@@ -20,11 +20,11 @@ const sidebars: SidebarsConfig = {
   /*
   tutorialSidebar: [
     'intro',
-    'hello',
+    'mission-vision-values',
     {
       type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
+      label: 'Policies',
+      items: ['policies/code-of-conduct', 'policies/conflict-of-interest'],
     },
   ],
    */
