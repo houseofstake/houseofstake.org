@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'House of Stake',
   tagline: "HoS is the NEAR ecosystem's social governance platform",
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -62,8 +62,9 @@ const config: Config = {
     navbar: {
       title: 'House of Stake',
       logo: {
-        alt: 'House of Stake Logo',
-        src: 'img/logo.svg',
+        alt: 'NEAR Logo',
+        src: 'img/near-logo.svg',
+        srcDark: 'img/near-logo-white.svg',
       },
       items: [
         {
@@ -119,6 +120,11 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
     },
   } satisfies Preset.ThemeConfig,
 };
