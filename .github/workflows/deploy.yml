@@ -67,15 +67,23 @@ jobs:
       - name: Set BASE_URL for PR preview
         if: github.event_name == 'pull_request_target' && github.event.action != 'closed'
         run: |
-          # PR previews always use the same path structure
-          echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
+          REPO_NAME="${{ github.event.repository.name }}"
+          OWNER="${{ github.repository_owner }}"
           
           # Set SITE_URL based on custom domain or GitHub Pages
           if [[ "${{ steps.check-domain.outputs.has_custom_domain }}" == "true" ]]; then
             echo "SITE_URL=https://${{ steps.check-domain.outputs.custom_domain }}" >> $GITHUB_ENV
+            echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
           else
-            # GitHub automatically serves project pages from /{repo-name}/ subdirectory
-            echo "SITE_URL=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" >> $GITHUB_ENV
+            # Always use base domain for SITE_URL
+            echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
+            
+            # For project pages, include repo name in BASE_URL
+            if [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
+              echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
+            else
+              echo "BASE_URL=/${REPO_NAME}/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
+            fi
           fi
 
       - name: Set BASE_URL for production
@@ -91,14 +99,15 @@ jobs:
             REPO_NAME="${{ github.event.repository.name }}"
             OWNER="${{ github.repository_owner }}"
             
+            # Always use the base GitHub Pages domain
+            echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
+            
             if [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
               # User/org pages site
               echo "BASE_URL=/" >> $GITHUB_ENV
-              echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
             else
-              # Project pages site
+              # Project pages site - baseUrl includes repo name
               echo "BASE_URL=/${REPO_NAME}/" >> $GITHUB_ENV
-              echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
             fi
           fi
 
@@ -160,15 +169,23 @@ jobs:
 
       - name: Set BASE_URL for PR preview
         run: |
-          # PR previews always use the same path structure
-          echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
+          REPO_NAME="${{ github.event.repository.name }}"
+          OWNER="${{ github.repository_owner }}"
           
           # Set SITE_URL based on custom domain or GitHub Pages
           if [[ "${{ steps.check-domain.outputs.has_custom_domain }}" == "true" ]]; then
             echo "SITE_URL=https://${{ steps.check-domain.outputs.custom_domain }}" >> $GITHUB_ENV
+            echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
           else
-            # GitHub automatically serves project pages from /{repo-name}/ subdirectory
-            echo "SITE_URL=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" >> $GITHUB_ENV
+            # Always use base domain for SITE_URL
+            echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
+            
+            # For project pages, include repo name in BASE_URL
+            if [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
+              echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
+            else
+              echo "BASE_URL=/${REPO_NAME}/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
+            fi
           fi
 
       - name: Build Docusaurus
