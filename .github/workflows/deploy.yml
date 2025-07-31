@@ -113,12 +113,11 @@ jobs:
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    environment:
-      name: production
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: gh-pages
 
       - name: Download artifact
         uses: actions/download-artifact@v4
@@ -126,17 +125,31 @@ jobs:
           name: build-output
           path: ./build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload to GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./build
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy to gh-pages branch
+        run: |
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Remove old files (but keep pr-preview directory)
+          find . -maxdepth 1 -type f -delete
+          find . -maxdepth 1 -type d ! -name '.git' ! -name '.' ! -name 'pr-preview' -exec rm -rf {} +
+          
+          # Copy new build files to root
+          cp -R ./build/* ./
+          rm -rf ./build
+          
+          # Add .nojekyll file to prevent Jekyll processing
+          touch .nojekyll
+          
+          # Commit and push
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Deploy production build from main branch"
+            git push origin gh-pages
+          fi
 
   # Deploy PR preview
   deploy-preview:
