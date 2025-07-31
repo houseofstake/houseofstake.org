@@ -1,5 +1,16 @@
 name: Build, Deploy and PR Preview
 
+# SECURITY CONFIGURATION REQUIRED:
+# This workflow requires the 'pr-preview-approval' environment to be configured with:
+# 1. Required reviewers (admins who can approve PR previews)
+# 2. Deployment protection rules
+# 
+# To set up:
+# 1. Go to Settings > Environments
+# 2. Create 'pr-preview-approval' environment
+# 3. Add required reviewers
+# 4. This prevents automatic execution of untrusted code from forks
+
 on:
   push:
     branches: [main]
@@ -21,6 +32,9 @@ jobs:
     # Only run for PRs from the same repo or for push events
     # For PRs from forks, we'll use a separate safe build process
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    # Add environment protection for PR builds (optional for same-repo PRs)
+    environment:
+      name: ${{ github.event_name == 'pull_request_target' && 'pr-preview-approval' || '' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -56,7 +70,7 @@ jobs:
           # Check if custom domain exists
           if [[ "${{ steps.check-domain.outputs.has_custom_domain }}" == "true" ]]; then
             # Custom domain setup
-            echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+            echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
             echo "SITE_URL=https://${{ steps.check-domain.outputs.custom_domain }}" >> $GITHUB_ENV
           else
             # Default GitHub Pages setup
@@ -65,7 +79,7 @@ jobs:
             
             if [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
               # User/org pages site
-              echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+              echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
               echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
             else
               # Project pages site
@@ -113,7 +127,7 @@ jobs:
 
   # Safe build job for PRs from forks
   # SECURITY WARNING: This job builds untrusted code from forks
-  # - The 'environment' protection can be configured to require manual approval
+  # - The 'environment' protection MUST be configured to require manual approval
   # - We use --ignore-scripts to prevent npm script execution during install
   # - The build process itself still runs untrusted code, so review PRs carefully
   build-fork-pr:
@@ -121,7 +135,7 @@ jobs:
     # Only run for PRs from forks
     if: github.event_name == 'pull_request_target' && github.event.pull_request.head.repo.full_name != github.repository && github.event.action != 'closed'
     environment:
-      name: fork-pr-preview
+      name: pr-preview-approval
     steps:
       - name: Checkout PR head
         uses: actions/checkout@v4
@@ -159,7 +173,7 @@ jobs:
           # Check if custom domain exists
           if [[ "${{ steps.check-domain.outputs.has_custom_domain }}" == "true" ]]; then
             # Custom domain setup
-            echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+            echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
             echo "SITE_URL=https://${{ steps.check-domain.outputs.custom_domain }}" >> $GITHUB_ENV
           else
             # Default GitHub Pages setup
@@ -168,7 +182,7 @@ jobs:
             
             if [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
               # User/org pages site
-              echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+              echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
               echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
             else
               # Project pages site
@@ -212,7 +226,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
           # Remove old files (but keep pr-preview directory and CNAME if exists)
-          find . -maxdepth 1 -type f ! -name 'CNAME' -delete
+          find . -maxdepth 1 -type f ! -name 'CNAME' ! -name '.nojekyll' -delete
           find . -maxdepth 1 -type d ! -name '.git' ! -name '.' ! -name 'pr-preview' ! -name 'build' -exec rm -rf {} +
           
           # Copy new build files to root
@@ -228,7 +242,7 @@ jobs:
           touch .nojekyll
           
           # Commit and push
-          git add .
+          git add -A
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
@@ -285,7 +299,7 @@ jobs:
           rm -rf ./pr-preview-build
           
           # Commit and push
-          git add .
+          git add -A
           git commit -m "Deploy preview for PR #${PR_NUMBER}" || echo "No changes to commit"
           git push origin gh-pages
 
