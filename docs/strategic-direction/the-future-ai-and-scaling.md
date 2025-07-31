@@ -1,4 +1,4 @@
-## The Future: AI & Scaling
+# The Future: AI & Scaling
 
 Governance in crypto is evolving. As networks grow more complex, the systems that manage them must also scale — not just in users and proposals, but in intelligence, autonomy, and resilience.
 
