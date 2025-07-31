@@ -35,13 +35,62 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check for custom domain
+        id: check-domain
+        run: |
+          # Check for CNAME file in the current repository
+          if [[ -f "static/CNAME" ]]; then
+            CUSTOM_DOMAIN=$(cat static/CNAME | tr -d '\n')
+            echo "custom_domain=${CUSTOM_DOMAIN}" >> $GITHUB_OUTPUT
+            echo "has_custom_domain=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_custom_domain=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Set BASE_URL for PR preview
         if: github.event_name == 'pull_request' && github.event.action != 'closed'
-        run: echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+        run: |
+          # Check if custom domain exists
+          if [[ "${{ steps.check-domain.outputs.has_custom_domain }}" == "true" ]]; then
+            # Custom domain setup
+            echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+          else
+            # Default GitHub Pages setup
+            REPO_NAME="${{ github.event.repository.name }}"
+            OWNER="${{ github.repository_owner }}"
+            
+            if [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
+              # User/org pages site
+              echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+            else
+              # Project pages site
+              echo "BASE_URL=/${REPO_NAME}/pr-preview/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+            fi
+          fi
 
       - name: Set BASE_URL for production
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: echo "BASE_URL=" >> $GITHUB_ENV
+        run: |
+          # Check if custom domain exists
+          if [[ "${{ steps.check-domain.outputs.has_custom_domain }}" == "true" ]]; then
+            # Custom domain setup
+            echo "BASE_URL=/" >> $GITHUB_ENV
+            echo "SITE_URL=https://${{ steps.check-domain.outputs.custom_domain }}" >> $GITHUB_ENV
+          else
+            # Default GitHub Pages setup
+            REPO_NAME="${{ github.event.repository.name }}"
+            OWNER="${{ github.repository_owner }}"
+            
+            if [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
+              # User/org pages site
+              echo "BASE_URL=/" >> $GITHUB_ENV
+              echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
+            else
+              # Project pages site
+              echo "BASE_URL=/${REPO_NAME}/" >> $GITHUB_ENV
+              echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
+            fi
+          fi
 
       - name: Build Docusaurus
         if: github.event_name != 'pull_request' || github.event.action != 'closed'
@@ -63,7 +112,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://www.houseofstake.org
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -128,7 +177,42 @@ jobs:
         with:
           script: |
             const prNumber = context.issue.number;
-            const previewUrl = `https://www.houseofstake.org/pr-preview/pr-${prNumber}/`;
+            
+            // Get repository information
+            const { data: repo } = await github.rest.repos.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            
+            // Check for custom domain (CNAME) in gh-pages
+            let customDomain = null;
+            try {
+              const { data: cnameContent } = await github.rest.repos.getContent({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                path: 'CNAME',
+                ref: 'gh-pages'
+              });
+              if (cnameContent.content) {
+                customDomain = Buffer.from(cnameContent.content, 'base64').toString('utf-8').trim();
+              }
+            } catch (error) {
+              // CNAME file doesn't exist, use default GitHub Pages URL
+            }
+            
+            // Determine the base URL
+            let baseUrl;
+            if (customDomain) {
+              baseUrl = `https://${customDomain}`;
+            } else if (repo.name === `${context.repo.owner}.github.io`) {
+              // User/org GitHub Pages site
+              baseUrl = `https://${context.repo.owner}.github.io`;
+            } else {
+              // Project GitHub Pages site
+              baseUrl = `https://${context.repo.owner}.github.io/${repo.name}`;
+            }
+            
+            const previewUrl = `${baseUrl}/pr-preview/pr-${prNumber}/`;
             
             // Find existing comment
             const { data: comments } = await github.rest.issues.listComments({
