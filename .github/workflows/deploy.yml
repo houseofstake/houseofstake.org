@@ -1,30 +1,207 @@
-name: Deploy to GitHub Pages
+name: Build, Deploy and PR Preview
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  pull-requests: write
+
+concurrency:
+  group: "pages-${{ github.ref }}"
+  cancel-in-progress: false
 
 jobs:
-  deploy:
-    name: Deploy to GitHub Pages
+  # Build job
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          node-version: 22
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
           cache: npm
 
       - name: Install dependencies
         run: npm ci
-      - name: Build website
+
+      - name: Set BASE_URL for PR preview
+        if: github.event_name == 'pull_request' && github.event.action != 'closed'
+        run: echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+
+      - name: Set BASE_URL for production
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: echo "BASE_URL=" >> $GITHUB_ENV
+
+      - name: Build Docusaurus
+        if: github.event_name != 'pull_request' || github.event.action != 'closed'
+        env:
+          NODE_ENV: production
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+      - name: Upload artifact
+        if: github.event_name != 'pull_request' || github.event.action != 'closed'
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          name: build-output
+          path: ./build
+
+  # Deploy to production (main branch only)
+  deploy-production:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://www.houseofstake.org
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: ./build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # Deploy PR preview
+  deploy-preview:
+    needs: build
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: ./pr-preview-build
+
+      - name: Deploy PR preview
+        run: |
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Create PR preview directory
+          PR_NUMBER="${{ github.event.pull_request.number }}"
+          PREVIEW_DIR="pr-preview/pr-${PR_NUMBER}"
+          
+          # Remove old preview if exists and copy new build
+          rm -rf "${PREVIEW_DIR}"
+          mkdir -p "${PREVIEW_DIR}"
+          cp -R ./pr-preview-build/* "${PREVIEW_DIR}/"
+          
+          # Commit and push
+          git add .
+          git commit -m "Deploy preview for PR #${PR_NUMBER}" || echo "No changes to commit"
+          git push origin gh-pages
+
+      - name: Comment PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.issue.number;
+            const previewUrl = `https://www.houseofstake.org/pr-preview/pr-${prNumber}/`;
+            
+            // Find existing comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+            });
+            
+            const botComment = comments.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('Preview deployment is ready!')
+            );
+            
+            const commentBody = `### 🚀 Preview deployment is ready!
+            
+            | Environment | URL |
+            |-------------|-----|
+            | Preview | ${previewUrl} |
+            
+            *This preview will update automatically when you push new commits.*`;
+            
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: commentBody
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: commentBody
+              });
+            }
+
+  # Cleanup PR preview when closed
+  cleanup-preview:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Remove preview
+        run: |
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Remove preview directory
+          PR_NUMBER="${{ github.event.pull_request.number }}"
+          PREVIEW_DIR="pr-preview/pr-${PR_NUMBER}"
+          
+          if [ -d "${PREVIEW_DIR}" ]; then
+            rm -rf "${PREVIEW_DIR}"
+            git add .
+            git commit -m "Remove preview for PR #${PR_NUMBER}"
+            git push origin gh-pages
+          fi
+
+      - name: Comment PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.issue.number;
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body: `### 🧹 Preview deployment has been removed.`
+            });
