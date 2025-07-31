@@ -257,9 +257,27 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Create PR preview directory
+          # Determine if this is a project pages site or custom domain/user site
+          REPO_NAME="${{ github.event.repository.name }}"
+          OWNER="${{ github.repository_owner }}"
           PR_NUMBER="${{ github.event.pull_request.number }}"
-          PREVIEW_DIR="pr-preview/pr-${PR_NUMBER}"
+          
+          # Check for CNAME file in gh-pages to determine custom domain
+          HAS_CUSTOM_DOMAIN=false
+          if [ -f "CNAME" ]; then
+            HAS_CUSTOM_DOMAIN=true
+          fi
+          
+          # Determine preview directory path
+          if [[ "${HAS_CUSTOM_DOMAIN}" == "true" ]] || [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
+            # Custom domain or user/org site - use root-level pr-preview
+            PREVIEW_DIR="pr-preview/pr-${PR_NUMBER}"
+          else
+            # Project pages site - use project-specific path
+            PREVIEW_DIR="${REPO_NAME}/pr-preview/pr-${PR_NUMBER}"
+          fi
+          
+          echo "Deploying to preview directory: ${PREVIEW_DIR}"
           
           # Verify build exists
           if [ ! -d "./pr-preview-build" ] || [ ! "$(ls -A ./pr-preview-build)" ]; then
@@ -374,9 +392,27 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Remove preview directory
+          # Determine if this is a project pages site or custom domain/user site
+          REPO_NAME="${{ github.event.repository.name }}"
+          OWNER="${{ github.repository_owner }}"
           PR_NUMBER="${{ github.event.pull_request.number }}"
-          PREVIEW_DIR="pr-preview/pr-${PR_NUMBER}"
+          
+          # Check for CNAME file in gh-pages to determine custom domain
+          HAS_CUSTOM_DOMAIN=false
+          if [ -f "CNAME" ]; then
+            HAS_CUSTOM_DOMAIN=true
+          fi
+          
+          # Determine preview directory path
+          if [[ "${HAS_CUSTOM_DOMAIN}" == "true" ]] || [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
+            # Custom domain or user/org site - use root-level pr-preview
+            PREVIEW_DIR="pr-preview/pr-${PR_NUMBER}"
+          else
+            # Project pages site - use project-specific path
+            PREVIEW_DIR="${REPO_NAME}/pr-preview/pr-${PR_NUMBER}"
+          fi
+          
+          echo "Removing preview directory: ${PREVIEW_DIR}"
           
           if [ -d "${PREVIEW_DIR}" ]; then
             rm -rf "${PREVIEW_DIR}"
