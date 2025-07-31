@@ -45,6 +45,10 @@ jobs:
           else
             echo "has_custom_domain=false" >> $GITHUB_OUTPUT
           fi
+          
+          # Also output repo name and owner for consistency
+          echo "repo_name=${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
+          echo "owner=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
 
       - name: Set BASE_URL for PR preview
         if: github.event_name == 'pull_request_target' && github.event.action != 'closed'
@@ -145,6 +149,10 @@ jobs:
           else
             echo "has_custom_domain=false" >> $GITHUB_OUTPUT
           fi
+          
+          # Also output repo name and owner for consistency
+          echo "repo_name=${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
+          echo "owner=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
 
       - name: Set BASE_URL for PR preview
         run: |
@@ -203,18 +211,49 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
+          # Determine deployment path
+          REPO_NAME="${{ github.event.repository.name }}"
+          OWNER="${{ github.repository_owner }}"
           
-          # Remove old files (but keep pr-preview directory)
-          find . -maxdepth 1 -type f -delete
-          find . -maxdepth 1 -type d ! -name '.git' ! -name '.' ! -name 'pr-preview' ! -name 'build' -exec rm -rf {} +
+          # Check for CNAME file in gh-pages to determine custom domain
+          HAS_CUSTOM_DOMAIN=false
+          if [ -f "CNAME" ]; then
+            HAS_CUSTOM_DOMAIN=true
+          fi
           
-          # Copy new build files to root
-          if [ -d "./build" ] && [ "$(ls -A ./build)" ]; then
-            cp -R ./build/* ./
-            rm -rf ./build
+          # For project pages without custom domain, we need to deploy to a subdirectory
+          if [[ "${HAS_CUSTOM_DOMAIN}" == "true" ]] || [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
+            # Custom domain or user/org site - deploy to root
+            echo "Deploying to root directory"
+            
+            # Remove old files (but keep pr-preview directory and any project subdirectories)
+            find . -maxdepth 1 -type f ! -name 'CNAME' -delete
+            find . -maxdepth 1 -type d ! -name '.git' ! -name '.' ! -name 'pr-preview' ! -name 'build' -exec rm -rf {} +
+            
+            # Copy new build files to root
+            if [ -d "./build" ] && [ "$(ls -A ./build)" ]; then
+              cp -R ./build/* ./
+              rm -rf ./build
+            else
+              echo "Error: Build directory is empty or doesn't exist"
+              exit 1
+            fi
           else
-            echo "Error: Build directory is empty or doesn't exist"
-            exit 1
+            # Project pages site - deploy to project subdirectory
+            echo "Deploying to project subdirectory: ${REPO_NAME}"
+            
+            # Create/update project directory
+            rm -rf "${REPO_NAME}"
+            mkdir -p "${REPO_NAME}"
+            
+            # Copy new build files to project directory
+            if [ -d "./build" ] && [ "$(ls -A ./build)" ]; then
+              cp -R ./build/* "${REPO_NAME}/"
+              rm -rf ./build
+            else
+              echo "Error: Build directory is empty or doesn't exist"
+              exit 1
+            fi
           fi
           
           # Add .nojekyll file to prevent Jekyll processing
