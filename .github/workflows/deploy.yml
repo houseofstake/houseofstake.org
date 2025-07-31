@@ -131,13 +131,24 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
+          # Debug: Check what's in the build directory
+          echo "Contents of current directory:"
+          ls -la
+          echo "Contents of build directory:"
+          ls -la ./build || echo "Build directory not found"
+          
           # Remove old files (but keep pr-preview directory)
           find . -maxdepth 1 -type f -delete
-          find . -maxdepth 1 -type d ! -name '.git' ! -name '.' ! -name 'pr-preview' -exec rm -rf {} +
+          find . -maxdepth 1 -type d ! -name '.git' ! -name '.' ! -name 'pr-preview' ! -name 'build' -exec rm -rf {} +
           
           # Copy new build files to root
-          cp -R ./build/* ./
-          rm -rf ./build
+          if [ -d "./build" ] && [ "$(ls -A ./build)" ]; then
+            cp -R ./build/* ./
+            rm -rf ./build
+          else
+            echo "Error: Build directory is empty or doesn't exist"
+            exit 1
+          fi
           
           # Add .nojekyll file to prevent Jekyll processing
           touch .nojekyll
@@ -178,10 +189,17 @@ jobs:
           PR_NUMBER="${{ github.event.pull_request.number }}"
           PREVIEW_DIR="pr-preview/pr-${PR_NUMBER}"
           
+          # Debug: Check what's in the pr-preview-build directory
+          echo "Contents of pr-preview-build directory:"
+          ls -la ./pr-preview-build || echo "pr-preview-build directory not found"
+          
           # Remove old preview if exists and copy new build
           rm -rf "${PREVIEW_DIR}"
           mkdir -p "${PREVIEW_DIR}"
           cp -R ./pr-preview-build/* "${PREVIEW_DIR}/"
+          
+          # Remove the temporary build directory to avoid committing it
+          rm -rf ./pr-preview-build
           
           # Commit and push
           git add .
