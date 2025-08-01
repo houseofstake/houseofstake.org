@@ -54,14 +54,22 @@ jobs:
       - name: Check for custom domain
         id: check-domain
         run: |
-          # Check for CNAME file in the current repository
-          if [[ -f "static/CNAME" ]]; then
-            CUSTOM_DOMAIN=$(cat static/CNAME | tr -d '\n' | tr -d '\r')
-            echo "custom_domain=${CUSTOM_DOMAIN}" >> $GITHUB_OUTPUT
-            echo "has_custom_domain=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_custom_domain=false" >> $GITHUB_OUTPUT
+          # Check for CNAME file in gh-pages branch
+          CUSTOM_DOMAIN=""
+          HAS_CUSTOM_DOMAIN="false"
+          
+          # Try to fetch CNAME from gh-pages branch
+          if git ls-remote --heads origin gh-pages | grep -q gh-pages; then
+            # gh-pages branch exists, try to get CNAME
+            CNAME_CONTENT=$(git show origin/gh-pages:CNAME 2>/dev/null || echo "")
+            if [[ -n "$CNAME_CONTENT" ]]; then
+              CUSTOM_DOMAIN=$(echo "$CNAME_CONTENT" | tr -d '\n' | tr -d '\r')
+              HAS_CUSTOM_DOMAIN="true"
+            fi
           fi
+          
+          echo "custom_domain=${CUSTOM_DOMAIN}" >> $GITHUB_OUTPUT
+          echo "has_custom_domain=${HAS_CUSTOM_DOMAIN}" >> $GITHUB_OUTPUT
           
           # Also output repo name and owner for consistency
           echo "repo_name=${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
@@ -157,14 +165,22 @@ jobs:
       - name: Check for custom domain
         id: check-domain
         run: |
-          # Check for CNAME file in the current repository
-          if [[ -f "static/CNAME" ]]; then
-            CUSTOM_DOMAIN=$(cat static/CNAME | tr -d '\n' | tr -d '\r')
-            echo "custom_domain=${CUSTOM_DOMAIN}" >> $GITHUB_OUTPUT
-            echo "has_custom_domain=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_custom_domain=false" >> $GITHUB_OUTPUT
+          # Check for CNAME file in gh-pages branch
+          CUSTOM_DOMAIN=""
+          HAS_CUSTOM_DOMAIN="false"
+          
+          # Try to fetch CNAME from gh-pages branch
+          if git ls-remote --heads origin gh-pages | grep -q gh-pages; then
+            # gh-pages branch exists, try to get CNAME
+            CNAME_CONTENT=$(git show origin/gh-pages:CNAME 2>/dev/null || echo "")
+            if [[ -n "$CNAME_CONTENT" ]]; then
+              CUSTOM_DOMAIN=$(echo "$CNAME_CONTENT" | tr -d '\n' | tr -d '\r')
+              HAS_CUSTOM_DOMAIN="true"
+            fi
           fi
+          
+          echo "custom_domain=${CUSTOM_DOMAIN}" >> $GITHUB_OUTPUT
+          echo "has_custom_domain=${HAS_CUSTOM_DOMAIN}" >> $GITHUB_OUTPUT
           
           # Also output repo name and owner for consistency
           echo "repo_name=${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
