@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhouseofstake=self.webpackChunkhouseofstake||[]).push([[903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/houseofstake.org/pr-preview/pr-3/blog","blogTitle":"Blog","authorsListPath":"/houseofstake.org/pr-preview/pr-3/blog/authors"}')}}]);
