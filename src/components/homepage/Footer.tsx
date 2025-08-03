@@ -16,11 +16,31 @@ const footerSections: FooterSection[] = [
   {
     title: 'Social',
     links: [
-      { label: 'Medium (Announcement)', href: 'https://medium.com/@nearcommunitysquad', isExternal: true },
-      { label: 'NEAR Forum', href: 'https://gov.near.org/t/house-of-stake-updates-transparency-thread/40753/57', isExternal: true },
-      { label: 'X / Twitter', href: 'https://x.com/NEARGovernance', isExternal: true },
-      { label: 'Telegram', href: 'https://t.me/NEAR_HouseOfStake', isExternal: true },
-      { label: 'Github', href: 'https://github.com/houseofstake', isExternal: true },
+      {
+        label: 'Medium (Announcement)',
+        href: 'https://medium.com/@nearcommunitysquad',
+        isExternal: true,
+      },
+      {
+        label: 'NEAR Forum',
+        href: 'https://gov.near.org/c/house-of-stake/158',
+        isExternal: true,
+      },
+      {
+        label: 'X / Twitter',
+        href: 'https://x.com/NEARGovernance',
+        isExternal: true,
+      },
+      {
+        label: 'Telegram',
+        href: 'https://t.me/NEAR_HouseOfStake',
+        isExternal: true,
+      },
+      {
+        label: 'Github',
+        href: 'https://github.com/houseofstake',
+        isExternal: true,
+      },
     ],
   },
   {
@@ -42,7 +62,7 @@ const Footer: React.FC = () => {
         <div className={styles.brand}>
           <h3 className={styles.brandTitle}>House of Stake</h3>
         </div>
-        
+
         <div className={styles.linksContainer}>
           {footerSections.map((section) => (
             <div key={section.title} className={styles.section}>
@@ -65,7 +85,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
       </div>
-      
+
       <div className={styles.bottomBar}>
         <p className={styles.copyright}>
           © House of Stake {currentYear}. All rights reserved
