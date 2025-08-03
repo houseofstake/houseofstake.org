@@ -1,50 +1,34 @@
 import type { ReactNode } from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
+import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
-
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header
-      className={clsx(
-        'hero hero--primary',
-        'py-8 md:py-16 text-center relative overflow-hidden'
-      )}
-    >
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className="flex items-center justify-center">
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
-          >
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import Hero from '@site/src/components/homepage/Hero';
+import What from '@site/src/components/homepage/What';
+import How from '@site/src/components/homepage/How';
+import StructureRoles from '@site/src/components/homepage/StructureRoles';
+import GovernanceSystem from '@site/src/components/homepage/GovernanceSystem';
+import GetInvolved from '@site/src/components/homepage/GetInvolved';
+import FindUs from '@site/src/components/homepage/FindUs';
+import Footer from '@site/src/components/homepage/Footer';
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <HomepageHeader />
+    <>
+      <Head>
+        <title>{`${siteConfig.title}`}</title>
+      </Head>
+
       <main>
-        <HomepageFeatures />
+        <Hero />
+        <What />
+        <How />
+        <StructureRoles />
+        <GovernanceSystem />
+        <GetInvolved />
+        <FindUs />
       </main>
-    </Layout>
+      <Footer />
+    </>
   );
 }
 // Force rebuild at Sun Aug  3 22:09:28 EEST 2025
