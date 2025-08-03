@@ -63,7 +63,6 @@ const config: Config = {
       logo: {
         alt: 'NEAR Logo',
         src: 'img/near-logo.svg',
-        srcDark: 'img/near-logo-white.svg',
       },
       items: [
         {
@@ -118,12 +117,11 @@ const config: Config = {
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
     },
     colorMode: {
       defaultMode: 'light',
-      disableSwitch: false,
-      respectPrefersColorScheme: true,
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
   } satisfies Preset.ThemeConfig,
 };
