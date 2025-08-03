@@ -42,7 +42,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          routeBasePath: '/', // Serve docs at the site's root
+          routeBasePath: 'docs', // Serve docs at /docs
           sidebarPath: './sidebars.ts',
           editUrl:
             'https://github.com/houseofstake/houseofstake.org/tree/main/',
@@ -87,7 +87,7 @@ const config: Config = {
           items: [
             {
               label: 'Documentation',
-              to: '/',
+              to: '/docs',
             },
           ],
         },
