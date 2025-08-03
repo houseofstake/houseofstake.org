@@ -12,29 +12,58 @@ const features = [
 
 const How: React.FC = () => {
   return (
-    <section className={styles.howSection}>
-      <div className={styles.header}>
-        <h2 className={styles.title}>How is it different</h2>
-        <div className={styles.divider} />
-        <p className={styles.description}>
-          House of Stake is a governance framework for the NEAR ecosystem, designed to facilitate decentralized decision-making.
-        </p>
+    <section className={styles.sectionSplitTextVisual}>
+      <div className={styles.headerTitle}>
+        <div className={styles.container}>
+          <h2 className={styles.title}>How is it different</h2>
+        </div>
+        <div className={styles.containerDivider}>
+          <div className={styles.divider} />
+        </div>
+        <div className={styles.textContainer}>
+          <p className={styles.description}>
+            House of Stake is a governance framework for the NEAR ecosystem, designed to facilitate decentralized decision-making.
+          </p>
+        </div>
       </div>
       
       <div className={styles.cardsGrid}>
         {features.map((feature, index) => (
-          <div key={index} className={styles.featureCard}>
-            <p className={styles.featureText}>{feature}</p>
+          <div key={index} className={styles.squareCard}>
+            <div className={styles.cardInner}>
+              <div className={styles.bg} />
+              <div className={styles.contentTop}>
+                <div className={styles.textWrapper}>
+                  <p className={styles.featureText}>{feature}</p>
+                </div>
+              </div>
+            </div>
+            <div className={styles.cardBorder} />
           </div>
         ))}
         
         <div className={styles.learnMoreCard}>
-          <Link to="/docs" className={styles.learnMoreLink}>
-            Learn more
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.5 3.5L12.5 12.5M12.5 12.5V3.5M12.5 12.5H3.5" stroke="currentColor" strokeWidth="1.5"/>
-            </svg>
-          </Link>
+          <div className={styles.learnMoreCardInner}>
+            <div className={styles.bg} />
+            <div className={styles.learnMoreInnerCard}>
+              <div className={styles.learnMoreInnerCardContent}>
+                <div className={styles.bg} />
+                <div className={styles.learnMoreContentTop}>
+                  <Link to="/docs/governance-system/proposal-and-voting-process" className={styles.learnMoreLink}>
+                    <div className={styles.learnMoreText}>
+                      <span className={styles.learnMoreLabel}>Learn more</span>
+                    </div>
+                    <div className={styles.arrowIcon}>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 10.5L10.5 5.5M10.5 5.5H5.5M10.5 5.5V10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.cardBorder} />
         </div>
       </div>
     </section>

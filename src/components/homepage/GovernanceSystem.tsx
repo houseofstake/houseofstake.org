@@ -55,7 +55,9 @@ const GovernanceSystem: React.FC = () => {
     <section className={styles.governanceSection}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Governance System</h2>
+          <div className={styles.headerContainer}>
+            <h2 className={styles.title}>Governance System</h2>
+          </div>
           <div className={styles.divider} />
         </div>
 

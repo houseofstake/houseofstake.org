@@ -1,23 +1,28 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 import styles from './What.module.css';
 
 interface CardData {
   title: string;
   description: string;
+  link: string;
 }
 
 const cards: CardData[] = [
   {
     title: 'What is HoS?',
     description: 'House of Stake is a governance framework for the NEAR ecosystem, designed to facilitate decentralized decision-making.',
+    link: '/docs/',
   },
   {
     title: 'How Governance Works',
     description: 'Understand the veNEAR token, voting mechanisms, and proposal process that power our decentralized governance system.',
+    link: '/docs/governance-system/what-is-venear',
   },
   {
     title: 'Our Mission',
     description: 'Loren Ipsom',
+    link: '/docs/overview/mission-vision-values',
   },
 ];
 
@@ -26,7 +31,7 @@ const What: React.FC = () => {
     <section className={styles.sectionSplitTextVisual}>
       <div className={styles.cardsContainer}>
         {cards.map((card, index) => (
-          <div key={index} className={styles.squareCard}>
+          <Link key={index} to={card.link} className={styles.squareCard}>
             <div className={styles.cardInner}>
               <div className={styles.bg} />
               <div className={styles.contentTop}>
@@ -47,7 +52,7 @@ const What: React.FC = () => {
               </div>
             </div>
             <div className={styles.cardBorder} />
-          </div>
+          </Link>
         ))}
       </div>
     </section>

@@ -6,6 +6,7 @@ import What from '@site/src/components/homepage/What';
 import How from '@site/src/components/homepage/How';
 import StructureRoles from '@site/src/components/homepage/StructureRoles';
 import GovernanceSystem from '@site/src/components/homepage/GovernanceSystem';
+import Roadmap from '@site/src/components/homepage/Roadmap';
 import GetInvolved from '@site/src/components/homepage/GetInvolved';
 import FindUs from '@site/src/components/homepage/FindUs';
 import Footer from '@site/src/components/homepage/Footer';
@@ -24,6 +25,7 @@ export default function Home(): ReactNode {
         <How />
         <StructureRoles />
         <GovernanceSystem />
+        <Roadmap />
         <GetInvolved />
         <FindUs />
       </main>

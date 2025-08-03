@@ -46,7 +46,7 @@ const FindUs: React.FC = () => {
     <section className={styles.sectionSplitTextVisual}>
       <div className={styles.headerTitle}>
         <div className={styles.container}>
-          <h2 className={styles.title}>Find us on</h2>
+          <h2 className={styles.title}>Find Us On</h2>
         </div>
         <div className={styles.divider} />
       </div>
@@ -76,7 +76,7 @@ const FindUs: React.FC = () => {
               <div className={styles.contentBottom}>
                 <div className={styles.arrowWrapper}>
                   <div className={styles.topLine} />
-                  <div className={styles.arrowUpRight}>
+                  <div className={styles.arrowIcon}>
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10 30L30 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       <path d="M15 10H30V25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -89,6 +89,13 @@ const FindUs: React.FC = () => {
             <div className={styles.cardBorder} />
           </a>
         ))}
+        
+        {/* Empty card for layout - hidden on mobile */}
+        <div className={styles.emptyCard}>
+          <div className={styles.cardInner}>
+            <div className={styles.bg} />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -23,7 +23,7 @@ const footerSections: FooterSection[] = [
       },
       {
         label: 'NEAR Forum',
-        href: 'https://gov.near.org/c/house-of-stake/158',
+        href: 'https://gov.near.org/t/house-of-stake-updates-transparency-thread/40753/57',
         isExternal: true,
       },
       {
@@ -59,30 +59,32 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.mainContent}>
-        <div className={styles.brand}>
-          <h3 className={styles.brandTitle}>House of Stake</h3>
-        </div>
+        <div className={styles.contentWrapper}>
+          <div className={styles.brand}>
+            <h3 className={styles.brandTitle}>House of Stake</h3>
+          </div>
 
-        <div className={styles.linksContainer}>
-          {footerSections.map((section) => (
-            <div key={section.title} className={styles.section}>
-              <h4 className={styles.sectionTitle}>{section.title}</h4>
-              <ul className={styles.linksList}>
-                {section.links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className={styles.link}
-                      target={link.isExternal ? '_blank' : undefined}
-                      rel={link.isExternal ? 'noopener noreferrer' : undefined}
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className={styles.linksContainer}>
+            {footerSections.map((section) => (
+              <div key={section.title} className={styles.section}>
+                <h4 className={styles.sectionTitle}>{section.title}</h4>
+                <ul className={styles.linksList}>
+                  {section.links.map((link) => (
+                    <li key={link.label}>
+                      <a
+                        href={link.href}
+                        className={styles.link}
+                        target={link.isExternal ? '_blank' : undefined}
+                        rel={link.isExternal ? 'noopener noreferrer' : undefined}
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
