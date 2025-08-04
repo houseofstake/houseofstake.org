@@ -18,8 +18,9 @@ const tabContents: TabContent[] = [
 
 By locking NEAR, stNEAR, or liNEAR tokens for a fixed period (from 3 months up to 4 years), users receive veNEAR. The longer the lock duration, the greater the voting power received. This mechanism aligns incentives for long-term commitment and active participation.
 
-veNEAR creates a strong alignment between governance power and economic commitment. Those with more at stake—literally and figuratively—have more influence, encouraging responsible, engaged decision-making that supports the long-term health of the ecosystem.`,
-    image: '/img/4262b3cb81555c40e4b2b30de47a378581d6184e.png',
+veNEAR creates a strong alignment between governance power and economic commitment. Those with more at stake—literally and figuratively—have more influence, encouraging responsible, engaged decision-making that supports the long-term health of the ecosystem.
+
+![veNEAR Governance Model](/img/4262b3cb81555c40e4b2b30de47a378581d6184e.png)`,
   },
   {
     id: 'locking',
@@ -54,17 +55,105 @@ The amount of veNEAR received is proportional to both the number of tokens locke
   {
     id: 'rewards',
     title: 'Rewards & Incentives',
-    content: 'Content for Rewards & Incentives will be added here.',
+    content: `## Rewards & Incentives Overview
+
+House of Stake implements a sustainable incentive system to encourage meaningful participation in NEAR governance. The model is designed to reward both veNEAR holders and endorsed delegates, balancing competitiveness with long-term sustainability.
+
+### veNEAR Holder Rewards
+
+veNEAR holders receive rewards for locking tokens and engaging in governance.
+
+- Funded by 0.5% of annual NEAR inflation
+- Distributed proportionally based on veNEAR amount and lock duration
+- Rewards must be claimed manually
+- Voting participation may be required in future phases
+- Target APY ranges from approximately 5.8% to 8.8%, benchmarked against DeFi yields
+
+### Delegate Incentives
+
+Endorsed delegates are eligible for additional rewards, provided they meet performance and transparency standards.
+
+- Minimum 80% voting participation
+- Required to publish quarterly public voting reports
+- Must hold at least 0.5% of total veNEAR supply
+- Must complete KYC/KYB verification for accountability
+
+### Sustainable Funding
+
+Incentives are funded from a predictable and capped source:
+
+- 0.5% protocol inflation allocated to governance incentives
+- Potential future funding from ecosystem revenues such as protocol fees
+- Transparent and scalable budget model
+
+### Dynamic Reward Scaling
+
+To ensure rewards remain sustainable as participation grows, veNEAR APY adjusts automatically based on total veNEAR supply:
+
+![Dynamic Reward Scaling Formula](https://placehold.co/600x300/1a1a1a/ffffff/png?text=Dynamic+Reward+Scaling+Formula)
+
+This formula ensures that APY decreases as veNEAR supply increases, maintaining fair yields in early stages while controlling emissions over time.`,
   },
   {
     id: 'inflation',
     title: 'Inflation Model',
-    content: 'Content for Inflation Model will be added here.',
+    content: `## Inflation Model Overview
+
+House of Stake employs a fixed and transparent inflation mechanism to support governance incentives and long-term platform sustainability.
+
+### Core Principles
+
+1. **Annual inflation rate:** 0.5% of total NEAR supply  
+2. **Inflation allocation:** 100% goes to governance participation incentives  
+3. **Reward distribution:**
+   - veNEAR holders  
+   - Endorsed delegates  
+
+### Design Rationale
+
+1. Incentivizes long-term token locking and active governance participation  
+2. Aligns economic incentives with governance quality  
+3. Replaces ad-hoc treasury grants with a sustainable funding stream  
+4. Provides a predictable and bounded budget for governance operations  
+
+### Flexibility and Governance
+
+1. The inflation rate and distribution logic can be adjusted through governance  
+2. Possible triggers for change include:
+   - Participation levels  
+   - Tokenomic shifts  
+   - Ecosystem growth and evolving needs`,
   },
   {
     id: 'versioning',
     title: 'Versioning & Evolution',
-    content: 'Content for Versioning & Evolution will be added here.',
+    content: `## Versioning & Evolution Overview
+
+House of Stake is designed as an evolving governance system. To stay relevant, it must be able to improve over time — without losing stability or trust.
+
+### On-chain Versioning
+
+1. Each major governance change (e.g., new roles, voting rules, funding mechanisms) is treated as a version upgrade  
+2. Version upgrades follow the standard proposal and voting process  
+3. All changes are:
+   - Tracked on-chain  
+   - Publicly documented  
+   - Linked to specific proposals and rationale  
+
+### Why Versioning Matters
+
+1. Promotes transparency and continuity  
+2. Prevents abrupt or undocumented changes  
+3. Creates a shared memory for governance evolution  
+
+### Community-Driven Iteration
+
+1. Governance is intentionally open-ended — it is never considered "final"  
+2. The system welcomes:
+   - Experimentation  
+   - Iterative improvements  
+   - New governance ideas  
+3. All changes must go through transparent proposal, debate, and voting processes`,
   },
 ];
 
@@ -164,19 +253,15 @@ const GovernanceSystem: React.FC = () => {
                         h2: ({children}) => <h2 className={styles.contentHeading2}>{children}</h2>,
                         h3: ({children}) => <h3 className={styles.contentHeading3}>{children}</h3>,
                         ul: ({children}) => <ul className={styles.contentList}>{children}</ul>,
+                        ol: ({children}) => <ol className={styles.contentOrderedList}>{children}</ol>,
                         li: ({children}) => <li className={styles.contentListItem}>{children}</li>,
                         strong: ({children}) => <strong className={styles.contentStrong}>{children}</strong>,
+                        img: ({src, alt}) => <img src={src} alt={alt} className={styles.contentInlineImage} />,
                       }}
                     >
                       {tab.content}
                     </Markdown>
                   </div>
-                  {tab.image && (
-                    <div
-                      className={styles.accordionImage}
-                      style={{ backgroundImage: `url('${tab.image}')` }}
-                    />
-                  )}
                 </div>
               </div>
             ))}
@@ -209,21 +294,15 @@ const GovernanceSystem: React.FC = () => {
                         h2: ({children}) => <h2 className={styles.contentHeading2}>{children}</h2>,
                         h3: ({children}) => <h3 className={styles.contentHeading3}>{children}</h3>,
                         ul: ({children}) => <ul className={styles.contentList}>{children}</ul>,
+                        ol: ({children}) => <ol className={styles.contentOrderedList}>{children}</ol>,
                         li: ({children}) => <li className={styles.contentListItem}>{children}</li>,
                         strong: ({children}) => <strong className={styles.contentStrong}>{children}</strong>,
+                        img: ({src, alt}) => <img src={src} alt={alt} className={styles.contentInlineImage} />,
                       }}
                     >
                       {activeContent.content}
                     </Markdown>
                   </div>
-                  {activeContent.image && (
-                    <div
-                      className={styles.contentImage}
-                      style={{
-                        backgroundImage: `url('${activeContent.image}')`,
-                      }}
-                    />
-                  )}
                 </>
               )}
             </div>
