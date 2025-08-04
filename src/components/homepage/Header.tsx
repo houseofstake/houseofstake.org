@@ -1,30 +1,45 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect, useRef, useCallback } from 'react';
 import Link from '@docusaurus/Link';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from './Header.module.css';
 
-const HeaderContent: React.FC = () => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const animationFrameRef = useRef<number | null>(null);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen((prev) => !prev);
+  }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+  useLayoutEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const checkScroll = () => {
+      const scrollTop =
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        window.scrollY;
+      const shouldBeScrolled = scrollTop > 50;
+
+      setIsScrolled((prev) =>
+        prev !== shouldBeScrolled ? shouldBeScrolled : prev
+      );
+      animationFrameRef.current = requestAnimationFrame(checkScroll);
     };
 
-    // Check initial scroll position
-    handleScroll();
+    animationFrameRef.current = requestAnimationFrame(checkScroll);
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
   }, []);
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuActive : ''}`}>
+    <header
+      className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuActive : ''}`}
+    >
       <div className={styles.iconContainer}>
         <img
           src="/img/182fdc317f272c138653a6ca64dcec845f43ec76.svg"
@@ -47,12 +62,22 @@ const HeaderContent: React.FC = () => {
           <span className={styles.hamburgerLine}></span>
         </button>
 
-        <nav className={`${styles.menuContainer} ${isMenuOpen ? styles.menuOpen : ''}`}>
-          <Link to="/docs" className={styles.menuItem} onClick={() => setIsMenuOpen(false)}>
+        <nav
+          className={`${styles.menuContainer} ${isMenuOpen ? styles.menuOpen : ''}`}
+        >
+          <Link
+            to="/docs"
+            className={styles.menuItem}
+            onClick={() => setIsMenuOpen(false)}
+          >
             Documentation
           </Link>
 
-          <Link to="/blog" className={styles.menuItem} onClick={() => setIsMenuOpen(false)}>
+          <Link
+            to="/blog"
+            className={styles.menuItem}
+            onClick={() => setIsMenuOpen(false)}
+          >
             Blog
           </Link>
 
@@ -83,20 +108,16 @@ const HeaderContent: React.FC = () => {
             </svg>
           </div>
 
-          <Link to="/docs" className={styles.participateButton} onClick={() => setIsMenuOpen(false)}>
+          <Link
+            to="/docs"
+            className={styles.participateButton}
+            onClick={() => setIsMenuOpen(false)}
+          >
             Participate
           </Link>
         </nav>
       </div>
     </header>
-  );
-};
-
-const Header: React.FC = () => {
-  return (
-    <BrowserOnly fallback={<header className={styles.header}></header>}>
-      {() => <HeaderContent />}
-    </BrowserOnly>
   );
 };
 
