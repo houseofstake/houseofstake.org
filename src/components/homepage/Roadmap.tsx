@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './Roadmap.module.css';
-import { fetchGitHubProjectData, RoadmapItem } from '../../services/github';
+import { getHardcodedProjectData, RoadmapItem, PROJECT_ICONS } from '../../services/github';
 import { 
   CiCircleCheck, 
   CiClock1, 
@@ -19,12 +19,12 @@ const Roadmap: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch data from GitHub on component mount
+  // Use hardcoded data on component mount
   useEffect(() => {
-    const loadRoadmapData = async () => {
+    const loadRoadmapData = () => {
       try {
         setIsLoading(true);
-        const projectData = await fetchGitHubProjectData();
+        const projectData = getHardcodedProjectData();
         
         if (projectData.error) {
           setError(projectData.error);
@@ -52,7 +52,7 @@ const Roadmap: React.FC = () => {
           setStatusGroups(groups);
         }
       } catch (err) {
-        console.error('Failed to fetch roadmap data:', err);
+        console.error('Failed to load roadmap data:', err);
         setError('Failed to load roadmap data');
       } finally {
         setIsLoading(false);
@@ -242,6 +242,9 @@ const Roadmap: React.FC = () => {
                       >
                         <div className={styles.cardContent}>
                           <div className={styles.categoryBadge}>
+                            {item.projectNumber && PROJECT_ICONS[item.projectNumber] && (
+                              <img src={PROJECT_ICONS[item.projectNumber]} alt="Project icon" width="14" height="14" />
+                            )}
                             <span className={`${styles.categoryText} ${styles[item.category]}`}>
                               {item.category === 'governance' ? 'GOVERNANCE & PRODUCT' : 'AI & RESEARCH'}
                             </span>
