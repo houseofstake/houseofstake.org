@@ -10,13 +10,12 @@ import 'dotenv/config';
 const config: Config = {
   title: 'House of Stake',
   tagline: "HoS is the NEAR ecosystem's social governance platform",
-  favicon: 'img/favicon.png',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
-
 
   // Set the production url of your site here
   url: process.env.SITE_URL || 'https://houseofstake.github.io',
@@ -58,7 +57,8 @@ const config: Config = {
         blog: {
           showReadingTime: true,
           blogTitle: 'House of Stake Blog',
-          blogDescription: 'Latest updates and insights from the NEAR House of Stake community',
+          blogDescription:
+            'Latest updates and insights from the NEAR House of Stake community',
           postsPerPage: 10,
           blogSidebarTitle: 'Recent posts',
           blogSidebarCount: 5,
@@ -79,7 +79,7 @@ const config: Config = {
       title: 'House of Stake',
       logo: {
         alt: 'NEAR Logo',
-        src: 'img/182fdc317f272c138653a6ca64dcec845f43ec76.svg',
+        src: 'img/near-logo.svg',
       },
       items: [
         {

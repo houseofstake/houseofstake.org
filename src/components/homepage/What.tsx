@@ -11,12 +11,14 @@ interface CardData {
 const cards: CardData[] = [
   {
     title: 'What is HoS?',
-    description: 'House of Stake is a governance framework for the NEAR ecosystem, designed to facilitate decentralized decision-making.',
+    description:
+      'House of Stake is a governance framework for the NEAR ecosystem, designed to facilitate decentralized decision-making.',
     link: '/docs/',
   },
   {
     title: 'How Governance Works',
-    description: 'Understand the veNEAR token, voting mechanisms, and proposal process that power our decentralized governance system.',
+    description:
+      'Understand the veNEAR token, voting mechanisms, and proposal process that power our decentralized governance system.',
     link: '/docs/governance-system/what-is-venear',
   },
   {
@@ -42,9 +44,27 @@ const What: React.FC = () => {
                 <div className={styles.arrowWrapper}>
                   <div className={styles.topLine} />
                   <div className={styles.arrowUpRight}>
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 30L30 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M15 10H30V25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 30L30 10"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M15 10H30V25"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </div>
                   <div className={styles.bottomLine} />

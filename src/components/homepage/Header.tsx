@@ -42,7 +42,7 @@ const Header: React.FC = () => {
     >
       <Link to="/" className={styles.iconContainer}>
         <img
-          src="/img/182fdc317f272c138653a6ca64dcec845f43ec76.svg"
+          src="/img/near-logo.svg"
           alt="NEAR Logo"
           className={styles.logo}
         />

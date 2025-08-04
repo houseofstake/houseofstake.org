@@ -5,7 +5,8 @@
 import docusaurusConfig from '@generated/docusaurus.config';
 
 // Get GitHub token from Docusaurus custom fields (set at build time)
-const GITHUB_TOKEN = docusaurusConfig.customFields?.githubToken as string || '';
+const GITHUB_TOKEN =
+  (docusaurusConfig.customFields?.githubToken as string) || '';
 
 export interface GitHubProjectItem {
   id: string;
@@ -89,7 +90,13 @@ export function getHardcodedProjectData(): GitHubProjectData {
     ['Done', KANBAN_STATE_COLORS['Done']],
   ]);
 
-  const columns = ['Todo', 'Next Sprint/On Deck', 'This Sprint', 'Paused/Blocked', 'Done'];
+  const columns = [
+    'Todo',
+    'Next Sprint/On Deck',
+    'This Sprint',
+    'Paused/Blocked',
+    'Done',
+  ];
 
   const items: RoadmapItem[] = [
     // Todo items

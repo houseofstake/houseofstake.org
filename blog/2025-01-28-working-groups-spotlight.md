@@ -17,11 +17,13 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
 **Nulla pariatur**: Excepteur sint occaecat
 
 ### At Vero Eos:
+
 - Et accusamus et iusto odio dignissimos
 - Ducimus qui blanditiis praesentium
 - Voluptatum deleniti atque corrupti
 
 ### Quos Dolores:
+
 - Et quas molestias excepturi sint
 - Occaecati cupiditate non provident
 - Similique sunt in culpa qui officia
@@ -34,11 +36,13 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
 **Nam libero**: Tempore cum soluta
 
 ### Nobis Est Eligendi:
+
 - Optio cumque nihil impedit
 - Quo minus id quod maxime
 - Placeat facere possimus
 
 ### Omnis Voluptas:
+
 1. **Assumenda est**: Omnis dolor repellendus
 2. **Temporibus autem**: Quibusdam et aut officiis
 3. **Debitis aut**: Rerum necessitatibus saepe
@@ -49,11 +53,13 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
 **Itaque earum**: Rerum hic tenetur a sapiente
 
 ### Delectus Ut Aut:
+
 - **Reiciendis voluptatibus**: Maiores alias consequatur
 - **Aut perferendis**: Doloribus asperiores repellat
 - **Et aut officiis**: Debitis aut rerum necessitatibus
 
 ### Saepe Eveniet:
+
 - Ut et voluptates repudiandae
 - Sint et molestiae non recusandae
 - Itaque earum rerum hic tenetur
@@ -64,11 +70,13 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
 **Alias consequatur**: Aut perferendis doloribus
 
 ### Asperiores Repellat:
+
 - **Nam libero tempore**: Cum soluta nobis est
 - **Eligendi optio cumque**: Nihil impedit quo minus
 - **Id quod maxime**: Placeat facere possimus
 
 ### Omnis Voluptas:
+
 - Assumenda est omnis dolor
 - Repellendus temporibus autem
 - Quibusdam et aut officiis debitis
@@ -92,6 +100,7 @@ Saepe eveniet ut et voluptates:
 ## Repellendus Temporibus
 
 Auem quibusdam et aut:
+
 - Officiis debitis aut rerum
 - Necessitatibus saepe eveniet
 - Ut et voluptates repudiandae sint
@@ -100,6 +109,7 @@ Auem quibusdam et aut:
 ## Itaque Earum Rerum
 
 Hic tenetur a sapiente:
+
 - Delectus ut aut reiciendis
 - Voluptatibus maiores alias
 - Consequatur aut perferendis
@@ -113,4 +123,4 @@ Facere possimus [omnis voluptas](/docs/structure/working-groups-overview) assume
 
 ---
 
-*Dolor repellendus temporibus autem quibusdam et aut officiis debitis aut rerum.*
+_Dolor repellendus temporibus autem quibusdam et aut officiis debitis aut rerum._

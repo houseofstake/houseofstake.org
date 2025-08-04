@@ -20,7 +20,7 @@ By locking NEAR, stNEAR, or liNEAR tokens for a fixed period (from 3 months up t
 
 veNEAR creates a strong alignment between governance power and economic commitment. Those with more at stake—literally and figuratively—have more influence, encouraging responsible, engaged decision-making that supports the long-term health of the ecosystem.
 
-![veNEAR Governance Model](/img/4262b3cb81555c40e4b2b30de47a378581d6184e.png)`,
+![veNEAR Governance Model](/img/venear-governance-model.png)`,
   },
   {
     id: 'locking',
@@ -157,7 +157,6 @@ House of Stake is designed as an evolving governance system. To stay relevant, i
   },
 ];
 
-
 const GovernanceSystem: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('venear');
   const [expandedAccordions, setExpandedAccordions] = useState<string[]>([
@@ -246,17 +245,41 @@ const GovernanceSystem: React.FC = () => {
                   className={`${styles.accordionContent} ${expandedAccordions.includes(tab.id) ? styles.expanded : ''}`}
                 >
                   <div className={styles.accordionText}>
-                    <Markdown 
+                    <Markdown
                       remarkPlugins={[remarkGfm]}
                       components={{
-                        table: ({children}) => <table className={styles.dataTable}>{children}</table>,
-                        h2: ({children}) => <h2 className={styles.contentHeading2}>{children}</h2>,
-                        h3: ({children}) => <h3 className={styles.contentHeading3}>{children}</h3>,
-                        ul: ({children}) => <ul className={styles.contentList}>{children}</ul>,
-                        ol: ({children}) => <ol className={styles.contentOrderedList}>{children}</ol>,
-                        li: ({children}) => <li className={styles.contentListItem}>{children}</li>,
-                        strong: ({children}) => <strong className={styles.contentStrong}>{children}</strong>,
-                        img: ({src, alt}) => <img src={src} alt={alt} className={styles.contentInlineImage} />,
+                        table: ({ children }) => (
+                          <table className={styles.dataTable}>{children}</table>
+                        ),
+                        h2: ({ children }) => (
+                          <h2 className={styles.contentHeading2}>{children}</h2>
+                        ),
+                        h3: ({ children }) => (
+                          <h3 className={styles.contentHeading3}>{children}</h3>
+                        ),
+                        ul: ({ children }) => (
+                          <ul className={styles.contentList}>{children}</ul>
+                        ),
+                        ol: ({ children }) => (
+                          <ol className={styles.contentOrderedList}>
+                            {children}
+                          </ol>
+                        ),
+                        li: ({ children }) => (
+                          <li className={styles.contentListItem}>{children}</li>
+                        ),
+                        strong: ({ children }) => (
+                          <strong className={styles.contentStrong}>
+                            {children}
+                          </strong>
+                        ),
+                        img: ({ src, alt }) => (
+                          <img
+                            src={src}
+                            alt={alt}
+                            className={styles.contentInlineImage}
+                          />
+                        ),
                       }}
                     >
                       {tab.content}
@@ -287,17 +310,41 @@ const GovernanceSystem: React.FC = () => {
               {activeContent && (
                 <>
                   <div className={styles.contentText}>
-                    <Markdown 
+                    <Markdown
                       remarkPlugins={[remarkGfm]}
                       components={{
-                        table: ({children}) => <table className={styles.dataTable}>{children}</table>,
-                        h2: ({children}) => <h2 className={styles.contentHeading2}>{children}</h2>,
-                        h3: ({children}) => <h3 className={styles.contentHeading3}>{children}</h3>,
-                        ul: ({children}) => <ul className={styles.contentList}>{children}</ul>,
-                        ol: ({children}) => <ol className={styles.contentOrderedList}>{children}</ol>,
-                        li: ({children}) => <li className={styles.contentListItem}>{children}</li>,
-                        strong: ({children}) => <strong className={styles.contentStrong}>{children}</strong>,
-                        img: ({src, alt}) => <img src={src} alt={alt} className={styles.contentInlineImage} />,
+                        table: ({ children }) => (
+                          <table className={styles.dataTable}>{children}</table>
+                        ),
+                        h2: ({ children }) => (
+                          <h2 className={styles.contentHeading2}>{children}</h2>
+                        ),
+                        h3: ({ children }) => (
+                          <h3 className={styles.contentHeading3}>{children}</h3>
+                        ),
+                        ul: ({ children }) => (
+                          <ul className={styles.contentList}>{children}</ul>
+                        ),
+                        ol: ({ children }) => (
+                          <ol className={styles.contentOrderedList}>
+                            {children}
+                          </ol>
+                        ),
+                        li: ({ children }) => (
+                          <li className={styles.contentListItem}>{children}</li>
+                        ),
+                        strong: ({ children }) => (
+                          <strong className={styles.contentStrong}>
+                            {children}
+                          </strong>
+                        ),
+                        img: ({ src, alt }) => (
+                          <img
+                            src={src}
+                            alt={alt}
+                            className={styles.contentInlineImage}
+                          />
+                        ),
                       }}
                     >
                       {activeContent.content}

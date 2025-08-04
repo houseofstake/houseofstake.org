@@ -151,13 +151,25 @@ const StructureRoles: React.FC = () => {
                 <div className={styles.expandedContentInner}>
                   <div className={styles.expandedTextWrapper}>
                     <div className={styles.expandedText}>
-                      <Markdown 
+                      <Markdown
                         remarkPlugins={[remarkGfm]}
                         components={{
-                          p: ({children}) => <p className={styles.contentLine}>{children}</p>,
-                          ul: ({children}) => <ul className={styles.contentList}>{children}</ul>,
-                          li: ({children}) => <li className={styles.contentListItem}>{children}</li>,
-                          strong: ({children}) => <strong className={styles.contentStrong}>{children}</strong>,
+                          p: ({ children }) => (
+                            <p className={styles.contentLine}>{children}</p>
+                          ),
+                          ul: ({ children }) => (
+                            <ul className={styles.contentList}>{children}</ul>
+                          ),
+                          li: ({ children }) => (
+                            <li className={styles.contentListItem}>
+                              {children}
+                            </li>
+                          ),
+                          strong: ({ children }) => (
+                            <strong className={styles.contentStrong}>
+                              {children}
+                            </strong>
+                          ),
                         }}
                       >
                         {item.content}

@@ -50,4 +50,4 @@ Non provident, similique sunt in culpa qui officia deserunt mollitia animi.
 
 ---
 
-*Id est laborum et dolorum fuga harum quidem rerum facilis est et expedita distinctio.*
+_Id est laborum et dolorum fuga harum quidem rerum facilis est et expedita distinctio._

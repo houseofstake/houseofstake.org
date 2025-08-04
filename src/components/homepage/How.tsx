@@ -22,11 +22,12 @@ const How: React.FC = () => {
         </div>
         <div className={styles.textContainer}>
           <p className={styles.description}>
-            House of Stake is a governance framework for the NEAR ecosystem, designed to facilitate decentralized decision-making.
+            House of Stake is a governance framework for the NEAR ecosystem,
+            designed to facilitate decentralized decision-making.
           </p>
         </div>
       </div>
-      
+
       <div className={styles.cardsGrid}>
         {features.map((feature, index) => (
           <div key={index} className={styles.squareCard}>
@@ -41,7 +42,7 @@ const How: React.FC = () => {
             <div className={styles.cardBorder} />
           </div>
         ))}
-        
+
         <div className={styles.learnMoreCard}>
           <div className={styles.learnMoreCardInner}>
             <div className={styles.bg} />
@@ -49,13 +50,28 @@ const How: React.FC = () => {
               <div className={styles.learnMoreInnerCardContent}>
                 <div className={styles.bg} />
                 <div className={styles.learnMoreContentTop}>
-                  <Link to="/docs/governance-system/proposal-and-voting-process" className={styles.learnMoreLink}>
+                  <Link
+                    to="/docs/governance-system/proposal-and-voting-process"
+                    className={styles.learnMoreLink}
+                  >
                     <div className={styles.learnMoreText}>
                       <span className={styles.learnMoreLabel}>Learn more</span>
                     </div>
                     <div className={styles.arrowIcon}>
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.5 10.5L10.5 5.5M10.5 5.5H5.5M10.5 5.5V10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.5 10.5L10.5 5.5M10.5 5.5H5.5M10.5 5.5V10.5"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
                       </svg>
                     </div>
                   </Link>

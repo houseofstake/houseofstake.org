@@ -20,22 +20,72 @@ export default function Home(): ReactNode {
         {/* Preload all images for faster loading */}
         {/* Hero and main sections */}
         <link rel="preload" href="/img/hero.png" as="image" type="image/png" />
-        <link rel="preload" href="/img/get_involved.png" as="image" type="image/png" />
-        
+        <link
+          rel="preload"
+          href="/img/get_involved.png"
+          as="image"
+          type="image/png"
+        />
+
         {/* Logo and header */}
-        <link rel="preload" href="/img/182fdc317f272c138653a6ca64dcec845f43ec76.svg" as="image" type="image/svg+xml" />
-        <link rel="preload" href="/img/7362a17600fbfb1a525a67eaca6061513d362c27.svg" as="image" type="image/svg+xml" />
-        
+        <link
+          rel="preload"
+          href="/img/near-logo.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+        <link
+          rel="preload"
+          href="/img/near-logo-button.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+
         {/* Social icons */}
-        <link rel="preload" href="/img/d844f433a694945489021a9342caa22e6247c18e.svg" as="image" type="image/svg+xml" />
-        <link rel="preload" href="/img/c89ebe1c8ba03c7cac32652e2768adfd3f41339b.svg" as="image" type="image/svg+xml" />
-        <link rel="preload" href="/img/e3d72dc08bb70db3f8a2c2219f275f4dc2934a16.svg" as="image" type="image/svg+xml" />
-        <link rel="preload" href="/img/009c4b08ae2422f0e72fb148868714faf971ba43.svg" as="image" type="image/svg+xml" />
-        <link rel="preload" href="/img/f021978b954a445305131d3b44c8e621b9241c33.svg" as="image" type="image/svg+xml" />
-        
+        <link
+          rel="preload"
+          href="/img/blog-icon.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+        <link
+          rel="preload"
+          href="/img/near-forum-icon.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+        <link
+          rel="preload"
+          href="/img/twitter-x-icon.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+        <link
+          rel="preload"
+          href="/img/telegram-icon.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+        <link
+          rel="preload"
+          href="/img/github-icon.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+
         {/* Governance and other icons */}
-        <link rel="preload" href="/img/governance-icon.svg" as="image" type="image/svg+xml" />
-        <link rel="preload" href="/img/4262b3cb81555c40e4b2b30de47a378581d6184e.png" as="image" type="image/png" />
+        <link
+          rel="preload"
+          href="/img/governance-icon.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+        <link
+          rel="preload"
+          href="/img/venear-governance-model.png"
+          as="image"
+          type="image/png"
+        />
       </Head>
 
       <main>

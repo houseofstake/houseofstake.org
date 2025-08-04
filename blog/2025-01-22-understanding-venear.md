@@ -20,6 +20,7 @@ Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dic
 ### 1. Quibusdam Et Aut
 
 Officiis debitis aut rerum necessitatibus saepe eveniet:
+
 - Ut et voluptates repudiandae
 - Sint et molestiae non recusandae
 - Itaque earum rerum hic tenetur
@@ -30,6 +31,7 @@ Voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repe
 ### 2. Nam Libero Tempore
 
 Cum soluta nobis est eligendi optio:
+
 - **Cumque nihil**: Impedit quo minus id quod maxime
 - **Placeat facere**: Possimus omnis voluptas assumenda
 - **Est omnis dolor**: Repellendus temporibus autem
@@ -47,6 +49,7 @@ Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore 
 ### Ut Enim Ad Minim
 
 Veniam quis nostrud exercitation:
+
 - **Ullamco laboris**: Nisi ut aliquip ex ea commodo
 - **Consequat duis**: Aute irure dolor in reprehenderit
 
@@ -57,6 +60,7 @@ Esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat no
 ## Sunt In Culpa
 
 Qui officia deserunt:
+
 - Mollit anim id est laborum
 - Sed ut perspiciatis unde omnis
 - Iste natus error sit voluptatem
@@ -65,6 +69,7 @@ Qui officia deserunt:
 ## Totam Rem Aperiam
 
 Eaque ipsa quae ab illo:
+
 - **Inventore veritatis**: Et quasi architecto beatae vitae
 - **Dicta sunt explicabo**: Nemo enim ipsam voluptatem quia
 - **Voluptas sit aspernatur**: Aut odit aut fugit sed quia
@@ -72,6 +77,7 @@ Eaque ipsa quae ab illo:
 ## Consequuntur Magni
 
 Dolores eos qui:
+
 - Ratione voluptatem sequi nesciunt
 - Neque porro quisquam est qui dolorem
 - Ipsum quia dolor sit amet consectetur
@@ -83,4 +89,4 @@ Incidunt ut labore et dolore magnam aliquam quaerat voluptatem ut enim ad minima
 
 ---
 
-*Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.*
+_Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat._
