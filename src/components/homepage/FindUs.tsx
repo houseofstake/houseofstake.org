@@ -31,13 +31,13 @@ const socialCards: SocialCard[] = [
     id: 'telegram',
     title: 'Telegram',
     icon: '/img/009c4b08ae2422f0e72fb148868714faf971ba43.svg',
-    href: 'https://t.me/nearprotocol',
+    href: 'https://t.me/NEAR_HouseOfStake',
   },
   {
     id: 'github',
     title: 'GitHub',
     icon: '/img/f021978b954a445305131d3b44c8e621b9241c33.svg',
-    href: 'https://github.com/near',
+    href: 'https://github.com/houseofstake',
   },
 ];
 
@@ -67,9 +67,9 @@ const FindUs: React.FC = () => {
                 <div className={styles.textWrapper}>
                   <h3 className={styles.cardTitle}>{card.title}</h3>
                 </div>
-                <img 
-                  src={card.icon} 
-                  alt={card.title} 
+                <img
+                  src={card.icon}
+                  alt={card.title}
                   className={styles.cardIcon}
                 />
               </div>
@@ -77,9 +77,27 @@ const FindUs: React.FC = () => {
                 <div className={styles.arrowWrapper}>
                   <div className={styles.topLine} />
                   <div className={styles.arrowIcon}>
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 30L30 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M15 10H30V25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 30L30 10"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M15 10H30V25"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </div>
                   <div className={styles.bottomLine} />
@@ -89,7 +107,7 @@ const FindUs: React.FC = () => {
             <div className={styles.cardBorder} />
           </a>
         ))}
-        
+
         {/* Empty card for layout - hidden on mobile */}
         <div className={styles.emptyCard}>
           <div className={styles.cardInner}>
