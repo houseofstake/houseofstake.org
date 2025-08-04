@@ -19,7 +19,7 @@ const Header: React.FC = () => {
         document.documentElement.scrollTop ||
         document.body.scrollTop ||
         window.scrollY;
-      const shouldBeScrolled = scrollTop > 50;
+      const shouldBeScrolled = scrollTop > 0;
 
       setIsScrolled((prev) =>
         prev !== shouldBeScrolled ? shouldBeScrolled : prev
