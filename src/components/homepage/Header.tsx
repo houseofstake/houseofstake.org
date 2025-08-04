@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from '@docusaurus/Link';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from './Header.module.css';
 
-const Header: React.FC = () => {
+const HeaderContent: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -15,7 +16,10 @@ const Header: React.FC = () => {
       setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Check initial scroll position
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -85,6 +89,14 @@ const Header: React.FC = () => {
         </nav>
       </div>
     </header>
+  );
+};
+
+const Header: React.FC = () => {
+  return (
+    <BrowserOnly fallback={<header className={styles.header}></header>}>
+      {() => <HeaderContent />}
+    </BrowserOnly>
   );
 };
 
