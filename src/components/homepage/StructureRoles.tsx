@@ -43,16 +43,105 @@ These groups develop strategy, shape proposals, and support execution. They oper
   {
     id: 'screening',
     title: 'Screening Committee',
+    content: `The **Screening Committee** is a key governance body in House of Stake. It pre-screens proposals, oversees delegates, and ensures alignment with protocol goals.
+
+To enable a fast launch, the **NEAR Foundation** appointed an **interim Committee** consisting of:
+
+- Bianca Guimaraes-Chadwick (NEAR Foundation)
+- Lane Rettig (NEAR Foundation)
+- Bowen Wang (Near One)
+- Gauntlet (1 seat)
+
+This interim Committee selected the first cohort of Endorsed Delegates and will **step down** after the community approves a formal **Charter** and elects a new Committee.
+
+---
+
+## 🔄 What's Next
+
+- A **Screening Committee Charter** will be proposed (target: mid-August)
+- It will define elections, term lengths, responsibilities, and structure
+- Once approved, a new **community-elected Committee** will take over
+
+---
+
+## ✅ Responsibilities
+
+- **Pre-screen proposals** before full vote (rejected proposals require 75% supermajority)
+- **Manage delegate process**: calls, selection, and oversight
+- **Adjust veNEAR rewards** to stay competitive
+- **Enforce Code of Conduct** and handle conflicts
+- **Ensure transparency** by publishing decisions and rationale
+
+In the future, authority over delegate selection will shift to the **House of Delegates**.
+
+---
+
+## 🗳️ Get Involved
+
+Want to nominate someone or share input?
+Join the discussion in the forum, Telegram, or the proposal repo.`,
     link: '/docs/structure/screening-committee',
   },
   {
     id: 'security',
     title: 'Security Council',
+    content: `The Security Council acts as the final line of defense within House of Stake governance, safeguarding the NEAR protocol's security, integrity, and resilience—especially during emergencies or critical upgrades.
+
+## Purpose
+
+- Respond to urgent threats and vulnerabilities
+- Coordinate emergency actions (e.g. halts, patches)
+- Oversee transitions during sensitive governance changes
+- Preserve network trust in times of crisis
+
+## Structure
+
+The Council includes:
+
+- **Core Members** – Permanent reps from key NEAR ecosystem orgs (e.g. NEAR Foundation, Near One)
+- **Key Members** – Independent experts with technical or strategic depth
+
+This mix ensures stability while allowing for diverse input.
+
+## Responsibilities
+
+- Trigger emergency interventions
+- Publicly disclose actions within 7 days
+- Monitor proposals for malicious behavior
+- Coordinate with validators, devs, and governance actors
+- Maintain the technical integrity of governance
+- Support the Screening Committee on security issues
+
+## Accountability
+
+Though their powers are reserved for exceptional situations, Security Council members must act transparently and in the ecosystem's best interest. Their role and authority may evolve through governance decisions as the system matures.`,
     link: '/docs/structure/security-council',
   },
   {
     id: 'responsibilities',
     title: 'Responsibilities & Scope (RACI)',
+    content: `The RACI model helps define how governance works in House of Stake by clarifying who does what. Each key participant—like the Screening Committee, Delegates, or veNEAR holders—has a distinct role:
+
+**R** – Responsible: The ones doing the work
+
+**A** – Accountable: The ones who own the outcome
+
+**C** – Consulted: Those who offer input or advice
+
+**I** – Informed: Those who stay in the loop
+
+Here's how these roles are distributed across core governance processes:
+
+| Process | Screening Committee | Endorsed Delegates | Delegates | Security Council | veNEAR Holders |
+|---------|-------------------|-------------------|-----------|-----------------|----------------|
+| Pre-screening grant proposals | R, A | | | C | I |
+| Voting on proposals | | R, A | R, A | I | R, A |
+| Selecting new delegates | R | | | C | I |
+| Removing bad actors | R | | | C | I |
+| Emergency intervention | | | | R, A | I |
+| Updating reward frameworks | R, A | | | C | I |
+
+These roles aren't set in stone—they may evolve as the system grows.`,
     link: '/docs/structure/responsibilities-and-scope',
   },
   {
