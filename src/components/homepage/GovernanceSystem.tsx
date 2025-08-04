@@ -95,52 +95,36 @@ const GovernanceSystem: React.FC = () => {
                     <span className={styles.accordionTitle}>{tab.title}</span>
                   </button>
                   <button
-                    className={styles.accordionIconButton}
+                    className={`${styles.accordionIconButton} ${expandedAccordions.includes(tab.id) ? styles.expanded : ''}`}
                     onClick={() => toggleAccordion(tab.id)}
                     aria-label={expandedAccordions.includes(tab.id) ? 'Collapse' : 'Expand'}
                   >
-                    {expandedAccordions.includes(tab.id) ? (
-                      <svg 
-                        className={styles.accordionIcon}
-                        width="57" 
-                        height="58" 
-                        viewBox="0 0 57 58" 
-                        fill="none" 
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M28.7164 43.1421V14.8579" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M17.2256 26.3481L28.7161 14.8577L40.2066 26.3481" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    ) : (
-                      <svg 
-                        className={styles.accordionIcon}
-                        width="57" 
-                        height="58" 
-                        viewBox="0 0 57 58" 
-                        fill="none" 
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M28.7153 14.8579V43.1421" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M40.2061 31.6519L28.7156 43.1423L17.2251 31.6519" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    )}
+                    <svg 
+                      className={styles.accordionIcon}
+                      width="57" 
+                      height="58" 
+                      viewBox="0 0 57 58" 
+                      fill="none" 
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M28.7153 14.8579V43.1421" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M40.2061 31.6519L28.7156 43.1423L17.2251 31.6519" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </button>
                 </div>
-                {expandedAccordions.includes(tab.id) && (
-                  <div className={styles.accordionContent}>
-                    <div className={styles.accordionText}>
-                      {tab.content.split('\n\n').map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
-                      ))}
-                    </div>
-                    {tab.image && (
-                      <div 
-                        className={styles.accordionImage}
-                        style={{ backgroundImage: `url('${tab.image}')` }}
-                      />
-                    )}
+                <div className={`${styles.accordionContent} ${expandedAccordions.includes(tab.id) ? styles.expanded : ''}`}>
+                  <div className={styles.accordionText}>
+                    {tab.content.split('\n\n').map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
+                    ))}
                   </div>
-                )}
+                  {tab.image && (
+                    <div 
+                      className={styles.accordionImage}
+                      style={{ backgroundImage: `url('${tab.image}')` }}
+                    />
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -161,7 +145,7 @@ const GovernanceSystem: React.FC = () => {
               ))}
             </div>
 
-            <div className={styles.tabContent}>
+            <div className={styles.tabContent} key={activeTab}>
               {activeContent && (
                 <>
                   <div className={styles.contentText}>

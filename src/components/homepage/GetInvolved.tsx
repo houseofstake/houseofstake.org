@@ -10,11 +10,11 @@ interface CardData {
 const cards: CardData[] = [
   {
     title: 'Join the Forum',
-    link: 'https://gov.near.org',
+    link: 'https://gov.near.org/c/house-of-stake/158',
   },
   {
     title: 'Read Proposals',
-    link: '/docs/get-involved/submit-a-proposal',
+    link: 'https://agora-near.vercel.app/proposals',
   },
   {
     title: 'Contribute to code',
@@ -26,7 +26,7 @@ const GetInvolved: React.FC = () => {
   return (
     <section className={styles.sectionSplitTextVisual}>
       <div className={styles.backgroundImage} />
-      
+
       <div className={styles.content}>
         <div className={styles.headerTitle}>
           <div className={styles.container}>
@@ -34,14 +34,16 @@ const GetInvolved: React.FC = () => {
           </div>
           <div className={styles.divider} />
         </div>
-        
+
         <div className={styles.cardsContainer}>
           {cards.map((card, index) => (
-            <Link 
-              key={index} 
-              to={card.link} 
+            <Link
+              key={index}
+              to={card.link}
               className={styles.squareCard}
-              {...(card.link.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              {...(card.link.startsWith('http')
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
             >
               <div className={styles.cardInner}>
                 <div className={styles.bg} />
@@ -54,9 +56,27 @@ const GetInvolved: React.FC = () => {
                   <div className={styles.arrowWrapper}>
                     <div className={styles.topLine} />
                     <div className={styles.arrowIcon}>
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 30L30 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M15 10H30V25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <svg
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10 30L30 10"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M15 10H30V25"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
                       </svg>
                     </div>
                     <div className={styles.bottomLine} />

@@ -23,7 +23,7 @@ const footerSections: FooterSection[] = [
       },
       {
         label: 'NEAR Forum',
-        href: 'https://gov.near.org/t/house-of-stake-updates-transparency-thread/40753/57',
+        href: 'https://gov.near.org/c/house-of-stake/158',
         isExternal: true,
       },
       {
@@ -75,7 +75,9 @@ const Footer: React.FC = () => {
                         href={link.href}
                         className={styles.link}
                         target={link.isExternal ? '_blank' : undefined}
-                        rel={link.isExternal ? 'noopener noreferrer' : undefined}
+                        rel={
+                          link.isExternal ? 'noopener noreferrer' : undefined
+                        }
                       >
                         {link.label}
                       </a>

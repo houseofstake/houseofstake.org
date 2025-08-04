@@ -97,8 +97,8 @@ const StructureRoles: React.FC = () => {
                 )}
               </button>
             </div>
-            {openItem === item.id && item.content && (
-              <div className={styles.expandedContent}>
+            {item.content && (
+              <div className={`${styles.expandedContent} ${openItem === item.id ? styles.open : ''}`}>
                 <div className={styles.expandedContentInner}>
                   <div className={styles.expandedTextWrapper}>
                     <div className={styles.expandedText}>

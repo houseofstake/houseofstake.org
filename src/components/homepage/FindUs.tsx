@@ -21,14 +21,14 @@ const socialCards: SocialCard[] = [
     id: 'forum',
     title: 'NEAR Forum',
     icon: '/img/c89ebe1c8ba03c7cac32652e2768adfd3f41339b.svg',
-    href: 'https://gov.near.org',
+    href: 'https://gov.near.org/c/house-of-stake/158',
     isExternal: true,
   },
   {
     id: 'twitter',
     title: 'X / Twitter',
     icon: '/img/e3d72dc08bb70db3f8a2c2219f275f4dc2934a16.svg',
-    href: 'https://twitter.com/NEARProtocol',
+    href: 'https://x.com/NEARGovernance',
     isExternal: true,
   },
   {
@@ -63,8 +63,8 @@ const FindUs: React.FC = () => {
             key={card.id}
             href={card.href}
             className={styles.squareCard}
-            target={card.isExternal ? "_blank" : undefined}
-            rel={card.isExternal ? "noopener noreferrer" : undefined}
+            target={card.isExternal ? '_blank' : undefined}
+            rel={card.isExternal ? 'noopener noreferrer' : undefined}
             aria-label={`Visit our ${card.title}`}
           >
             <div className={styles.cardInner}>

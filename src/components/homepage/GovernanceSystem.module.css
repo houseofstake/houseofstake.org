@@ -85,23 +85,45 @@
   padding: 32px;
   text-align: left;
   cursor: pointer;
-  transition: all 0.2s ease;
-  opacity: 0.8;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.6;
   position: relative;
   outline: none;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  transform: translateX(0);
 }
 
 .tabButton:hover:not(.active) {
-  /* No hover effect */
+  opacity: 0.8;
+  transform: translateX(8px);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .tabButton.active {
   opacity: 1;
-  background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 121, 102, 0.1);
+  border-color: #FF7966;
+  transform: translateX(8px);
+}
+
+.tabButton.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #FF7966;
+  transform: scaleY(0);
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: scaleY(1);
+  }
 }
 
 .tabTitle {
@@ -120,6 +142,18 @@
   flex-direction: column;
   gap: 32px;
   padding-bottom: 40px;
+  animation: fadeInContent 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .contentText {
@@ -133,6 +167,26 @@
   line-height: 24px;
   color: #EEEEEE;
   margin: 0 0 16px 0;
+  opacity: 0;
+  animation: fadeInParagraph 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.contentText p:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.contentText p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.contentText p:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInParagraph {
+  to {
+    opacity: 1;
+  }
 }
 
 .contentText p:last-child {
@@ -145,6 +199,14 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0;
+  animation: fadeInImage 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
 }
 
 /* GovernanceSystem always has black background regardless of theme */
@@ -226,11 +288,18 @@
   height: 72px;
   background-color: #000000;
   overflow: hidden;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 3px solid transparent;
 }
 
 .accordionHeader:hover {
   background-color: rgba(255, 255, 255, 0.05);
+  border-left-color: rgba(255, 121, 102, 0.5);
+}
+
+.accordionHeader.expanded {
+  background-color: rgba(255, 121, 102, 0.05);
+  border-left-color: #FF7966;
 }
 
 .accordionTitleButton {
@@ -268,15 +337,32 @@
 
 .accordionIcon {
   flex-shrink: 0;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   color: #FF7966;
   width: 40px;
   height: 40px;
+  display: block;
+  transform: rotate(0deg);
+}
+
+.accordionIconButton.expanded .accordionIcon {
+  transform: rotate(180deg);
 }
 
 .accordionContent {
-  padding: 0 24px 24px 24px;
   background-color: #000000;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-20px);
+}
+
+.accordionContent.expanded {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 0 24px 24px 24px;
+  transform: translateY(0);
 }
 
 .accordionText {
@@ -289,6 +375,26 @@
 
 .accordionText p {
   margin: 0 0 16px 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordionContent.expanded .accordionText p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.accordionContent.expanded .accordionText p:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.accordionContent.expanded .accordionText p:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.accordionContent.expanded .accordionText p:nth-child(3) {
+  transition-delay: 0.2s;
 }
 
 .accordionText p:last-child {
@@ -303,6 +409,14 @@
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 8px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.accordionContent.expanded .accordionImage {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* Mobile breakpoint */
@@ -332,7 +446,7 @@
     font-size: 16px;
   }
   
-  .accordionContent {
+  .accordionContent.expanded {
     padding: 0 20px 20px 20px;
   }
   

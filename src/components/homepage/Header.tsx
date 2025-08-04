@@ -109,7 +109,7 @@ const Header: React.FC = () => {
           </div>
 
           <Link
-            to="/docs"
+            to="https://agora-near.vercel.app/"
             className={styles.participateButton}
             onClick={() => setIsMenuOpen(false)}
           >
