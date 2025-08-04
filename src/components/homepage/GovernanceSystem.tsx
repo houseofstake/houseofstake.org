@@ -21,7 +21,7 @@ veNEAR creates a strong alignment between governance power and economic commitme
   },
   {
     id: 'locking',
-    title: 'Locking Mechanisms',
+    title: 'veNEAR Locking Mechanism',
     content: 'Content for Locking Mechanisms will be added here.',
   },
   {
@@ -48,26 +48,26 @@ veNEAR creates a strong alignment between governance power and economic commitme
 
 const GovernanceSystem: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('venear');
-  const [expandedAccordions, setExpandedAccordions] = useState<string[]>(['venear']);
+  const [expandedAccordions, setExpandedAccordions] = useState<string[]>([
+    'venear',
+  ]);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 1200);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const activeContent = tabContents.find(tab => tab.id === activeTab);
+  const activeContent = tabContents.find((tab) => tab.id === activeTab);
 
   const toggleAccordion = (id: string) => {
-    setExpandedAccordions(prev => 
-      prev.includes(id) 
-        ? prev.filter(item => item !== id)
-        : [...prev, id]
+    setExpandedAccordions((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
   };
 
@@ -86,7 +86,9 @@ const GovernanceSystem: React.FC = () => {
           <div className={styles.accordionWrapper}>
             {tabContents.map((tab) => (
               <div key={tab.id} className={styles.accordionItem}>
-                <div className={`${styles.accordionHeader} ${expandedAccordions.includes(tab.id) ? styles.expanded : ''}`}>
+                <div
+                  className={`${styles.accordionHeader} ${expandedAccordions.includes(tab.id) ? styles.expanded : ''}`}
+                >
                   <button
                     className={styles.accordionTitleButton}
                     onClick={() => toggleAccordion(tab.id)}
@@ -97,29 +99,47 @@ const GovernanceSystem: React.FC = () => {
                   <button
                     className={`${styles.accordionIconButton} ${expandedAccordions.includes(tab.id) ? styles.expanded : ''}`}
                     onClick={() => toggleAccordion(tab.id)}
-                    aria-label={expandedAccordions.includes(tab.id) ? 'Collapse' : 'Expand'}
+                    aria-label={
+                      expandedAccordions.includes(tab.id)
+                        ? 'Collapse'
+                        : 'Expand'
+                    }
                   >
-                    <svg 
+                    <svg
                       className={styles.accordionIcon}
-                      width="57" 
-                      height="58" 
-                      viewBox="0 0 57 58" 
-                      fill="none" 
+                      width="57"
+                      height="58"
+                      viewBox="0 0 57 58"
+                      fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path d="M28.7153 14.8579V43.1421" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M40.2061 31.6519L28.7156 43.1423L17.2251 31.6519" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path
+                        d="M28.7153 14.8579V43.1421"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M40.2061 31.6519L28.7156 43.1423L17.2251 31.6519"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </button>
                 </div>
-                <div className={`${styles.accordionContent} ${expandedAccordions.includes(tab.id) ? styles.expanded : ''}`}>
+                <div
+                  className={`${styles.accordionContent} ${expandedAccordions.includes(tab.id) ? styles.expanded : ''}`}
+                >
                   <div className={styles.accordionText}>
                     {tab.content.split('\n\n').map((paragraph, index) => (
                       <p key={index}>{paragraph}</p>
                     ))}
                   </div>
                   {tab.image && (
-                    <div 
+                    <div
                       className={styles.accordionImage}
                       style={{ backgroundImage: `url('${tab.image}')` }}
                     />
@@ -149,14 +169,18 @@ const GovernanceSystem: React.FC = () => {
               {activeContent && (
                 <>
                   <div className={styles.contentText}>
-                    {activeContent.content.split('\n\n').map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
-                    ))}
+                    {activeContent.content
+                      .split('\n\n')
+                      .map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                      ))}
                   </div>
                   {activeContent.image && (
-                    <div 
+                    <div
                       className={styles.contentImage}
-                      style={{ backgroundImage: `url('${activeContent.image}')` }}
+                      style={{
+                        backgroundImage: `url('${activeContent.image}')`,
+                      }}
                     />
                   )}
                 </>

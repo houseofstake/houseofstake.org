@@ -13,6 +13,20 @@ const accordionItems: AccordionItem[] = [
   {
     id: 'working-groups',
     title: 'Working Groups Overview',
+    content: `House of Stake includes several working groups composed of endorsed delegates, each focused on a key area of NEAR ecosystem governance.
+
+These groups develop strategy, shape proposals, and support execution.
+They operate independently, coordinate across domains, and share regular updates.
+
+Current groups:
+
+Governance Infrastructure & Processes — voting systems, proposal processes, and governance tools
+
+Ecosystem Growth Strategy — ecosystem expansion, partnerships, and incentive programs
+
+Treasury Strategy & Management — treasury allocation, funding frameworks, and reporting
+
+Network Economics & Security — tokenomics, inflation, and network sustainability`,
     link: '/docs/structure/working-groups-overview',
   },
   {
@@ -86,19 +100,51 @@ const StructureRoles: React.FC = () => {
                 aria-label={openItem === item.id ? 'Collapse' : 'Expand'}
               >
                 {openItem === item.id ? (
-                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="8.75" y="27.125" width="38.5" height="1.75" fill="currentColor"/>
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="8.75"
+                      y="27.125"
+                      width="38.5"
+                      height="1.75"
+                      fill="currentColor"
+                    />
                   </svg>
                 ) : (
-                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="27.125" y="8.75" width="1.75" height="38.5" fill="currentColor"/>
-                    <rect x="8.75" y="27.125" width="38.5" height="1.75" fill="currentColor"/>
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="27.125"
+                      y="8.75"
+                      width="1.75"
+                      height="38.5"
+                      fill="currentColor"
+                    />
+                    <rect
+                      x="8.75"
+                      y="27.125"
+                      width="38.5"
+                      height="1.75"
+                      fill="currentColor"
+                    />
                   </svg>
                 )}
               </button>
             </div>
             {item.content && (
-              <div className={`${styles.expandedContent} ${openItem === item.id ? styles.open : ''}`}>
+              <div
+                className={`${styles.expandedContent} ${openItem === item.id ? styles.open : ''}`}
+              >
                 <div className={styles.expandedContentInner}>
                   <div className={styles.expandedTextWrapper}>
                     <div className={styles.expandedText}>
