@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       <Header />
       <div
         className={styles.heroBackground}
-        style={{ backgroundImage: `url('/img/hero.svg')` }}
+        style={{ backgroundImage: `url('/img/hero.png')` }}
       />
       <div className={styles.heroContentWrapper}>
         <div className={styles.heroContent}>

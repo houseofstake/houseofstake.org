@@ -19,8 +19,8 @@ export default function Home(): ReactNode {
         <title>{`${siteConfig.title}`}</title>
         {/* Preload all images for faster loading */}
         {/* Hero and main sections */}
-        <link rel="preload" href="/img/hero.svg" as="image" type="image/svg+xml" />
-        <link rel="preload" href="/img/get_involved.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/img/hero.png" as="image" type="image/png" />
+        <link rel="preload" href="/img/get_involved.png" as="image" type="image/png" />
         
         {/* Logo and header */}
         <link rel="preload" href="/img/182fdc317f272c138653a6ca64dcec845f43ec76.svg" as="image" type="image/svg+xml" />
