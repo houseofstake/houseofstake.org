@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import styles from './StructureRoles.module.css';
 
 interface AccordionItem {
@@ -15,26 +17,27 @@ const accordionItems: AccordionItem[] = [
     title: 'Working Groups Overview',
     content: `House of Stake includes several working groups composed of endorsed delegates, each focused on a key area of NEAR ecosystem governance.
 
-These groups develop strategy, shape proposals, and support execution.
-They operate independently, coordinate across domains, and share regular updates.
+These groups develop strategy, shape proposals, and support execution. They operate independently, coordinate across domains, and share regular updates.
 
-Current groups:
+**Current groups:**
 
-Governance Infrastructure & Processes — voting systems, proposal processes, and governance tools
+- **Governance Infrastructure & Processes** — voting systems, proposal processes, and governance tools
 
-Ecosystem Growth Strategy — ecosystem expansion, partnerships, and incentive programs
+- **Ecosystem Growth Strategy** — ecosystem expansion, partnerships, and incentive programs
 
-Treasury Strategy & Management — treasury allocation, funding frameworks, and reporting
+- **Treasury Strategy & Management** — treasury allocation, funding frameworks, and reporting
 
-Network Economics & Security — tokenomics, inflation, and network sustainability`,
+- **Network Economics & Security** — tokenomics, inflation, and network sustainability`,
     link: '/docs/structure/working-groups-overview',
   },
   {
     id: 'delegates',
     title: 'Delegates & Participants',
-    content: `Delegates: trusted members who vote on proposals, provide rationale, and engage with the community.
-Participants: any veNEAR holder can vote, submit proposals, or delegate their voting power.
-Endorsed Delegates: selected through a screening process, must maintain high participation and transparency.`,
+    content: `**Delegates:** trusted members who vote on proposals, provide rationale, and engage with the community.
+
+**Participants:** any veNEAR holder can vote, submit proposals, or delegate their voting power.
+
+**Endorsed Delegates:** selected through a screening process, must maintain high participation and transparency.`,
     link: '/docs/structure/delegates-and-participants',
   },
   {
@@ -148,11 +151,17 @@ const StructureRoles: React.FC = () => {
                 <div className={styles.expandedContentInner}>
                   <div className={styles.expandedTextWrapper}>
                     <div className={styles.expandedText}>
-                      {item.content.split('\n').map((line, index) => (
-                        <p key={index} className={styles.contentLine}>
-                          {line}
-                        </p>
-                      ))}
+                      <Markdown 
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                          p: ({children}) => <p className={styles.contentLine}>{children}</p>,
+                          ul: ({children}) => <ul className={styles.contentList}>{children}</ul>,
+                          li: ({children}) => <li className={styles.contentListItem}>{children}</li>,
+                          strong: ({children}) => <strong className={styles.contentStrong}>{children}</strong>,
+                        }}
+                      >
+                        {item.content}
+                      </Markdown>
                     </div>
                   </div>
                   <div className={styles.spacer} />

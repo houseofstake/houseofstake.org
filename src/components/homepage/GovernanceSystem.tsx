@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import styles from './GovernanceSystem.module.css';
 
 interface TabContent {
@@ -22,7 +24,27 @@ veNEAR creates a strong alignment between governance power and economic commitme
   {
     id: 'locking',
     title: 'veNEAR Locking Mechanism',
-    content: 'Content for Locking Mechanisms will be added here.',
+    content: `To obtain veNEAR — the voting token used in NEAR governance — users must lock NEAR, stNEAR, or liNEAR in a vote-escrow contract. House of Stake supports two locking mechanisms:
+
+## 1. Fixed Lock
+
+Users choose a fixed lock-up period, ranging from 3 months to 4 years. The longer the lock duration, the more veNEAR they receive per token. Voting power (veNEAR) decays linearly over time until the lock expires.
+
+- **Minimum duration:** 3 months
+- **Maximum duration:** 4 years
+- **Conversion rate:** Increases with longer lock durations
+- **Best for:** Users confident in long-term alignment
+
+The amount of veNEAR received is proportional to both the number of tokens locked and the duration selected.
+
+### 📊 Example: veNEAR by Lock Duration
+
+| User | Locked NEAR | Lock-up (months) | veNEAR | veNEAR Premium |
+|------|-------------|------------------|--------|----------------|
+| A    | 1           | 12               | 1.5    | 50%            |
+| B    | 1           | 24               | 2.0    | 100%           |
+| C    | 1           | 36               | 2.5    | 150%           |
+| D    | 1           | 48               | 3.0    | 200%           |`,
   },
   {
     id: 'proposal',
@@ -45,6 +67,7 @@ veNEAR creates a strong alignment between governance power and economic commitme
     content: 'Content for Versioning & Evolution will be added here.',
   },
 ];
+
 
 const GovernanceSystem: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('venear');
@@ -134,9 +157,19 @@ const GovernanceSystem: React.FC = () => {
                   className={`${styles.accordionContent} ${expandedAccordions.includes(tab.id) ? styles.expanded : ''}`}
                 >
                   <div className={styles.accordionText}>
-                    {tab.content.split('\n\n').map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
-                    ))}
+                    <Markdown 
+                      remarkPlugins={[remarkGfm]}
+                      components={{
+                        table: ({children}) => <table className={styles.dataTable}>{children}</table>,
+                        h2: ({children}) => <h2 className={styles.contentHeading2}>{children}</h2>,
+                        h3: ({children}) => <h3 className={styles.contentHeading3}>{children}</h3>,
+                        ul: ({children}) => <ul className={styles.contentList}>{children}</ul>,
+                        li: ({children}) => <li className={styles.contentListItem}>{children}</li>,
+                        strong: ({children}) => <strong className={styles.contentStrong}>{children}</strong>,
+                      }}
+                    >
+                      {tab.content}
+                    </Markdown>
                   </div>
                   {tab.image && (
                     <div
@@ -169,11 +202,19 @@ const GovernanceSystem: React.FC = () => {
               {activeContent && (
                 <>
                   <div className={styles.contentText}>
-                    {activeContent.content
-                      .split('\n\n')
-                      .map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
-                      ))}
+                    <Markdown 
+                      remarkPlugins={[remarkGfm]}
+                      components={{
+                        table: ({children}) => <table className={styles.dataTable}>{children}</table>,
+                        h2: ({children}) => <h2 className={styles.contentHeading2}>{children}</h2>,
+                        h3: ({children}) => <h3 className={styles.contentHeading3}>{children}</h3>,
+                        ul: ({children}) => <ul className={styles.contentList}>{children}</ul>,
+                        li: ({children}) => <li className={styles.contentListItem}>{children}</li>,
+                        strong: ({children}) => <strong className={styles.contentStrong}>{children}</strong>,
+                      }}
+                    >
+                      {activeContent.content}
+                    </Markdown>
                   </div>
                   {activeContent.image && (
                     <div
