@@ -6,18 +6,30 @@ const Hero: React.FC = () => {
   return (
     <section className={styles.hero}>
       <Header />
-      <div className={styles.heroBackground} style={{ backgroundImage: `url('/img/hero.svg')` }} />
+      <div
+        className={styles.heroBackground}
+        style={{ backgroundImage: `url('/img/hero.svg')` }}
+      />
       <div className={styles.heroContentWrapper}>
         <div className={styles.heroContent}>
           <div className={styles.textContentWrapper}>
             <div className={styles.textContentTitle}>
               <div className={styles.titleWrapper}>
                 <p className={styles.subtitle}>House of Stake</p>
-                <h1 className={styles.title}>Governance of the NEAR Ecosystem</h1>
+                <h1 className={styles.title}>
+                  Governance of the NEAR Ecosystem
+                </h1>
               </div>
-              <a href="/docs" className={styles.specialButton}>
+              <a
+                href="https://agora-near.vercel.app/"
+                target="_blank"
+                className={styles.specialButton}
+              >
                 <div className={styles.logoIcon}>
-                  <img src="/img/7362a17600fbfb1a525a67eaca6061513d362c27.svg" alt="NEAR Logo" />
+                  <img
+                    src="/img/7362a17600fbfb1a525a67eaca6061513d362c27.svg"
+                    alt="NEAR Logo"
+                  />
                 </div>
                 <span className={styles.buttonLabel}>Participate</span>
               </a>

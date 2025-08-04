@@ -40,16 +40,18 @@ const Header: React.FC = () => {
     <header
       className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuActive : ''}`}
     >
-      <div className={styles.iconContainer}>
+      <Link to="/" className={styles.iconContainer}>
         <img
           src="/img/182fdc317f272c138653a6ca64dcec845f43ec76.svg"
           alt="NEAR Logo"
           className={styles.logo}
         />
-      </div>
+      </Link>
 
       <div className={styles.container}>
-        <h1 className={styles.brandTitle}>House of Stake</h1>
+        <Link to="/" className={styles.brandLink}>
+          <h1 className={styles.brandTitle}>House of Stake</h1>
+        </Link>
 
         <button
           className={styles.hamburger}
@@ -70,7 +72,7 @@ const Header: React.FC = () => {
             className={styles.menuItem}
             onClick={() => setIsMenuOpen(false)}
           >
-            Documentation
+            Docs
           </Link>
 
           <Link

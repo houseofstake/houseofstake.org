@@ -79,23 +79,23 @@ const config: Config = {
       title: 'House of Stake',
       logo: {
         alt: 'NEAR Logo',
-        src: 'img/near-logo.svg',
+        src: 'img/182fdc317f272c138653a6ca64dcec845f43ec76.svg',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
-          position: 'left',
+          position: 'right',
           label: 'Docs',
         },
         {
           to: '/blog',
           label: 'Blog',
-          position: 'left',
+          position: 'right',
         },
         {
-          href: 'https://github.com/houseofstake/houseofstake.org',
-          label: 'GitHub',
+          href: 'https://github.com/houseofstake/houseofstake.org/edit/main/README.md',
+          label: 'Edit page',
           position: 'right',
         },
       ],
