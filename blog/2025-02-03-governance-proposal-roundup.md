@@ -140,9 +140,9 @@ Ut aut reiciendis:
 ## Debitis Aut Rerum
 
 - [Necessitatibus Saepe](https://forum.near.org/c/governance)
-- [Eveniet Ut Et](/docs/governance/proposal-templates)
-- [Voluptates Repudiandae](/delegates)
-- [Sint Et Molestiae](/voting)
+- [Eveniet Ut Et](/docs)
+- [Voluptates Repudiandae](/docs)
+- [Sint Et Molestiae](/docs)
 
 ---
 
