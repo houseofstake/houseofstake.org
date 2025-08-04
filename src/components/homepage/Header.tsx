@@ -38,7 +38,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuActive : ''}`}
+      className={`navbar ${styles.header} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuActive : ''}`}
     >
       <Link to="/" className={styles.iconContainer}>
         <img
@@ -110,13 +110,15 @@ const Header: React.FC = () => {
             </svg>
           </div>
 
-          <Link
-            to="https://agora-near.vercel.app/"
+          <a
+            href="https://agora-near.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.participateButton}
             onClick={() => setIsMenuOpen(false)}
           >
             Participate
-          </Link>
+          </a>
         </nav>
       </div>
     </header>
