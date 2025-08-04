@@ -6,38 +6,44 @@ interface SocialCard {
   title: string;
   icon: string;
   href: string;
+  isExternal?: boolean;
 }
 
 const socialCards: SocialCard[] = [
   {
-    id: 'medium',
-    title: 'Medium',
+    id: 'blog',
+    title: 'Blog',
     icon: '/img/d844f433a694945489021a9342caa22e6247c18e.svg',
-    href: 'https://medium.com/near-protocol',
+    href: '/blog',
+    isExternal: false,
   },
   {
     id: 'forum',
     title: 'NEAR Forum',
     icon: '/img/c89ebe1c8ba03c7cac32652e2768adfd3f41339b.svg',
     href: 'https://gov.near.org',
+    isExternal: true,
   },
   {
     id: 'twitter',
     title: 'X / Twitter',
     icon: '/img/e3d72dc08bb70db3f8a2c2219f275f4dc2934a16.svg',
     href: 'https://twitter.com/NEARProtocol',
+    isExternal: true,
   },
   {
     id: 'telegram',
     title: 'Telegram',
     icon: '/img/009c4b08ae2422f0e72fb148868714faf971ba43.svg',
     href: 'https://t.me/NEAR_HouseOfStake',
+    isExternal: true,
   },
   {
     id: 'github',
     title: 'GitHub',
     icon: '/img/f021978b954a445305131d3b44c8e621b9241c33.svg',
     href: 'https://github.com/houseofstake',
+    isExternal: true,
   },
 ];
 
@@ -57,8 +63,8 @@ const FindUs: React.FC = () => {
             key={card.id}
             href={card.href}
             className={styles.squareCard}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={card.isExternal ? "_blank" : undefined}
+            rel={card.isExternal ? "noopener noreferrer" : undefined}
             aria-label={`Visit our ${card.title}`}
           >
             <div className={styles.cardInner}>

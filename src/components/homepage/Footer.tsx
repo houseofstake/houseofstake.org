@@ -17,9 +17,9 @@ const footerSections: FooterSection[] = [
     title: 'Social',
     links: [
       {
-        label: 'Medium (Announcement)',
-        href: 'https://medium.com/@nearcommunitysquad',
-        isExternal: true,
+        label: 'Blog',
+        href: '/blog',
+        isExternal: false,
       },
       {
         label: 'NEAR Forum',

@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from '@docusaurus/Link';
 import styles from './Header.module.css';
 
 const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuActive : ''}`}>
       <div className={styles.iconContainer}>
         <img
           src="/img/182fdc317f272c138653a6ca64dcec845f43ec76.svg"
@@ -16,9 +32,24 @@ const Header: React.FC = () => {
       <div className={styles.container}>
         <h1 className={styles.brandTitle}>House of Stake</h1>
 
-        <nav className={styles.menuContainer}>
-          <Link to="/docs" className={styles.menuItem}>
+        <button
+          className={styles.hamburger}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span className={styles.hamburgerLine}></span>
+          <span className={styles.hamburgerLine}></span>
+          <span className={styles.hamburgerLine}></span>
+        </button>
+
+        <nav className={`${styles.menuContainer} ${isMenuOpen ? styles.menuOpen : ''}`}>
+          <Link to="/docs" className={styles.menuItem} onClick={() => setIsMenuOpen(false)}>
             Documentation
+          </Link>
+
+          <Link to="/blog" className={styles.menuItem} onClick={() => setIsMenuOpen(false)}>
+            Blog
           </Link>
 
           <div className={styles.menuItem}>
@@ -48,7 +79,7 @@ const Header: React.FC = () => {
             </svg>
           </div>
 
-          <Link to="/docs" className={styles.participateButton}>
+          <Link to="/docs" className={styles.participateButton} onClick={() => setIsMenuOpen(false)}>
             Participate
           </Link>
         </nav>

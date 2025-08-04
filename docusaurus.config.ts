@@ -55,7 +55,16 @@ const config: Config = {
           editUrl:
             'https://github.com/houseofstake/houseofstake.org/tree/main/',
         },
-        blog: false, // Disable the blog plugin
+        blog: {
+          showReadingTime: true,
+          blogTitle: 'House of Stake Blog',
+          blogDescription: 'Latest updates and insights from the NEAR House of Stake community',
+          postsPerPage: 10,
+          blogSidebarTitle: 'Recent posts',
+          blogSidebarCount: 5,
+          editUrl:
+            'https://github.com/houseofstake/houseofstake.org/tree/main/',
+        },
         theme: {
           customCss: './src/css/global.css',
         },
@@ -80,6 +89,11 @@ const config: Config = {
           label: 'Docs',
         },
         {
+          to: '/blog',
+          label: 'Blog',
+          position: 'left',
+        },
+        {
           href: 'https://github.com/houseofstake/houseofstake.org',
           label: 'GitHub',
           position: 'right',
@@ -95,6 +109,10 @@ const config: Config = {
             {
               label: 'Documentation',
               to: '/docs',
+            },
+            {
+              label: 'Blog',
+              to: '/blog',
             },
           ],
         },
