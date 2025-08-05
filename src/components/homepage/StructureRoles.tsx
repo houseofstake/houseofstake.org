@@ -157,7 +157,7 @@ These roles aren't set in stone—they may evolve as the system grows.`,
 ];
 
 const StructureRoles: React.FC = () => {
-  const [openItem, setOpenItem] = useState<string>('delegates');
+  const [openItem, setOpenItem] = useState<string>('');
 
   const toggleItem = (itemId: string) => {
     setOpenItem(openItem === itemId ? '' : itemId);
@@ -175,21 +175,23 @@ const StructureRoles: React.FC = () => {
       <div className={styles.content}>
         {accordionItems.map((item) => (
           <div key={item.id} className={styles.accordion}>
-            <div className={styles.accordionContainer}>
+            <button
+              className={styles.accordionContainer}
+              onClick={() => toggleItem(item.id)}
+              aria-expanded={openItem === item.id}
+              aria-label={openItem === item.id ? 'Collapse' : 'Expand'}
+            >
               <div className={styles.leftContent}>
                 <div className={styles.contentWrapper}>
                   <div className={styles.titleWrapper}>
-                    <Link to={item.link} className={styles.accordionTitle}>
+                    <span className={styles.accordionTitle}>
                       {item.title}
-                    </Link>
+                    </span>
                   </div>
                 </div>
               </div>
-              <button
+              <div
                 className={`${styles.arrowButton} ${openItem === item.id ? styles.open : ''}`}
-                onClick={() => toggleItem(item.id)}
-                aria-expanded={openItem === item.id}
-                aria-label={openItem === item.id ? 'Collapse' : 'Expand'}
               >
                 {openItem === item.id ? (
                   <svg
@@ -231,8 +233,8 @@ const StructureRoles: React.FC = () => {
                     />
                   </svg>
                 )}
-              </button>
-            </div>
+              </div>
+            </button>
             {item.content && (
               <div
                 className={`${styles.expandedContent} ${openItem === item.id ? styles.open : ''}`}
@@ -263,6 +265,11 @@ const StructureRoles: React.FC = () => {
                       >
                         {item.content}
                       </Markdown>
+                      <div className={styles.learnMoreWrapper}>
+                        <Link to={item.link} className={styles.learnMoreLink}>
+                          Learn more →
+                        </Link>
+                      </div>
                     </div>
                   </div>
                   <div className={styles.spacer} />

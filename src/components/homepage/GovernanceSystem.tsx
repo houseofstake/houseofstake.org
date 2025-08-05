@@ -11,195 +11,107 @@ interface TabContent {
   title: string;
   content: string;
   image?: string;
+  docsLink?: string;
 }
 
 const tabContents: TabContent[] = [
   {
     id: 'venear',
     title: 'What is veNEAR',
-    content: `veNEAR (vote-escrowed NEAR) is a governance token that gives NEAR holders the ability to participate in House of Stake governance in a stake-weighted, time-locked manner.
-
-By locking NEAR, stNEAR, or liNEAR tokens for a fixed period (from 3 months up to 4 years), users receive veNEAR. The longer the lock duration, the greater the voting power received. This mechanism aligns incentives for long-term commitment and active participation.
-
-veNEAR creates a strong alignment between governance power and economic commitment. Those with more at stake—literally and figuratively—have more influence, encouraging responsible, engaged decision-making that supports the long-term health of the ecosystem.
-
-![veNEAR Governance Model](/img/venear-governance-model.png)`,
+    content: `**veNEAR** is a non-transferable governance token earned by locking NEAR, stNEAR, or liNEAR. The longer you lock, the more voting power you get.`,
+    docsLink: '/docs/governance-system/what-is-venear',
   },
   {
     id: 'locking',
     title: 'veNEAR Locking Mechanism',
-    content: `## veNEAR Locking Mechanism
+    content: `Lock NEAR, stNEAR, or liNEAR to get veNEAR. Two options:
 
-To obtain **veNEAR**, users must lock **NEAR**, **stNEAR**, or **liNEAR** tokens in a vote-escrow contract.
-House of Stake supports a **Rolling Lock** mechanism, providing flexibility while encouraging long-term alignment with the NEAR ecosystem.
+- **Fixed Lock**: Lock for 3–48 months. More time = more veNEAR. Power decays over time.
+- **Rolling Lock**: No set period. veNEAR grows over time. Unlock anytime with 3-month cooldown.
 
----
-
-### 🔁 Rolling Lock
-
-The Rolling Lock mechanism allows users to lock tokens without selecting a fixed period.
-veNEAR **accumulates linearly over time**, up to a maximum equivalent of 4 years of lock. Users can initiate an unlock at any moment. Once initiated, a **3-month cooldown** begins, during which **veNEAR voting power decays to zero**, and tokens become withdrawable at the end.
-
-**Key properties:**
-- ✅ No fixed period required
-- 📈 veNEAR accrues over time (max at 4 years)
-- ⏳ 3-month unlock cooldown
-- 🧩 Flexible exit for uncertain users
-
----
-
-### 📊 Example: veNEAR Accumulation and Unlock Flow
-
-This mechanism rewards consistent long-term locking while preserving flexibility.
-
-1. User deposits 1 NEAR into veNEAR contract.
-2. veNEAR accrues gradually (e.g., per epoch).
-3. After 3 years, the user decides to unlock.
-4. A 3-month cooldown begins — veNEAR decays linearly to 0.
-5. After cooldown ends, the 1 NEAR becomes withdrawable.
-
----
-
-### ⚖️ Feature Comparison
-
-| Feature            | Rolling Lock                          |
-|--------------------|---------------------------------------|
-| Initial choice     | No initial lock needed                |
-| Flexibility        | High (can unlock anytime)             |
-| Max voting power   | Yes (accumulates over time)           |
-| Exit process       | Start 3-month cooldown anytime        |
-
----
-
-The Rolling Lock model is ideal for users who prefer **gradual commitment** over fixed terms.
-It supports a **stake- and time-weighted governance** system that balances flexibility with long-term influence.`,
+**Fixed = max power, less flexibility. Rolling = gradual power, flexible exit.**`,
+    docsLink: '/docs/governance-system/venear-locking-mechanisms',
   },
   {
     id: 'proposal',
     title: 'Proposal & Voting Process',
-    content: `House of Stake uses a two-step decision-making process to ensure efficiency, transparency, and decentralization.
+    content: `House of Stake uses a 3-step governance flow:
 
-### 1. Proposal Submission
-Anyone can submit a proposal using a standard template and must post it publicly for discussion.
-It should include goals, rationale, impact, and any funding request.
+1. **Submit Proposal**  
+Anyone can propose using a public template. Community feedback is required before voting.
 
-### 2. Screening Committee Review
-A 7-member committee checks if the proposal is ready:
+2. **Screening Committee**  
+7 members review proposals:  
+- 4+ approvals → simple majority (51%) vote  
+- <4 approvals → needs supermajority (75%)  
+Filters low-quality proposals early.
 
-- 4+ approvals → moves to a simple majority vote (51%)
-- Fewer than 4 → requires a supermajority (75%)
+3. **On-chain Voting**  
+veNEAR holders vote directly or via delegates.  
+Voting power = veNEAR balance.  
+Standard voting period (e.g. 5–7 days).
 
-### 3. On-chain Voting
-Approved proposals go to a veNEAR-based vote:
-
-- Voting power = veNEAR held
-- Standard voting period (e.g., 5–7 days)
-
-### 4. Transparency
-All proposals, reviews, and results are published for full transparency and auditability.`,
+All activity is public for transparency and accountability.`,
+    docsLink: '/docs/governance-system/proposal-and-voting-process',
   },
   {
     id: 'rewards',
     title: 'Rewards & Incentives',
-    content: `## Rewards & Incentives Overview
+    content: `House of Stake rewards active participation:
 
-House of Stake implements a sustainable incentive system to encourage meaningful participation in NEAR governance. The model is designed to reward both veNEAR holders and endorsed delegates, balancing competitiveness with long-term sustainability.
+## veNEAR Holders
+- Earn ~5.8–8.8% APY (from 0.5% NEAR inflation)
+- Based on veNEAR amount & lock duration
+- Voting may be required to claim
+- Manual claiming, not auto-compounding
 
-### veNEAR Holder Rewards
+## Delegates
+- Rewards for ≥80% voting, public updates, 0.5%+ veNEAR stake, KYC/KYB
+- Incentivizes active, transparent delegation
 
-veNEAR holders receive rewards for locking tokens and engaging in governance.
+## Funding
+- 0.5% protocol inflation (capped, transparent)
+- Future: ecosystem revenue may contribute
 
-- Funded by 0.5% of annual NEAR inflation
-- Distributed proportionally based on veNEAR amount and lock duration
-- Rewards must be claimed manually
-- Voting participation may be required in future phases
-- Target APY ranges from approximately 5.8% to 8.8%, benchmarked against DeFi yields
-
-### Delegate Incentives
-
-Endorsed delegates are eligible for additional rewards, provided they meet performance and transparency standards.
-
-- Minimum 80% voting participation
-- Required to publish quarterly public voting reports
-- Must hold at least 0.5% of total veNEAR supply
-- Must complete KYC/KYB verification for accountability
-
-### Sustainable Funding
-
-Incentives are funded from a predictable and capped source:
-
-- 0.5% protocol inflation allocated to governance incentives
-- Potential future funding from ecosystem revenues such as protocol fees
-- Transparent and scalable budget model
-
-### Dynamic Reward Scaling
-
-To ensure rewards remain sustainable as participation grows, veNEAR APY adjusts automatically based on total veNEAR supply:
-
-$$\\text{veNEAR}_{\\text{rewardsApy}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{supply}}}}$$
-
-This formula ensures that APY decreases as veNEAR supply increases, maintaining fair yields in early stages while controlling emissions over time.`,
+## Dynamic Scaling
+Rewards adjust with veNEAR supply:  
+$$\\text{veNEAR}_{\\text{APY}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{supply}}}}$$  
+→ Lower APY as supply grows = sustainable model`,
+    docsLink: '/docs/governance-system/rewards-and-incentives',
   },
   {
     id: 'inflation',
     title: 'Inflation Model',
-    content: `## Inflation Model Overview
+    content: `House of Stake uses 0.5% annual NEAR inflation to fund governance.
 
-House of Stake employs a fixed and transparent inflation mechanism to support governance incentives and long-term platform sustainability.
+- **100%** goes to veNEAR holders and active delegates  
+- Predictable, capped, and sustainable  
+- No major dilution to NEAR holders
 
-### Core Principles
+**Why it matters:**  
+- Rewards long-term locking and voting  
+- Reduces need for treasury grants  
+- Keeps governance funding transparent and stable
 
-1. **Annual inflation rate:** 0.5% of total NEAR supply
-2. **Inflation allocation:** 100% goes to governance participation incentives
-3. **Reward distribution:**
-   - veNEAR holders
-   - Endorsed delegates
-
-### Design Rationale
-
-1. Incentivizes long-term token locking and active governance participation
-2. Aligns economic incentives with governance quality
-3. Replaces ad-hoc treasury grants with a sustainable funding stream
-4. Provides a predictable and bounded budget for governance operations
-
-### Flexibility and Governance
-
-1. The inflation rate and distribution logic can be adjusted through governance
-2. Possible triggers for change include:
-   - Participation levels
-   - Tokenomic shifts
-   - Ecosystem growth and evolving needs`,
+**Adjustable via governance** if needed in the future.`,
+    docsLink: '/docs/governance-system/inflation-model',
   },
   {
     id: 'versioning',
     title: 'Versioning & Evolution',
-    content: `## Versioning & Evolution Overview
+    content: `House of Stake evolves through on-chain versioning:
 
-House of Stake is designed as an evolving governance system. To stay relevant, it must be able to improve over time — without losing stability or trust.
+- Major changes = version upgrades (roles, rules, funding)
+- Approved via standard proposal + voting process
+- All versions tracked and documented on-chain
 
-### On-chain Versioning
+**Why it matters:**  
+- Ensures transparency and stability  
+- Prevents undocumented changes  
+- Builds a shared history of governance evolution
 
-1. Each major governance change (e.g., new roles, voting rules, funding mechanisms) is treated as a version upgrade
-2. Version upgrades follow the standard proposal and voting process
-3. All changes are:
-   - Tracked on-chain
-   - Publicly documented
-   - Linked to specific proposals and rationale
-
-### Why Versioning Matters
-
-1. Promotes transparency and continuity
-2. Prevents abrupt or undocumented changes
-3. Creates a shared memory for governance evolution
-
-### Community-Driven Iteration
-
-1. Governance is intentionally open-ended — it is never considered "final"
-2. The system welcomes:
-   - Experimentation
-   - Iterative improvements
-   - New governance ideas
-3. All changes must go through transparent proposal, debate, and voting processes`,
+Governance stays open to improvement — if proposed and approved by the community.`,
+    docsLink: '/docs/governance-system/versioning-and-evolution',
   },
 ];
 
@@ -331,6 +243,13 @@ const GovernanceSystem: React.FC = () => {
                     >
                       {tab.content}
                     </Markdown>
+                    {tab.docsLink && (
+                      <div className={styles.learnMoreWrapper}>
+                        <a href={tab.docsLink} className={styles.learnMoreLink}>
+                          Learn more →
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -397,6 +316,13 @@ const GovernanceSystem: React.FC = () => {
                     >
                       {activeContent.content}
                     </Markdown>
+                    {activeContent.docsLink && (
+                      <div className={styles.learnMoreWrapper}>
+                        <a href={activeContent.docsLink} className={styles.learnMoreLink}>
+                          Learn more →
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </>
               )}
