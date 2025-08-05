@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
 
       <div className={styles.bottomBar}>
         <p className={styles.copyright}>
-          © House of Stake {currentYear}. All rights reserved
+          © NEAR House of Stake Foundation {currentYear}. All rights reserved
         </p>
       </div>
     </footer>
