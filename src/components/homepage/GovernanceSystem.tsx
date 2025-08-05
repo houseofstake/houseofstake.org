@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 import styles from './GovernanceSystem.module.css';
 
 interface TabContent {
@@ -133,7 +136,7 @@ Incentives are funded from a predictable and capped source:
 
 To ensure rewards remain sustainable as participation grows, veNEAR APY adjusts automatically based on total veNEAR supply:
 
-![Dynamic Reward Scaling Formula](https://placehold.co/600x300/1a1a1a/ffffff/png?text=Dynamic+Reward+Scaling+Formula)
+$$\\text{veNEAR}_{\\text{rewardsApy}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{supply}}}}$$
 
 This formula ensures that APY decreases as veNEAR supply increases, maintaining fair yields in early stages while controlling emissions over time.`,
   },
@@ -289,7 +292,8 @@ const GovernanceSystem: React.FC = () => {
                 >
                   <div className={styles.accordionText}>
                     <Markdown
-                      remarkPlugins={[remarkGfm]}
+                      remarkPlugins={[remarkGfm, remarkMath]}
+                      rehypePlugins={[rehypeKatex]}
                       components={{
                         table: ({ children }) => (
                           <table className={styles.dataTable}>{children}</table>
@@ -354,7 +358,8 @@ const GovernanceSystem: React.FC = () => {
                 <>
                   <div className={styles.contentText}>
                     <Markdown
-                      remarkPlugins={[remarkGfm]}
+                      remarkPlugins={[remarkGfm, remarkMath]}
+                      rehypePlugins={[rehypeKatex]}
                       components={{
                         table: ({ children }) => (
                           <table className={styles.dataTable}>{children}</table>
