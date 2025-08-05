@@ -4,7 +4,7 @@ name: Build, Deploy and PR Preview
 # This workflow requires the 'pr-preview-approval' environment to be configured with:
 # 1. Required reviewers (admins who can approve PR previews)
 # 2. Deployment protection rules
-# 
+#
 # To set up:
 # 1. Go to Settings > Environments
 # 2. Create 'pr-preview-approval' environment
@@ -41,6 +41,8 @@ jobs:
         with:
           # For PR builds, checkout the PR head commit
           ref: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.sha || github.ref }}
+          # Fetch all history to access other branches (needed for CNAME detection)
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -57,7 +59,7 @@ jobs:
           # Check for CNAME file in gh-pages branch
           CUSTOM_DOMAIN=""
           HAS_CUSTOM_DOMAIN="false"
-          
+
           # Try to fetch CNAME from gh-pages branch
           if git ls-remote --heads origin gh-pages | grep -q gh-pages; then
             # gh-pages branch exists, try to get CNAME
@@ -67,10 +69,10 @@ jobs:
               HAS_CUSTOM_DOMAIN="true"
             fi
           fi
-          
+
           echo "custom_domain=${CUSTOM_DOMAIN}" >> $GITHUB_OUTPUT
           echo "has_custom_domain=${HAS_CUSTOM_DOMAIN}" >> $GITHUB_OUTPUT
-          
+
           # Also output repo name and owner for consistency
           echo "repo_name=${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
           echo "owner=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
@@ -80,7 +82,7 @@ jobs:
         run: |
           REPO_NAME="${{ github.event.repository.name }}"
           OWNER="${{ github.repository_owner }}"
-          
+
           # Set SITE_URL based on custom domain or GitHub Pages
           if [[ "${{ steps.check-domain.outputs.has_custom_domain }}" == "true" ]]; then
             echo "SITE_URL=https://${{ steps.check-domain.outputs.custom_domain }}" >> $GITHUB_ENV
@@ -88,7 +90,7 @@ jobs:
           else
             # Always use base domain for SITE_URL
             echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
-            
+
             # For project pages, include repo name in BASE_URL
             if [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
               echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
@@ -109,10 +111,10 @@ jobs:
             # Default GitHub Pages setup
             REPO_NAME="${{ github.event.repository.name }}"
             OWNER="${{ github.repository_owner }}"
-            
+
             # Always use the base GitHub Pages domain
             echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
-            
+
             if [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
               # User/org pages site
               echo "BASE_URL=/" >> $GITHUB_ENV
@@ -152,6 +154,8 @@ jobs:
         with:
           # Explicitly checkout the PR head commit to ensure we're building the PR's code
           ref: ${{ github.event.pull_request.head.sha }}
+          # Fetch all history to access other branches (needed for CNAME detection)
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -168,7 +172,7 @@ jobs:
           # Check for CNAME file in gh-pages branch
           CUSTOM_DOMAIN=""
           HAS_CUSTOM_DOMAIN="false"
-          
+
           # Try to fetch CNAME from gh-pages branch
           if git ls-remote --heads origin gh-pages | grep -q gh-pages; then
             # gh-pages branch exists, try to get CNAME
@@ -178,10 +182,10 @@ jobs:
               HAS_CUSTOM_DOMAIN="true"
             fi
           fi
-          
+
           echo "custom_domain=${CUSTOM_DOMAIN}" >> $GITHUB_OUTPUT
           echo "has_custom_domain=${HAS_CUSTOM_DOMAIN}" >> $GITHUB_OUTPUT
-          
+
           # Also output repo name and owner for consistency
           echo "repo_name=${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
           echo "owner=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
@@ -190,7 +194,7 @@ jobs:
         run: |
           REPO_NAME="${{ github.event.repository.name }}"
           OWNER="${{ github.repository_owner }}"
-          
+
           # Set SITE_URL based on custom domain or GitHub Pages
           if [[ "${{ steps.check-domain.outputs.has_custom_domain }}" == "true" ]]; then
             echo "SITE_URL=https://${{ steps.check-domain.outputs.custom_domain }}" >> $GITHUB_ENV
@@ -198,7 +202,7 @@ jobs:
           else
             # Always use base domain for SITE_URL
             echo "SITE_URL=https://${OWNER}.github.io" >> $GITHUB_ENV
-            
+
             # For project pages, include repo name in BASE_URL
             if [[ "${REPO_NAME}" == "${OWNER}.github.io" ]]; then
               echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
@@ -240,11 +244,11 @@ jobs:
           # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
+
           # Remove old files (but keep pr-preview directory and CNAME if exists)
           find . -maxdepth 1 -type f ! -name 'CNAME' ! -name '.nojekyll' -delete
           find . -maxdepth 1 -type d ! -name '.git' ! -name '.' ! -name 'pr-preview' ! -name 'build' -exec rm -rf {} +
-          
+
           # Copy new build files to root
           if [ -d "./build" ] && [ "$(ls -A ./build)" ]; then
             cp -R ./build/* ./
@@ -253,10 +257,10 @@ jobs:
             echo "Error: Build directory is empty or doesn't exist"
             exit 1
           fi
-          
+
           # Add .nojekyll file to prevent Jekyll processing
           touch .nojekyll
-          
+
           # Commit and push
           git add -A
           if git diff --staged --quiet; then
@@ -271,8 +275,8 @@ jobs:
     needs: [build, build-fork-pr]
     # Run if either build job succeeded (but not both will run due to their conditions)
     if: |
-      always() && 
-      github.event_name == 'pull_request_target' && 
+      always() &&
+      github.event_name == 'pull_request_target' &&
       github.event.action != 'closed' &&
       (needs.build.result == 'success' || needs.build-fork-pr.result == 'success')
     runs-on: ubuntu-latest
@@ -293,27 +297,27 @@ jobs:
           # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
+
           # PR previews always go in pr-preview directory at root
           PR_NUMBER="${{ github.event.pull_request.number }}"
           PREVIEW_DIR="pr-preview/pr-${PR_NUMBER}"
-          
+
           echo "Deploying to preview directory: ${PREVIEW_DIR}"
-          
+
           # Verify build exists
           if [ ! -d "./pr-preview-build" ] || [ ! "$(ls -A ./pr-preview-build)" ]; then
             echo "Error: PR preview build directory is empty or doesn't exist"
             exit 1
           fi
-          
+
           # Remove old preview if exists and copy new build
           rm -rf "${PREVIEW_DIR}"
           mkdir -p "${PREVIEW_DIR}"
           cp -R ./pr-preview-build/* "${PREVIEW_DIR}/"
-          
+
           # Remove the temporary build directory to avoid committing it
           rm -rf ./pr-preview-build
-          
+
           # Commit and push
           git add -A
           git commit -m "Deploy preview for PR #${PR_NUMBER}" || echo "No changes to commit"
@@ -324,13 +328,13 @@ jobs:
         with:
           script: |
             const prNumber = context.issue.number;
-            
+
             // Get repository information
             const { data: repo } = await github.rest.repos.get({
               owner: context.repo.owner,
               repo: context.repo.repo,
             });
-            
+
             // Check for custom domain (CNAME) in gh-pages
             let customDomain = null;
             try {
@@ -346,7 +350,7 @@ jobs:
             } catch (error) {
               // CNAME file doesn't exist, use default GitHub Pages URL
             }
-            
+
             // Determine the base URL
             let baseUrl;
             if (customDomain) {
@@ -358,29 +362,29 @@ jobs:
               // Project GitHub Pages site
               baseUrl = `https://${context.repo.owner}.github.io/${repo.name}`;
             }
-            
+
             const previewUrl = `${baseUrl}/pr-preview/pr-${prNumber}/`;
-            
+
             // Find existing comment
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: prNumber,
             });
-            
-            const botComment = comments.find(comment => 
-              comment.user.type === 'Bot' && 
+
+            const botComment = comments.find(comment =>
+              comment.user.type === 'Bot' &&
               comment.body.includes('Preview deployment is ready!')
             );
-            
+
             const commentBody = `### 🚀 Preview deployment is ready!
-            
+
             | Environment | URL |
             |-------------|-----|
             | Preview | ${previewUrl} |
-            
+
             *This preview will update automatically when you push new commits.*`;
-            
+
             if (botComment) {
               await github.rest.issues.updateComment({
                 owner: context.repo.owner,
@@ -412,13 +416,13 @@ jobs:
           # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
+
           # PR previews are always in pr-preview directory at root
           PR_NUMBER="${{ github.event.pull_request.number }}"
           PREVIEW_DIR="pr-preview/pr-${PR_NUMBER}"
-          
+
           echo "Removing preview directory: ${PREVIEW_DIR}"
-          
+
           if [ -d "${PREVIEW_DIR}" ]; then
             rm -rf "${PREVIEW_DIR}"
             git add .
@@ -431,7 +435,7 @@ jobs:
         with:
           script: |
             const prNumber = context.issue.number;
-            
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
