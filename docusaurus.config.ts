@@ -53,6 +53,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl:
             'https://github.com/houseofstake/houseofstake.org/tree/main/',
+          breadcrumbs: true, // Enable breadcrumbs
         },
         blog: {
           showReadingTime: true,

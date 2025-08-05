@@ -1,5 +1,5 @@
 ---
-slug: /
+title: What is House of Stake
 ---
 
 # What is House of Stake
