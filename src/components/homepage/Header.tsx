@@ -41,11 +41,7 @@ const Header: React.FC = () => {
       className={`navbar ${styles.header} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuActive : ''}`}
     >
       <Link to="/" className={styles.iconContainer}>
-        <img
-          src="/img/near-logo.svg"
-          alt="NEAR Logo"
-          className={styles.logo}
-        />
+        <img src="/img/near-logo.svg" alt="NEAR Logo" className={styles.logo} />
       </Link>
 
       <div className={styles.container}>
