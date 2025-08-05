@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
                 className={styles.specialButton}
               >
                 <div className={styles.logoIcon}>
-                  <img src="/img/near-logo-button.svg" alt="NEAR Logo" />
+                  <img src="/img/near-logo.svg" alt="NEAR Logo" />
                 </div>
                 <span className={styles.buttonLabel}>Participate</span>
               </a>

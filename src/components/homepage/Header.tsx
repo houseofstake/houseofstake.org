@@ -64,7 +64,7 @@ const Header: React.FC = () => {
           className={`${styles.menuContainer} ${isMenuOpen ? styles.menuOpen : ''}`}
         >
           <Link
-            to="/docs"
+            to="/docs/overview/what-is-house-of-stake"
             className={styles.menuItem}
             onClick={() => setIsMenuOpen(false)}
           >

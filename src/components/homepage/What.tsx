@@ -13,7 +13,7 @@ const cards: CardData[] = [
     title: 'What is HoS?',
     description:
       'House of Stake is a governance framework for the NEAR ecosystem, designed to facilitate decentralized decision-making.',
-    link: '/docs/',
+    link: '/docs/overview/what-is-house-of-stake',
   },
   {
     title: 'How Governance Works',

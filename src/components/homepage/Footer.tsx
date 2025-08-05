@@ -1,10 +1,14 @@
 import React from 'react';
 import styles from './Footer.module.css';
+import { FaGithub, FaTelegram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { LuBookText, LuScroll } from 'react-icons/lu';
 
 interface FooterLink {
   label: string;
   href: string;
   isExternal?: boolean;
+  icon?: React.ReactNode;
 }
 
 interface FooterSection {
@@ -17,29 +21,42 @@ const footerSections: FooterSection[] = [
     title: 'Social',
     links: [
       {
-        label: 'Blog',
-        href: '/blog',
-        isExternal: false,
-      },
-      {
         label: 'NEAR Forum',
         href: 'https://gov.near.org/c/house-of-stake/158',
         isExternal: true,
+        icon: (
+          <img src="/img/near-logo.svg" alt="NEAR" width={14} height={14} />
+        ),
       },
       {
-        label: 'X / Twitter',
-        href: 'https://x.com/NEARGovernance',
+        label: 'Proposal',
+        href: 'https://gov.near.org/c/house-of-stake/158',
         isExternal: true,
+        icon: <LuScroll size={14} />,
       },
       {
-        label: 'Telegram',
-        href: 'https://t.me/NEAR_HouseOfStake',
-        isExternal: true,
+        label: 'Blog',
+        href: '/blog',
+        isExternal: false,
+        icon: <LuBookText size={14} />,
       },
       {
         label: 'Github',
         href: 'https://github.com/houseofstake',
         isExternal: true,
+        icon: <FaGithub size={14} />,
+      },
+      {
+        label: 'X / Twitter',
+        href: 'https://x.com/NEARGovernance',
+        isExternal: true,
+        icon: <FaXTwitter size={14} />,
+      },
+      {
+        label: 'Telegram',
+        href: 'https://t.me/NEAR_HouseOfStake',
+        isExternal: true,
+        icon: <FaTelegram size={14} />,
       },
     ],
   },
@@ -79,6 +96,9 @@ const Footer: React.FC = () => {
                           link.isExternal ? 'noopener noreferrer' : undefined
                         }
                       >
+                        {link.icon && (
+                          <span className={styles.linkIcon}>{link.icon}</span>
+                        )}
                         {link.label}
                       </a>
                     </li>
