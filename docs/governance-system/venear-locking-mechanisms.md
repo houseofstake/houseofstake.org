@@ -15,6 +15,8 @@ When performing a vote-lock, users specify the lock-up duration. Based on the nu
 
 📊 **Example: veNEAR voting power by lock-up duration**
 
+![veNEAR Premium based on Lock Duration and Amount of NEAR Tokens](assets/venear-premium.png)
+
 This example shows how longer commitments unlock greater governance power — rewarding long-term alignment with the NEAR ecosystem.
 
 ## 2. Rolling Lock
@@ -25,6 +27,7 @@ Users lock tokens indefinitely and accumulate veNEAR over time. They can initiat
 - **veNEAR accumulates linearly over time (up to 4 years)**
 - **3-month unlock delay**
 - **More flexible exit option for uncertain users**
+
 
 ## Choosing a Locking Mechanism
 
@@ -49,6 +52,8 @@ Assume a user deposits **1 NEAR** into veNEAR contracts.
 - Over time, veNEAR **decays linearly** until reaching zero at the end of 3 years
 - NEAR becomes unlockable **only after the full 3 years**
 
+![veNEAR Premium and decay calculations for Fixed Lock Approach](assets/venear-premium-fixed.png)
+
 #### 🔄 Approach 2: Rolling Lock
 
 - The user deposits **1 NEAR** without specifying a lock duration
@@ -56,3 +61,5 @@ Assume a user deposits **1 NEAR** into veNEAR contracts.
 - After **3 years**, the user initiates the unlock process
 - A **3-month cooldown** begins, during which veNEAR **decays linearly to zero**
 - Once the cooldown ends, the NEAR becomes withdrawable
+
+![veNEAR Premium and decay calculations for Rolling Lock Approach ](assets/venear-premium-rolling.png)

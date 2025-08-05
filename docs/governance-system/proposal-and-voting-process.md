@@ -29,6 +29,8 @@ veNEAR holders vote directly or via delegates.
 - A standard voting period applies (e.g. 5–7 days)
 - Final outcomes are determined transparently on-chain
 
+![Proposal Flow](assets/proposal-flow.png)
+
 ## 4. Transparency & Recordkeeping
 
 All proposals, screening outcomes, and voting results are archived publicly.

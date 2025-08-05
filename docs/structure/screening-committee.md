@@ -5,9 +5,10 @@ The Screening Committee is a core governance body in House of Stake. It serves a
 This group acts as a filter — helping ensure that only relevant, clear, and aligned proposals reach the broader voting audience.
 
 **The initial Screening Committee consists of:**
-• 3 members from [NEAR Foundation](https://near.foundation)
-• 1 member from [Gauntlet](https://gauntlet.xyz)
-• 1 member from NearOne
+
+- 3 members from [NEAR Foundation](https://near.foundation)
+- 1 member from [Gauntlet](https://gauntlet.xyz)
+- 1 member from NearOne
 
 Over time, new members will be elected by delegates annually.
 
@@ -25,6 +26,7 @@ Over time, new members will be elected by delegates annually.
 
 📊 **Governance Flow with Delegate Selection and Screening Oversight**
 
+![NEAR Governance Architecture](assets/governance-architecture.png)
 _This diagram shows how proposals move through the governance process and how the Screening Committee supervises both the grant flow and the Endorsed Delegates._
 
 The Screening Committee plays two critical roles:
