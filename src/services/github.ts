@@ -1,12 +1,10 @@
-// WARNING: This token is exposed in the browser - NOT SECURE FOR PRODUCTION
-// TODO: Move this to a serverless function or backend API
+// GitHub service for fetching project data
+// Currently using hardcoded data to avoid exposing GitHub tokens in the browser
+// TODO: Implement backend API for dynamic GitHub data fetching
 
-// Import Docusaurus config to access custom fields
-import docusaurusConfig from '@generated/docusaurus.config';
-
-// Get GitHub token from Docusaurus custom fields (set at build time)
-const GITHUB_TOKEN =
-  (docusaurusConfig.customFields?.githubToken as string) || '';
+// GitHub token is not included for security reasons
+// If dynamic data is needed, implement a backend service
+const GITHUB_TOKEN = '';
 
 export interface GitHubProjectItem {
   id: string;

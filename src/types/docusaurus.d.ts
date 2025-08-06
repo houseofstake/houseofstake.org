@@ -1,8 +1,6 @@
 declare module '@generated/docusaurus.config' {
   const config: {
-    customFields?: {
-      githubToken?: string;
-    };
+    customFields?: {};
   };
   export default config;
 }

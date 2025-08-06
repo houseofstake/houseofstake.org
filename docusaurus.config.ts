@@ -2,9 +2,6 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// Load environment variables from .env file
-import 'dotenv/config';
-
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
@@ -39,10 +36,6 @@ const config: Config = {
     locales: ['en'],
   },
 
-  // Custom fields to pass environment variables to the client
-  customFields: {
-    githubToken: process.env.GITHUB_TOKEN || '',
-  },
 
   presets: [
     [
