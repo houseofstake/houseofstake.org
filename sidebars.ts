@@ -8,7 +8,8 @@ const sidebars: SidebarsConfig = {
       link: {
         type: 'generated-index',
         title: 'Overview',
-        description: 'Learn about House of Stake, its governance philosophy, and our mission.',
+        description:
+          'Learn about House of Stake, its governance philosophy, and our mission.',
         slug: '/overview',
       },
       items: [
@@ -23,7 +24,8 @@ const sidebars: SidebarsConfig = {
       link: {
         type: 'generated-index',
         title: 'Structure & Roles',
-        description: 'Explore the organizational structure, working groups, committees, and key roles within House of Stake.',
+        description:
+          'Explore the organizational structure, working groups, committees, and key roles within House of Stake.',
         slug: '/structure',
       },
       items: [
@@ -42,7 +44,8 @@ const sidebars: SidebarsConfig = {
       link: {
         type: 'generated-index',
         title: 'Governance System',
-        description: 'Understand the veNEAR token system, voting mechanisms, and governance processes.',
+        description:
+          'Understand the veNEAR token system, voting mechanisms, and governance processes.',
         slug: '/governance-system',
       },
       items: [
@@ -60,7 +63,8 @@ const sidebars: SidebarsConfig = {
       link: {
         type: 'generated-index',
         title: 'Strategic Direction',
-        description: 'Discover our vision for the future, including roadmap, milestones, and long-term goals.',
+        description:
+          'Discover our vision for the future, including roadmap, milestones, and long-term goals.',
         slug: '/strategic-direction',
       },
       items: [
@@ -75,7 +79,8 @@ const sidebars: SidebarsConfig = {
       link: {
         type: 'generated-index',
         title: 'Get Involved',
-        description: 'Learn how to participate in House of Stake by submitting proposals or contributing to the project.',
+        description:
+          'Learn how to participate in House of Stake by submitting proposals or contributing to the project.',
         slug: '/get-involved',
       },
       items: [
@@ -89,7 +94,8 @@ const sidebars: SidebarsConfig = {
       link: {
         type: 'generated-index',
         title: 'Working Groups',
-        description: 'Explore the various working groups focusing on governance, ecosystem growth, treasury, and network economics.',
+        description:
+          'Explore the various working groups focusing on governance, ecosystem growth, treasury, and network economics.',
         slug: '/working-groups',
       },
       items: [

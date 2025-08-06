@@ -13,27 +13,27 @@ import Footer from '@site/src/components/homepage/Footer';
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
-  
+
   useEffect(() => {
     if (!ExecutionEnvironment.canUseDOM) {
       return;
     }
-    
+
     const scrollToAnchor = () => {
       const hash = window.location.hash;
-      
+
       if (hash) {
         // Small delay to ensure components are mounted
         setTimeout(() => {
           const id = hash.substring(1);
-          
+
           // If hash is just '#' or empty, scroll to top
           if (!id || id === '') {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           } else {
             // Otherwise, try to find the element and scroll to it
             const element = document.getElementById(id);
-            
+
             if (element) {
               element.scrollIntoView({ behavior: 'smooth', block: 'start' });
               // Adjust for header after scrollIntoView completes
@@ -45,13 +45,13 @@ export default function Home(): ReactNode {
         }, 300);
       }
     };
-    
+
     // Call on mount
     scrollToAnchor();
-    
+
     // Listen for hash changes
     window.addEventListener('hashchange', scrollToAnchor);
-    
+
     return () => {
       window.removeEventListener('hashchange', scrollToAnchor);
     };
@@ -71,7 +71,6 @@ export default function Home(): ReactNode {
           as="image"
           type="image/svg+xml"
         />
-
 
         {/* Governance and other icons */}
         <link

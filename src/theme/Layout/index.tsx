@@ -23,7 +23,7 @@ export default function LayoutWrapper(props: Props): ReactNode {
 
     const handleHashChange = () => {
       const hash = window.location.hash;
-      
+
       // If hash is just '#' (no specific anchor), scroll to top
       if (hash === '#') {
         window.scrollTo({ top: 0, behavior: 'smooth' });

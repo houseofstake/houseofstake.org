@@ -139,7 +139,7 @@ const GovernanceSystem: React.FC = () => {
       // Check if hash starts with "governance-" and extract the tab id
       if (hash.startsWith('governance-')) {
         const tabId = hash.replace('governance-', '');
-        const matchingTab = tabContents.find(tab => tab.id === tabId);
+        const matchingTab = tabContents.find((tab) => tab.id === tabId);
         if (matchingTab) {
           if (isMobile) {
             // On mobile, expand the accordion
@@ -154,10 +154,10 @@ const GovernanceSystem: React.FC = () => {
 
     // Check on mount and when mobile state changes
     checkHash();
-    
+
     // Listen for hash changes
     window.addEventListener('hashchange', checkHash);
-    
+
     return () => {
       window.removeEventListener('hashchange', checkHash);
     };

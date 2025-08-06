@@ -168,7 +168,7 @@ const StructureRoles: React.FC = () => {
     const checkHash = () => {
       const hash = window.location.hash.replace('#', '');
       // Check if the hash matches any accordion item
-      const matchingItem = accordionItems.find(item => item.id === hash);
+      const matchingItem = accordionItems.find((item) => item.id === hash);
       if (matchingItem) {
         setOpenItem(matchingItem.id);
       }
@@ -176,10 +176,10 @@ const StructureRoles: React.FC = () => {
 
     // Check on mount
     checkHash();
-    
+
     // Listen for hash changes
     window.addEventListener('hashchange', checkHash);
-    
+
     return () => {
       window.removeEventListener('hashchange', checkHash);
     };
