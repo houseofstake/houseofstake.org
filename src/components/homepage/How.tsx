@@ -50,7 +50,7 @@ const How: React.FC = () => {
               <div className={styles.learnMoreInnerCardContent}>
                 <div className={styles.bg} />
                 <div className={styles.learnMoreContentTop}>
-                  <Link to="/docs" className={styles.learnMoreLink}>
+                  <Link to="/docs#" className={styles.learnMoreLink}>
                     <div className={styles.learnMoreText}>
                       <span className={styles.learnMoreLabel}>Learn more</span>
                     </div>

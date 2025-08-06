@@ -19,7 +19,7 @@ const tabContents: TabContent[] = [
     id: 'venear',
     title: 'What is veNEAR',
     content: `**veNEAR** is a non-transferable governance token earned by locking NEAR, stNEAR, or liNEAR. The longer you lock, the more voting power you get.`,
-    docsLink: '/docs/governance-system/what-is-venear',
+    docsLink: '/docs/governance-system/what-is-venear#',
   },
   {
     id: 'locking',
@@ -30,7 +30,7 @@ const tabContents: TabContent[] = [
 - **Rolling Lock**: No set period. veNEAR grows over time. Unlock anytime with 3-month cooldown.
 
 **Fixed = max power, less flexibility. Rolling = gradual power, flexible exit.**`,
-    docsLink: '/docs/governance-system/venear-locking-mechanisms',
+    docsLink: '/docs/governance-system/venear-locking-mechanisms#',
   },
   {
     id: 'proposal',
@@ -52,7 +52,7 @@ Voting power = veNEAR balance.
 Standard voting period (e.g. 5–7 days).
 
 All activity is public for transparency and accountability.`,
-    docsLink: '/docs/governance-system/proposal-and-voting-process',
+    docsLink: '/docs/governance-system/proposal-and-voting-process#',
   },
   {
     id: 'rewards',
@@ -77,7 +77,7 @@ All activity is public for transparency and accountability.`,
 Rewards adjust with veNEAR supply:
 $$\\text{veNEAR}_{\\text{APY}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{supply}}}}$$
 → Lower APY as supply grows = sustainable model`,
-    docsLink: '/docs/governance-system/rewards-and-incentives',
+    docsLink: '/docs/governance-system/rewards-and-incentives#',
   },
   {
     id: 'inflation',
@@ -94,7 +94,7 @@ $$\\text{veNEAR}_{\\text{APY}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{suppl
 - Keeps governance funding transparent and stable
 
 **Adjustable via governance** if needed in the future.`,
-    docsLink: '/docs/governance-system/inflation-model',
+    docsLink: '/docs/governance-system/inflation-model#',
   },
   {
     id: 'versioning',
@@ -111,7 +111,7 @@ $$\\text{veNEAR}_{\\text{APY}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{suppl
 - Builds a shared history of governance evolution
 
 Governance stays open to improvement — if proposed and approved by the community.`,
-    docsLink: '/docs/governance-system/versioning-and-evolution',
+    docsLink: '/docs/governance-system/versioning-and-evolution#',
   },
 ];
 

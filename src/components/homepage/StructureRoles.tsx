@@ -28,7 +28,7 @@ These groups develop strategy, shape proposals, and support execution. They oper
 - **Treasury Strategy & Management** — treasury allocation, funding frameworks, and reporting
 
 - **Network Economics & Security** — tokenomics, inflation, and network sustainability`,
-    link: '/docs/structure/working-groups-overview',
+    link: '/docs/structure/working-groups-overview#',
   },
   {
     id: 'delegates',
@@ -38,7 +38,7 @@ These groups develop strategy, shape proposals, and support execution. They oper
 **Participants:** any veNEAR holder can vote, submit proposals, or delegate their voting power.
 
 **Endorsed Delegates:** selected through a screening process, must maintain high participation and transparency.`,
-    link: '/docs/structure/delegates-and-participants',
+    link: '/docs/structure/delegates-and-participants#',
   },
   {
     id: 'screening',
@@ -80,7 +80,7 @@ In the future, authority over delegate selection will shift to the **House of De
 
 Want to nominate someone or share input?
 Join the discussion in the forum, Telegram, or the proposal repo.`,
-    link: '/docs/structure/screening-committee',
+    link: '/docs/structure/screening-committee#',
   },
   {
     id: 'security',
@@ -115,7 +115,7 @@ This mix ensures stability while allowing for diverse input.
 ## Accountability
 
 Though their powers are reserved for exceptional situations, Security Council members must act transparently and in the ecosystem's best interest. Their role and authority may evolve through governance decisions as the system matures.`,
-    link: '/docs/structure/security-council',
+    link: '/docs/structure/security-council#',
   },
   {
     id: 'responsibilities',
@@ -142,17 +142,17 @@ Here's how these roles are distributed across core governance processes:
 | Updating reward frameworks | R, A | | | C | I |
 
 These roles aren't set in stone—they may evolve as the system grows.`,
-    link: '/docs/structure/responsibilities-and-scope',
+    link: '/docs/structure/responsibilities-and-scope#',
   },
   {
     id: 'code-of-conduct',
     title: 'Code of Conduct',
-    link: '/docs/structure/code-of-conduct',
+    link: '/docs/structure/code-of-conduct#',
   },
   {
     id: 'conflict-of-interest',
     title: 'Conflict of Interest Policy',
-    link: '/docs/structure/conflict-of-interest-policy',
+    link: '/docs/structure/conflict-of-interest-policy#',
   },
 ];
 

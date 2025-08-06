@@ -26,14 +26,21 @@ export default function Home(): ReactNode {
         // Small delay to ensure components are mounted
         setTimeout(() => {
           const id = hash.substring(1);
-          const element = document.getElementById(id);
           
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Adjust for header after scrollIntoView completes
-            setTimeout(() => {
-              window.scrollBy(0, -90);
-            }, 300);
+          // If hash is just '#' or empty, scroll to top
+          if (!id || id === '') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            // Otherwise, try to find the element and scroll to it
+            const element = document.getElementById(id);
+            
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              // Adjust for header after scrollIntoView completes
+              setTimeout(() => {
+                window.scrollBy(0, -90);
+              }, 300);
+            }
           }
         }, 300);
       }

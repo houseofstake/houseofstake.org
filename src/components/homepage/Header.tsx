@@ -40,12 +40,12 @@ const Header: React.FC = () => {
     <header
       className={`navbar ${styles.header} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuActive : ''}`}
     >
-      <Link to="/" className={styles.iconContainer}>
+      <Link to="/#" className={styles.iconContainer}>
         <img src="/img/near-logo.svg" alt="NEAR Logo" className={styles.logo} />
       </Link>
 
       <div className={styles.container}>
-        <Link to="/" className={styles.brandLink}>
+        <Link to="/#" className={styles.brandLink}>
           <h1 className={styles.brandTitle}>House of Stake</h1>
         </Link>
 
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
           className={`${styles.menuContainer} ${isMenuOpen ? styles.menuOpen : ''}`}
         >
           <Link
-            to="/docs/overview/what-is-house-of-stake"
+            to="/docs/overview/what-is-house-of-stake#"
             className={styles.menuItem}
             onClick={() => setIsMenuOpen(false)}
           >
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
           </Link>
 
           <Link
-            to="/blog"
+            to="/blog#"
             className={styles.menuItem}
             onClick={() => setIsMenuOpen(false)}
           >

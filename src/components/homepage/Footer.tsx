@@ -36,7 +36,7 @@ const footerSections: FooterSection[] = [
       },
       {
         label: 'Blog',
-        href: '/blog',
+        href: '/blog#',
         isExternal: false,
         icon: <LuBookText size={14} />,
       },
@@ -63,9 +63,9 @@ const footerSections: FooterSection[] = [
   {
     title: 'Legal',
     links: [
-      { label: 'Privacy', href: '/privacy', isExternal: false },
-      { label: 'Terms of Use', href: '/terms', isExternal: false },
-      { label: 'Cookie Policy', href: '/cookies', isExternal: false },
+      { label: 'Privacy', href: '/privacy#', isExternal: false },
+      { label: 'Terms of Use', href: '/terms#', isExternal: false },
+      { label: 'Cookie Policy', href: '/cookies#', isExternal: false },
     ],
   },
 ];
