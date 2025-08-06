@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react';
+import { useEffect } from 'react';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import Hero from '@site/src/components/homepage/Hero';
 import What from '@site/src/components/homepage/What';
 import How from '@site/src/components/homepage/How';
@@ -11,6 +13,42 @@ import Footer from '@site/src/components/homepage/Footer';
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
+  
+  useEffect(() => {
+    if (!ExecutionEnvironment.canUseDOM) {
+      return;
+    }
+    
+    const scrollToAnchor = () => {
+      const hash = window.location.hash;
+      
+      if (hash) {
+        // Small delay to ensure components are mounted
+        setTimeout(() => {
+          const id = hash.substring(1);
+          const element = document.getElementById(id);
+          
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Adjust for header after scrollIntoView completes
+            setTimeout(() => {
+              window.scrollBy(0, -90);
+            }, 300);
+          }
+        }, 300);
+      }
+    };
+    
+    // Call on mount
+    scrollToAnchor();
+    
+    // Listen for hash changes
+    window.addEventListener('hashchange', scrollToAnchor);
+    
+    return () => {
+      window.removeEventListener('hashchange', scrollToAnchor);
+    };
+  }, []);
   return (
     <>
       <Head>
