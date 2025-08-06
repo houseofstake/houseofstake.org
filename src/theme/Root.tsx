@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from '@docusaurus/router';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import Head from '@docusaurus/Head';
 
 // Custom Root component that wraps the entire Docusaurus app
 // This ensures pages scroll to top when navigation routes change
@@ -49,7 +50,35 @@ function Root({ children }: { children: React.ReactNode }) {
     return () => clearTimeout(timeoutId);
   }, [location.pathname]);
 
-  return <>{children}</>;
+  return (
+    <>
+      <Head>
+        {/* Preload critical font weights to prevent FOUT */}
+        <link
+          rel="preload"
+          href="/fonts/FKGrotesk-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/FKGrotesk-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/FKGrotesk-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </Head>
+      {children}
+    </>
+  );
 }
 
 export default Root;
