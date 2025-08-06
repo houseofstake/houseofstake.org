@@ -132,6 +132,37 @@ const GovernanceSystem: React.FC = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Auto-select tab or expand accordion based on URL hash
+  useEffect(() => {
+    const checkHash = () => {
+      const hash = window.location.hash.replace('#', '');
+      // Check if hash starts with "governance-" and extract the tab id
+      if (hash.startsWith('governance-')) {
+        const tabId = hash.replace('governance-', '');
+        const matchingTab = tabContents.find(tab => tab.id === tabId);
+        if (matchingTab) {
+          if (isMobile) {
+            // On mobile, expand the accordion
+            setExpandedAccordions([matchingTab.id]);
+          } else {
+            // On desktop, select the tab
+            setActiveTab(matchingTab.id);
+          }
+        }
+      }
+    };
+
+    // Check on mount and when mobile state changes
+    checkHash();
+    
+    // Listen for hash changes
+    window.addEventListener('hashchange', checkHash);
+    
+    return () => {
+      window.removeEventListener('hashchange', checkHash);
+    };
+  }, [isMobile]);
+
   const activeContent = tabContents.find((tab) => tab.id === activeTab);
 
   const toggleAccordion = (id: string) => {

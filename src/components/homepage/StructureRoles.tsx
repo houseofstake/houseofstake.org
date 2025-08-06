@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from '@docusaurus/Link';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -162,6 +162,28 @@ const StructureRoles: React.FC = () => {
   const toggleItem = (itemId: string) => {
     setOpenItem(openItem === itemId ? '' : itemId);
   };
+
+  // Auto-open accordion based on URL hash
+  useEffect(() => {
+    const checkHash = () => {
+      const hash = window.location.hash.replace('#', '');
+      // Check if the hash matches any accordion item
+      const matchingItem = accordionItems.find(item => item.id === hash);
+      if (matchingItem) {
+        setOpenItem(matchingItem.id);
+      }
+    };
+
+    // Check on mount
+    checkHash();
+    
+    // Listen for hash changes
+    window.addEventListener('hashchange', checkHash);
+    
+    return () => {
+      window.removeEventListener('hashchange', checkHash);
+    };
+  }, []);
 
   return (
     <section id="structure-roles" className={styles.sectionSplitTextVisual}>
