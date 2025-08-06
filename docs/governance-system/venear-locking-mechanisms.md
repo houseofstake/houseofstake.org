@@ -1,25 +1,25 @@
-# veNEAR Locking Mechanism
+# veNEAR Locking Mechanism {#venear-locking-mechanism}
 ﻿
 To obtain **veNEAR**, users must lock **NEAR**, **stNEAR**, or **liNEAR** tokens in a vote-escrow contract.
 The House of Stake governance system supports a **single flexible locking model** that does not require users to commit to a fixed duration.
 
 ---
 
-### 🔁 Locking Model
+### Locking Model {#locking-model}
 
 Users lock tokens without selecting a fixed period.
 veNEAR **accumulates linearly over time**, up to a maximum equivalent of 4 years of lock.
 Users can initiate an unlock at any time. Once they do, a **3-month cooldown** begins, during which **veNEAR voting power decays to zero**, and tokens become withdrawable at the end.
 
 **Key properties:**
-- ✅ No fixed period required
-- 📈 veNEAR accrues gradually (max at 4 years)
-- ⏳ 3-month cooldown after initiating unlock
-- 🧩 Flexible exit at any time
+- No fixed period required
+- veNEAR accrues gradually (max at 4 years)
+- 3-month cooldown after initiating unlock
+- Flexible exit at any time
 
 ---
 
-### 📊 Example: veNEAR Accumulation and Unlock Flow
+### Example: veNEAR Accumulation and Unlock Flow {#example-venear-accumulation-and-unlock-flow}
 
 This mechanism rewards users who consistently keep tokens locked, while still offering the freedom to exit.
 

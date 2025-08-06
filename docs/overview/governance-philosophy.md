@@ -1,4 +1,4 @@
-# Governance Philosophy
+# Governance Philosophy {#governance-philosophy}
 
 The philosophy behind House of Stake is rooted in three principles:
 

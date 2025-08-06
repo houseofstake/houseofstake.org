@@ -2,7 +2,7 @@
 title: What is House of Stake
 ---
 
-# What is House of Stake
+# What is House of Stake {#what-is-house-of-stake}
 
 The **House of Stake (HoS)** is a governance framework designed to empower NEAR token holders with a transparent, efficient, and stake-weighted system of decision-making.
 

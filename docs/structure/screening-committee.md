@@ -1,4 +1,4 @@
-# Screening Committee
+# Screening Committee {#screening-committee}
 
 The Screening Committee is a core governance body in House of Stake. It serves as the first layer of review and quality control for proposals, delegates, and governance processes.
 
@@ -12,7 +12,7 @@ This group acts as a filter — helping ensure that only relevant, clear, and al
 
 Over time, new members will be elected by delegates annually.
 
-## Responsibilities
+## Responsibilities {#responsibilities}
 
 - **Pre-screening proposals**: Review incoming proposals before they reach the main vote. If approved by the Committee (4 out of 7 votes), a proposal goes to simple majority voting. If not, it requires a supermajority (75%) to pass.
 
@@ -24,20 +24,20 @@ Over time, new members will be elected by delegates annually.
 
 - **Transparency**: Share decisions, meeting notes, and rationale with the community regularly.
 
-📊 **Governance Flow with Delegate Selection and Screening Oversight**
+**Governance Flow with Delegate Selection and Screening Oversight**
 
 ![NEAR Governance Architecture](assets/governance-architecture.png)
 _This diagram shows how proposals move through the governance process and how the Screening Committee supervises both the grant flow and the Endorsed Delegates._
 
 The Screening Committee plays two critical roles:
 
-### 🧩 1. Selection & Monitoring of Delegates
+### Selection & Monitoring of Delegates {#selection-monitoring-of-delegates}
 
 - **Initial Selection**: Chooses the first cohort of Endorsed Delegates
 - **Ongoing Oversight**: Monitors delegates’ voting behavior on proposals
 - **Intervention Power**: If a delegate acts against the code of conduct, the Committee may revoke a proposal’s approval, forcing a 75% supermajority for passage
 
-### 🛠️ 2. Management & Adjustment
+### Management & Adjustment {#management-adjustment}
 
 - **Performance Reviews**: Periodically assess the effectiveness of the process and delegates
 - **Iterative Improvement**: Adjust frameworks and criteria to maintain alignment with protocol goals

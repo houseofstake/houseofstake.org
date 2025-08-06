@@ -1,12 +1,12 @@
-# Delegates & Participants
+# Delegates & Participants {#delegates-participants}
 
 In House of Stake, **delegates** play a central role in executing governance on behalf of veNEAR holders. They are trusted participants who vote on proposals, help shape the future of the ecosystem, and are expected to act transparently and responsibly.
 
-## Delegates
+## Delegates {#delegates}
 
 Delegates receive voting power when other veNEAR holders delegate their tokens to them. To become a delegate, a user must meet certain requirements and publicly commit to participating in governance.
 
-### Responsibilities
+### Responsibilities {#responsibilities}
 
 - Vote actively on governance proposals
 - Provide rationale for their decisions
@@ -15,7 +15,7 @@ Delegates receive voting power when other veNEAR holders delegate their tokens t
 
 Delegates may receive **incentives** if they meet participation criteria such as maintaining 80%+ voting activity, regular updates, and holding at least 0.5% of veNEAR.
 
-## Participants
+## Participants {#participants}
 
 Anyone holding veNEAR can participate in governance directly — by voting, submitting proposals, or delegating their tokens.
 
@@ -29,13 +29,13 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 [Endorsed Delegates](https://gov.near.org/t/announcing-the-initial-set-of-endorsed-delegates/40815?u=kv9990) are officially approved governance participants, selected by the Screening Committee through an open and competitive process. They represent veNEAR holders who choose to delegate their voting power for greater efficiency and coordination in protocol governance.
 
-## Initial Delegate Committee
+## Initial Delegate Committee {#initial-delegate-committee}
 
 The first cohort of 11 Endorsed Delegates was selected based on multiple criteria: reputation, alignment with the NEAR ecosystem, quality of their applications, and diversity of perspectives. The selection prioritized balance, not just popularity or influence.
 
-## The initial endorsed delegates are:
+## The initial endorsed delegates are: {#the-initial-endorsed-delegates-are}
 
-### Slime
+### Slime {#slime}
 
 - **Twitter**: [@slimedrgn](https://x.com/slimedrgn)
 - **LinkedIn**: No LinkedIn
@@ -51,7 +51,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ---
 
-### Charles
+### Charles {#charles}
 
 - **Twitter**: [@openwebeconomy](https://x.com/openwebeconomy)
 - **LinkedIn**: [clgarrett](https://www.linkedin.com/in/clgarrett/)
@@ -61,7 +61,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ---
 
-### Yuen
+### Yuen {#yuen}
 
 - **Twitter**: [@yuensid](https://x.com/yuensid)
 - **LinkedIn**: [chee-yuen-lee](https://www.linkedin.com/in/chee-yuen-lee-99b633377/)
@@ -71,7 +71,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ---
 
-### James
+### James {#james}
 
 - **Twitter**: [@jwaup](https://x.com/jwaup)
 - **LinkedIn**:
@@ -83,7 +83,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ---
 
-### Cameron
+### Cameron {#cameron}
 
 - **Twitter**: [@Cameron*Dennis*](https://x.com/Cameron_Dennis_)
 - **LinkedIn**: [cameron-dennis](https://www.linkedin.com/in/cameron-dennis-b93b25104/)
@@ -95,7 +95,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ---
 
-### Alan
+### Alan {#alan}
 
 - **Twitter**: [@alannetwork\_](https://x.com/alannetwork_)
 - **LinkedIn**: [alannetwork](https://www.linkedin.com/in/alannetwork/)
@@ -113,11 +113,11 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ---
 
-## Organizations
+## Organizations {#organizations}
 
 ---
 
-### NEARWeek
+### NEARWeek {#nearweek}
 
 - **Twitter**: [@nearweek](https://x.com/nearweek)
 - **LinkedIn**: [NEARWeek](https://www.linkedin.com/company/nearweek)
@@ -126,7 +126,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ---
 
-### Tané
+### Tané {#tane}
 
 - **Twitter**: [@tanelabs](https://x.com/tanelabs)
 - **LinkedIn**: [Tané](https://www.linkedin.com/company/tan%C3%A9/)
@@ -138,7 +138,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ---
 
-### 404Gov
+### 404Gov {#404gov}
 
 - **Twitter**: [@404Gov](https://x.com/404Gov)
 - **LinkedIn**: [404 DAO](https://www.linkedin.com/company/404-dao)
@@ -152,7 +152,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ---
 
-### Areta
+### Areta {#areta}
 
 - **Twitter**: [@areta_io](https://x.com/areta_io)
 - **LinkedIn**: [Areta](https://www.linkedin.com/company/aretaio)
@@ -163,7 +163,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ---
 
-### Aurora Labs
+### Aurora Labs {#aurora-labs}
 
 - **Twitter**: [@auroraisnear](https://twitter.com/auroraisnear)
 - **LinkedIn**: [Aurora Labs](https://www.linkedin.com/company/aurora-labs-official/)
@@ -175,11 +175,11 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 These delegates reflect a strong mix of experienced individuals and active NEAR-aligned teams, many of whom have contributed to the ecosystem for years.
 
-## Role of Delegates
+## Role of Delegates {#role-of-delegates}
 
 Participation in House of Stake is permissionless — anyone holding veNEAR can vote directly. However, the delegate system exists to streamline governance for everyday participants by enabling delegation to trusted representatives.
 
-## Expectations & Standards
+## Expectations & Standards {#expectations-standards}
 
 Endorsed Delegates are expected to:
 

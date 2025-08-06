@@ -1,8 +1,8 @@
-# Security Council
+# Security Council {#security-council}
 
 The Security Council is a critical governance body responsible for ensuring the security, integrity, and operational resilience of the NEAR protocol. It serves as a final line of defense in the governance architecture of House of Stake, particularly during emergencies or critical protocol upgrades.
 
-## Purpose
+## Purpose {#purpose}
 
 The Security Council exists to:
 
@@ -11,7 +11,7 @@ The Security Council exists to:
 - Provide oversight during sensitive governance transitions
 - Maintain trust in the network during crises
 
-## Structure
+## Structure {#structure}
 
 The Council is composed of two types of members:
 
@@ -22,7 +22,7 @@ The Council is composed of two types of members:
 
 This tiered composition ensures both institutional stability and diverse perspectives.
 
-## Responsibilities
+## Responsibilities {#responsibilities}
 
 - Initiate emergency interventions when necessary
 - Inform the community within 7 days after emergency actions
@@ -31,7 +31,7 @@ This tiered composition ensures both institutional stability and diverse perspec
 - Oversee technical integrity of the governance system
 - Support the Screening Committee in identifying security risks
 
-## Accountability
+## Accountability {#accountability}
 
 Security Council members are expected to act in the best interest of the NEAR ecosystem. While their powers are reserved for exceptional circumstances, transparency and clear communication are required after any intervention.
 

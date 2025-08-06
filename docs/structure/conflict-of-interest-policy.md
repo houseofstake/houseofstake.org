@@ -1,1 +1,1 @@
-# Conflict of Interests Policy
+# Conflict of Interests Policy {#conflict-of-interests-policy}

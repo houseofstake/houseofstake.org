@@ -1,10 +1,10 @@
-# Working Groups Overview
+# Working Groups Overview {#working-groups-overview}
 
 House of Stake is organized around several specialized Working Groups (WGs), each focused on a core area of governance and ecosystem development.
 
 These groups are responsible for driving discussions, developing strategy, and coordinating execution in their respective domains. While delegates vote on proposals, WGs help shape those proposals and provide the expertise and operational support needed to make governance work.
 
-## Current Working Groups
+## Current Working Groups {#current-working-groups}
 
 - **Governance Infrastructure & Processes WG**
   Focuses on improving governance architecture, voting systems, proposal processes, and tooling.

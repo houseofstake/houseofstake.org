@@ -1,8 +1,8 @@
-# Rewards & Incentives
+# Rewards & Incentives {#rewards-incentives}
 
 House of Stake introduces a structured incentive system to reward meaningful participation in governance, both for veNEAR holders and active delegates.
 
-## 1. Rewards for veNEAR Holders
+## Rewards for veNEAR Holders {#rewards-for-venear-holders}
 
 veNEAR holders receive regular rewards in exchange for locking tokens and participating in governance.
 
@@ -16,7 +16,7 @@ veNEAR holders receive regular rewards in exchange for locking tokens and partic
 
 ![Expected Rewards Expenditure when veNEAR scales](assets/venear-rewards.png)
 
-## 2. Delegate Incentives
+## Delegate Incentives {#delegate-incentives}
 
 Endorsed delegates are eligible for rewards — if they meet certain participation standards:
 
@@ -27,7 +27,7 @@ Endorsed delegates are eligible for rewards — if they meet certain participati
 
 Rewards are proportional to stake and participation, encouraging responsible engagement.
 
-## 3. Funding Source
+## Funding Source {#funding-source}
 
 All incentives are paid from a predictable and capped funding stream:
 
@@ -35,7 +35,7 @@ All incentives are paid from a predictable and capped funding stream:
 - Possible future funding via ecosystem revenue (e.g. protocol fees)
 - Sustainable and transparent budgeting model
 
-### 4. Dynamic veNEAR Reward Scaling
+### Dynamic veNEAR Reward Scaling {#dynamic-venear-reward-scaling}
 
 As veNEAR adoption grows, governance rewards must scale **transparently** and **sustainably** — without requiring constant manual intervention by the Screening Committee.
 
@@ -51,15 +51,15 @@ This ensures that:
 - APY remains competitive early on
 - Total NEAR outflows stay bounded as the system scales
 
-📉 **veNEAR APY vs veNEAR Supply**
+**veNEAR APY vs veNEAR Supply**
 
 ![Determining APY by veNEAR Supply 1](assets/venear-apy-vs-supply.png)
 
-📊 **Reward Examples by Supply Level**
+**Reward Examples by Supply Level**
 
 ![Determining APY by veNEAR Supply 2](assets/venear-apy.png)
 
-## 5. Reward Examples Based on Locked NEAR
+## Reward Examples Based on Locked NEAR {#reward-examples-based-on-locked-near}
 
 To illustrate how veNEAR incentives convert into actual NEAR rewards, here’s an example table based on a 5.8% annual yield.
 

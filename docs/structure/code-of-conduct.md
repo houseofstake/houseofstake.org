@@ -1,1 +1,1 @@
-# Code of Conduct
+# Code of Conduct {#code-of-conduct}

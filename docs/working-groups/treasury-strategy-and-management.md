@@ -1,9 +1,9 @@
-# Treasury Strategy & Management WG
+# Treasury Strategy & Management WG {#treasury-strategy-management-wg}
 
 This working group’s mission is to effectively utilize treasury resources to drive long-term sustainability and growth for the NEAR ecosystem through House of Stake.
 Led by [Cole](https://x.com/404_cole)
 
-## Key responsibilities
+## Key responsibilities {#key-responsibilities}
 
 - Develop frameworks for budgets and strategic asset allocations
 - Establish finance process flows for governance in collaboration with the Infrastructure WG
