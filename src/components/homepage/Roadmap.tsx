@@ -1,109 +1,291 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import styles from './Roadmap.module.css';
-import {
-  getHardcodedProjectData,
-  RoadmapItem,
-  PROJECT_ICONS,
-} from '../../services/github';
 import {
   CiCircleCheck,
   CiClock1,
   CiCalendar,
-  CiPause1,
   CiCircleMore,
 } from 'react-icons/ci';
 
+interface RoadmapItem {
+  id: string;
+  title: string;
+  status: string;
+  statusColor: string;
+  statusTextColor: string;
+  category: 'governance' | 'research';
+  issueNumber: number;
+  quarter: string;
+}
+
 const Roadmap: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [roadmapItems, setRoadmapItems] = useState<RoadmapItem[]>([]);
-  const [statusGroups, setStatusGroups] = useState<Map<string, RoadmapItem[]>>(
-    new Map()
-  );
-  const [availableStatuses, setAvailableStatuses] = useState<string[]>([]);
-  const [statusColors, setStatusColors] = useState<Map<string, string>>(
-    new Map()
-  );
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
-  // Use hardcoded data on component mount
-  useEffect(() => {
-    const loadRoadmapData = () => {
-      try {
-        setIsLoading(true);
-        const projectData = getHardcodedProjectData();
+  // Hardcoded roadmap data from Figma design
+  const roadmapData: RoadmapItem[] = [
+    // Q1 2025 - All Complete
+    {
+      id: '1',
+      title: 'Initial Delegate Selection',
+      status: 'Complete',
+      statusColor: '#C7F5D8',
+      statusTextColor: '#096D50',
+      category: 'governance',
+      issueNumber: 1,
+      quarter: 'Q1 2025',
+    },
+    {
+      id: '2',
+      title: 'Agora Contract',
+      status: 'Complete',
+      statusColor: '#C7F5D8',
+      statusTextColor: '#096D50',
+      category: 'governance',
+      issueNumber: 2,
+      quarter: 'Q1 2025',
+    },
+    {
+      id: '3',
+      title: 'Backend Contracts',
+      status: 'Complete',
+      statusColor: '#C7F5D8',
+      statusTextColor: '#096D50',
+      category: 'governance',
+      issueNumber: 3,
+      quarter: 'Q1 2025',
+    },
+    {
+      id: '4',
+      title: 'First Delegate Meetings, Form Working Groups',
+      status: 'Complete',
+      statusColor: '#C7F5D8',
+      statusTextColor: '#096D50',
+      category: 'governance',
+      issueNumber: 4,
+      quarter: 'Q1 2025',
+    },
+    {
+      id: '5',
+      title: 'Audit Backend',
+      status: 'Complete',
+      statusColor: '#C7F5D8',
+      statusTextColor: '#096D50',
+      category: 'governance',
+      issueNumber: 5,
+      quarter: 'Q1 2025',
+    },
+    // Q2 2025 - Governance & Product Column
+    {
+      id: '6',
+      title: 'Research Best Practices, Constitution',
+      status: 'In Progress',
+      statusColor: '#ADFCF3',
+      statusTextColor: '#0282A2',
+      category: 'governance',
+      issueNumber: 6,
+      quarter: 'Q2 2025',
+    },
+    {
+      id: '7',
+      title: 'First Draft Proposals',
+      status: 'In Progress',
+      statusColor: '#ADFCF3',
+      statusTextColor: '#0282A2',
+      category: 'governance',
+      issueNumber: 7,
+      quarter: 'Q2 2025',
+    },
+    {
+      id: '8',
+      title: 'Finalize HoS 1.0 & 2.0 Params',
+      status: 'In Progress',
+      statusColor: '#ADFCF3',
+      statusTextColor: '#0282A2',
+      category: 'governance',
+      issueNumber: 8,
+      quarter: 'Q2 2025',
+    },
+    {
+      id: '9',
+      title: 'Hire Head of Governance',
+      status: 'In Progress',
+      statusColor: '#ADFCF3',
+      statusTextColor: '#0282A2',
+      category: 'governance',
+      issueNumber: 9,
+      quarter: 'Q2 2025',
+    },
+    {
+      id: '10',
+      title: 'First In-person Event',
+      status: 'In Progress',
+      statusColor: '#ADFCF3',
+      statusTextColor: '#0282A2',
+      category: 'governance',
+      issueNumber: 10,
+      quarter: 'Q2 2025',
+    },
+    {
+      id: '11',
+      title: 'HoS Dashboard Launch',
+      status: 'In Progress',
+      statusColor: '#ADFCF3',
+      statusTextColor: '#0282A2',
+      category: 'governance',
+      issueNumber: 11,
+      quarter: 'Q2 2025',
+    },
+    {
+      id: '12',
+      title: 'HoS Alpha Complete',
+      status: 'Scheduled',
+      statusColor: '#DCDCF9',
+      statusTextColor: '#4D3BC2',
+      category: 'governance',
+      issueNumber: 12,
+      quarter: 'Q2 2025',
+    },
+    // Q2 2025 - AI & Research Column
+    {
+      id: '13',
+      title: 'HoS Alpha Complete',
+      status: 'In Progress',
+      statusColor: '#ADFCF3',
+      statusTextColor: '#0282A2',
+      category: 'research',
+      issueNumber: 13,
+      quarter: 'Q2 2025',
+    },
+    {
+      id: '14',
+      title: 'Finalize Research Partnership',
+      status: 'In Progress',
+      statusColor: '#ADFCF3',
+      statusTextColor: '#0282A2',
+      category: 'research',
+      issueNumber: 14,
+      quarter: 'Q2 2025',
+    },
+    {
+      id: '15',
+      title: 'AI Assistant',
+      status: 'Scheduled',
+      statusColor: '#DCDCF9',
+      statusTextColor: '#4D3BC2',
+      category: 'research',
+      issueNumber: 15,
+      quarter: 'Q2 2025',
+    },
+    // Q3 2025 - Governance & Product Column
+    {
+      id: '16',
+      title: 'HoS Beta Complete',
+      status: 'Scheduled',
+      statusColor: '#DCDCF9',
+      statusTextColor: '#4D3BC2',
+      category: 'governance',
+      issueNumber: 16,
+      quarter: 'Q3 2025',
+    },
+    {
+      id: '17',
+      title: 'First Final Proposals',
+      status: 'Scheduled',
+      statusColor: '#DCDCF9',
+      statusTextColor: '#4D3BC2',
+      category: 'governance',
+      issueNumber: 17,
+      quarter: 'Q3 2025',
+    },
+    {
+      id: '18',
+      title: 'HoS 1.0 Go Live',
+      status: 'Scheduled',
+      statusColor: '#DCDCF9',
+      statusTextColor: '#4D3BC2',
+      category: 'governance',
+      issueNumber: 18,
+      quarter: 'Q3 2025',
+    },
+    {
+      id: '19',
+      title: 'First Staking',
+      status: 'Scheduled',
+      statusColor: '#DCDCF9',
+      statusTextColor: '#4D3BC2',
+      category: 'governance',
+      issueNumber: 19,
+      quarter: 'Q3 2025',
+    },
+    {
+      id: '20',
+      title: 'First Vote',
+      status: 'Scheduled',
+      statusColor: '#DCDCF9',
+      statusTextColor: '#4D3BC2',
+      category: 'governance',
+      issueNumber: 20,
+      quarter: 'Q3 2025',
+    },
+    {
+      id: '21',
+      title: 'Finalize HoS 2.0 Design',
+      status: 'Scheduled',
+      statusColor: '#DCDCF9',
+      statusTextColor: '#4D3BC2',
+      category: 'governance',
+      issueNumber: 21,
+      quarter: 'Q3 2025',
+    },
+    {
+      id: '22',
+      title: 'Target 10% Staking',
+      status: 'Scheduled',
+      statusColor: '#DCDCF9',
+      statusTextColor: '#4D3BC2',
+      category: 'governance',
+      issueNumber: 22,
+      quarter: 'Q3 2025',
+    },
+    // Q3 2025 - AI & Research Column
+    {
+      id: '23',
+      title: 'Hire First Researchers',
+      status: 'In Progress',
+      statusColor: '#ADFCF3',
+      statusTextColor: '#0282A2',
+      category: 'research',
+      issueNumber: 23,
+      quarter: 'Q3 2025',
+    },
+    {
+      id: '24',
+      title: 'Research Lab Launch',
+      status: 'Scheduled',
+      statusColor: '#DCDCF9',
+      statusTextColor: '#4D3BC2',
+      category: 'research',
+      issueNumber: 24,
+      quarter: 'Q3 2025',
+    },
+    {
+      id: '25',
+      title: 'First AI Delegate Prototype (Public Goods Funding)',
+      status: 'Scheduled',
+      statusColor: '#DCDCF9',
+      statusTextColor: '#4D3BC2',
+      category: 'research',
+      issueNumber: 25,
+      quarter: 'Q3 2025',
+    },
+  ];
 
-        if (projectData.error) {
-          setError(projectData.error);
-        } else {
-          setRoadmapItems(projectData.items);
-          setStatusColors(projectData.statuses);
-
-          // Use columns from API if available, otherwise use ordered list
-          const statusOrder =
-            projectData.columns.length > 0
-              ? projectData.columns
-              : getStatusOrder(projectData.statuses);
-          setAvailableStatuses(statusOrder);
-
-          // Group items by status
-          const groups = new Map<string, RoadmapItem[]>();
-          // Initialize all statuses with empty arrays
-          statusOrder.forEach((status) => {
-            groups.set(status, []);
-          });
-          // Add items to their respective groups
-          projectData.items.forEach((item) => {
-            const existing = groups.get(item.status) || [];
-            groups.set(item.status, [...existing, item]);
-          });
-          setStatusGroups(groups);
-        }
-      } catch (err) {
-        console.error('Failed to load roadmap data:', err);
-        setError('Failed to load roadmap data');
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadRoadmapData();
-  }, []);
-
-  // Get ordered list of statuses
-  const getStatusOrder = (statuses: Map<string, string>): string[] => {
-    const statusArray = Array.from(statuses.keys());
-
-    // Define priority order for known status types
-    const orderPriority: Record<string, number> = {
-      todo: 1,
-      backlog: 1,
-      next: 2,
-      'on deck': 2,
-      upcoming: 2,
-      'this sprint': 3,
-      current: 3,
-      'in progress': 3,
-      paused: 4,
-      blocked: 4,
-      done: 5,
-      complete: 5,
-      closed: 5,
-    };
-
-    // Sort statuses based on priority
-    return statusArray.sort((a, b) => {
-      const aPriority =
-        Object.entries(orderPriority).find(([key]) =>
-          a.toLowerCase().includes(key)
-        )?.[1] || 99;
-      const bPriority =
-        Object.entries(orderPriority).find(([key]) =>
-          b.toLowerCase().includes(key)
-        )?.[1] || 99;
-
-      return aPriority - bPriority;
-    });
+  // Group items by quarter and category
+  const quarters = ['Q1 2025', 'Q2 2025', 'Q3 2025'];
+  
+  // Create a structure for quarter -> category -> items
+  const getItemsForQuarterAndCategory = (quarter: string, category: 'governance' | 'research') => {
+    return roadmapData.filter(item => item.quarter === quarter && item.category === category);
   };
 
   // Get appropriate icon for status
@@ -111,39 +293,18 @@ const Roadmap: React.FC = () => {
     const statusLower = status.toLowerCase();
     const iconProps = { size: 16, color: color, style: { strokeWidth: 1.5 } };
 
-    // Done/Complete statuses - check circle icon
-    if (
-      statusLower.includes('done') ||
-      statusLower.includes('complete') ||
-      statusLower.includes('closed')
-    ) {
+    if (statusLower.includes('complete')) {
       return <CiCircleCheck {...iconProps} />;
     }
 
-    // In Progress/Current statuses - clock icon
-    if (
-      statusLower.includes('this sprint') ||
-      statusLower.includes('current') ||
-      statusLower.includes('in progress')
-    ) {
+    if (statusLower.includes('in progress')) {
       return <CiClock1 {...iconProps} />;
     }
 
-    // Next/Upcoming statuses - calendar icon
-    if (
-      statusLower.includes('next') ||
-      statusLower.includes('on deck') ||
-      statusLower.includes('upcoming')
-    ) {
+    if (statusLower.includes('scheduled')) {
       return <CiCalendar {...iconProps} />;
     }
 
-    // Paused/Blocked statuses - pause icon
-    if (statusLower.includes('paused') || statusLower.includes('blocked')) {
-      return <CiPause1 {...iconProps} />;
-    }
-
-    // Todo/Backlog statuses (default) - circle icon
     return <CiCircleMore {...iconProps} />;
   };
 
@@ -165,43 +326,10 @@ const Roadmap: React.FC = () => {
     }
   };
 
-  if (isLoading) {
-    return (
-      <section className={styles.roadmapSection}>
-        <div className={styles.headerContainer}>
-          <div className={styles.titleContainer}>
-            <h2 className={styles.title}>Roadmap</h2>
-          </div>
-          <div className={styles.divider} />
-        </div>
-        <div className={styles.roadmapContent}>
-          <div style={{ textAlign: 'center', padding: '40px' }}>
-            Loading roadmap data...
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  if (error) {
-    return (
-      <section className={styles.roadmapSection}>
-        <div className={styles.headerContainer}>
-          <div className={styles.titleContainer}>
-            <h2 className={styles.title}>Roadmap</h2>
-          </div>
-          <div className={styles.divider} />
-        </div>
-        <div className={styles.roadmapContent}>
-          <div
-            style={{ textAlign: 'center', padding: '40px', color: '#ff6b6b' }}
-          >
-            Failed to load roadmap data. Please try again later.
-          </div>
-        </div>
-      </section>
-    );
-  }
+  // Check if quarter is current - hardcoded to Q2 2025
+  const isCurrentQuarter = (quarter: string): boolean => {
+    return quarter === 'Q2 2025';
+  };
 
   return (
     <section className={styles.roadmapSection}>
@@ -258,73 +386,99 @@ const Roadmap: React.FC = () => {
 
       <div className={styles.roadmapContent}>
         <div className={styles.timelineContainer} ref={containerRef}>
-          {availableStatuses.map((status, statusIndex) => {
-            const items = statusGroups.get(status) || [];
-            const isCurrentStatus =
-              status.toLowerCase().includes('this sprint') ||
-              status.toLowerCase().includes('current') ||
-              status.toLowerCase().includes('in progress');
+          {quarters.map((quarter) => {
+            const isCurrent = isCurrentQuarter(quarter);
+            const governanceItems = getItemsForQuarterAndCategory(quarter, 'governance');
+            const researchItems = getItemsForQuarterAndCategory(quarter, 'research');
 
             return (
-              <div key={status} className={styles.statusColumn}>
+              <div key={quarter} className={styles.quarterSection}>
                 <div className={styles.statusHeader}>
                   <div className={styles.timelineLine} />
                   <div
-                    className={`${styles.timelineDot} ${isCurrentStatus ? styles.current : ''}`}
+                    className={`${styles.timelineDot} ${isCurrent ? styles.current : ''}`}
                   />
                   <div className={styles.timelineLine} />
                 </div>
-                <h3 className={styles.statusLabel}>{status}</h3>
-                <div className={styles.cardsContainer}>
-                  {items.length === 0 ? (
-                    <div className={styles.emptyState}>
-                      <span>No items</span>
-                    </div>
-                  ) : (
-                    items.map((item) => (
-                      <a
-                        key={item.id}
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.roadmapCard}
-                        style={{ textDecoration: 'none' }}
-                      >
-                        <div className={styles.cardContent}>
-                          <div className={styles.categoryBadge}>
-                            {item.projectNumber &&
-                              PROJECT_ICONS[item.projectNumber] && (
+                <h3 className={styles.statusLabel}>{quarter}</h3>
+                <div className={styles.quarterColumns}>
+                  {/* Governance & Product Column */}
+                  {governanceItems.length > 0 && (
+                    <div className={styles.categoryColumn}>
+                      <div className={styles.cardsContainer}>
+                        {governanceItems.map((item) => (
+                          <div
+                            key={item.id}
+                            className={styles.roadmapCard}
+                          >
+                            <div className={styles.cardContent}>
+                              <div className={styles.categoryBadge}>
                                 <img
-                                  src={PROJECT_ICONS[item.projectNumber]}
-                                  alt="Project icon"
+                                  src="/img/governance-icon.svg"
+                                  alt="Governance icon"
                                   width="14"
                                   height="14"
                                 />
-                              )}
-                            <span
-                              className={`${styles.categoryText} ${styles[item.category]}`}
+                                <span
+                                  className={`${styles.categoryText} ${styles.governance}`}
+                                >
+                                  GOVERNANCE & PRODUCT
+                                </span>
+                              </div>
+                              <h4 className={styles.cardTitle}>{item.title}</h4>
+                            </div>
+                            <div
+                              className={styles.statusBadge}
+                              style={{ backgroundColor: item.statusColor }}
                             >
-                              {item.category === 'governance'
-                                ? 'GOVERNANCE & PRODUCT'
-                                : 'AI & RESEARCH'}
-                            </span>
+                              {getStatusIcon(item.status, item.statusTextColor)}
+                              <span style={{ color: item.statusTextColor }}>
+                                {item.status}
+                              </span>
+                            </div>
                           </div>
-                          <h4 className={styles.cardTitle}>{item.title}</h4>
-                          <span className={styles.issueNumber}>
-                            #{item.issueNumber}
-                          </span>
-                        </div>
-                        <div
-                          className={styles.statusBadge}
-                          style={{ backgroundColor: item.statusColor }}
-                        >
-                          {getStatusIcon(item.status, item.statusTextColor)}
-                          <span style={{ color: item.statusTextColor }}>
-                            {item.status}
-                          </span>
-                        </div>
-                      </a>
-                    ))
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {/* AI & Research Column */}
+                  {researchItems.length > 0 && (
+                    <div className={styles.categoryColumn}>
+                      <div className={styles.cardsContainer}>
+                        {researchItems.map((item) => (
+                          <div
+                            key={item.id}
+                            className={styles.roadmapCard}
+                          >
+                            <div className={styles.cardContent}>
+                              <div className={styles.categoryBadge}>
+                                <img
+                                  src="/img/research-icon.svg"
+                                  alt="Research icon"
+                                  width="14"
+                                  height="14"
+                                />
+                                <span
+                                  className={`${styles.categoryText} ${styles.research}`}
+                                >
+                                  AI & RESEARCH
+                                </span>
+                              </div>
+                              <h4 className={styles.cardTitle}>{item.title}</h4>
+                            </div>
+                            <div
+                              className={styles.statusBadge}
+                              style={{ backgroundColor: item.statusColor }}
+                            >
+                              {getStatusIcon(item.status, item.statusTextColor)}
+                              <span style={{ color: item.statusTextColor }}>
+                                {item.status}
+                              </span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   )}
                 </div>
               </div>
