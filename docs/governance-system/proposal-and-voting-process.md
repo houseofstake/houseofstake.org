@@ -1,6 +1,6 @@
 # Proposal & Voting Process {#proposal-voting-process}
 
-House of Stake governance follows a two-stage decision-making flow designed to balance efficiency, inclusiveness, and decentralization.
+House of Stake governance follows a structured process built around a **two-stage decision-making core** (pre-screening and on-chain voting), designed to balance efficiency, inclusiveness, and decentralization.
 
 ## Proposal Submission {#proposal-submission}
 

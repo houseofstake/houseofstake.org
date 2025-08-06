@@ -1,6 +1,7 @@
 # Rewards & Incentives {#rewards-incentives}
 
-House of Stake introduces a structured incentive system to reward meaningful participation in governance, both for veNEAR holders and active delegates.
+House of Stake is exploring the introduction of a structured incentive system to reward meaningful participation in governance — both for veNEAR holders and active delegates.
+Below is a theoretical outline of how this could work.
 
 ## Rewards for veNEAR Holders {#rewards-for-venear-holders}
 

@@ -9,14 +9,16 @@ This section defines the roles and responsibilities of key governance participan
 
 ## Example: Key Governance Processes {#example-key-governance-processes}
 
-| Process                       | Screening Committee | Endorsed Delegates | Delegates | Security Council | veNEAR Holders |
-| ----------------------------- | ------------------- | ------------------ | --------- | ---------------- | -------------- |
-| Pre-screening grant proposals | R, A                |                    |           | C                | I              |
-| Voting on proposals           |                     | R, A               | R, A      | I                | R, A           |
-| Selecting new delegates       | R                   |                    |           | C                | I              |
-| Removing bad actors           | R                   |                    |           | C                | I              |
-| Emergency intervention        |                     |                    |           | R, A             | I              |
-| Updating reward frameworks    | R, A                |                    |           | C                | I              |
+| Process                           | Screening Committee | Endorsed Delegates | Delegates | Security Council | veNEAR Holders |
+|----------------------------------|---------------------|--------------------|-----------|------------------|----------------|
+| Pre-screening grant proposals    | R, A                |                    |           | C                | I              |
+| Voting on proposals              |                     | R, A               | R, A      | I                | R, A           |
+| Selecting new delegates          | R                   |                    |           | C                | I              |
+| Removing bad actors              | R                   |                    |           | C                | I              |
+| Emergency intervention           |                     |                    |           | R, A             | I              |
+| Updating reward frameworks       | R, A                |                    |           | C                | I              |
+
+
 
 > **Note:** This table serves as a starting point. Roles and scopes may evolve as the governance system matures.
 

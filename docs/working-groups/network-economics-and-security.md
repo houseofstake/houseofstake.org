@@ -1,7 +1,7 @@
 # Network Economics & Security WG {#network-economics-security-wg}
 
 This working group focuses on the sustainability and resilience of NEAR’s core economic and security infrastructure.
-Led by [Rika](https://x.com/RikaGoldberg)
+**Led by [Rika](https://x.com/RikaGoldberg)**
 
 ## Key responsibilities {#key-responsibilities}
 

@@ -8,7 +8,7 @@ This group acts as a filter — helping ensure that only relevant, clear, and al
 
 - 3 members from [NEAR Foundation](https://near.foundation)
 - 1 member from [Gauntlet](https://gauntlet.xyz)
-- 1 member from NearOne
+- 1 member from [NearOne](https://nearone.org/)
 
 Over time, new members will be elected by delegates annually.
 
