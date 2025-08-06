@@ -74,15 +74,11 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Open Graph and social card image
+    // Open Graph and social card image - Docusaurus will automatically handle og:image and twitter:image
     image: 'img/og-image.jpg',
     metadata: [
       { name: 'twitter:card', content: 'summary_large_image' },
-      { property: 'og:image', content: 'https://houseofstake.org/img/og-image.jpg' },
-      { property: 'og:image:width', content: '1200' },
-      { property: 'og:image:height', content: '630' },
-      { property: 'og:title', content: 'House of Stake - Governance of the NEAR Ecosystem' },
-      { property: 'og:description', content: 'HoS is the NEAR ecosystem\'s social governance platform' },
+      { property: 'og:type', content: 'website' },
     ],
     navbar: {
       title: 'House of Stake',
