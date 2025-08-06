@@ -37,18 +37,18 @@ const tabContents: TabContent[] = [
     title: 'Proposal & Voting Process',
     content: `House of Stake uses a 3-step governance flow:
 
-1. **Submit Proposal**  
+1. **Submit Proposal**
 Anyone can propose using a public template. Community feedback is required before voting.
 
-2. **Screening Committee**  
-7 members review proposals:  
-- 4+ approvals → simple majority (51%) vote  
-- <4 approvals → needs supermajority (75%)  
+2. **Screening Committee**
+7 members review proposals:
+- 4+ approvals → simple majority (51%) vote
+- <4 approvals → needs supermajority (75%)
 Filters low-quality proposals early.
 
-3. **On-chain Voting**  
-veNEAR holders vote directly or via delegates.  
-Voting power = veNEAR balance.  
+3. **On-chain Voting**
+veNEAR holders vote directly or via delegates.
+Voting power = veNEAR balance.
 Standard voting period (e.g. 5–7 days).
 
 All activity is public for transparency and accountability.`,
@@ -74,8 +74,8 @@ All activity is public for transparency and accountability.`,
 - Future: ecosystem revenue may contribute
 
 ## Dynamic Scaling
-Rewards adjust with veNEAR supply:  
-$$\\text{veNEAR}_{\\text{APY}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{supply}}}}$$  
+Rewards adjust with veNEAR supply:
+$$\\text{veNEAR}_{\\text{APY}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{supply}}}}$$
 → Lower APY as supply grows = sustainable model`,
     docsLink: '/docs/governance-system/rewards-and-incentives',
   },
@@ -84,13 +84,13 @@ $$\\text{veNEAR}_{\\text{APY}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{suppl
     title: 'Inflation Model',
     content: `House of Stake uses 0.5% annual NEAR inflation to fund governance.
 
-- **100%** goes to veNEAR holders and active delegates  
-- Predictable, capped, and sustainable  
+- **100%** goes to veNEAR holders and active delegates
+- Predictable, capped, and sustainable
 - No major dilution to NEAR holders
 
-**Why it matters:**  
-- Rewards long-term locking and voting  
-- Reduces need for treasury grants  
+**Why it matters:**
+- Rewards long-term locking and voting
+- Reduces need for treasury grants
 - Keeps governance funding transparent and stable
 
 **Adjustable via governance** if needed in the future.`,
@@ -105,9 +105,9 @@ $$\\text{veNEAR}_{\\text{APY}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{suppl
 - Approved via standard proposal + voting process
 - All versions tracked and documented on-chain
 
-**Why it matters:**  
-- Ensures transparency and stability  
-- Prevents undocumented changes  
+**Why it matters:**
+- Ensures transparency and stability
+- Prevents undocumented changes
 - Builds a shared history of governance evolution
 
 Governance stays open to improvement — if proposed and approved by the community.`,
@@ -141,7 +141,7 @@ const GovernanceSystem: React.FC = () => {
   };
 
   return (
-    <section className={styles.governanceSection}>
+    <section id="governance-system" className={styles.governanceSection}>
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.headerContainer}>
@@ -154,7 +154,11 @@ const GovernanceSystem: React.FC = () => {
           // Accordion layout for mobile/tablet
           <div className={styles.accordionWrapper}>
             {tabContents.map((tab) => (
-              <div key={tab.id} className={styles.accordionItem}>
+              <div
+                key={tab.id}
+                id={`governance-${tab.id}`}
+                className={styles.accordionItem}
+              >
                 <div
                   className={`${styles.accordionHeader} ${expandedAccordions.includes(tab.id) ? styles.expanded : ''}`}
                 >
@@ -272,7 +276,11 @@ const GovernanceSystem: React.FC = () => {
               ))}
             </div>
 
-            <div className={styles.tabContent} key={activeTab}>
+            <div
+              id={`governance-${activeTab}`}
+              className={styles.tabContent}
+              key={activeTab}
+            >
               {activeContent && (
                 <>
                   <div className={styles.contentText}>
@@ -318,7 +326,10 @@ const GovernanceSystem: React.FC = () => {
                     </Markdown>
                     {activeContent.docsLink && (
                       <div className={styles.learnMoreWrapper}>
-                        <a href={activeContent.docsLink} className={styles.learnMoreLink}>
+                        <a
+                          href={activeContent.docsLink}
+                          className={styles.learnMoreLink}
+                        >
                           Learn more →
                         </a>
                       </div>

@@ -164,7 +164,7 @@ const StructureRoles: React.FC = () => {
   };
 
   return (
-    <section className={styles.sectionSplitTextVisual}>
+    <section id="structure-roles" className={styles.sectionSplitTextVisual}>
       <div className={styles.headerTitle}>
         <div className={styles.container}>
           <h2 className={styles.title}>Structure & Roles</h2>
@@ -174,7 +174,7 @@ const StructureRoles: React.FC = () => {
 
       <div className={styles.content}>
         {accordionItems.map((item) => (
-          <div key={item.id} className={styles.accordion}>
+          <div key={item.id} id={item.id} className={styles.accordion}>
             <button
               className={styles.accordionContainer}
               onClick={() => toggleItem(item.id)}
@@ -184,9 +184,7 @@ const StructureRoles: React.FC = () => {
               <div className={styles.leftContent}>
                 <div className={styles.contentWrapper}>
                   <div className={styles.titleWrapper}>
-                    <span className={styles.accordionTitle}>
-                      {item.title}
-                    </span>
+                    <span className={styles.accordionTitle}>{item.title}</span>
                   </div>
                 </div>
               </div>

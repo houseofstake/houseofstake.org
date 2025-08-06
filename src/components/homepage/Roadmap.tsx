@@ -284,10 +284,15 @@ const Roadmap: React.FC = () => {
 
   // Group items by quarter and category
   const quarters = ['Q1 2025', 'Q2 2025', 'Q3 2025'];
-  
+
   // Create a structure for quarter -> category -> items
-  const getItemsForQuarterAndCategory = (quarter: string, category: 'governance' | 'research') => {
-    return roadmapData.filter(item => item.quarter === quarter && item.category === category);
+  const getItemsForQuarterAndCategory = (
+    quarter: string,
+    category: 'governance' | 'research'
+  ) => {
+    return roadmapData.filter(
+      (item) => item.quarter === quarter && item.category === category
+    );
   };
 
   // Get appropriate icon for status
@@ -337,10 +342,10 @@ const Roadmap: React.FC = () => {
   const checkScroll = () => {
     if (containerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
-      
+
       // Show left gradient if not at the start
       setShowLeftGradient(scrollLeft > 0);
-      
+
       // Show right gradient if not at the end
       setShowRightGradient(scrollLeft < scrollWidth - clientWidth - 1);
     }
@@ -349,23 +354,23 @@ const Roadmap: React.FC = () => {
   useEffect(() => {
     // Check initial scroll state
     checkScroll();
-    
+
     // Add resize observer to check when container size changes
     const resizeObserver = new ResizeObserver(() => {
       checkScroll();
     });
-    
+
     if (containerRef.current) {
       resizeObserver.observe(containerRef.current);
     }
-    
+
     return () => {
       resizeObserver.disconnect();
     };
   }, []);
 
   return (
-    <section className={styles.roadmapSection}>
+    <section id="roadmap" className={styles.roadmapSection}>
       <div className={styles.headerContainer}>
         <div className={styles.titleContainer}>
           <h2 className={styles.title}>Roadmap</h2>
@@ -420,15 +425,21 @@ const Roadmap: React.FC = () => {
       <div className={styles.roadmapContent}>
         {showLeftGradient && <div className={styles.gradientLeft} />}
         {showRightGradient && <div className={styles.gradientRight} />}
-        <div 
-          className={styles.timelineContainer} 
+        <div
+          className={styles.timelineContainer}
           ref={containerRef}
           onScroll={checkScroll}
         >
           {quarters.map((quarter) => {
             const isCurrent = isCurrentQuarter(quarter);
-            const governanceItems = getItemsForQuarterAndCategory(quarter, 'governance');
-            const researchItems = getItemsForQuarterAndCategory(quarter, 'research');
+            const governanceItems = getItemsForQuarterAndCategory(
+              quarter,
+              'governance'
+            );
+            const researchItems = getItemsForQuarterAndCategory(
+              quarter,
+              'research'
+            );
 
             return (
               <div key={quarter} className={styles.quarterSection}>
@@ -445,10 +456,7 @@ const Roadmap: React.FC = () => {
                     <div className={styles.categoryColumn}>
                       <div className={styles.cardsContainer}>
                         {governanceItems.map((item) => (
-                          <div
-                            key={item.id}
-                            className={styles.roadmapCard}
-                          >
+                          <div key={item.id} className={styles.roadmapCard}>
                             <div className={styles.cardContent}>
                               <div className={styles.categoryBadge}>
                                 <img
@@ -484,10 +492,7 @@ const Roadmap: React.FC = () => {
                     <div className={styles.categoryColumn}>
                       <div className={styles.cardsContainer}>
                         {researchItems.map((item) => (
-                          <div
-                            key={item.id}
-                            className={styles.roadmapCard}
-                          >
+                          <div key={item.id} className={styles.roadmapCard}>
                             <div className={styles.cardContent}>
                               <div className={styles.categoryBadge}>
                                 <img

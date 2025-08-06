@@ -4,7 +4,7 @@ import styles from './Hero.module.css';
 
 const Hero: React.FC = () => {
   return (
-    <section className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       <Header />
       <div
         className={styles.heroBackground}

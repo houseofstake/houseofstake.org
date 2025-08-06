@@ -12,7 +12,7 @@ const features = [
 
 const How: React.FC = () => {
   return (
-    <section className={styles.sectionSplitTextVisual}>
+    <section id="how" className={styles.sectionSplitTextVisual}>
       <div className={styles.headerTitle}>
         <div className={styles.container}>
           <h2 className={styles.title}>How is it different</h2>

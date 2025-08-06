@@ -30,7 +30,7 @@ const cards: CardData[] = [
 
 const What: React.FC = () => {
   return (
-    <section className={styles.sectionSplitTextVisual}>
+    <section id="what" className={styles.sectionSplitTextVisual}>
       <div className={styles.cardsContainer}>
         {cards.map((card, index) => (
           <Link key={index} to={card.link} className={styles.squareCard}>
