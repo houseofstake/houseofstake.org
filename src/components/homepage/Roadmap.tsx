@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styles from './Roadmap.module.css';
 import {
   CiCircleCheck,
-  CiClock1,
+  CiPlay1,
   CiCalendar,
   CiCircleMore,
 } from 'react-icons/ci';
@@ -298,7 +298,7 @@ const Roadmap: React.FC = () => {
     }
 
     if (statusLower.includes('in progress')) {
-      return <CiClock1 {...iconProps} />;
+      return <CiPlay1 {...iconProps} />;
     }
 
     if (statusLower.includes('scheduled')) {
