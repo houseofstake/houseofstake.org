@@ -113,7 +113,7 @@ const Header: React.FC = () => {
             className={styles.participateButton}
             onClick={() => setIsMenuOpen(false)}
           >
-            Participate
+            Govern
           </a>
         </nav>
       </div>

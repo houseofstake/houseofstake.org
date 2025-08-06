@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styles from './Roadmap.module.css';
 import {
   CiCircleCheck,
@@ -20,6 +20,8 @@ interface RoadmapItem {
 
 const Roadmap: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [showLeftGradient, setShowLeftGradient] = useState(false);
+  const [showRightGradient, setShowRightGradient] = useState(false);
 
   // Hardcoded roadmap data from Figma design
   const roadmapData: RoadmapItem[] = [
@@ -331,6 +333,37 @@ const Roadmap: React.FC = () => {
     return quarter === 'Q2 2025';
   };
 
+  // Check scroll position and update gradient visibility
+  const checkScroll = () => {
+    if (containerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
+      
+      // Show left gradient if not at the start
+      setShowLeftGradient(scrollLeft > 0);
+      
+      // Show right gradient if not at the end
+      setShowRightGradient(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  useEffect(() => {
+    // Check initial scroll state
+    checkScroll();
+    
+    // Add resize observer to check when container size changes
+    const resizeObserver = new ResizeObserver(() => {
+      checkScroll();
+    });
+    
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
+    
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
+
   return (
     <section className={styles.roadmapSection}>
       <div className={styles.headerContainer}>
@@ -385,7 +418,13 @@ const Roadmap: React.FC = () => {
       </div>
 
       <div className={styles.roadmapContent}>
-        <div className={styles.timelineContainer} ref={containerRef}>
+        {showLeftGradient && <div className={styles.gradientLeft} />}
+        {showRightGradient && <div className={styles.gradientRight} />}
+        <div 
+          className={styles.timelineContainer} 
+          ref={containerRef}
+          onScroll={checkScroll}
+        >
           {quarters.map((quarter) => {
             const isCurrent = isCurrentQuarter(quarter);
             const governanceItems = getItemsForQuarterAndCategory(quarter, 'governance');
@@ -398,7 +437,6 @@ const Roadmap: React.FC = () => {
                   <div
                     className={`${styles.timelineDot} ${isCurrent ? styles.current : ''}`}
                   />
-                  <div className={styles.timelineLine} />
                 </div>
                 <h3 className={styles.statusLabel}>{quarter}</h3>
                 <div className={styles.quarterColumns}>
