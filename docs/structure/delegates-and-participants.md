@@ -29,10 +29,6 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 [Endorsed Delegates](https://gov.near.org/t/announcing-the-initial-set-of-endorsed-delegates/40815?u=kv9990) are officially approved governance participants, selected by the Screening Committee through an open and competitive process. They represent veNEAR holders who choose to delegate their voting power for greater efficiency and coordination in protocol governance.
 
-## Initial Delegate Committee {#initial-delegate-committee}
-
-The first cohort of 11 Endorsed Delegates was selected based on multiple criteria: reputation, alignment with the NEAR ecosystem, quality of their applications, and diversity of perspectives. The selection prioritized balance, not just popularity or influence.
-
 ## The initial endorsed delegates are: {#the-initial-endorsed-delegates-are}
 
 ### Slime {#slime}
