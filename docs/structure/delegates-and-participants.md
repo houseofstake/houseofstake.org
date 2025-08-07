@@ -56,8 +56,8 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 - **Twitter**: [@openwebeconomy](https://x.com/openwebeconomy)
 - **LinkedIn**: [clgarrett](https://www.linkedin.com/in/clgarrett/)
 - **Title**: Co-founder of @beneviolabs
-- **Bio**: House of Stake delegate and DeFi founder, blending engineering leadership with community‑driven governance. I focus on shaping governance, incentives, and collaborations that strengthen NEAR's ecosystem, expand participation, and sustain long‑term growth.
-- **Previous experience**:
+- **Bio**: Founder, engineering leader, and DeFi builder, Charles is dedicated to expanding access to digital assets through approachable, social, and practical crypto experiences. With a strong background in both product and protocol development, he has contributed across the NEAR ecosystem as a DevEx contributor and engineering manager. Their work focuses on simplifying complexity, aligning incentives, and building for long-term sustainable growth in Web3.
+- **Previous experience**: Included in bio
 
 ---
 

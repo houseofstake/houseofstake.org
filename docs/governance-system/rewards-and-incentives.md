@@ -45,10 +45,6 @@ This ensures that:
 
 ![Determining APY by veNEAR Supply 1](assets/venear-apy-vs-supply.png)
 
-**Reward Examples by Supply Level**
-
-![Determining APY by veNEAR Supply 2](assets/venear-apy.png)
-
 ## Reward Examples Based on Locked NEAR {#reward-examples-based-on-locked-near}
 
 To illustrate how veNEAR incentives convert into actual NEAR rewards, here’s an example table based on a 5.8% annual yield.
