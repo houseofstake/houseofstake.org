@@ -107,7 +107,7 @@ const Header: React.FC = () => {
           </div>
 
           <a
-            href="https://agora-near.vercel.app/"
+            href="https://gov.houseofstake.org"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.participateButton}

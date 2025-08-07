@@ -21,8 +21,9 @@ const Hero: React.FC = () => {
                 </h1>
               </div>
               <a
-                href="https://agora-near.vercel.app/"
+                href="https://gov.houseofstake.org"
                 target="_blank"
+                rel="noopener noreferrer"
                 className={styles.specialButton}
               >
                 <div className={styles.logoIcon}>
