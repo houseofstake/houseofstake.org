@@ -1,6 +1,6 @@
 # Responsibilities and Scope (RACI) {#responsibilities-and-scope-raci}
 
-This section defines the roles and responsibilities of key governance participants within the House of Stake, using the RACI framework:
+This section defines the roles and responsibilities of key governance participants within the House of Stake, using the [RACI matrix](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix):
 
 - **R – Responsible:** Who does the work
 - **A – Accountable:** Who is ultimately answerable for the outcome

@@ -95,7 +95,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ![Cameron](assets/delegates/Cameron%20Dennis.jpg)
 
-- **Twitter**: [@Cameron_Dennis_](https://x.com/Cameron_Dennis_)
+- **Twitter**: [@Cameron*Dennis*](https://x.com/Cameron_Dennis_)
 - **LinkedIn**: [cameron-dennis](https://www.linkedin.com/in/cameron-dennis-b93b25104/)
 - **Title**: Head of Ecosystem, NEAR AI
 - **Bio**: Cameron Dennis is the Head of Ecosystem at NEAR AI, where he leads business development, founder support, partner integrations, and ecosystem growth. With four and a half years of experience at the NEAR Foundation, Cameron brings deep expertise in blockchain ecosystem development.
@@ -109,7 +109,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ![Alan](assets/delegates/Alan.jpg)
 
-- **Twitter**: [@alannetwork_](https://x.com/alannetwork_)
+- **Twitter**: [@alannetwork\_](https://x.com/alannetwork_)
 - **LinkedIn**: [alannetwork](https://www.linkedin.com/in/alannetwork/)
 - **Title**: Head of Governance and leads the Node Runners Programs at Meta Pool
 - **Bio**:

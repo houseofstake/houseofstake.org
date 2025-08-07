@@ -4,7 +4,6 @@
 
 By locking NEAR, stNEAR, or liNEAR tokens, users receive veNEAR. The longer the lock duration, the greater the voting power received. This aligns incentives for long-term commitment and active participation.
 
-
 ![veNEAR Flow](assets/venear-flow.png)
 
 ## Key Characteristics {#key-characteristics}

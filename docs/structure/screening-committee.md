@@ -8,9 +8,10 @@ This group serves as a **filter** and **guardian of integrity**, maintaining a b
 
 ## Current Status: Interim Screening Committee {#current-status-interim-screening-committee}
 
-To expedite the launch of House of Stake, the **NEAR Foundation** appointed an **interim Screening Committee**. This temporary body was responsible for launching the delegate process and selecting the **first cohort of Endorsed Delegates**.
+To expedite the launch of House of Stake, the **NEAR Foundation** appointed an **Interim Screening Committee**. This temporary body was responsible for launching the delegate process and selecting the **first cohort of Endorsed Delegates**.
 
 ### Interim Committee Members {#interim-committee-members}
+
 - Bianca Guimaraes-Chadwick (NEAR Foundation)
 - Lane Rettig (NEAR Foundation)
 - Bowen Wang (Near One)
@@ -27,7 +28,7 @@ The transition from a Foundation-appointed interim body to a **community-elected
 ### Timeline and Process {#timeline-and-process}
 
 1. **Charter Proposal (target: mid-August)**
-   The NEAR Foundation will publish a detailed *Screening Committee Charter* proposal covering:
+   The NEAR Foundation will publish a detailed _Screening Committee Charter_ proposal covering:
    - How members are elected, added, or removed
    - Term lengths and rotation
    - Committee responsibilities and accountability mechanisms
@@ -39,7 +40,6 @@ The transition from a Foundation-appointed interim body to a **community-elected
 
 3. **Sunsetting the Interim Committee**
    The interim body will disband after the first election is complete. **Ensuring this transition** is the committee's highest and final responsibility.
-
 
 ## Community Input & Nominations {#community-input-nominations}
 
@@ -58,19 +58,23 @@ This is not yet a formal application process — just a **head start** to surfac
 ## Responsibilities of the Screening Committee {#responsibilities-of-the-screening-committee}
 
 ### Proposal Review & Governance Flow {#proposal-review-governance-flow}
+
 - **Pre-screen proposals** before community-wide voting
 - **Filter mechanism**: proposals rejected by the Committee (less than 4 out of 7 votes) must achieve a 75% supermajority to pass
 
 ### Delegate Selection & Oversight {#delegate-selection-oversight}
+
 - **Initiate Calls for Delegates**
 - **Select initial Endorsed Delegates**
 - **Monitor delegate behavior and voting patterns**
 - **Flag conflicts of interest or violations**
 
 ### Oversight & Improvement {#oversight-improvement}
+
 - **Adjust veNEAR reward incentives** to remain competitive
 - **Publish meeting notes and decisions** for transparency
 - **Continuously improve frameworks** based on community feedback
 
 ### Future Transition {#future-transition}
+
 Eventually, as the system matures, the Screening Committee will **transfer the authority to select Endorsed Delegates to the House of Delegates**, enabling fully community-led governance.
