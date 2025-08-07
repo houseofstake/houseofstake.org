@@ -31,7 +31,7 @@ const footerSections: FooterSection[] = [
       {
         label: 'Proposal',
         href: 'https://gov.houseofstake.org/proposals',
-        isExternal: true,
+        isExternal: false,
         icon: <LuScroll size={14} />,
       },
       {
@@ -47,7 +47,7 @@ const footerSections: FooterSection[] = [
         icon: <FaGithub size={14} />,
       },
       {
-        label: 'X / Twitter',
+        label: 'Twitter',
         href: 'https://x.com/NEARGovernance',
         isExternal: true,
         icon: <FaXTwitter size={14} />,

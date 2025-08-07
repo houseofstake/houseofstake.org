@@ -108,8 +108,6 @@ const Header: React.FC = () => {
 
           <a
             href="https://gov.houseofstake.org"
-            target="_blank"
-            rel="noopener noreferrer"
             className={styles.participateButton}
             onClick={() => setIsMenuOpen(false)}
           >
