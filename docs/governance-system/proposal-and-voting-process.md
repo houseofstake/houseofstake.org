@@ -4,7 +4,7 @@ House of Stake governance follows a structured process built around a **two-stag
 
 ## Proposal Submission {#proposal-submission}
 
-Anyone can submit a proposal using a standardized template.
+Anyone can submit a proposal using a [standardized template](https://www.notion.so/gauntlet/Near-House-of-Stake-Proposal-Process-Draft-239a664a132f8072b07edc7755380a27).
 Before it proceeds to a vote, the proposal must be posted publicly for feedback and discussion.
 
 - Proposals should clearly define goals, rationale, impact, and requested funding (if any)
