@@ -6,17 +6,18 @@ These groups are responsible for driving discussions, developing strategy, and c
 
 ## Current Working Groups {#current-working-groups}
 
-- **Governance Infrastructure & Processes WG**
-  Focuses on improving governance architecture, voting systems, proposal processes, and tooling.
+- **Ecosystem Growth**
+  Drive user adoption and engagement, boost liquidity and token utility, expand and retain builders, improve NEAR’s visibility and integration across the stack.
 
-- **Ecosystem Growth Strategy WG**
-  Works on expanding NEAR’s user base and developer ecosystem through strategic initiatives, partnerships, and incentive programs.
+- **Treasury Strategy & Management**
+  Effectively utilize NEAR treasury resources.
 
-- **Treasury Strategy & Management WG**
-  Designs frameworks for treasury allocation, funding guardrails, and financial reporting.
+- **Governance Infrastructure & Processes**
+  Draft proposal structure, outline voting procedures & other operational governance processes, work towards defining DAO North Star objectives, break down governance OKRs into actionable items.
 
-- **Network Economics & Security WG**
-  Focuses on the sustainability of tokenomics, validator incentives, inflation tuning, and on-chain economic resilience.
+- **Network Economics & Security**
+  Steward communication between the NEAR community, relevant stakeholders, and Gauntlet — focusing on the implications of a potential reduction of validator issuance on decentralization and validator sustainability.
+
 
 Each group operates semi-independently, collaborates with delegates, and publishes progress updates regularly.
 

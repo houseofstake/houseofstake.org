@@ -55,7 +55,7 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 - **Twitter**: [@openwebeconomy](https://x.com/openwebeconomy)
 - **LinkedIn**: [clgarrett](https://www.linkedin.com/in/clgarrett/)
-- **Title**: Co-founder of @beneviolabs
+- **Title**: Co-Founder of Beneviolabs
 - **Bio**: Founder, engineering leader, and DeFi builder, Charles is dedicated to expanding access to digital assets through approachable, social, and practical crypto experiences. With a strong background in both product and protocol development, he has contributed across the NEAR ecosystem as a DevEx contributor and engineering manager. Their work focuses on simplifying complexity, aligning incentives, and building for long-term sustainable growth in Web3.
 - **Previous experience**: Included in bio
 
@@ -116,7 +116,6 @@ House of Stake encourages both **direct** and **delegated** participation to ens
   - Head of Governance at Meta Pool
   - Founder of CloudMex Analytics
   - Former Head of Scientific & Technological Research, Nayarit government (2017–2021)
-- **Expertise**: Web3 governance, decentralized infrastructure, DeFi systems, GTM strategies, blockchain security
 - **Previous experience**: Included in bio
 
 ---
@@ -159,10 +158,6 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 - **Website**: [404dao.io](https://www.404dao.io)
 - **Description**:
   The professional governance arm of 404 DAO, a community of Web3 professionals and students advancing education and blockchain adoption in Atlanta.
-- **Previous experience**:
-  - Active delegate since January 2023
-  - Holds delegations in Uniswap, Arbitrum, Optimism, ZKsync, Scroll, Rootstock, Wormhole, Morpho, Anvil
-  - Contributions in incentive programs, onboarding, DAO ops
 
 ---
 
