@@ -49,7 +49,7 @@ Want to **nominate someone** (or yourself) to the future Screening Committee
 
 Have ideas about **how the committee should be structured or elected**
 
-👉 Please share your thoughts in the forum thread.
+👉 Please share your thoughts in the [forum thread](https://gov.near.org/t/transitioning-the-screening-committee/41490).
 
 This is not yet a formal application process — just a **head start** to surface early ideas and candidates.
 
