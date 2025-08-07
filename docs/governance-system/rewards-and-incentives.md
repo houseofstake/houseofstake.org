@@ -17,17 +17,6 @@ veNEAR holders receive regular rewards in exchange for locking tokens and partic
 
 ![Expected Rewards Expenditure when veNEAR scales](assets/venear-rewards.png)
 
-## Delegate Incentives {#delegate-incentives}
-
-Endorsed delegates are eligible for rewards — if they meet certain participation standards:
-
-- Must maintain ≥ 80% voting participation
-- Must publish quarterly public updates with rationale for their votes
-- Must hold ≥ 0.5% of total veNEAR supply
-- Must pass KYC/KYB (for accountability and anti-sybil protection)
-
-Rewards are proportional to stake and participation, encouraging responsible engagement.
-
 ## Funding Source {#funding-source}
 
 All incentives are paid from a predictable and capped funding stream:
