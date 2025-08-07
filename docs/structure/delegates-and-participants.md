@@ -37,6 +37,8 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ### Slime {#slime}
 
+![Slime](assets/delegates/Slime.jpg)
+
 - **Twitter**: [@slimedrgn](https://x.com/slimedrgn)
 - **LinkedIn**: No LinkedIn
 - **Title**: Intearn at Intear
@@ -53,15 +55,19 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ### Charles {#charles}
 
+![Charles](assets/delegates/Charles.jpg)
+
 - **Twitter**: [@openwebeconomy](https://x.com/openwebeconomy)
 - **LinkedIn**: [clgarrett](https://www.linkedin.com/in/clgarrett/)
 - **Title**: Co-founder of @beneviolabs
-- **Bio**: House of Stake delegate and DeFi founder, blending engineering leadership with community‑driven governance. I focus on shaping governance, incentives, and collaborations that strengthen NEAR’s ecosystem, expand participation, and sustain long‑term growth.
+- **Bio**: House of Stake delegate and DeFi founder, blending engineering leadership with community‑driven governance. I focus on shaping governance, incentives, and collaborations that strengthen NEAR's ecosystem, expand participation, and sustain long‑term growth.
 - **Previous experience**:
 
 ---
 
 ### Yuen {#yuen}
+
+![Yuen](assets/delegates/Yuen.jpg)
 
 - **Twitter**: [@yuensid](https://x.com/yuensid)
 - **LinkedIn**: [chee-yuen-lee](https://www.linkedin.com/in/chee-yuen-lee-99b633377/)
@@ -73,10 +79,12 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ### James {#james}
 
+![James](assets/delegates/James%20Waugh.jpg)
+
 - **Twitter**: [@jwaup](https://x.com/jwaup)
-- **LinkedIn**:
+- **LinkedIn**: [jlwaugh](https://www.linkedin.com/in/jlwaugh)
 - **Title**: HOS Delegate
-- **Bio**: I joined NEAR Foundation as a Community Manager in late 2020, initially focused on developing contributor programs and helping people leverage Sputnik DAO contracts. Over the years, as a Near Social proponent, a Build DAO council member, and a NEAR AI agent developer, I’ve learned much about governance that is relevant for ecosystem success ~ it all boils down to communication with integrity, accountability, and responsibility.
+- **Bio**: I joined NEAR Foundation as a Community Manager in late 2020, initially focused on developing contributor programs and helping people leverage Sputnik DAO contracts. Over the years, as a Near Social proponent, a Build DAO council member, and a NEAR AI agent developer, I've learned much about governance that is relevant for ecosystem success ~ it all boils down to communication with integrity, accountability, and responsibility.
 - **Previous experience**:
   - Community Manager at NEAR Foundation
   - Build DAO Council Member
@@ -85,7 +93,9 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ### Cameron {#cameron}
 
-- **Twitter**: [@Cameron*Dennis*](https://x.com/Cameron_Dennis_)
+![Cameron](assets/delegates/Cameron%20Dennis.jpg)
+
+- **Twitter**: [@Cameron_Dennis_](https://x.com/Cameron_Dennis_)
 - **LinkedIn**: [cameron-dennis](https://www.linkedin.com/in/cameron-dennis-b93b25104/)
 - **Title**: Head of Ecosystem, NEAR AI
 - **Bio**: Cameron Dennis is the Head of Ecosystem at NEAR AI, where he leads business development, founder support, partner integrations, and ecosystem growth. With four and a half years of experience at the NEAR Foundation, Cameron brings deep expertise in blockchain ecosystem development.
@@ -97,7 +107,9 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ### Alan {#alan}
 
-- **Twitter**: [@alannetwork\_](https://x.com/alannetwork_)
+![Alan](assets/delegates/Alan.jpg)
+
+- **Twitter**: [@alannetwork_](https://x.com/alannetwork_)
 - **LinkedIn**: [alannetwork](https://www.linkedin.com/in/alannetwork/)
 - **Title**: Head of Governance and leads the Node Runners Programs at Meta Pool
 - **Bio**:
@@ -109,7 +121,7 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
   - Founder of CloudMex Analytics
   - Former Head of Scientific & Technological Research, Nayarit government (2017–2021)
 - **Expertise**: Web3 governance, decentralized infrastructure, DeFi systems, GTM strategies, blockchain security
-- **Previous experience**: See bio
+- **Previous experience**: Included in bio
 
 ---
 
@@ -119,6 +131,8 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ### NEARWeek {#nearweek}
 
+![NEARWeek](assets/delegates/NEARWeek.jpg)
+
 - **Twitter**: [@nearweek](https://x.com/nearweek)
 - **LinkedIn**: [NEARWeek](https://www.linkedin.com/company/nearweek)
 - **Website**: [nearweek.com](https://www.nearweek.com)
@@ -127,6 +141,8 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 ---
 
 ### Tané {#tane}
+
+![Tané](assets/delegates/Tané.png)
 
 - **Twitter**: [@tanelabs](https://x.com/tanelabs)
 - **LinkedIn**: [Tané](https://www.linkedin.com/company/tan%C3%A9/)
@@ -139,6 +155,8 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 ---
 
 ### 404Gov {#404gov}
+
+![404Gov](assets/delegates/404Gov.jpg)
 
 - **Twitter**: [@404Gov](https://x.com/404Gov)
 - **LinkedIn**: [404 DAO](https://www.linkedin.com/company/404-dao)
@@ -154,6 +172,8 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ### Areta {#areta}
 
+![Areta](assets/delegates/Areta.jpg)
+
 - **Twitter**: [@areta_io](https://x.com/areta_io)
 - **LinkedIn**: [Areta](https://www.linkedin.com/company/aretaio)
 - **Website**: [areta.io](https://www.areta.io/)
@@ -165,6 +185,8 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
 
 ### Aurora Labs {#aurora-labs}
 
+![Aurora Labs](assets/delegates/Aurora.svg)
+
 - **Twitter**: [@auroraisnear](https://twitter.com/auroraisnear)
 - **LinkedIn**: [Aurora Labs](https://www.linkedin.com/company/aurora-labs-official/)
 - **Website**: [aurora.dev](https://aurora.dev)
@@ -172,6 +194,8 @@ The first cohort of 11 Endorsed Delegates was selected based on multiple criteri
   A network of customizable, EVM-compatible Virtual Chains running on NEAR Protocol.
 - **Description**:
   Aurora provides scalable, efficient infrastructure with EVM compatibility and cross-contract call tech. It supports a multichain future beyond Ethereum through its unique Virtual Chain model.
+
+---
 
 These delegates reflect a strong mix of experienced individuals and active NEAR-aligned teams, many of whom have contributed to the ecosystem for years.
 

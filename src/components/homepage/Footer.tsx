@@ -30,7 +30,7 @@ const footerSections: FooterSection[] = [
       },
       {
         label: 'Proposal',
-        href: 'https://gov.near.org/c/house-of-stake/158',
+        href: 'https://agora-near.vercel.app',
         isExternal: true,
         icon: <LuScroll size={14} />,
       },

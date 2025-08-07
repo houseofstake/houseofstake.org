@@ -91,9 +91,9 @@ export default function Home(): ReactNode {
         <Hero />
         <What />
         <How />
-        <StructureRoles />
+        {/*<StructureRoles />
         <GovernanceSystem />
-        <Roadmap />
+        <Roadmap />*/}
       </main>
       <Footer />
     </>

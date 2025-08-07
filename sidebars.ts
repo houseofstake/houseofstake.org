@@ -69,7 +69,7 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'strategic-direction/why-this-matters',
-        'strategic-direction/roadmap-and-milestones',
+        // 'strategic-direction/roadmap-and-milestones',
         'strategic-direction/the-future-ai-and-scaling',
       ],
     },

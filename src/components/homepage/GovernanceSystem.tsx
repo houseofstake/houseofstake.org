@@ -37,19 +37,20 @@ const tabContents: TabContent[] = [
     title: 'Proposal & Voting Process',
     content: `House of Stake uses a 3-step governance flow:
 
-1. **Submit Proposal**
-Anyone can propose using a public template. Community feedback is required before voting.
+1. **Submit Proposal**  
+   Anyone can propose using a public template. Community feedback is required before voting.
 
-2. **Screening Committee**
-7 members review proposals:
-- 4+ approvals → simple majority (51%) vote
-- <4 approvals → needs supermajority (75%)
-Filters low-quality proposals early.
+2. **Screening Committee**  
+   7 members review proposals:
+   - 4+ approvals → simple majority (51%) vote
+   - <4 approvals → needs supermajority (75%)
+   
+   Filters low-quality proposals early.
 
-3. **On-chain Voting**
-veNEAR holders vote directly or via delegates.
-Voting power = veNEAR balance.
-Standard voting period (e.g. 5–7 days).
+3. **On-chain Voting**  
+   veNEAR holders vote directly or via delegates.  
+   Voting power = veNEAR balance.  
+   Standard voting period (e.g. 5–7 days).
 
 All activity is public for transparency and accountability.`,
     docsLink: '/docs/governance-system/proposal-and-voting-process#',
@@ -75,7 +76,9 @@ All activity is public for transparency and accountability.`,
 
 ## Dynamic Scaling
 Rewards adjust with veNEAR supply:
+
 $$\\text{veNEAR}_{\\text{APY}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{supply}}}}$$
+
 → Lower APY as supply grows = sustainable model`,
     docsLink: '/docs/governance-system/rewards-and-incentives#',
   },

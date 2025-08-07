@@ -42,9 +42,9 @@ As veNEAR adoption grows, governance rewards must scale **transparently** and **
 
 To achieve this, `veNEAR_rewardsAPY` can be calculated dynamically based on the current total supply of veNEAR using the following formula:
 
-```math
-\text{veNEAR}_\text{rewardsAPY} = \frac{198}{\sqrt{\text{veNEAR}_\text{supply}}}
-```
+$$
+veNEAR_{rewardsAPY} = \frac{198}{\sqrt{veNEAR_{supply}}}
+$$
 
 This ensures that:
 
