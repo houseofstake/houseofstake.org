@@ -5,6 +5,16 @@ permissions:
   contents: read
 
 on:
+  # Manual trigger from GitHub Actions UI
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to review (leave empty for current branch)'
+        required: false
+        type: string
+        default: ''
+  
+  # Also trigger on pull requests
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -15,13 +25,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          ref: ${{ github.event.inputs.branch || github.event.pull_request.head.sha || github.sha }}
           fetch-depth: 2
       
       - name: Run Claude Code Security Review
         uses: anthropics/claude-code-security-review@main
         with:
-          comment-pr: true
+          comment-pr: ${{ github.event_name == 'pull_request' }}
           claude-api-key: ${{ secrets.CLAUDE_API_KEY }}
           upload-results: true
           exclude-directories: |
@@ -29,4 +39,4 @@ jobs:
             build
             static/fonts
           claudecode-timeout: 20
-          run-every-commit: true
+          run-every-commit: ${{ github.event_name == 'pull_request' }}
