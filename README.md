@@ -1,134 +1,112 @@
-# Contributing Guide
+## House of Stake Website – How to Contribute
 
-This repository powers the House of Stake website built with Docusaurus. Content lives in plain Markdown. Follow this guide to update the homepage, docs, blog or legal pages.
+This repository powers the House of Stake website (Docusaurus). Most content is plain Markdown — no coding required.
 
-### Prerequisites
+### Contribute without cloning (recommended for most people)
 
-- Node 18+ and Yarn 1.x
-- Install deps once: `yarn install`
+Use the GitHub web editor to fix typos, add docs, or write blog posts.
 
-### Run locally
+1) Find the page or file
+- From the website: click the Edit button in the header ("Edit this page"). It opens the exact file on GitHub.
+- From GitHub: browse to the file you want to change (see “Where things live” below).
 
-- Dev server: `yarn start`
-- Typecheck: `yarn typecheck`
-- Build: `yarn build`
+2) Make your change
+- Click the pencil icon to edit the file in your browser.
+- For a brand‑new page:
+  - Docs: use GitHub’s “Add file → Create new file” inside the right folder under `docs/`.
+  - Blog: create a file under `blog/` named `YYYY-MM-DD-your-slug.md`.
 
-If build fails, check the error — homepage content is validated at build time.
+3) Propose your change (pull request)
+- At the bottom of the editor, write a short summary of what you changed and click “Propose changes”.
+- GitHub will open a pull request (PR) for review.
 
-## Homepage content (Markdown, not code)
+4) Preview your change
+- A preview link will be posted on your PR after the build finishes. For first‑time contributors or forks, a maintainer may need to approve the preview build before it appears.
 
-- File: `src/content/homepage.md`
-- Structure: one frontmatter document with sections. A Zod schema validates it at build time.
-- Toggle sections with `visible: true|false`.
+5) Get merged
+- Maintainers will review, help if needed, and merge. Your change will go live shortly after.
 
-Key sections (fields are self-explanatory):
+### Where things live
 
-- `header.brandTitle`, `header.menu[]`
-- `hero.visible`, `hero.backgroundImage`, `hero.subtitle`, `hero.title`, `hero.cta{}`, `hero.stats[]`
-- `what.visible`, `what.cards[]`
-- `how.visible`, `how.title`, `how.description`, `how.features[]`, `how.learnMore{}`
-- `governanceSystem.visible`, `governanceSystem.title`, `governanceSystem.tabs[]`
-- `structureRoles.visible`, `structureRoles.title`, `structureRoles.items[]`
-- `roadmap.visible`, `roadmap.title`, `roadmap.quarters[]`, `roadmap.currentQuarter`, `roadmap.items[]`
-- `footer.brandTitle`, `footer.sections[]`, `footer.bottomBarText`
+- Homepage content: `src/content/homepage.md`
+  - One YAML frontmatter document controls the homepage sections. You can toggle sections with `visible: true|false`.
+  - The structure is validated at build time by a schema, so keep the keys as they are. If something’s off, maintainers will help fix it.
 
-Quick examples:
+- Docs: `docs/`
+  - One topic per `.md` file. Use a top‑level `# Title` and short sections.
+  - To list it in the sidebar, add the new doc path to the correct category in `sidebars.ts` (under `items`).
+  - Images: keep them close to the doc in `docs/<section>/assets/` or, for shared images, use `static/img/` and link as `/img/<file>`.
 
-```yaml
-hero:
-  visible: true
-  subtitle: 'Example Subtitle'
-  title: 'Example Title'
-  cta: { label: 'Example CTA', href: 'https://example.org' }
-
-what:
-  visible: true
-  cards:
-    - { title: 'Example Card A', description: 'Short text', link: '/docs#' }
-
-governanceSystem:
-  visible: true
-  title: 'Example: Governance System'
-  tabs:
-    - {
-        id: 'example',
-        title: 'Example Tab',
-        content: 'Example text',
-        docsLink: '/docs#',
-      }
-```
-
-Notes
-
-- The header “Edit this page” button on the homepage points to `src/content/homepage.md`.
-- Hidden sections can keep short placeholder examples for layout.
-- Schema location (for reference): `src/shared/homepageContentSchema.ts`
-
-## Docs (Documentation)
-
-- Location: `docs/`
-- Format: plain `.md` files; one topic per file.
-- Sidebar: managed in `sidebars.ts` (uses generated categories). Add new files to the relevant folder; the sidebar config already references those folders.
-- Images: store under `docs/<section>/assets/` and link with relative paths, or use `static/img/` for shared assets.
-- Math/table support is enabled. Keep docs concise and link to longer references when needed.
-
-### Create a new doc
-
-1. Pick the folder that matches the section (e.g., `docs/overview/`).
-2. Create `my-topic.md` with a top-level `# Title`.
-3. If needed, add it to the `items` list for that section in `sidebars.ts`.
-
-## Blog
-
-- Location: `blog/`
-- Create posts as `YYYY-MM-DD-your-slug.md`.
-- Frontmatter example:
-
-```yaml
----
-title: Example Post Title
-description: One-line summary of the post.
-authors: [house-of-stake]
-tags: [update, example]
----
-Your content here (Markdown).
-```
-
-- Authors: define once in `blog/authors.yml` (reuse identifiers in `authors:`).
-- Images: prefer `static/img/` and reference with `/img/your-image.png`.
-
-## Legal pages
-
-- Location: content lives in MDX files under `legal/` (e.g., `legal/privacy.mdx`, `legal/terms.mdx`, `legal/cookies.mdx`, `legal/privacy-california.mdx`, `legal/privacy-eu-uk.mdx`).
-- Renderers: each legal page is rendered by a wrapper component in `src/pages/` (e.g., `src/pages/privacy.tsx`, `src/pages/terms.tsx`, ...). These import the MDX and provide layout via the shared `Header`, `Footer`, and `legal.module.css`.
-- Edit text: update the MDX file in `legal/`.
-- Title/date from MDX: set these in the MDX frontmatter and they will appear automatically on the page.
-  - Example frontmatter:
+- Blog: `blog/`
+  - File name: `YYYY-MM-DD-your-slug.md`
+  - Frontmatter:
     ```yaml
     ---
-    title: Privacy Policy
-    lastUpdated: 7 August 2025
+    title: Your Post Title
+    description: One-line summary
+    authors: [houseofstake]
+    tags: [update]
     ---
     ```
-- Preview: `yarn start` then visit `/privacy`, `/terms`, `/cookies`, `/privacy-california`, or `/privacy-eu-uk`.
-- Edit link button: the header "Edit page" button for legal routes opens the MDX file on GitHub, via the route map in `src/components/homepage/Header.tsx`. If you add a new legal route, also add it to `ROUTE_TO_GITHUB_MAP` pointing to the new `legal/<file>.mdx`.
+  - Authors are defined in `blog/authors.yml`.
 
-## Content style tips
+- Legal pages: `legal/*.mdx`
+  - These are MDX files displayed by wrappers in `src/pages/*.tsx`.
+  - You can edit the text directly in the MDX file. Optional frontmatter supports `title` and `lastUpdated`.
 
-- Prefer short paragraphs and lists over walls of text.
-- Use descriptive headings; link to deeper references when needed.
-- Keep examples clearly marked as examples.
+### Content tips
+- Prefer clear headings, short paragraphs, and bullet points.
+- Link to longer references instead of duplicating large blocks of text.
+- Keep examples clearly labeled as examples.
 
-## Pull requests
+### Feedback and questions (GitHub Issues)
+- If you found a problem, want to request a new page, or have a question, open an issue: [Create a new issue](../../issues/new)
+- Helpful info to include:
+  - Page URL or file path
+  - What you expected vs. what you saw
+  - Screenshot or small snippet (if relevant)
 
-- Create a feature branch, commit, and open a PR.
-- Before pushing: `yarn typecheck && yarn build`.
-- CI/build errors about homepage content usually mean invalid `homepage.md` — keep keys and types aligned with the schema.
+---
 
-## Deployment (maintainers)
+## Maintainers
 
-- GitHub Pages is configured. Typical publish steps:
-  - SSH: `USE_SSH=true yarn deploy`
-  - HTTPS: `GIT_USER=<your_github_username> yarn deploy`
+### Prerequisites
+- Node.js 18+
+- npm 10+ (CI uses npm). Yarn Classic is also supported.
+
+### Install and run
+- Install deps: `npm ci` (or `yarn install`)
+- Dev server: `npm run start` (or `yarn start`)
+- Typecheck: `npm run typecheck` (or `yarn typecheck`)
+- Build: `npm run build` (or `yarn build`)
+- Serve build locally: `npm run serve` (or `yarn serve`)
+- Format: `npm run format` / `npm run format:check`
+
+Notes
+- Homepage frontmatter is validated by `src/shared/homepageContentSchema.ts` via the `plugins/homepage-content` plugin. Build will error if the shape is invalid.
+
+### Edit links
+- The custom header maps routes to GitHub edit URLs in `src/components/homepage/Header.tsx` (`ROUTE_TO_GITHUB_MAP`).
+- Docs/blog also have Docusaurus “Edit this page” links, controlled by `editUrl` in `docusaurus.config.ts`.
+- Keep these in sync so all edit buttons point to the right files/branches.
+
+### CI, previews, and deploys
+- GitHub Actions builds on PRs and pushes to `main` (see `.github/workflows/deploy.yml`).
+- PR preview: a comment with a preview URL is posted after a successful build. For forks, a protected environment (`pr-preview-approval`) may require maintainer approval.
+- Production deploy: push to `main` builds and publishes to the `gh-pages` branch. If a `CNAME` exists there, the workflow uses it automatically.
+
+
+### File layout quick reference
+- `docs/` — documentation (Markdown)
+- `blog/` — posts (Markdown)
+- `legal/` — policies (MDX), rendered by wrappers in `src/pages/`
+- `src/content/homepage.md` — homepage content
+- `static/img/` — shared images
+
+### Branch and PR guidance
+- Create feature branches; open small, focused PRs.
+- Before merging: `npm run typecheck && npm run build`.
+
+---
 
 License: see `LICENSE`.
