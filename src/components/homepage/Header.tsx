@@ -116,6 +116,9 @@ const Header: React.FC = () => {
     <header
       className={`navbar ${styles.header} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuActive : ''}`}
     >
+      <div className={styles.notch} aria-live="polite">
+        <span className={styles.notchText}>Welcome to the Alpha Launch</span>
+      </div>
       <Link to="/#" className={styles.iconContainer}>
         <img src="/img/near-logo.svg" alt="NEAR Logo" className={styles.logo} />
       </Link>
