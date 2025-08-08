@@ -24,7 +24,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'houseofstake', // Usually your GitHub org/user name.
+  organizationName: 'HackHumanityOrg', // Usually your GitHub org/user name.
   projectName: 'houseofstake.org', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -46,7 +46,7 @@ const config: Config = {
           routeBasePath: 'docs', // Serve docs at /docs
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/houseofstake/houseofstake.org/tree/main/',
+            'https://github.com/HackHumanityOrg/houseofstake.org/tree/initial-setup/',
           breadcrumbs: true, // Enable breadcrumbs
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
@@ -60,7 +60,7 @@ const config: Config = {
           blogSidebarTitle: 'Recent posts',
           blogSidebarCount: 5,
           editUrl:
-            'https://github.com/houseofstake/houseofstake.org/tree/main/',
+            'https://github.com/HackHumanityOrg/houseofstake.org/tree/initial-setup/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
@@ -90,72 +90,6 @@ const config: Config = {
       { name: 'twitter:card', content: 'summary_large_image' },
       { property: 'og:type', content: 'website' },
     ],
-    navbar: {
-      title: 'House of Stake',
-      logo: {
-        alt: 'NEAR Logo',
-        src: 'img/near-logo.svg',
-      },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'right',
-          label: 'Docs',
-        },
-        {
-          to: '/blog',
-          label: 'Blog',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/houseofstake/houseofstake.org/edit/main/README.md',
-          label: 'Edit page',
-          position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Documentation',
-              to: '/docs',
-            },
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Telegram',
-              href: 'https://t.me/NEAR_HouseOfStake',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/neargovernance',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/houseofstake/houseofstake.org',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} NEAR House of Stake Foundation.`,
-    },
     prism: {
       theme: prismThemes.github,
     },
