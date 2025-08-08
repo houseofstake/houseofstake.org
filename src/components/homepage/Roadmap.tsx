@@ -6,6 +6,7 @@ import {
   CiCalendar,
   CiCircleMore,
 } from 'react-icons/ci';
+import useHomepageContent from '@site/src/utils/useHomepageContent';
 
 interface RoadmapItem {
   id: string;
@@ -22,268 +23,13 @@ const Roadmap: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [showLeftGradient, setShowLeftGradient] = useState(false);
   const [showRightGradient, setShowRightGradient] = useState(false);
+  const content = useHomepageContent();
 
-  // Hardcoded roadmap data from Figma design
-  const roadmapData: RoadmapItem[] = [
-    // Q1 2025 - All Complete
-    {
-      id: '1',
-      title: 'Initial Delegate Selection',
-      status: 'Complete',
-      statusColor: '#C7F5D8',
-      statusTextColor: '#096D50',
-      category: 'governance',
-      issueNumber: 1,
-      quarter: 'Q1 2025',
-    },
-    {
-      id: '2',
-      title: 'Agora Contract',
-      status: 'Complete',
-      statusColor: '#C7F5D8',
-      statusTextColor: '#096D50',
-      category: 'governance',
-      issueNumber: 2,
-      quarter: 'Q1 2025',
-    },
-    {
-      id: '3',
-      title: 'Backend Contracts',
-      status: 'Complete',
-      statusColor: '#C7F5D8',
-      statusTextColor: '#096D50',
-      category: 'governance',
-      issueNumber: 3,
-      quarter: 'Q1 2025',
-    },
-    {
-      id: '4',
-      title: 'First Delegate Meetings, Form Working Groups',
-      status: 'Complete',
-      statusColor: '#C7F5D8',
-      statusTextColor: '#096D50',
-      category: 'governance',
-      issueNumber: 4,
-      quarter: 'Q1 2025',
-    },
-    {
-      id: '5',
-      title: 'Audit Backend',
-      status: 'Complete',
-      statusColor: '#C7F5D8',
-      statusTextColor: '#096D50',
-      category: 'governance',
-      issueNumber: 5,
-      quarter: 'Q1 2025',
-    },
-    // Q2 2025 - Governance & Product Column
-    {
-      id: '6',
-      title: 'Research Best Practices, Constitution',
-      status: 'In Progress',
-      statusColor: '#ADFCF3',
-      statusTextColor: '#0282A2',
-      category: 'governance',
-      issueNumber: 6,
-      quarter: 'Q2 2025',
-    },
-    {
-      id: '7',
-      title: 'First Draft Proposals',
-      status: 'In Progress',
-      statusColor: '#ADFCF3',
-      statusTextColor: '#0282A2',
-      category: 'governance',
-      issueNumber: 7,
-      quarter: 'Q2 2025',
-    },
-    {
-      id: '8',
-      title: 'Finalize HoS 1.0 & 2.0 Params',
-      status: 'In Progress',
-      statusColor: '#ADFCF3',
-      statusTextColor: '#0282A2',
-      category: 'governance',
-      issueNumber: 8,
-      quarter: 'Q2 2025',
-    },
-    {
-      id: '9',
-      title: 'Hire Head of Governance',
-      status: 'In Progress',
-      statusColor: '#ADFCF3',
-      statusTextColor: '#0282A2',
-      category: 'governance',
-      issueNumber: 9,
-      quarter: 'Q2 2025',
-    },
-    {
-      id: '10',
-      title: 'First In-person Event',
-      status: 'In Progress',
-      statusColor: '#ADFCF3',
-      statusTextColor: '#0282A2',
-      category: 'governance',
-      issueNumber: 10,
-      quarter: 'Q2 2025',
-    },
-    {
-      id: '11',
-      title: 'HoS Dashboard Launch',
-      status: 'In Progress',
-      statusColor: '#ADFCF3',
-      statusTextColor: '#0282A2',
-      category: 'governance',
-      issueNumber: 11,
-      quarter: 'Q2 2025',
-    },
-    {
-      id: '12',
-      title: 'HoS Alpha Complete',
-      status: 'Scheduled',
-      statusColor: '#DCDCF9',
-      statusTextColor: '#4D3BC2',
-      category: 'governance',
-      issueNumber: 12,
-      quarter: 'Q2 2025',
-    },
-    // Q2 2025 - AI & Research Column
-    {
-      id: '13',
-      title: 'HoS Alpha Complete',
-      status: 'In Progress',
-      statusColor: '#ADFCF3',
-      statusTextColor: '#0282A2',
-      category: 'research',
-      issueNumber: 13,
-      quarter: 'Q2 2025',
-    },
-    {
-      id: '14',
-      title: 'Finalize Research Partnership',
-      status: 'In Progress',
-      statusColor: '#ADFCF3',
-      statusTextColor: '#0282A2',
-      category: 'research',
-      issueNumber: 14,
-      quarter: 'Q2 2025',
-    },
-    {
-      id: '15',
-      title: 'AI Assistant',
-      status: 'Scheduled',
-      statusColor: '#DCDCF9',
-      statusTextColor: '#4D3BC2',
-      category: 'research',
-      issueNumber: 15,
-      quarter: 'Q2 2025',
-    },
-    // Q3 2025 - Governance & Product Column
-    {
-      id: '16',
-      title: 'HoS Beta Complete',
-      status: 'Scheduled',
-      statusColor: '#DCDCF9',
-      statusTextColor: '#4D3BC2',
-      category: 'governance',
-      issueNumber: 16,
-      quarter: 'Q3 2025',
-    },
-    {
-      id: '17',
-      title: 'First Final Proposals',
-      status: 'Scheduled',
-      statusColor: '#DCDCF9',
-      statusTextColor: '#4D3BC2',
-      category: 'governance',
-      issueNumber: 17,
-      quarter: 'Q3 2025',
-    },
-    {
-      id: '18',
-      title: 'HoS 1.0 Go Live',
-      status: 'Scheduled',
-      statusColor: '#DCDCF9',
-      statusTextColor: '#4D3BC2',
-      category: 'governance',
-      issueNumber: 18,
-      quarter: 'Q3 2025',
-    },
-    {
-      id: '19',
-      title: 'First Staking',
-      status: 'Scheduled',
-      statusColor: '#DCDCF9',
-      statusTextColor: '#4D3BC2',
-      category: 'governance',
-      issueNumber: 19,
-      quarter: 'Q3 2025',
-    },
-    {
-      id: '20',
-      title: 'First Vote',
-      status: 'Scheduled',
-      statusColor: '#DCDCF9',
-      statusTextColor: '#4D3BC2',
-      category: 'governance',
-      issueNumber: 20,
-      quarter: 'Q3 2025',
-    },
-    {
-      id: '21',
-      title: 'Finalize HoS 2.0 Design',
-      status: 'Scheduled',
-      statusColor: '#DCDCF9',
-      statusTextColor: '#4D3BC2',
-      category: 'governance',
-      issueNumber: 21,
-      quarter: 'Q3 2025',
-    },
-    {
-      id: '22',
-      title: 'Target 10% Staking',
-      status: 'Scheduled',
-      statusColor: '#DCDCF9',
-      statusTextColor: '#4D3BC2',
-      category: 'governance',
-      issueNumber: 22,
-      quarter: 'Q3 2025',
-    },
-    // Q3 2025 - AI & Research Column
-    {
-      id: '23',
-      title: 'Hire First Researchers',
-      status: 'In Progress',
-      statusColor: '#ADFCF3',
-      statusTextColor: '#0282A2',
-      category: 'research',
-      issueNumber: 23,
-      quarter: 'Q3 2025',
-    },
-    {
-      id: '24',
-      title: 'Research Lab Launch',
-      status: 'Scheduled',
-      statusColor: '#DCDCF9',
-      statusTextColor: '#4D3BC2',
-      category: 'research',
-      issueNumber: 24,
-      quarter: 'Q3 2025',
-    },
-    {
-      id: '25',
-      title: 'First AI Delegate Prototype (Public Goods Funding)',
-      status: 'Scheduled',
-      statusColor: '#DCDCF9',
-      statusTextColor: '#4D3BC2',
-      category: 'research',
-      issueNumber: 25,
-      quarter: 'Q3 2025',
-    },
-  ];
+  const roadmapData: RoadmapItem[] =
+    (content.roadmap?.items as RoadmapItem[]) || [];
 
   // Group items by quarter and category
-  const quarters = ['Q1 2025', 'Q2 2025', 'Q3 2025'];
+  const quarters = content.roadmap?.quarters || [];
 
   // Create a structure for quarter -> category -> items
   const getItemsForQuarterAndCategory = (
@@ -335,7 +81,7 @@ const Roadmap: React.FC = () => {
 
   // Check if quarter is current - hardcoded to Q2 2025
   const isCurrentQuarter = (quarter: string): boolean => {
-    return quarter === 'Q2 2025';
+    return quarter === (content.roadmap?.currentQuarter || '');
   };
 
   // Check scroll position and update gradient visibility

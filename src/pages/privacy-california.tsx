@@ -8,7 +8,7 @@ import CaliforniaPrivacyContent from '@site/legal/privacy-california.mdx';
 export default function PrivacyCalifornia() {
   const title = 'California Privacy Rights';
   const lastUpdated = 'Last updated: 7 August 2025';
-  
+
   return (
     <>
       <Head>
@@ -21,9 +21,7 @@ export default function PrivacyCalifornia() {
           <div className={styles.heroBackground} />
           <div className={styles.heroContent}>
             <h1 className={styles.title}>{title}</h1>
-            <p className={styles.subtitle}>
-              {lastUpdated}
-            </p>
+            <p className={styles.subtitle}>{lastUpdated}</p>
           </div>
         </section>
 

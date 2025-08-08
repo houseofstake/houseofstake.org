@@ -18,7 +18,6 @@ These groups are responsible for driving discussions, developing strategy, and c
 - **Network Economics & Security**
   Steward communication between the NEAR community, relevant stakeholders, and Gauntlet — focusing on the implications of a potential reduction of validator issuance on decentralization and validator sustainability.
 
-
 Each group operates semi-independently, collaborates with delegates, and publishes progress updates regularly.
 
 Community members can engage with WGs through forums, discussions, or proposals.

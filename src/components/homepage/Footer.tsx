@@ -3,6 +3,7 @@ import styles from './Footer.module.css';
 import { FaGithub, FaTelegram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { LuBookText, LuScroll } from 'react-icons/lu';
+import useHomepageContent from '@site/src/utils/useHomepageContent';
 
 interface FooterLink {
   label: string;
@@ -10,79 +11,54 @@ interface FooterLink {
   isExternal?: boolean;
   icon?: React.ReactNode;
 }
-
 interface FooterSection {
   title: string;
   links: FooterLink[];
 }
 
-const footerSections: FooterSection[] = [
-  {
-    title: 'Social',
-    links: [
-      {
-        label: 'NEAR Forum',
-        href: 'https://gov.near.org/c/house-of-stake/158',
-        isExternal: true,
-        icon: (
-          <img src="/img/near-logo.svg" alt="NEAR" width={14} height={14} />
-        ),
-      },
-      {
-        label: 'Proposal',
-        href: 'https://gov.houseofstake.org/proposals',
-        isExternal: false,
-        icon: <LuScroll size={14} />,
-      },
-      {
-        label: 'Blog',
-        href: '/blog#',
-        isExternal: false,
-        icon: <LuBookText size={14} />,
-      },
-      {
-        label: 'Github',
-        href: 'https://github.com/houseofstake',
-        isExternal: true,
-        icon: <FaGithub size={14} />,
-      },
-      {
-        label: 'Twitter',
-        href: 'https://x.com/NEARGovernance',
-        isExternal: true,
-        icon: <FaXTwitter size={14} />,
-      },
-      {
-        label: 'Telegram',
-        href: 'https://t.me/NEAR_HouseOfStake',
-        isExternal: true,
-        icon: <FaTelegram size={14} />,
-      },
-    ],
-  },
-  {
-    title: 'Legal',
-    links: [
-      { label: 'Privacy', href: '/privacy#', isExternal: false },
-      { label: 'Terms of Use', href: '/terms#', isExternal: false },
-      { label: 'Cookie Policy', href: '/cookies#', isExternal: false },
-    ],
-  },
-];
-
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const content = useHomepageContent();
+  const brandTitle = content.footer?.brandTitle || 'House of Stake';
+  const sections: FooterSection[] = (content.footer?.sections || []).map(
+    (section: any) => ({
+      title: section.title,
+      links: (section.links || []).map((link: any) => ({
+        label: link.label,
+        href: link.href,
+        isExternal: link.isExternal,
+        icon:
+          link.icon === 'near' ? (
+            <img src="/img/near-logo.svg" alt="NEAR" width={14} height={14} />
+          ) : link.icon === 'scroll' ? (
+            <LuScroll size={14} />
+          ) : link.icon === 'book' ? (
+            <LuBookText size={14} />
+          ) : link.icon === 'github' ? (
+            <FaGithub size={14} />
+          ) : link.icon === 'x' ? (
+            <FaXTwitter size={14} />
+          ) : link.icon === 'telegram' ? (
+            <FaTelegram size={14} />
+          ) : undefined,
+      })),
+    })
+  );
+  const bottomBarTemplate =
+    content.footer?.bottomBarText ||
+    '© NEAR House of Stake Foundation {year}. All rights reserved';
+  const bottomBar = bottomBarTemplate.replace('{year}', String(currentYear));
 
   return (
     <footer className={styles.footer}>
       <div className={styles.mainContent}>
         <div className={styles.contentWrapper}>
           <div className={styles.brand}>
-            <h3 className={styles.brandTitle}>House of Stake</h3>
+            <h3 className={styles.brandTitle}>{brandTitle}</h3>
           </div>
 
           <div className={styles.linksContainer}>
-            {footerSections.map((section) => (
+            {sections.map((section) => (
               <div key={section.title} className={styles.section}>
                 <h4 className={styles.sectionTitle}>{section.title}</h4>
                 <ul className={styles.linksList}>
@@ -111,9 +87,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className={styles.bottomBar}>
-        <p className={styles.copyright}>
-          © NEAR House of Stake Foundation {currentYear}. All rights reserved
-        </p>
+        <p className={styles.copyright}>{bottomBar}</p>
       </div>
     </footer>
   );

@@ -1,34 +1,17 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import styles from './What.module.css';
+import useHomepageContent from '@site/src/utils/useHomepageContent';
+import type { HomepageContent } from '@site/src/shared/homepageContentSchema';
 
-interface CardData {
-  title: string;
-  description: string;
-  link: string;
-}
-
-const cards: CardData[] = [
-  {
-    title: 'What is HoS?',
-    description:
-      'House of Stake is a governance framework for the NEAR ecosystem, designed to facilitate decentralized decision-making.',
-    link: '/docs/overview/what-is-house-of-stake',
-  },
-  {
-    title: 'How Governance Works',
-    description:
-      'Understand the veNEAR token, voting mechanisms, and proposal process that power our decentralized governance system.',
-    link: '/docs/governance-system/what-is-venear',
-  },
-  {
-    title: 'Our Mission',
-    description: 'Loren Ipsom',
-    link: '/docs/overview/mission-vision-values',
-  },
-];
+type CardData = NonNullable<
+  NonNullable<HomepageContent['what']>['cards']
+>[number];
 
 const What: React.FC = () => {
+  const content = useHomepageContent();
+  const cards: CardData[] = (content.what?.cards as CardData[]) ?? [];
+
   return (
     <section id="what" className={styles.sectionSplitTextVisual}>
       <div className={styles.cardsContainer}>

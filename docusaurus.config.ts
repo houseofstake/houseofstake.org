@@ -71,6 +71,8 @@ const config: Config = {
     ],
   ],
 
+  plugins: [require.resolve('./plugins/homepage-content')],
+
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css',

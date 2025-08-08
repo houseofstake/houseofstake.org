@@ -8,7 +8,7 @@ import TermsContent from '@site/legal/terms.mdx';
 export default function Terms() {
   const title = 'Terms of Use';
   const lastUpdated = 'Last updated: 7 August 2025';
-  
+
   return (
     <>
       <Head>
@@ -21,9 +21,7 @@ export default function Terms() {
           <div className={styles.heroBackground} />
           <div className={styles.heroContent}>
             <h1 className={styles.title}>{title}</h1>
-            <p className={styles.subtitle}>
-              {lastUpdated}
-            </p>
+            <p className={styles.subtitle}>{lastUpdated}</p>
           </div>
         </section>
 

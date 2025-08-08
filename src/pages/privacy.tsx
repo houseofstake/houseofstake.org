@@ -8,7 +8,7 @@ import PrivacyContent from '@site/legal/privacy.mdx';
 export default function Privacy() {
   const title = 'Privacy Policy';
   const lastUpdated = 'Last updated: 7 August 2025';
-  
+
   return (
     <>
       <Head>
@@ -21,9 +21,7 @@ export default function Privacy() {
           <div className={styles.heroBackground} />
           <div className={styles.heroContent}>
             <h1 className={styles.title}>{title}</h1>
-            <p className={styles.subtitle}>
-              {lastUpdated}
-            </p>
+            <p className={styles.subtitle}>{lastUpdated}</p>
           </div>
         </section>
 

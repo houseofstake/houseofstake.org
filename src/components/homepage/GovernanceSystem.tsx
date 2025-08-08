@@ -5,123 +5,20 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import styles from './GovernanceSystem.module.css';
+import useHomepageContent from '@site/src/utils/useHomepageContent';
+import type { HomepageContent } from '@site/src/shared/homepageContentSchema';
 
-interface TabContent {
-  id: string;
-  title: string;
-  content: string;
-  image?: string;
-  docsLink?: string;
-}
-
-const tabContents: TabContent[] = [
-  {
-    id: 'venear',
-    title: 'What is veNEAR',
-    content: `**veNEAR** is a non-transferable governance token earned by locking NEAR, stNEAR, or liNEAR. The longer you lock, the more voting power you get.`,
-    docsLink: '/docs/governance-system/what-is-venear#',
-  },
-  {
-    id: 'locking',
-    title: 'veNEAR Locking Mechanism',
-    content: `Lock NEAR, stNEAR, or liNEAR to get veNEAR. Two options:
-
-- **Fixed Lock**: Lock for 3–48 months. More time = more veNEAR. Power decays over time.
-- **Rolling Lock**: No set period. veNEAR grows over time. Unlock anytime with 3-month cooldown.
-
-**Fixed = max power, less flexibility. Rolling = gradual power, flexible exit.**`,
-    docsLink: '/docs/governance-system/venear-locking-mechanisms#',
-  },
-  {
-    id: 'proposal',
-    title: 'Proposal & Voting Process',
-    content: `House of Stake uses a 3-step governance flow:
-
-1. **Submit Proposal**  
-   Anyone can propose using a public template. Community feedback is required before voting.
-
-2. **Screening Committee**  
-   7 members review proposals:
-   - 4+ approvals → simple majority (51%) vote
-   - <4 approvals → needs supermajority (75%)
-   
-   Filters low-quality proposals early.
-
-3. **On-chain Voting**  
-   veNEAR holders vote directly or via delegates.  
-   Voting power = veNEAR balance.  
-   Standard voting period (e.g. 5–7 days).
-
-All activity is public for transparency and accountability.`,
-    docsLink: '/docs/governance-system/proposal-and-voting-process#',
-  },
-  {
-    id: 'rewards',
-    title: 'Rewards & Incentives',
-    content: `House of Stake rewards active participation:
-
-## veNEAR Holders
-- Earn ~5.8–8.8% APY (from 0.5% NEAR inflation)
-- Based on veNEAR amount & lock duration
-- Voting may be required to claim
-- Manual claiming, not auto-compounding
-
-## Delegates
-- Rewards for ≥80% voting, public updates, 0.5%+ veNEAR stake, KYC/KYB
-- Incentivizes active, transparent delegation
-
-## Funding
-- 0.5% protocol inflation (capped, transparent)
-- Future: ecosystem revenue may contribute
-
-## Dynamic Scaling
-Rewards adjust with veNEAR supply:
-
-$$\\text{veNEAR}_{\\text{APY}} = \\frac{198}{\\sqrt{\\text{veNEAR}_{\\text{supply}}}}$$
-
-→ Lower APY as supply grows = sustainable model`,
-    docsLink: '/docs/governance-system/rewards-and-incentives#',
-  },
-  {
-    id: 'inflation',
-    title: 'Inflation Model',
-    content: `House of Stake uses 0.5% annual NEAR inflation to fund governance.
-
-- **100%** goes to veNEAR holders and active delegates
-- Predictable, capped, and sustainable
-- No major dilution to NEAR holders
-
-**Why it matters:**
-- Rewards long-term locking and voting
-- Reduces need for treasury grants
-- Keeps governance funding transparent and stable
-
-**Adjustable via governance** if needed in the future.`,
-    docsLink: '/docs/governance-system/inflation-model#',
-  },
-  {
-    id: 'versioning',
-    title: 'Versioning & Evolution',
-    content: `House of Stake evolves through on-chain versioning:
-
-- Major changes = version upgrades (roles, rules, funding)
-- Approved via standard proposal + voting process
-- All versions tracked and documented on-chain
-
-**Why it matters:**
-- Ensures transparency and stability
-- Prevents undocumented changes
-- Builds a shared history of governance evolution
-
-Governance stays open to improvement — if proposed and approved by the community.`,
-    docsLink: '/docs/governance-system/versioning-and-evolution#',
-  },
-];
+type TabContent = NonNullable<
+  NonNullable<HomepageContent['governanceSystem']>['tabs']
+>[number];
 
 const GovernanceSystem: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>('venear');
+  const content = useHomepageContent();
+  const tabs: TabContent[] = (content.governanceSystem?.tabs as TabContent[]) ?? [];
+  const sectionTitle = content.governanceSystem?.title || 'Governance System';
+  const [activeTab, setActiveTab] = useState<string>(tabs[0]?.id || '');
   const [expandedAccordions, setExpandedAccordions] = useState<string[]>([
-    'venear',
+    tabs[0]?.id || '',
   ]);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
@@ -142,7 +39,7 @@ const GovernanceSystem: React.FC = () => {
       // Check if hash starts with "governance-" and extract the tab id
       if (hash.startsWith('governance-')) {
         const tabId = hash.replace('governance-', '');
-        const matchingTab = tabContents.find((tab) => tab.id === tabId);
+        const matchingTab = tabs.find((tab) => tab.id === tabId);
         if (matchingTab) {
           if (isMobile) {
             // On mobile, expand the accordion
@@ -166,7 +63,7 @@ const GovernanceSystem: React.FC = () => {
     };
   }, [isMobile]);
 
-  const activeContent = tabContents.find((tab) => tab.id === activeTab);
+  const activeContent = tabs.find((tab) => tab.id === activeTab);
 
   const toggleAccordion = (id: string) => {
     setExpandedAccordions((prev) =>
@@ -179,7 +76,7 @@ const GovernanceSystem: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.headerContainer}>
-            <h2 className={styles.title}>Governance System</h2>
+            <h2 className={styles.title}>{sectionTitle}</h2>
           </div>
           <div className={styles.divider} />
         </div>
@@ -187,7 +84,7 @@ const GovernanceSystem: React.FC = () => {
         {isMobile ? (
           // Accordion layout for mobile/tablet
           <div className={styles.accordionWrapper}>
-            {tabContents.map((tab) => (
+            {tabs.map((tab) => (
               <div
                 key={tab.id}
                 id={`governance-${tab.id}`}
@@ -297,7 +194,7 @@ const GovernanceSystem: React.FC = () => {
           // Tab layout for desktop
           <div className={styles.contentWrapper}>
             <div className={styles.tabList}>
-              {tabContents.map((tab) => (
+              {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   className={`${styles.tabButton} ${activeTab === tab.id ? styles.active : ''}`}

@@ -10,9 +10,11 @@ import StructureRoles from '@site/src/components/homepage/StructureRoles';
 import GovernanceSystem from '@site/src/components/homepage/GovernanceSystem';
 import Roadmap from '@site/src/components/homepage/Roadmap';
 import Footer from '@site/src/components/homepage/Footer';
+import useHomepageContent from '@site/src/utils/useHomepageContent';
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
+  const content = useHomepageContent();
 
   useEffect(() => {
     if (!ExecutionEnvironment.canUseDOM) {
@@ -88,12 +90,12 @@ export default function Home(): ReactNode {
       </Head>
 
       <main>
-        <Hero />
-        <What />
-        <How />
-        {/*<StructureRoles />
-        <GovernanceSystem />
-        <Roadmap />*/}
+        {(content.hero?.visible ?? true) && <Hero />}
+        {(content.what?.visible ?? true) && <What />}
+        {(content.how?.visible ?? true) && <How />}
+        {(content.structureRoles?.visible ?? false) && <StructureRoles />}
+        {(content.governanceSystem?.visible ?? false) && <GovernanceSystem />}
+        {(content.roadmap?.visible ?? false) && <Roadmap />}
       </main>
       <Footer />
     </>
