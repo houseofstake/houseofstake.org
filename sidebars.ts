@@ -70,6 +70,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'strategic-direction/why-this-matters',
         'strategic-direction/the-future-ai-and-scaling',
+        'strategic-direction/roadmap-and-milestones',
       ],
     },
     {
