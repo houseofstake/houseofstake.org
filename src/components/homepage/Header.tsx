@@ -1,11 +1,76 @@
-import React, { useState, useLayoutEffect, useRef, useCallback } from 'react';
+import React, { useState, useLayoutEffect, useRef, useCallback, useMemo } from 'react';
 import Link from '@docusaurus/Link';
+import { useLocation } from '@docusaurus/router';
 import styles from './Header.module.css';
 
+// Map of routes to their corresponding GitHub edit URLs
+const ROUTE_TO_GITHUB_MAP: Record<string, string> = {
+  // Main pages
+  '/': 'src/pages/index.tsx',
+  
+  // Legal pages (these are MDX files rendered by TSX components)
+  '/privacy': 'legal/privacy.mdx',
+  '/terms': 'legal/terms.mdx',
+  '/cookies': 'legal/cookies.mdx',
+  '/privacy-california': 'legal/privacy-california.mdx',
+  '/privacy-eu-uk': 'legal/privacy-eu-uk.mdx',
+  
+  // Documentation landing page
+  '/docs': 'src/pages/docs/index.tsx',
+  '/docs/': 'src/pages/docs/index.tsx',
+  
+  // Blog landing page
+  '/blog': 'blog/',
+  '/blog/': 'blog/',
+};
+
 const Header: React.FC = () => {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const animationFrameRef = useRef<number | null>(null);
+
+  // Dynamically determine the edit URL based on current page
+  const editUrl = useMemo(() => {
+    const baseGithubUrl = 'https://github.com/houseofstake/houseofstake.org/edit/main';
+    const pathname = location.pathname;
+
+    // Check exact match first (handles main pages and legal pages)
+    if (ROUTE_TO_GITHUB_MAP[pathname]) {
+      return `${baseGithubUrl}/${ROUTE_TO_GITHUB_MAP[pathname]}`;
+    }
+
+    // Handle docs pages - they map directly to markdown files
+    if (pathname.startsWith('/docs/')) {
+      // Remove /docs/ prefix and trailing slash, then add .md extension
+      const docPath = pathname.replace(/^\/docs\//, '').replace(/\/$/, '');
+      
+      // Special case: if it's just /docs, use the docs index page
+      if (!docPath || docPath === '') {
+        return `${baseGithubUrl}/src/pages/docs/index.tsx`;
+      }
+      
+      return `${baseGithubUrl}/docs/${docPath}.md`;
+    }
+
+    // Handle blog posts
+    if (pathname.startsWith('/blog/')) {
+      const blogPath = pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
+      
+      // If it's a specific blog post (has a date pattern YYYY/MM/DD or direct .md file)
+      if (blogPath && blogPath !== '') {
+        // Blog posts in Docusaurus typically follow YYYY-MM-DD-slug pattern
+        // But the URL might be /blog/YYYY/MM/DD/slug or /blog/slug
+        // For now, point to the blog directory since we can't easily map to specific files
+        return `${baseGithubUrl}/blog/`;
+      }
+      
+      return `${baseGithubUrl}/blog/`;
+    }
+
+    // Default to homepage for any unmatched routes
+    return `${baseGithubUrl}/src/pages/index.tsx`;
+  }, [location.pathname]);
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
@@ -81,7 +146,7 @@ const Header: React.FC = () => {
 
           <div className={styles.menuItem}>
             <a
-              href="https://github.com/houseofstake/houseofstake.org/edit/main/README.md"
+              href={editUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.menuLink}
