@@ -41,7 +41,7 @@ what:
       description: 'Understand the veNEAR token, voting mechanisms, and proposal process that power our decentralized governance system.'
       link: '/docs/governance-system/what-is-venear'
     - title: 'Our Mission'
-      description: 'Loren Ipsom'
+      description: ''
       link: '/docs/overview/mission-vision-values'
 
 how:
