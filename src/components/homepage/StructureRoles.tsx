@@ -13,7 +13,8 @@ type AccordionItem = NonNullable<
 const StructureRoles: React.FC = () => {
   const content = useHomepageContent();
   const sectionTitle = content.structureRoles?.title || 'Structure & Roles';
-  const accordionItems: AccordionItem[] = (content.structureRoles?.items as AccordionItem[]) ?? [];
+  const accordionItems: AccordionItem[] =
+    (content.structureRoles?.items as AccordionItem[]) ?? [];
   const [openItem, setOpenItem] = useState<string>('');
 
   const toggleItem = (itemId: string) => {

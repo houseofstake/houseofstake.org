@@ -3,11 +3,16 @@ import Head from '@docusaurus/Head';
 import styles from './legal.module.css';
 import Header from '@site/src/components/homepage/Header';
 import Footer from '@site/src/components/homepage/Footer';
-import CaliforniaPrivacyContent from '@site/legal/privacy-california.mdx';
+import CaliforniaPrivacyContent, {
+  frontMatter as caFrontMatter,
+} from '@site/legal/privacy-california.mdx';
 
 export default function PrivacyCalifornia() {
-  const title = 'California Privacy Rights';
-  const lastUpdated = 'Last updated: 7 August 2025';
+  const fm = (caFrontMatter as { title?: string; lastUpdated?: string }) || {};
+  const title = fm.title ?? 'California Privacy Rights';
+  const lastUpdated = fm.lastUpdated
+    ? `Last updated: ${fm.lastUpdated}`
+    : undefined;
 
   return (
     <>
@@ -21,7 +26,7 @@ export default function PrivacyCalifornia() {
           <div className={styles.heroBackground} />
           <div className={styles.heroContent}>
             <h1 className={styles.title}>{title}</h1>
-            <p className={styles.subtitle}>{lastUpdated}</p>
+            {lastUpdated && <p className={styles.subtitle}>{lastUpdated}</p>}
           </div>
         </section>
 

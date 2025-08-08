@@ -3,11 +3,17 @@ import Head from '@docusaurus/Head';
 import styles from './legal.module.css';
 import Header from '@site/src/components/homepage/Header';
 import Footer from '@site/src/components/homepage/Footer';
-import CookiesContent from '@site/legal/cookies.mdx';
+import CookiesContent, {
+  frontMatter as cookiesFrontMatter,
+} from '@site/legal/cookies.mdx';
 
 export default function Cookies() {
-  const title = 'Cookie Policy';
-  const lastUpdated = 'Last updated: 7 August 2025';
+  const fm =
+    (cookiesFrontMatter as { title?: string; lastUpdated?: string }) || {};
+  const title = fm.title ?? 'Cookie Policy';
+  const lastUpdated = fm.lastUpdated
+    ? `Last updated: ${fm.lastUpdated}`
+    : undefined;
 
   return (
     <>
@@ -21,7 +27,7 @@ export default function Cookies() {
           <div className={styles.heroBackground} />
           <div className={styles.heroContent}>
             <h1 className={styles.title}>{title}</h1>
-            <p className={styles.subtitle}>{lastUpdated}</p>
+            {lastUpdated && <p className={styles.subtitle}>{lastUpdated}</p>}
           </div>
         </section>
 

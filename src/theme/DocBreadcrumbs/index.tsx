@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import { useSidebarBreadcrumbs } from '@docusaurus/plugin-content-docs/client';
 
-function HomeBreadcrumbItem(): JSX.Element {
+function HomeBreadcrumbItem(): React.ReactElement {
   return (
     <li className="breadcrumbs__item">
       <Link aria-label="Home page" className="breadcrumbs__link" href="/docs#">
@@ -18,7 +18,7 @@ function HomeBreadcrumbItem(): JSX.Element {
   );
 }
 
-export default function DocBreadcrumbs(): JSX.Element | null {
+export default function DocBreadcrumbs(): React.ReactElement | null {
   const breadcrumbs = useSidebarBreadcrumbs();
 
   if (!breadcrumbs) {

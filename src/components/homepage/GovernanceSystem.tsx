@@ -14,7 +14,8 @@ type TabContent = NonNullable<
 
 const GovernanceSystem: React.FC = () => {
   const content = useHomepageContent();
-  const tabs: TabContent[] = (content.governanceSystem?.tabs as TabContent[]) ?? [];
+  const tabs: TabContent[] =
+    (content.governanceSystem?.tabs as TabContent[]) ?? [];
   const sectionTitle = content.governanceSystem?.title || 'Governance System';
   const [activeTab, setActiveTab] = useState<string>(tabs[0]?.id || '');
   const [expandedAccordions, setExpandedAccordions] = useState<string[]>([

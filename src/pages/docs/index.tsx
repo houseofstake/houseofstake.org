@@ -74,7 +74,7 @@ const categories = [
   },
 ];
 
-export default function DocsIndex(): JSX.Element {
+export default function DocsIndex(): React.ReactElement {
   return (
     <Layout
       title="Documentation"
