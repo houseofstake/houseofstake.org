@@ -77,4 +77,4 @@ This is not yet a formal application process — just a **head start** to surfac
 
 ### Future Transition {#future-transition}
 
-Eventually, as the system matures, the Screening Committee will **transfer the authority to select Endorsed Delegates to the House of Delegates**, enabling fully community-led governance.
+Eventually, as the system matures, the Screening Committee will **transfer the authority to select Endorsed Delegates**, enabling fully community-led governance.
