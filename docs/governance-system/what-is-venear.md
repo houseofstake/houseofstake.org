@@ -14,7 +14,7 @@ By locking NEAR, stNEAR, or liNEAR tokens, users receive veNEAR. The longer the 
 
 ## Purpose of veNEAR {#purpose-of-venear}
 
-- Empower long-term stakeholders to influence the direction of NEAR governance.
+- Aligning stakeholders over the long-term to influence the direction of NEAR governance.
 - Provide a clear and predictable incentive structure via reward distribution.
 - Encourage thoughtful participation and discourage manipulation.
 
