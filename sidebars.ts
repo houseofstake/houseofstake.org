@@ -52,7 +52,7 @@ const sidebars: SidebarsConfig = {
         'governance-system/what-is-venear',
         'governance-system/venear-locking-mechanisms',
         'governance-system/proposal-and-voting-process',
-        'governance-system/rewards-and-incentives',
+        //'governance-system/rewards-and-incentives',
         //'governance-system/inflation-model',
         'governance-system/versioning-and-evolution',
       ],
