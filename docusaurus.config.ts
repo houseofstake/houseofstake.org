@@ -71,10 +71,7 @@ const config: Config = {
     ],
   ],
 
-  plugins: [
-    require.resolve('./plugins/homepage-content'),
-    require.resolve('./plugins/fontaine-plugin'),
-  ],
+  plugins: [require.resolve('./plugins/homepage-content')],
 
   headTags: [
     // Preload critical font weights for FK Grotesk
@@ -106,6 +103,14 @@ const config: Config = {
         as: 'font',
         type: 'font/woff2',
         crossorigin: 'anonymous',
+      },
+    },
+    // Add font loading script to wait for fonts before showing page
+    {
+      tagName: 'script',
+      attributes: {
+        src: '/scripts/font-loader.js',
+        async: 'false',
       },
     },
   ],
