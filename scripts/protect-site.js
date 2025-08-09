@@ -21,8 +21,9 @@ if (process.env.SITE_PASSWORD === undefined) {
 console.log('🔐 Encrypting site with password protection...');
 
 try {
-  // Use bash expansion for glob pattern WITHOUT custom template for now
-  const command = `bash -c 'npx staticrypt ${BUILD_DIR}/*.html ${BUILD_DIR}/**/*.html \
+  // Use recursive flag to encrypt all HTML files in all subdirectories
+  const command = `npx staticrypt ${BUILD_DIR}/* \
+    -r \
     -p "${PASSWORD}" \
     --short \
     -d "${BUILD_DIR}" \
@@ -33,7 +34,7 @@ try {
     --template-error "Incorrect password. Please try again." \
     --template-remember "Remember for this session" \
     --template-color-primary "#000000" \
-    --template-color-secondary "#ffffff"'`;
+    --template-color-secondary "#ffffff"`;
   
   execSync(command, { 
     stdio: 'inherit',
