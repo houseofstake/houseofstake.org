@@ -71,7 +71,44 @@ const config: Config = {
     ],
   ],
 
-  plugins: [require.resolve('./plugins/homepage-content')],
+  plugins: [
+    require.resolve('./plugins/homepage-content'),
+    require.resolve('./plugins/fontaine-plugin'),
+  ],
+
+  headTags: [
+    // Preload critical font weights for FK Grotesk
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/fonts/FKGrotesk-Regular.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/fonts/FKGrotesk-Medium.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/fonts/FKGrotesk-Bold.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous',
+      },
+    },
+  ],
 
   stylesheets: [
     {
