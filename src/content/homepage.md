@@ -23,13 +23,6 @@ hero:
   cta:
     label: 'Govern'
     href: 'https://gov.houseofstake.org'
-  stats:
-    - value: '100K+'
-      label: 'Participants by total onchain wallets'
-    - value: '1,000+'
-      label: 'Proposals'
-    - value: '5.5M'
-      label: 'veNEAR staked'
 
 what:
   visible: true

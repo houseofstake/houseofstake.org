@@ -23,9 +23,6 @@ export const homepageContentSchema = z.object({
       subtitle: z.string().optional(),
       title: z.string().optional(),
       cta: z.object({ label: z.string(), href: z.string().url() }).optional(),
-      stats: z
-        .array(z.object({ value: z.string(), label: z.string() }))
-        .optional(),
     })
     .optional(),
   what: z
