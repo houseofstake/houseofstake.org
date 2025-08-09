@@ -12,7 +12,7 @@ This section defines the roles and responsibilities of key governance participan
 | Process                       | Screening Committee | Endorsed Delegates | Delegates | Security Council | veNEAR Holders |
 | ----------------------------- | ------------------- | ------------------ | --------- | ---------------- | -------------- |
 | Pre-screening grant proposals | R, A                |                    |           | C                | I              |
-| Voting on proposals           |                     | R, A               | R, A      | I                | R, A           |
+| Voting on proposals           |                     | R, A               | R, A      | I                | C, A           |
 | Selecting new delegates       | R                   |                    |           | C                | I              |
 | Removing bad actors           | R                   |                    |           | C                | I              |
 | Emergency intervention        |                     |                    |           | R, A             | I              |
