@@ -28,7 +28,9 @@ function Root({ children }: { children: React.ReactNode }) {
 
     const currentPathname = location.pathname;
     const hasHash = location.hash;
-    const isPathChange = previousPathname.current !== null && previousPathname.current !== currentPathname;
+    const isPathChange =
+      previousPathname.current !== null &&
+      previousPathname.current !== currentPathname;
 
     // Update previous pathname for next comparison
     previousPathname.current = currentPathname;
@@ -44,20 +46,20 @@ function Root({ children }: { children: React.ReactNode }) {
           element.scrollIntoView();
         }
       };
-      
+
       // Try immediately
       scrollToAnchor();
-      
+
       // Try again after DOM is ready
       requestAnimationFrame(() => {
         scrollToAnchor();
       });
-      
+
       // And once more after a delay for async content
       setTimeout(() => {
         scrollToAnchor();
       }, 100);
-      
+
       return;
     }
 

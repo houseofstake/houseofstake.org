@@ -10,12 +10,16 @@ const TEMPLATE_PATH = path.join(__dirname, 'password-template.html');
 const PASSWORD = process.env.SITE_PASSWORD || 'default-password';
 
 if (!fs.existsSync(BUILD_DIR)) {
-  console.error('Build directory does not exist. Please run "npm run build" first.');
+  console.error(
+    'Build directory does not exist. Please run "npm run build" first.'
+  );
   process.exit(1);
 }
 
 if (process.env.SITE_PASSWORD === undefined) {
-  console.warn('⚠️  Warning: Using default password. Set SITE_PASSWORD environment variable for custom password.');
+  console.warn(
+    '⚠️  Warning: Using default password. Set SITE_PASSWORD environment variable for custom password.'
+  );
 }
 
 console.log('🔐 Encrypting site with password protection...');
@@ -35,12 +39,12 @@ try {
     --template-remember "Remember for this session" \
     --template-color-primary "#000000" \
     --template-color-secondary "#ffffff"`;
-  
-  execSync(command, { 
+
+  execSync(command, {
     stdio: 'inherit',
-    cwd: path.join(__dirname, '..')
+    cwd: path.join(__dirname, '..'),
   });
-  
+
   console.log('✅ Site successfully encrypted with password protection!');
   console.log('📁 Protected build ready in:', BUILD_DIR);
   console.log('🔑 Password required to access the site');

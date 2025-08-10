@@ -4,7 +4,7 @@ title: 'Introducing NEAR House of Stake: A New Era of Governance'
 authors: [houseofstake]
 ---
 
-## **NEAR House of Stake is Live on Mainnet** 
+## **NEAR House of Stake is Live on Mainnet**
 
 Today, the NEAR Protocol enters a new chapter in its evolution. We're proud to announce the mainnet launch of [**House of Stake**](https://gov.houseofstake.org/): a next-generation governance system designed to be transparent, scalable, and adaptive. More than just a tool, it’s the first step in a multi-phase transformation of how NEAR is governed—and, eventually, how governance itself is reimagined.
 
@@ -24,27 +24,27 @@ This system is designed not only to work—but to evolve. To guide that evolutio
 
 **What does success look like?**
 
-* Consistently high delegate participation and proposal engagement
+- Consistently high delegate participation and proposal engagement
 
-* Quality and clarity of proposals passing the screening process
+- Quality and clarity of proposals passing the screening process
 
-* Diverse stakeholder representation (not just whales)
+- Diverse stakeholder representation (not just whales)
 
-* Growing trust in the process, measured through surveys and forum feedback
+- Growing trust in the process, measured through surveys and forum feedback
 
-* Effective use of incentives: are rewards driving real contribution or just farming?
+- Effective use of incentives: are rewards driving real contribution or just farming?
 
 ### **What We Shipped**
 
 Over the past year, we’ve worked with the best partner teams in the world to design and ship the House of Stake system. Based on governance [research and design](https://www.gauntlet.xyz/resources/near-house-of-stake-governance-proposal) from our friends at [Gauntlet](https://www.gauntlet.xyz/), and built by our friends at [FastNear](https://fastnear.com/) and [Agora](https://agora.xyz/), House of Stake already [live on mainnet](https://gov.houseofstake.org/):
 
-* **veNEAR Governance Token**: Users lock NEAR, stNEAR, or liNEAR to receive veNEAR. The longer the lock, the greater the voting power and rewards. This is a pragmatic approach: stake-weighted governance isn’t perfect but it’s currently the most effective Sybil resistance mechanism available. Our ambition is to evolve toward more democratic and identity-aware models as the technology matures.
+- **veNEAR Governance Token**: Users lock NEAR, stNEAR, or liNEAR to receive veNEAR. The longer the lock, the greater the voting power and rewards. This is a pragmatic approach: stake-weighted governance isn’t perfect but it’s currently the most effective Sybil resistance mechanism available. Our ambition is to evolve toward more democratic and identity-aware models as the technology matures.
 
-* **Delegation System**: A curated group of [**Endorsed Delegates**](https://gov.near.org/t/announcing-the-initial-set-of-endorsed-delegates/40815) help scale decision-making. They’re required to maintain high participation rates, disclose their rationale, and act in line with the community’s goals.
+- **Delegation System**: A curated group of [**Endorsed Delegates**](https://gov.near.org/t/announcing-the-initial-set-of-endorsed-delegates/40815) help scale decision-making. They’re required to maintain high participation rates, disclose their rationale, and act in line with the community’s goals.
 
-* **Screening Committee and Security Council**: These oversight bodies ensure that governance is safe, credible, and efficient. The Screening Committee reviews proposals before they go to a vote; the Security Council has a final veto and can act quickly in emergencies.
+- **Screening Committee and Security Council**: These oversight bodies ensure that governance is safe, credible, and efficient. The Screening Committee reviews proposals before they go to a vote; the Security Council has a final veto and can act quickly in emergencies.
 
-* **On-chain Voting \+ Incentives**: Using NEAR’s 0.5% annual token inflation, as well as future protocol-generated revenue sources (intents, AI infrastructure, etc.), the system funds veNEAR holders, active delegates, and community-approved grant proposals—creating a sustainable, protocol-native governance economy.
+- **On-chain Voting \+ Incentives**: Using NEAR’s 0.5% annual token inflation, as well as future protocol-generated revenue sources (intents, AI infrastructure, etc.), the system funds veNEAR holders, active delegates, and community-approved grant proposals—creating a sustainable, protocol-native governance economy.
 
 ### **Beyond Token Voting**
 
@@ -52,35 +52,35 @@ House of Stake was designed from day one to grow into a more expansive system. H
 
 **Phase One (Now)**:
 
-* Launch veNEAR and the on-chain voting system
+- Launch veNEAR and the on-chain voting system
 
-* Community elects the screening committee and begins proposal screening
+- Community elects the screening committee and begins proposal screening
 
-* Distribute early incentives and test mechanisms
+- Distribute early incentives and test mechanisms
 
-* Ship foundational infrastructure (contracts, frontend, onboarding, documentation)
+- Ship foundational infrastructure (contracts, frontend, onboarding, documentation)
 
 **Phase Two**:
 
-* House of Stake expands its scope: funding more verticals, coordinating more protocol functions
+- House of Stake expands its scope: funding more verticals, coordinating more protocol functions
 
-* Begins to own protocol economics and budgetary governance
+- Begins to own protocol economics and budgetary governance
 
-* Introduces more robust delegate frameworks, forum tooling, and working groups
+- Introduces more robust delegate frameworks, forum tooling, and working groups
 
-* Runs on-chain experiments in public goods allocation and participatory budgeting
+- Runs on-chain experiments in public goods allocation and participatory budgeting
 
 **Phase Three:**
 
-* Deep AI integration: agents that help interpret, vote on, and even propose governance actions
+- Deep AI integration: agents that help interpret, vote on, and even propose governance actions
 
-* Agents are trained on user values and community norms: governance copilots and autonomous delegates
+- Agents are trained on user values and community norms: governance copilots and autonomous delegates
 
-* Governance agents represent thousands of users' preferences, run simulations of policy outcomes, and automatically adjust decisions based on community sentiment
+- Governance agents represent thousands of users' preferences, run simulations of policy outcomes, and automatically adjust decisions based on community sentiment
 
-* “Swarm governance”: a network of AI actors collaborating on behalf of their human stakeholders, coordinating at scales humans can’t match
+- “Swarm governance”: a network of AI actors collaborating on behalf of their human stakeholders, coordinating at scales humans can’t match
 
-* Real-world lessons exported to cooperatives, civic networks, and other governance domains
+- Real-world lessons exported to cooperatives, civic networks, and other governance domains
 
 The House of Stake roadmap goes far beyond features. We’re adopting cutting-edge technologies and working at the fringes of what’s possible, and we’ll share the tools we build and the things we learn with the wider world.
 
@@ -96,15 +96,15 @@ And we’re doing it in the open, together, with community participation as both
 
 Participation is permissionless, and getting started is easy:
 
-* **Lock NEAR into veNEAR** to gain governance power at [gov.houseofstake.org](http://gov.houseofstake.org)
+- **Lock NEAR into veNEAR** to gain governance power at [gov.houseofstake.org](http://gov.houseofstake.org)
 
-* **Read and comment on proposals** on [gov.near.org](https://gov.near.org/)
+- **Read and comment on proposals** on [gov.near.org](https://gov.near.org/)
 
-* **Join the discussion** on [Telegram](https://t.me/NEAR_HouseOfStake)
+- **Join the discussion** on [Telegram](https://t.me/NEAR_HouseOfStake)
 
-* **Follow progress** via [@NEARGovernance](https://x.com/NEARGovernance)
+- **Follow progress** via [@NEARGovernance](https://x.com/NEARGovernance)
 
-* **Become a [delegate](https://gov.houseofstake.org/delegates?filter=endorsed)** by convincing others to delegate their veNEAR to you, or delegate to yourself and simply vote on proposals you care about
+- **Become a [delegate](https://gov.houseofstake.org/delegates?filter=endorsed)** by convincing others to delegate their veNEAR to you, or delegate to yourself and simply vote on proposals you care about
 
 Whether you’re a validator, a developer, a researcher, or a curious community member, there’s a seat for you in the House. The time to act is now\! The foundations are still being laid, and early participation gives you more than voting power, it gives you influence over the very shape of this system.
 

@@ -65,7 +65,12 @@ export default function Home(): ReactNode {
         <title>{`${siteConfig.title}`}</title>
         {/* Preload all images for faster loading */}
         {/* Hero and main sections */}
-        <link rel="preload" href={useBaseUrl('/img/hero.png')} as="image" type="image/png" />
+        <link
+          rel="preload"
+          href={useBaseUrl('/img/hero.png')}
+          as="image"
+          type="image/png"
+        />
 
         {/* Logo and header */}
         <link
@@ -102,4 +107,3 @@ export default function Home(): ReactNode {
     </>
   );
 }
-// Force rebuild at Sun Aug  3 22:09:28 EEST 2025
