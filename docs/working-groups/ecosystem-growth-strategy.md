@@ -1,9 +1,9 @@
-# Ecosystem Growth Strategy WG {#ecosystem-growth-strategy-wg}
+# Ecosystem Growth Strategy WG
 
 This working group is focused on expanding the NEAR ecosystem by driving user adoption, engaging developers, and improving token utility across the stack.
 **Led by [Areta](https://x.com/areta_io)**
 
-## Key responsibilities {#key-responsibilities}
+## Key responsibilities
 
 - Increase user adoption and engagement
 - Boost liquidity and token utility

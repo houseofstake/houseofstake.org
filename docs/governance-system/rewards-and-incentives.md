@@ -1,4 +1,4 @@
-# Rewards & Incentives {#rewards-incentives}
+# Rewards & Incentives
 
 :::tip ✍️ Help improve this page
 Have feedback, found an error, or want to suggest changes?

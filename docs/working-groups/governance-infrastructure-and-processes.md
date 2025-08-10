@@ -1,9 +1,9 @@
-# Governance Infrastructure & Processes WG {#governance-infrastructure-processes-wg}
+# Governance Infrastructure & Processes WG
 
 This working group is responsible for designing and maintaining the core structures that make House of Stake function.
 **Led by [James Waugh](https://x.com/jwaup)**
 
-## Key responsibilities {#key-responsibilities}
+## Key responsibilities
 
 - Draft proposal structures
 - Define and refine voting procedures

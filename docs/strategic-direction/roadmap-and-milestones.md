@@ -1,4 +1,4 @@
-# Roadmap and Milestones {#roadmap-and-milestones}
+# Roadmap and Milestones
 
 :::tip ✍️ Help improve this page
 Have feedback, found an error, or want to suggest changes?

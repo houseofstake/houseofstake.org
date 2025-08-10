@@ -1,12 +1,12 @@
-# Delegates & Participants {#delegates-participants}
+# Delegates & Participants
 
 In House of Stake, **delegates** play a central role in executing governance on behalf of veNEAR holders. They are trusted participants who vote on proposals, help shape the future of the ecosystem, and are expected to act transparently and responsibly.
 
-## Delegates {#delegates}
+## Delegates
 
 Delegates receive voting power when other veNEAR holders delegate their tokens to them. To become a delegate, a user must meet certain requirements and publicly commit to participating in governance.
 
-### Responsibilities {#responsibilities}
+### Responsibilities
 
 - Vote actively on governance proposals
 - Provide rationale for their decisions
@@ -15,7 +15,7 @@ Delegates receive voting power when other veNEAR holders delegate their tokens t
 
 Delegates may receive **incentives** if they meet participation criteria such as maintaining 80%+ voting activity, regular updates, and holding at least 0.5% of veNEAR.
 
-## Participants {#participants}
+## Participants
 
 Anyone holding veNEAR can participate in governance directly — by voting, submitting proposals, or delegating their tokens.
 
@@ -29,9 +29,9 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 [Endorsed Delegates](https://gov.near.org/t/announcing-the-initial-set-of-endorsed-delegates/40815?u=kv9990) are officially approved governance participants, selected by the Screening Committee through an open and competitive process. They represent veNEAR holders who choose to delegate their voting power for greater efficiency and coordination in protocol governance.
 
-## The initial endorsed delegates are: {#the-initial-endorsed-delegates-are}
+## The initial endorsed delegates are:
 
-### Slime {#slime}
+### Slime
 
 ![Slime](assets/delegates/Slime.jpg)
 
@@ -49,7 +49,7 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 ---
 
-### Charles {#charles}
+### Charles
 
 ![Charles](assets/delegates/Charles.jpg)
 
@@ -61,7 +61,7 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 ---
 
-### Yuen {#yuen}
+### Yuen
 
 ![Yuen](assets/delegates/Yuen.jpg)
 
@@ -73,7 +73,7 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 ---
 
-### James {#james}
+### James
 
 ![James](assets/delegates/James%20Waugh.jpg)
 
@@ -87,7 +87,7 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 ---
 
-### Cameron {#cameron}
+### Cameron
 
 ![Cameron](assets/delegates/Cameron%20Dennis.jpg)
 
@@ -101,7 +101,7 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 ---
 
-### Alan {#alan}
+### Alan
 
 ![Alan](assets/delegates/Alan.jpg)
 
@@ -120,11 +120,11 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 ---
 
-## Organizations {#organizations}
+## Organizations
 
 ---
 
-### NEARWeek {#nearweek}
+### NEARWeek
 
 ![NEARWeek](assets/delegates/NEARWeek.jpg)
 
@@ -135,7 +135,7 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 ---
 
-### Tané {#tane}
+### Tané
 
 ![Tané](assets/delegates/Tané.png)
 
@@ -149,7 +149,7 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 ---
 
-### 404Gov {#404gov}
+### 404Gov
 
 ![404Gov](assets/delegates/404Gov.jpg)
 
@@ -161,7 +161,7 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 ---
 
-### Areta {#areta}
+### Areta
 
 ![Areta](assets/delegates/Areta.jpg)
 
@@ -174,7 +174,7 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 ---
 
-### Aurora Labs {#aurora-labs}
+### Aurora Labs
 
 ![Aurora Labs](assets/delegates/Aurora.svg)
 
@@ -190,11 +190,11 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 These delegates reflect a strong mix of experienced individuals and active NEAR-aligned teams, many of whom have contributed to the ecosystem for years.
 
-## Role of Delegates {#role-of-delegates}
+## Role of Delegates
 
 Participation in House of Stake is permissionless — anyone holding veNEAR can vote directly. However, the delegate system exists to streamline governance for everyday participants by enabling delegation to trusted representatives.
 
-## Expectations & Standards {#expectations-standards}
+## Expectations & Standards
 
 Endorsed Delegates are expected to:
 

@@ -1,4 +1,4 @@
-# Code of Conduct {#code-of-conduct}
+# Code of Conduct
 
 :::tip ✍️ This page is a work in progress - Help improve this page
 Have feedback, found an error, or want to suggest changes?

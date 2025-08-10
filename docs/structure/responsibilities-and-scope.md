@@ -1,4 +1,4 @@
-# Responsibilities and Scope (RACI) {#responsibilities-and-scope-raci}
+# Responsibilities and Scope (RACI)
 
 This section defines the roles and responsibilities of key governance participants within the House of Stake, using the [RACI matrix](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix):
 
@@ -7,7 +7,7 @@ This section defines the roles and responsibilities of key governance participan
 - **C – Consulted:** Who provides input or expertise
 - **I – Informed:** Who must be kept up to date
 
-## Example: Key Governance Processes {#example-key-governance-processes}
+## Example: Key Governance Processes
 
 | Process                       | Screening Committee | Endorsed Delegates | Delegates | Security Council | veNEAR Holders |
 | ----------------------------- | ------------------- | ------------------ | --------- | ---------------- | -------------- |
@@ -20,6 +20,6 @@ This section defines the roles and responsibilities of key governance participan
 
 > **Note:** This table serves as a starting point. Roles and scopes may evolve as the governance system matures.
 
-## Why RACI Matters {#why-raci-matters}
+## Why RACI Matters
 
 The RACI model clarifies responsibilities, reduces overlap, and increases transparency. It makes complex governance processes easier to understand and more efficient—especially in decentralized environments.

@@ -1,4 +1,4 @@
-# Screening Committee {#screening-committee}
+# Screening Committee
 
 The **Screening Committee** is a core governance body within House of Stake. It acts as the first layer of review and quality control for proposals, delegates, and broader governance processes — ensuring that only aligned, well-formed proposals reach the full voting body.
 
@@ -6,11 +6,11 @@ This group serves as a **filter** and **guardian of integrity**, maintaining a b
 
 ---
 
-## Current Status: Interim Screening Committee {#current-status-interim-screening-committee}
+## Current Status: Interim Screening Committee
 
 To expedite the launch of House of Stake, the **NEAR Foundation** appointed an **Interim Screening Committee**. This temporary body was responsible for launching the delegate process and selecting the **first cohort of Endorsed Delegates**.
 
-### Interim Committee Members {#interim-committee-members}
+### Interim Committee Members
 
 - Bianca Guimaraes-Chadwick (NEAR Foundation)
 - Lane Rettig (NEAR Foundation)
@@ -21,11 +21,11 @@ The interim Committee will remain in place **only until** a formal Charter is pr
 
 ---
 
-## What Happens Next {#what-happens-next}
+## What Happens Next
 
 The transition from a Foundation-appointed interim body to a **community-elected Screening Committee** is now the top priority.
 
-### Timeline and Process {#timeline-and-process}
+### Timeline and Process
 
 1. **Charter Proposal (target: mid-August)**
    The NEAR Foundation will publish a detailed _Screening Committee Charter_ proposal covering:
@@ -41,7 +41,7 @@ The transition from a Foundation-appointed interim body to a **community-elected
 3. **Sunsetting the Interim Committee**
    The interim body will disband after the first election is complete. **Ensuring this transition** is the committee's highest and final responsibility.
 
-## Community Input & Nominations {#community-input-nominations}
+## Community Input & Nominations
 
 The process is open. If you:
 
@@ -55,26 +55,26 @@ This is not yet a formal application process — just a **head start** to surfac
 
 ---
 
-## Responsibilities of the Screening Committee {#responsibilities-of-the-screening-committee}
+## Responsibilities of the Screening Committee
 
-### Proposal Review & Governance Flow {#proposal-review-governance-flow}
+### Proposal Review & Governance Flow
 
 - **Pre-screen proposals** before community-wide voting
 - **Filter mechanism**: proposals rejected by the Committee (less than 4 out of 7 votes) must achieve a 75% supermajority to pass
 
-### Delegate Selection & Oversight {#delegate-selection-oversight}
+### Delegate Selection & Oversight
 
 - **Initiate Calls for Delegates**
 - **Select initial Endorsed Delegates**
 - **Monitor delegate behavior and voting patterns**
 - **Flag conflicts of interest or violations**
 
-### Oversight & Improvement {#oversight-improvement}
+### Oversight & Improvement
 
 - **Adjust veNEAR reward incentives** to remain competitive
 - **Publish meeting notes and decisions** for transparency
 - **Continuously improve frameworks** based on community feedback
 
-### Future Transition {#future-transition}
+### Future Transition
 
 Eventually, as the system matures, the Screening Committee will **transfer the authority to select Endorsed Delegates**, enabling fully community-led governance.

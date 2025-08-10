@@ -1,4 +1,4 @@
-# The Future: AI & Scaling {#the-future-ai-and-scaling}
+# The Future: AI & Scaling
 
 Governance in crypto is evolving. As networks grow more complex, the systems that manage them must also scale — not just in users and proposals, but in intelligence, autonomy, and resilience.
 
@@ -6,11 +6,11 @@ Governance in crypto is evolving. As networks grow more complex, the systems tha
 
 ---
 
-### AI-Assisted Governance {#ai-assisted-governance}
+### AI-Assisted Governance
 
 We’re entering an era where governance will be increasingly **AI-augmented**. This doesn’t mean handing the keys over to machines — it means building smarter support systems that make human decision-making more informed, inclusive, and efficient.
 
-#### Phase 1: The Assistant {#phase-1-the-assistant}
+#### Phase 1: The Assistant
 
 AI today can already:
 
@@ -21,7 +21,7 @@ AI today can already:
 
 The first milestone is embedding such assistants into governance platforms like Agora or Tally — as bots trained on governance archives, protocol mechanics, legal theory, and social norms. These tools can **make participation more accessible**, reduce delegate burnout, and **strengthen accountability**.
 
-#### Phase 2: The Delegate {#phase-2-the-delegate}
+#### Phase 2: The Delegate
 
 The logical next step is the **AI delegate** — an autonomous agent that performs most governance functions:
 
@@ -32,7 +32,7 @@ The logical next step is the **AI delegate** — an autonomous agent that perfor
 
 Communities could spin up many such agents, each trained with different priorities or behavioral logic. Through experimentation, we’ll learn which models earn **real trust** and deliver real impact.
 
-#### Phase 3: The President {#phase-3-the-president}
+#### Phase 3: The President
 
 The long-term vision — still speculative — is the **AI president**: a master coordination agent overseeing protocol governance with transparency, neutrality, and continuous availability.
 
@@ -49,7 +49,7 @@ Whether such a system is desirable or possible depends not just on technical fea
 
 ---
 
-### Scalable Infrastructure {#scalable-infrastructure}
+### Scalable Infrastructure
 
 To support this evolution, House of Stake promotes:
 
@@ -59,7 +59,7 @@ To support this evolution, House of Stake promotes:
 
 ---
 
-### The Vision {#the-vision}
+### The Vision
 
 House of Stake is not just about fixing governance — it’s about **reinventing it**.
 
