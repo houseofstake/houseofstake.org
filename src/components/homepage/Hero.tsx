@@ -122,7 +122,7 @@ const Hero: React.FC = () => {
   const statsData = [
     {
       value: displayValues[0],
-      label: 'Participants by total onchain wallets',
+      label: 'Participants',
     },
     {
       value: displayValues[1],
