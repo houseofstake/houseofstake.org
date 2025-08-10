@@ -1,4 +1,5 @@
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './Footer.module.css';
 import { FaGithub, FaTelegram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
@@ -29,7 +30,7 @@ const Footer: React.FC = () => {
         isExternal: link.isExternal,
         icon:
           link.icon === 'near' ? (
-            <img src="/img/near-logo.svg" alt="NEAR" width={14} height={14} />
+            <img src={useBaseUrl('/img/near-logo.svg')} alt="NEAR" width={14} height={14} />
           ) : link.icon === 'scroll' ? (
             <LuScroll size={14} />
           ) : link.icon === 'book' ? (

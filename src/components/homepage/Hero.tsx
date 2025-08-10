@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Header from './Header';
 import styles from './Hero.module.css';
 import {
@@ -140,7 +141,7 @@ const Hero: React.FC = () => {
       <div
         className={styles.heroBackground}
         style={{
-          backgroundImage: `url('/img/hero.png')`,
+          backgroundImage: `url('${useBaseUrl('/img/hero.png')}')`,
         }}
       />
       <div className={styles.heroContentWrapper}>
@@ -158,7 +159,7 @@ const Hero: React.FC = () => {
                 className={styles.specialButton}
               >
                 <div className={styles.logoIcon}>
-                  <img src="/img/near-logo.svg" alt="NEAR Logo" />
+                  <img src={useBaseUrl('/img/near-logo.svg')} alt="NEAR Logo" />
                 </div>
                 <span className={styles.buttonLabel}>Govern</span>
               </a>

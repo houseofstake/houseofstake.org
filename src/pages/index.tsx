@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Hero from '@site/src/components/homepage/Hero';
 import What from '@site/src/components/homepage/What';
 import How from '@site/src/components/homepage/How';
@@ -64,12 +65,12 @@ export default function Home(): ReactNode {
         <title>{`${siteConfig.title}`}</title>
         {/* Preload all images for faster loading */}
         {/* Hero and main sections */}
-        <link rel="preload" href="/img/hero.png" as="image" type="image/png" />
+        <link rel="preload" href={useBaseUrl('/img/hero.png')} as="image" type="image/png" />
 
         {/* Logo and header */}
         <link
           rel="preload"
-          href="/img/near-logo.svg"
+          href={useBaseUrl('/img/near-logo.svg')}
           as="image"
           type="image/svg+xml"
         />
@@ -77,13 +78,13 @@ export default function Home(): ReactNode {
         {/* Governance and other icons */}
         <link
           rel="preload"
-          href="/img/governance-icon.svg"
+          href={useBaseUrl('/img/governance-icon.svg')}
           as="image"
           type="image/svg+xml"
         />
         <link
           rel="preload"
-          href="/img/venear-governance-model.png"
+          href={useBaseUrl('/img/venear-governance-model.png')}
           as="image"
           type="image/png"
         />

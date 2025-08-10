@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './Roadmap.module.css';
 import {
   CiCircleCheck,
@@ -206,7 +207,7 @@ const Roadmap: React.FC = () => {
                             <div className={styles.cardContent}>
                               <div className={styles.categoryBadge}>
                                 <img
-                                  src="/img/governance-icon.svg"
+                                  src={useBaseUrl('/img/governance-icon.svg')}
                                   alt="Governance icon"
                                   width="14"
                                   height="14"
@@ -242,7 +243,7 @@ const Roadmap: React.FC = () => {
                             <div className={styles.cardContent}>
                               <div className={styles.categoryBadge}>
                                 <img
-                                  src="/img/research-icon.svg"
+                                  src={useBaseUrl('/img/research-icon.svg')}
                                   alt="Research icon"
                                   width="14"
                                   height="14"

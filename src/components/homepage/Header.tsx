@@ -7,6 +7,7 @@ import React, {
 } from 'react';
 import Link from '@docusaurus/Link';
 import { useLocation } from '@docusaurus/router';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './Header.module.css';
 import useHomepageContent from '@site/src/utils/useHomepageContent';
 
@@ -136,7 +137,7 @@ const Header: React.FC = () => {
         </svg>
       </Link>
       <Link to="/#" className={styles.iconContainer}>
-        <img src="/img/near-logo.svg" alt="NEAR Logo" className={styles.logo} />
+        <img src={useBaseUrl('/img/near-logo.svg')} alt="NEAR Logo" className={styles.logo} />
       </Link>
 
       <div className={styles.container}>
