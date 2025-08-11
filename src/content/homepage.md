@@ -185,7 +185,7 @@ footer:
             icon: 'near',
           }
         - {
-            label: 'Proposal',
+            label: 'Proposals',
             href: 'https://gov.houseofstake.org/proposals',
             isExternal: false,
             icon: 'scroll',
