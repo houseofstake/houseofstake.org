@@ -42,11 +42,13 @@ function Root({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    // Set Featurebase configuration
-    (window as any).FeaturebaseSettings = {
-      organization: 'hackhumanity',
-      placement: 'right',
-    };
+    // Initialize Featurebase function before SDK loads
+    if (typeof (window as any).Featurebase !== 'function') {
+      (window as any).Featurebase = function () {
+        ((window as any).Featurebase.q =
+          (window as any).Featurebase.q || []).push(arguments);
+      };
+    }
 
     // Create and append the Featurebase script
     const script = document.createElement('script');
@@ -55,13 +57,23 @@ function Root({ children }: { children: React.ReactNode }) {
     script.async = true;
     document.head.appendChild(script);
 
+    // Initialize widget when script loads
+    script.onload = () => {
+      // Initialize the feedback widget with correct method
+      (window as any).Featurebase('initialize_feedback_widget', {
+        organization: 'hackhumanity', // Use the correct organization name
+        theme: 'light', // Required parameter
+        placement: 'right', // Shows floating button on right side
+        locale: 'en', // Language setting
+      });
+    };
+
     // Cleanup function
     return () => {
       const existingScript = document.getElementById('featurebase-sdk');
       if (existingScript) {
         existingScript.remove();
       }
-      delete (window as any).FeaturebaseSettings;
     };
   }, []);
 
