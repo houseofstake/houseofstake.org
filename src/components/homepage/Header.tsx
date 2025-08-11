@@ -42,7 +42,7 @@ const Header: React.FC = () => {
   // Dynamically determine the edit URL based on current page
   const editUrl = useMemo(() => {
     const baseGithubUrl =
-      'https://github.com/HackHumanityOrg/houseofstake.org/edit/initial-setup';
+      'https://github.com/houseofstake/houseofstake.org/edit/main';
     const pathname = location.pathname;
 
     // Check exact match first (handles main pages and legal pages)
