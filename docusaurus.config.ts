@@ -24,7 +24,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'HackHumanityOrg', // Usually your GitHub org/user name.
+  organizationName: 'houseofstake', // Usually your GitHub org/user name.
   projectName: 'houseofstake.org', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -46,7 +46,7 @@ const config: Config = {
           routeBasePath: 'docs', // Serve docs at /docs
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/HackHumanityOrg/houseofstake.org/tree/initial-setup/',
+            'https://github.com/houseofstake/houseofstake.org/tree/main/',
           breadcrumbs: true, // Enable breadcrumbs
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
@@ -60,7 +60,7 @@ const config: Config = {
           blogSidebarTitle: 'Recent posts',
           blogSidebarCount: 5,
           editUrl:
-            'https://github.com/HackHumanityOrg/houseofstake.org/tree/initial-setup/',
+            'https://github.com/houseofstake/houseofstake.org/tree/main/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
