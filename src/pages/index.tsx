@@ -79,20 +79,6 @@ export default function Home(): ReactNode {
           as="image"
           type="image/svg+xml"
         />
-
-        {/* Governance and other icons */}
-        <link
-          rel="preload"
-          href={useBaseUrl('/img/governance-icon.svg')}
-          as="image"
-          type="image/svg+xml"
-        />
-        <link
-          rel="preload"
-          href={useBaseUrl('/img/venear-governance-model.png')}
-          as="image"
-          type="image/png"
-        />
       </Head>
 
       <main>

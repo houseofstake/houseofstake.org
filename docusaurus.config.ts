@@ -74,37 +74,6 @@ const config: Config = {
   plugins: [require.resolve('./plugins/homepage-content')],
 
   headTags: [
-    // Preload critical font weights for FK Grotesk
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'preload',
-        href: '/fonts/FKGrotesk-Regular.woff2',
-        as: 'font',
-        type: 'font/woff2',
-        crossorigin: 'anonymous',
-      },
-    },
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'preload',
-        href: '/fonts/FKGrotesk-Medium.woff2',
-        as: 'font',
-        type: 'font/woff2',
-        crossorigin: 'anonymous',
-      },
-    },
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'preload',
-        href: '/fonts/FKGrotesk-Bold.woff2',
-        as: 'font',
-        type: 'font/woff2',
-        crossorigin: 'anonymous',
-      },
-    },
     // Add font loading script to wait for fonts before showing page
     {
       tagName: 'script',
