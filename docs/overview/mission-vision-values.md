@@ -11,7 +11,7 @@ target="_blank"
 rel="noopener noreferrer"
 
 >
-Learn how to contribute
+Contribute
 </a>
 <!-- prettier-ignore-end -->
 
