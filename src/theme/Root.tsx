@@ -2,6 +2,22 @@ import React, { useEffect, useRef } from 'react';
 import { useLocation } from '@docusaurus/router';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
+declare global {
+  interface Window {
+    Featurebase?: {
+      initialize: (config: {
+        organization: string;
+        placement?: 'left' | 'right';
+        theme?: 'light' | 'dark' | 'auto';
+        locale?: string;
+      }) => void;
+      open?: () => void;
+      close?: () => void;
+      destroy?: () => void;
+    };
+  }
+}
+
 // Custom Root component that wraps the entire Docusaurus app
 // This ensures pages scroll to top when navigation routes change
 function Root({ children }: { children: React.ReactNode }) {
@@ -18,6 +34,35 @@ function Root({ children }: { children: React.ReactNode }) {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
+  }, []);
+
+  // Load Featurebase widget
+  useEffect(() => {
+    if (!ExecutionEnvironment.canUseDOM) {
+      return;
+    }
+
+    // Set Featurebase configuration
+    (window as any).FeaturebaseSettings = {
+      organization: 'hackhumanity',
+      placement: 'right',
+    };
+
+    // Create and append the Featurebase script
+    const script = document.createElement('script');
+    script.src = 'https://do.featurebase.app/js/sdk.js';
+    script.id = 'featurebase-sdk';
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Cleanup function
+    return () => {
+      const existingScript = document.getElementById('featurebase-sdk');
+      if (existingScript) {
+        existingScript.remove();
+      }
+      delete (window as any).FeaturebaseSettings;
+    };
   }, []);
 
   useEffect(() => {
