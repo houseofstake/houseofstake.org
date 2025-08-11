@@ -36,7 +36,7 @@ This system is designed not only to work—but to evolve. To guide that evolutio
 
 ### **What We Shipped**
 
-Over the past year, we’ve worked with the best partner teams in the world to design and ship the House of Stake system. Based on governance [research and design](https://www.gauntlet.xyz/resources/near-house-of-stake-governance-proposal) from our friends at [Gauntlet](https://www.gauntlet.xyz/), built by our friends at [FastNear](https://fastnear.com/) and [Agora](https://agora.xyz/), with facilitation, integration and product expertise from our friends at [Hack Humanity](https://www.hackhumanity.com/). House of Stake already [live on mainnet](https://gov.houseofstake.org/):
+Over the past year, we’ve worked with the best partner teams in the world to design and ship the House of Stake system. Based on governance [research and design](https://www.gauntlet.xyz/resources/near-house-of-stake-governance-proposal) from our friends at [Gauntlet](https://www.gauntlet.xyz/), built by our friends at [FastNear](https://fastnear.com/) and [Agora](https://agora.xyz/), and with facilitation, integration and product expertise from our friends at [Hack Humanity](https://www.hackhumanity.com/). House of Stake already [live on mainnet](https://gov.houseofstake.org/):
 
 - **veNEAR Governance Token**: Users lock NEAR, stNEAR, or liNEAR to receive veNEAR. The longer the lock, the greater the voting power and rewards. This is a pragmatic approach: stake-weighted governance isn’t perfect but it’s currently the most effective Sybil resistance mechanism available. Our ambition is to evolve toward more democratic and identity-aware models as the technology matures.
 
