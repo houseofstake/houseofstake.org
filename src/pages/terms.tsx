@@ -1,0 +1,45 @@
+import React from 'react';
+import Head from '@docusaurus/Head';
+import styles from './legal.module.css';
+import Header from '@site/src/components/homepage/Header';
+import Footer from '@site/src/components/homepage/Footer';
+import TermsContent, {
+  frontMatter as termsFrontMatter,
+} from '@site/legal/terms.mdx';
+
+export default function Terms() {
+  const fm =
+    (termsFrontMatter as { title?: string; lastUpdated?: string }) || {};
+  const title = fm.title ?? 'Terms of Use';
+  const lastUpdated = fm.lastUpdated
+    ? `Last updated: ${fm.lastUpdated}`
+    : undefined;
+
+  return (
+    <>
+      <Head>
+        <title>{title} - House of Stake</title>
+        <meta name="description" content={`${title} for House of Stake`} />
+      </Head>
+      <Header />
+      <div className={styles.legalPage}>
+        <section className={styles.hero}>
+          <div className={styles.heroBackground} />
+          <div className={styles.heroContent}>
+            <h1 className={styles.title}>{title}</h1>
+            {lastUpdated && <p className={styles.subtitle}>{lastUpdated}</p>}
+          </div>
+        </section>
+
+        <section className={styles.content}>
+          <div className={styles.container}>
+            <div className={styles.textContent}>
+              <TermsContent />
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+}

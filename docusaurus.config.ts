@@ -1,13 +1,15 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
   title: 'House of Stake',
   tagline: "HoS is the NEAR ecosystem's social governance platform",
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -22,7 +24,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'houseofstake', // Usually your GitHub org/user name.
+  organizationName: 'HackHumanityOrg', // Usually your GitHub org/user name.
   projectName: 'houseofstake.org', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -41,102 +43,71 @@ const config: Config = {
       'classic',
       {
         docs: {
+          routeBasePath: 'docs', // Serve docs at /docs
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/houseofstake/houseofstake.org/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/HackHumanityOrg/houseofstake.org/tree/initial-setup/',
+          breadcrumbs: true, // Enable breadcrumbs
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          blogTitle: 'House of Stake Blog',
+          blogDescription:
+            'Latest updates and insights from the NEAR House of Stake community',
+          postsPerPage: 10,
+          blogSidebarTitle: 'Recent posts',
+          blogSidebarCount: 5,
           editUrl:
-            'https://github.com/houseofstake/houseofstake.org/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+            'https://github.com/HackHumanityOrg/houseofstake.org/tree/initial-setup/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/global.css',
         },
       } satisfies Preset.Options,
     ],
   ],
 
-  themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
-    navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+  plugins: [require.resolve('./plugins/homepage-content')],
+
+  headTags: [
+    // Add font loading script to wait for fonts before showing page
+    {
+      tagName: 'script',
+      attributes: {
+        src: '/scripts/font-loader.js',
+        async: 'false',
       },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Telegram',
-              href: 'https://t.me/NEAR_HouseOfStake',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/neargovernance',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/houseofstake/houseofstake.org',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} NEAR House of Stake Foundation.`,
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP',
+      crossorigin: 'anonymous',
     },
+  ],
+
+  themeConfig: {
+    // Open Graph and social card image - Docusaurus will automatically handle og:image and twitter:image
+    image: 'img/og-image.jpg',
+    metadata: [
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { property: 'og:type', content: 'website' },
+    ],
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+    },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
   } satisfies Preset.ThemeConfig,
 };

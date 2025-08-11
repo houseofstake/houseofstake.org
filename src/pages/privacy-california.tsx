@@ -1,0 +1,44 @@
+import React from 'react';
+import Head from '@docusaurus/Head';
+import styles from './legal.module.css';
+import Header from '@site/src/components/homepage/Header';
+import Footer from '@site/src/components/homepage/Footer';
+import CaliforniaPrivacyContent, {
+  frontMatter as caFrontMatter,
+} from '@site/legal/privacy-california.mdx';
+
+export default function PrivacyCalifornia() {
+  const fm = (caFrontMatter as { title?: string; lastUpdated?: string }) || {};
+  const title = fm.title ?? 'California Privacy Rights';
+  const lastUpdated = fm.lastUpdated
+    ? `Last updated: ${fm.lastUpdated}`
+    : undefined;
+
+  return (
+    <>
+      <Head>
+        <title>{title} - House of Stake</title>
+        <meta name="description" content={`${title} - House of Stake`} />
+      </Head>
+      <Header />
+      <div className={styles.legalPage}>
+        <section className={styles.hero}>
+          <div className={styles.heroBackground} />
+          <div className={styles.heroContent}>
+            <h1 className={styles.title}>{title}</h1>
+            {lastUpdated && <p className={styles.subtitle}>{lastUpdated}</p>}
+          </div>
+        </section>
+
+        <section className={styles.content}>
+          <div className={styles.container}>
+            <div className={styles.textContent}>
+              <CaliforniaPrivacyContent />
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+}

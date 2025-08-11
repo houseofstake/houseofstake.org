@@ -1,45 +1,95 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
+import type { ReactNode } from 'react';
+import { useEffect } from 'react';
+import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
-
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import Hero from '@site/src/components/homepage/Hero';
+import What from '@site/src/components/homepage/What';
+import How from '@site/src/components/homepage/How';
+import StructureRoles from '@site/src/components/homepage/StructureRoles';
+import GovernanceSystem from '@site/src/components/homepage/GovernanceSystem';
+import Roadmap from '@site/src/components/homepage/Roadmap';
+import Footer from '@site/src/components/homepage/Footer';
+import useHomepageContent from '@site/src/utils/useHomepageContent';
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
+  const content = useHomepageContent();
+
+  useEffect(() => {
+    if (!ExecutionEnvironment.canUseDOM) {
+      return;
+    }
+
+    const scrollToAnchor = () => {
+      const hash = window.location.hash;
+
+      if (hash) {
+        // Small delay to ensure components are mounted
+        setTimeout(() => {
+          const id = hash.substring(1);
+
+          // If hash is just '#' or empty, scroll to top
+          if (!id || id === '') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            // Otherwise, try to find the element and scroll to it
+            const element = document.getElementById(id);
+
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              // Adjust for header after scrollIntoView completes
+              setTimeout(() => {
+                window.scrollBy(0, -90);
+              }, 300);
+            }
+          }
+        }, 300);
+      }
+    };
+
+    // Call on mount
+    scrollToAnchor();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', scrollToAnchor);
+
+    return () => {
+      window.removeEventListener('hashchange', scrollToAnchor);
+    };
+  }, []);
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+    <>
+      <Head>
+        <title>{`${siteConfig.title}`}</title>
+        {/* Preload all images for faster loading */}
+        {/* Hero and main sections */}
+        <link
+          rel="preload"
+          href={useBaseUrl('/img/hero.png')}
+          as="image"
+          type="image/png"
+        />
+
+        {/* Logo and header */}
+        <link
+          rel="preload"
+          href={useBaseUrl('/img/near-logo.svg')}
+          as="image"
+          type="image/svg+xml"
+        />
+      </Head>
+
       <main>
-        <HomepageFeatures />
+        {(content.hero?.visible ?? true) && <Hero />}
+        {(content.what?.visible ?? true) && <What />}
+        {(content.how?.visible ?? true) && <How />}
+        {(content.structureRoles?.visible ?? false) && <StructureRoles />}
+        {(content.governanceSystem?.visible ?? false) && <GovernanceSystem />}
+        {(content.roadmap?.visible ?? false) && <Roadmap />}
       </main>
-    </Layout>
+      <Footer />
+    </>
   );
 }
-// Force rebuild at Sun Aug  3 22:09:28 EEST 2025

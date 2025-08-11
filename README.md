@@ -1,41 +1,15 @@
-# Website
+## House of Stake Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This repo powers the House of Stake website (Docusaurus). Most content is Markdown.
 
-## Installation
+- [Contributing guide](.github/CONTRIBUTING.md)
+- [Support & feedback](.github/SUPPORT.md)
+- [Open an issue](https://github.com/houseofstake/houseofstake.org/issues/new)
 
-```bash
-yarn
-```
+Local development (quick reference)
 
-## Local Development
+- Install: `npm ci`
+- Dev server: `npm run start`
+- Build: `npm run build`
 
-```bash
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+License: see `LICENSE`.
