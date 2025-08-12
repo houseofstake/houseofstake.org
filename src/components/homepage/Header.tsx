@@ -122,7 +122,7 @@ const Header: React.FC = () => {
         className={styles.notch}
         aria-live="polite"
       >
-        <span className={styles.notchText}>Welcome to the Alpha Launch</span>
+        <span className={styles.notchText}>Welcome to the Beta Launch</span>
         <svg
           className={styles.notchArrow}
           width="16"
