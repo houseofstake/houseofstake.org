@@ -115,7 +115,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`navbar ${styles.header} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuActive : ''}`}
+      className={`navbar ${styles.headerWrapper} ${isScrolled ? styles.scrolled : ''} ${isMenuOpen ? styles.menuActive : ''}`}
     >
       <Link
         to="/blog/introducing-near-house-of-stake"
@@ -140,7 +140,8 @@ const Header: React.FC = () => {
           />
         </svg>
       </Link>
-      <Link to="/#" className={styles.iconContainer}>
+      <div className={styles.header}>
+        <Link to="/#" className={styles.iconContainer}>
         <img
           src={useBaseUrl('/img/near-logo.svg')}
           alt="NEAR Logo"
@@ -228,6 +229,7 @@ const Header: React.FC = () => {
             );
           })}
         </nav>
+      </div>
       </div>
     </header>
   );
