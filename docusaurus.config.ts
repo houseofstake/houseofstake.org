@@ -71,7 +71,10 @@ const config: Config = {
     ],
   ],
 
-  plugins: [require.resolve('./plugins/homepage-content')],
+  plugins: [
+    require.resolve('./plugins/homepage-content'),
+    'docusaurus-plugin-llms',
+  ],
 
   headTags: [
     // Add font loading script to wait for fonts before showing page
