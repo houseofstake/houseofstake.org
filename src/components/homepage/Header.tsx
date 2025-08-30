@@ -105,7 +105,7 @@ const Header: React.FC = () => {
   }, []);
 
   const headerMenu = content.header?.menu || [];
-  const isDocsPage = location.pathname.startsWith('/docs');
+  const isDocsPage = location.pathname.includes('/docs');
 
   return (
     <header
