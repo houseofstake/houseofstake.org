@@ -35,7 +35,6 @@ const sidebars: SidebarsConfig = {
         'structure/security-council',
         'structure/responsibilities-and-scope',
         'structure/code-of-conduct',
-        'structure/conflict-of-interest-policy',
       ],
     },
     {
@@ -52,8 +51,6 @@ const sidebars: SidebarsConfig = {
         'governance-system/what-is-venear',
         'governance-system/venear-locking-mechanisms',
         'governance-system/proposal-and-voting-process',
-        //'governance-system/rewards-and-incentives',
-        //'governance-system/inflation-model',
         'governance-system/versioning-and-evolution',
       ],
     },
@@ -69,8 +66,7 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'strategic-direction/why-this-matters',
-        'strategic-direction/the-future-ai-and-scaling',
-        //'strategic-direction/roadmap-and-milestones',
+        'strategic-direction/ai-governance-product-roadmap',
       ],
     },
     {
