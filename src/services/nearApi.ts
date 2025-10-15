@@ -159,12 +159,12 @@ export async function fetchHouseOfStakeStats(): Promise<HouseOfStakeStats> {
   try {
     // Fetch data in parallel for better performance
     const [numAccounts, numProposals, totalSupply] = await Promise.all([
-      // Get number of participants from v.voteagora.near
-      callViewMethod('v.voteagora.near', 'get_num_accounts'),
-      // Get number of proposals from vote.voteagora.near
-      callViewMethod('vote.voteagora.near', 'get_num_proposals'),
-      // Get total veNEAR supply from v.voteagora.near
-      callViewMethod('v.voteagora.near', 'ft_total_supply'),
+      // Get number of participants from venear.dao
+      callViewMethod('venear.dao', 'get_num_accounts'),
+      // Get number of proposals from vote.dao
+      callViewMethod('vote.dao', 'get_num_proposals'),
+      // Get total veNEAR supply from venear.dao
+      callViewMethod('venear.dao', 'ft_total_supply'),
     ]);
 
     // Ensure we have valid numbers
