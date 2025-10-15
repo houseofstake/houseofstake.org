@@ -87,20 +87,6 @@ House of Stake encourages both **direct** and **delegated** participation to ens
 
 ---
 
-### Cameron
-
-![Cameron](assets/delegates/Cameron%20Dennis.jpg)
-
-- **Twitter**: [@Cameron*Dennis*](https://x.com/Cameron_Dennis_)
-- **LinkedIn**: [cameron-dennis](https://www.linkedin.com/in/cameron-dennis-b93b25104/)
-- **Title**: Head of Ecosystem, NEAR AI
-- **Bio**: Cameron Dennis is the Head of Ecosystem at NEAR AI, where he leads business development, founder support, partner integrations, and ecosystem growth. With four and a half years of experience at the NEAR Foundation, Cameron brings deep expertise in blockchain ecosystem development.
-  In 2018, he founded the Blockchain Acceleration Foundation (BAF), a nonprofit that unites over 70 university blockchain clubs.
-  Cameron is passionate about user-owned AI, confidential computing, political theory, yoga, gaming, and music.
-- **Previous experience**: Included in bio
-
----
-
 ### Alan
 
 ![Alan](assets/delegates/Alan.jpg)
