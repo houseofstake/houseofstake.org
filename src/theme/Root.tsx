@@ -2,22 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { useLocation } from '@docusaurus/router';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
-declare global {
-  interface Window {
-    Featurebase?: {
-      initialize: (config: {
-        organization: string;
-        placement?: 'left' | 'right';
-        theme?: 'light' | 'dark' | 'auto';
-        locale?: string;
-      }) => void;
-      open?: () => void;
-      close?: () => void;
-      destroy?: () => void;
-    };
-  }
-}
-
 // Custom Root component that wraps the entire Docusaurus app
 // This ensures pages scroll to top when navigation routes change
 function Root({ children }: { children: React.ReactNode }) {
@@ -34,47 +18,6 @@ function Root({ children }: { children: React.ReactNode }) {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
-  }, []);
-
-  // Load Featurebase widget
-  useEffect(() => {
-    if (!ExecutionEnvironment.canUseDOM) {
-      return;
-    }
-
-    // Initialize Featurebase function before SDK loads
-    if (typeof (window as any).Featurebase !== 'function') {
-      (window as any).Featurebase = function () {
-        ((window as any).Featurebase.q =
-          (window as any).Featurebase.q || []).push(arguments);
-      };
-    }
-
-    // Create and append the Featurebase script
-    const script = document.createElement('script');
-    script.src = 'https://do.featurebase.app/js/sdk.js';
-    script.id = 'featurebase-sdk';
-    script.async = true;
-    document.head.appendChild(script);
-
-    // Initialize widget when script loads
-    script.onload = () => {
-      // Initialize the feedback widget with correct method
-      (window as any).Featurebase('initialize_feedback_widget', {
-        organization: 'hackhumanity', // Use the correct organization name
-        theme: 'light', // Required parameter
-        placement: 'right', // Shows floating button on right side
-        locale: 'en', // Language setting
-      });
-    };
-
-    // Cleanup function
-    return () => {
-      const existingScript = document.getElementById('featurebase-sdk');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
   }, []);
 
   useEffect(() => {
