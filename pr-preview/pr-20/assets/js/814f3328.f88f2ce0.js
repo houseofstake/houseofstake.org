@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhouseofstake=self.webpackChunkhouseofstake||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Introducing NEAR House of Stake: A New Era of Governance","permalink":"/pr-preview/pr-20/blog/introducing-near-house-of-stake","unlisted":false,"date":"2025-08-07T00:00:00.000Z"}]}')}}]);
