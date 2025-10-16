@@ -76,6 +76,24 @@ const config: Config = {
     'docusaurus-plugin-llms',
   ],
 
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        language: ["en"],
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 50,
+        highlightSearchTermsOnTargetPage: true,
+        searchBarShortcut: true,
+        searchBarPosition: "right",
+      }
+    ]
+  ],
+
   headTags: [
     // Add font loading script to wait for fonts before showing page
     {
