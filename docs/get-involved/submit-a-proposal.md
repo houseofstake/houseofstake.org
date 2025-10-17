@@ -1,4 +1,4 @@
-# Submit a Proposal
+# Submit a Proposal Instructions
 
 :::tip ✍️ This page is a work in progress - Help improve this page
 Have feedback, found an error, or want to suggest changes?
