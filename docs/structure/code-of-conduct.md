@@ -7,7 +7,7 @@ Join us in the co-creation of the Code of Conduct for House of Stake. Your input
 <!-- prettier-ignore-start -->
 <a
 class="docsCtaButton"
-href="https://gov.near.org/t/near-house-of-stake-code-of-conduct-coc-draft-for-community-review/41606"
+href="https://gov.near.org/t/near-house-of-stake-code-of-conduct-coc-draft-for-community-review/41606/40"
 target="_blank"
 rel="noopener noreferrer"
 >
