@@ -1,15 +1,15 @@
 # Proposal & Voting Process
 
-1. Draft proposal submitted to [NEAR Governance Forum](https://gov.near.org/). Seven day "temperature check" period begins.
+1. Draft proposal submitted to [NEAR Governance Forum](https://gov.near.org/). Seven day "feedback period" period begins.
 2. Community can begin discussing, commenting on, and requesting changes to draft on the forum.
 
-Note that the following steps can happen immediately after the first step, and don't need to wait until the end of the temperature check period.
+Note that the following steps can happen immediately after the first step, and don't need to wait until the end of the feedback period.
 
 3. Draft proposal submitted to [proposals repository](https://github.com/houseofstake/proposals) as a PR that creates a new HSP in markdown format. See [sample PR](https://github.com/houseofstake/proposals/pull/16). PR target filename should be `HSPs/hsp-xxx.md` in the initial PR, as a HSP number has not yet been assigned. 
 4. HSP editor reviews proposal draft and make sure it conforms to the spec: correct format, complete (contains all required sections), and is within the scope of the HSP process/House of Stake governance. HSP editor communicates with author if changes are required.
-5. Once HSP conforms to the spec, an HSP editor officially assigns it a HSP ID number, assigns it the "Draft" status, and merges it. At this point, the proposal is a canonical HSP and is eligible for voting (once the temperature check period ends).
+5. Once HSP conforms to the spec, an HSP editor officially assigns it a HSP ID number, assigns it the "Draft" status, and merges it. At this point, the proposal is a canonical HSP and is eligible for voting (once the feedback period ends).
 6. Any author can set the HSP status to "Review", "Last Call", or "Voting." It's suggested, but not required, that this process continue for at least two weeks before the "Voting" status is assigned. HSP editors should promptly merge such changes.
-7. After the temperature check period ends, i.e., at least one week after the initial draft proposal was posted on the forum, any of its authors may submit it to House of Stake for a vote. They should also update the HSP status on Github to "Voting."
+7. After the feedback period ends, i.e., at least one week after the initial draft proposal was posted on the forum, any of its authors may submit it to House of Stake for a vote. They should also update the HSP status on Github to "Voting."
 8. Screening Committee reviews the draft proposal. They may or may not choose to approve it for voting. (Note: In HoS v1, Screening Committee approval is required before a vote. In v2, the Screening Committee can instead fast track a proposal, but cannot block a vote.)
 9. If approved for a vote, the 14 day voting period begins. Any voter who had voting power (their own, or delegated, veNEAR) _before the start of the vote_ can now vote on the proposal.
 10. Voting concludes. HSP status on Github updated to "Final" or "Rejected" depending on vote outcome. For "Sensing" proposals, no further steps are required.
