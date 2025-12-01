@@ -5,7 +5,7 @@
 
 Note that the following steps can happen immediately after the first step, and don't need to wait until the end of the feedback period.
 
-3. Draft proposal submitted to [proposals repository](https://github.com/houseofstake/proposals) as a PR that creates a new HSP in markdown format. See [sample PR](https://github.com/houseofstake/proposals/pull/16). PR target filename should be `HSPs/hsp-xxx.md` in the initial PR, as a HSP number has not yet been assigned. 
+3. Draft proposal submitted to [proposals repository](https://github.com/houseofstake/proposals) as a PR that creates a new HSP in markdown format. See [sample PR](https://github.com/houseofstake/proposals/pull/18). PR target filename should be `HSPs/hsp-xxx.md` in the initial PR, as a HSP number has not yet been assigned. Here's a direct link to create a new file in the correct folder: https://github.com/houseofstake/proposals/new/main/HSPs
 4. HSP editor reviews proposal draft and make sure it conforms to the spec: correct format, complete (contains all required sections), and is within the scope of the HSP process/House of Stake governance. HSP editor communicates with author if changes are required.
 5. Once HSP conforms to the spec, an HSP editor officially assigns it a HSP ID number, assigns it the "Draft" status, and merges it. At this point, the proposal is a canonical HSP and is eligible for voting (once the feedback period ends).
 6. Any author can set the HSP status to "Review", "Last Call", or "Voting." It's suggested, but not required, that this process continue for at least two weeks before the "Voting" status is assigned. HSP editors should promptly merge such changes.
