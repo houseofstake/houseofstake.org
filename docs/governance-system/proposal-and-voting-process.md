@@ -21,4 +21,4 @@ Note that the following steps can happen immediately after the first step, and d
 - A HSP author may, at any time, withdraw a proposal, changing its status on Github to "Withdrawn."
 - A HSP editor may mark a HSP as "Stagnant" once it's been inactive for six months. "Stagnant" proposals are not eligible for a vote, but the author can ressurrect a "Stagnant" proposal by moving it back to "Draft" at any time.
 - Another party may pick up and choose to champion a proposal if the authors withdraw it, or if it becomes stagnant. In this case, they become the new Author.
-- By the same token, any proposal may be forked by anyone at any time, permissionlessly. Note that proposals are all released into the public domain via [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/).
+- By the same token, any proposal may be forked by anyone at any time, permissionlessly. This would be done by creating a new PR, which will get a new HSP number. Note that proposals are all released into the public domain via [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/).
