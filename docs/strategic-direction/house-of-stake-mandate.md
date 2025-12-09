@@ -1,4 +1,4 @@
-## House of Stake Mandate:
+# House of Stake Mandate
 
 1. **Economic governance (of NEAR protocol and other NEAR products)**
    - Treasury management  
@@ -21,4 +21,4 @@
 
 4. **Grow Engagement and Ecosystem Health**
    - In the DAO, in governance, in the protocol, in NEAR ecosystem more broadly  
-   - Decentralized stakeholders participate in governance  
+   - Decentralized stakeholders participate in governance
