@@ -16,11 +16,11 @@ Angela brings a rare combination of startup agility, systems design expertise, a
 
 Her perspective is grounded in real-world experience. As she explains:
 
-> "Finding product-market fit is a hard challenge, and we have yet to prove that DAOs are a superior model for doing so. But if we want to test that premise properly, we must make DAOs not just more democratic, but more effective."
+> Finding product-market fit is a hard challenge, and we have yet to prove that DAOs are a superior model for doing so. But if we want to test that premise properly, we must make DAOs not just more democratic, but more effective.
 
 For Angela, decentralized governance is not only about making decisions together. It's about making *good* decisions. Every governance action should be evaluated against NEAR's North Star:
 
-> "Is this the best action we can take, in our collective capacity, for NEAR to become **the** blockchain for AI?"
+> Is this the best action we can take, in our collective capacity, for NEAR to become **the** blockchain for AI?
 
 Her vision for the House of Stake is decentralized coordination that serves the protocol, not itself, driven by product success, pursuit of product-market fit, and measurable achievement. Governance must create **impact**, not inertia.
 
@@ -41,7 +41,7 @@ Under Angela's leadership, the mission is clear: to make HoS not just functional
 
 The launch of House of Stake marks the beginning of a new chapter in NEAR governance. Over the coming months, Angela will help ensure that participation becomes increasingly accessible and meaningful. Governance is open to all NEAR stakeholders, whether they build the core protocol, launch agentic AI, validate the chain, or use products running on NEAR. This is a process of co-creation that strengthens the entire ecosystem.
 
-> "We're building governance not just for NEAR, but with NEAR. Every voice, every vote, every proposal is part of making this ecosystem stronger."
+> We're building governance not just for NEAR, but with NEAR. Every voice, every vote, every proposal is part of making this ecosystem stronger.
 > — Angela Kreitenweis
 
 ## Get Involved
