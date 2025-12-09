@@ -16,6 +16,7 @@ const sidebars: SidebarsConfig = {
         'overview/what-is-house-of-stake',
         'overview/governance-philosophy',
         'overview/mission-vision-values',
+        'overview/interim-constitution',
       ],
     },
     {
