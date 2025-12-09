@@ -68,6 +68,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'strategic-direction/why-this-matters',
         'strategic-direction/ai-governance-product-roadmap',
+        'strategic-direction/house-of-stake-mandate',
       ],
     },
     {
