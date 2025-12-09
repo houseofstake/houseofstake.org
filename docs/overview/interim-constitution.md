@@ -1,4 +1,4 @@
-## NEAR House of Stake - Interim Constitution (v0.1.0)
+# NEAR House of Stake - Interim Constitution (v0.1.0)
 
 ---
 
