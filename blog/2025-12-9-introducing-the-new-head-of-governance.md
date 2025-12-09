@@ -4,9 +4,13 @@ title: 'NEAR Welcomes Angela Kreitenweis as Head of Governance at House of Stake
 authors: [houseofstake]
 ---
 
+<img src={require('./assets/angela-kreitenweis-head-of-governance.png').default} alt="NEAR Welcomes Angela Kreitenweis as Head of Governance at House of Stake" style={{width: '100%'}} />
+
 *Advancing community-driven decision-making as House of Stake goes live on mainnet and [NEAR governance enters its next phase](https://www.near.org/blog/near-house-of-stake-is-now-live-on-mainnet).*
 
 Today, NEAR is pleased to announce that Angela Kreitenweis is joining as House of Stake Head of Governance. Angela will steward NEAR's governance evolution at a pivotal moment: [**House of Stake (HoS)**](https://www.near.org/blog/near-house-of-stake-is-now-live-on-mainnet), NEAR's next-generation stake-based governance system, has launched on mainnet, introducing veNEAR voting power and aligning long-term participation with meaningful voice in ecosystem decisions.
+
+{/* truncate */}
 
 Angela brings a rare combination of startup agility, systems design expertise, and deep governance insight to NEAR.
 
