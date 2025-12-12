@@ -44,7 +44,7 @@ export default function LayoutWrapper(props: Props): ReactNode {
   return (
     <>
       <Header />
-      <div style={{ paddingTop: '108px' }}>
+      <div style={{ paddingTop: '116px' }}>
         <Layout {...customProps} />
       </div>
       <Footer />
