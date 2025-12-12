@@ -73,7 +73,17 @@ const config: Config = {
 
   plugins: [
     require.resolve('./plugins/homepage-content'),
-    'docusaurus-plugin-llms',
+    [
+      'docusaurus-plugin-llms',
+      {
+        generateLLMsTxt: true,
+        generateLLMsFullTxt: true,
+        docsDir: 'docs',
+        includeBlog: true,
+        excludeImports: true,
+        title: 'House of Stake',
+      },
+    ],
   ],
 
   headTags: [
