@@ -36,3 +36,15 @@ This tiered composition ensures both institutional stability and diverse perspec
 Security Council members are expected to act in the best interest of the NEAR ecosystem. While their powers are reserved for exceptional circumstances, transparency and clear communication are required after any intervention.
 
 Over time, the Council’s composition and powers may evolve through on-chain governance decisions as the system matures.
+
+## Council Composition
+
+The Security Council currently consists of **six members**, appointed by the **NEAR Foundation**. Every effort will be made to keep the membership up to date here, but the current set of member accounts is always visible on chain as the [members of the `hos-root.sputnik-dao.near` account](https://hos-root.near.page/hos-root.near/widget/app?page=settings&tab=members).
+
+**Current Members:**
+- `as.near` (Alex Shevchenko)
+- `fastnear-hos.near` (Evgeny Kuzyakov)
+- `c65255255d689f74ae46b0a89f04bbaab94d3a51ab9dc4b79b1e9b61e7cf6816` (Kendall Cole)
+- `e953bb69d1129e4da87b99739373884a0b57d5e64a65fdc868478f22e6c31eac` (Bowen Wang)
+- `lane.near` (Lane Rettig)
+- `root.near` (Illia Polosukhin)
