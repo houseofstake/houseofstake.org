@@ -1,8 +1,19 @@
+---
+slug: introducing-the-new-head-of-governance
+title: 'NEAR Welcomes Angela Kreitenweis as Head of Governance at House of Stake'
+authors: [houseofstake]
+---
+
+<img src={require('venear-rewards./assets/.png').default} alt="veNEAR Rewards Now Live" style={{width: '100%'}} />
+
+
 # House of Stake Rewards Live: Lock NEAR, Receive Governance Rewards
 
 With the passage of HSP-003 (veNEAR lockup incentives), we have prepared and are now implementing a substantial early adopter rewards rate.
 
 For the first month, early participants locking NEAR or compatible LSTs will receive participation rewards that may be higher than standard staking returns, depending on participation and program parameters.
+
+{/* truncate */}
 
 ## What is veNEAR?
 
