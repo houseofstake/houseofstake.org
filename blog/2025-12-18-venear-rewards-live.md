@@ -4,7 +4,7 @@ title: 'NEAR Welcomes Angela Kreitenweis as Head of Governance at House of Stake
 authors: [houseofstake]
 ---
 
-<img src={require('venear-rewards./assets/.png').default} alt="veNEAR Rewards Now Live" style={{width: '100%'}} />
+<img src={require('./assets/venear-rewards.png').default} alt="veNEAR Rewards Now Live" style={{width: '100%'}} />
 
 
 # House of Stake Rewards Live: Lock NEAR, Receive Governance Rewards
