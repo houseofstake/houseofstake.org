@@ -158,11 +158,11 @@ export interface HouseOfStakeStats {
 export async function fetchHouseOfStakeStats(): Promise<HouseOfStakeStats> {
   try {
     // Fetch data in parallel for better performance
-    const [numAccounts, numProposals, totalSupply] = await Promise.all([
+    const [numAccounts, proposals, totalSupply] = await Promise.all([
       // Get number of participants from venear.dao
       callViewMethod('venear.dao', 'get_num_accounts'),
-      // Get number of proposals from vote.dao
-      callViewMethod('vote.dao', 'get_num_proposals'),
+      // Get all proposals from vote.dao (to filter out drafts)
+      callViewMethod('vote.dao', 'get_proposals', { from_index: 0, limit: 100 }),
       // Get total veNEAR supply from venear.dao
       callViewMethod('venear.dao', 'ft_total_supply'),
     ]);
@@ -172,10 +172,15 @@ export async function fetchHouseOfStakeStats(): Promise<HouseOfStakeStats> {
       typeof numAccounts === 'number'
         ? numAccounts
         : parseInt(numAccounts) || 0;
-    const proposalCount =
-      typeof numProposals === 'number'
-        ? numProposals
-        : parseInt(numProposals) || 0;
+
+    // Count only non-draft proposals (exclude "Created" status)
+    // "Created" status means the proposal is still a draft
+    const nonDraftProposals = Array.isArray(proposals)
+      ? proposals.filter(
+          (p: { status?: string }) => p.status && p.status !== 'Created'
+        )
+      : [];
+    const proposalCount = nonDraftProposals.length;
     const supplyString =
       typeof totalSupply === 'string' ? totalSupply : String(totalSupply);
 
