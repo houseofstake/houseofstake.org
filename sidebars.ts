@@ -36,6 +36,21 @@ const sidebars: SidebarsConfig = {
         'structure/security-council',
         'structure/responsibilities-and-scope',
         'structure/code-of-conduct',
+        {
+          type: 'category',
+          label: 'NEAR House of Stake Foundation Legal Documents',
+          link: {
+            type: 'generated-index',
+            title: 'NEAR House of Stake Foundation Legal Documents',
+            description:
+              'Official legal documents of the NEAR House of Stake Foundation.',
+            slug: '/structure/legal-documents',
+          },
+          items: [
+            'structure/legal-documents/memorandum-of-association',
+            'structure/legal-documents/bylaws',
+          ],
+        },
       ],
     },
     {
