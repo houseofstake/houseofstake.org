@@ -6,11 +6,11 @@ authors: [houseofstake]
 
 <img src={require('./assets/angela-kreitenweis-head-of-governance.png').default} alt="NEAR Welcomes Angela Kreitenweis as Head of Governance at House of Stake" style={{width: '100%'}} />
 
-_Advancing community-driven decision-making as House of Stake goes live on mainnet and [NEAR governance enters its next phase](https://www.near.org/blog/near-house-of-stake-is-now-live-on-mainnet)._
+*Advancing community-driven decision-making as House of Stake goes live on mainnet and [NEAR governance enters its next phase](https://www.near.org/blog/near-house-of-stake-is-now-live-on-mainnet).*
 
 Today, NEAR is pleased to announce that Angela Kreitenweis is joining as House of Stake Head of Governance. Angela will steward NEAR's governance evolution at a pivotal moment: [**House of Stake (HoS)**](https://www.near.org/blog/near-house-of-stake-is-now-live-on-mainnet), NEAR's next-generation stake-based governance system, has launched on mainnet, introducing veNEAR voting power and aligning long-term participation with meaningful voice in ecosystem decisions.
 
-{/_ truncate _/}
+{/* truncate */}
 
 Angela brings a rare combination of startup agility, systems design expertise, and deep governance insight to NEAR.
 
@@ -18,7 +18,7 @@ Her perspective is grounded in real-world experience. As she explains:
 
 > Finding product-market fit is a hard challenge, and we have yet to prove that DAOs are a superior model for doing so. But if we want to test that premise properly, we must make DAOs not just more democratic, but more effective.
 
-For Angela, decentralized governance is not only about making decisions together. It's about making _good_ decisions. Every governance action should be evaluated against NEAR's North Star:
+For Angela, decentralized governance is not only about making decisions together. It's about making *good* decisions. Every governance action should be evaluated against NEAR's North Star:
 
 > Is this the best action we can take, in our collective capacity, for NEAR to become **the** blockchain for AI?
 

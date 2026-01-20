@@ -12,7 +12,6 @@ The first phase focuses on enhancing human participation in governance.
 **Proposal Dashboard** is an intelligent platform that helps authors, reviewers, and the community work with proposals more effectively and transparently.
 
 AI capabilities include:
-
 - Evaluating and summarizing proposals based on clarity, completeness, and mission alignment;
 - Helping authors refine structure, reasoning, and relevance;
 - Supporting reviewers by identifying risks, gaps, and promising ideas.
@@ -27,7 +26,6 @@ The second phase introduces **representation through autonomous, customizable AI
 **Delegate Agent** is a transparent AI delegate that participates in voting, informed by Proposal Dashboard evaluations and user-defined principles.
 
 It enables:
-
 - Automated yet auditable participation in governance processes;
 - Transparent reasoning and traceable decision logic;
 - Personalization and adaptive learning through user feedback.
@@ -42,7 +40,6 @@ The final phase focuses on **coordination and organizational management** within
 **Manager Agent** can manage committee membership, roles, and responsibilities in real time, based on objective and transparent criteria.
 
 It enables DAOs to:
-
 - Automate role and membership management;
 - Prevent capture and improve accountability;
 - Scale through flexible, autonomous decision-making groups.

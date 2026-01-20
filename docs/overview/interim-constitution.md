@@ -11,7 +11,7 @@ The NEAR House of Stake ("HoS") is the stake-weighted governance system of NEAR 
 Rules may be enforced onchain or off-chain; all rules adopted under this Constitution are binding.
 
 **1.3. Supremacy**  
-This Constitution is the supreme governance document for NEAR House of Stake - the decentralized network of veNEAR tokenholders. In the event of conflict with any policy, charter, or guideline, this Constitution supersedes their controls unless amended under Article 9. _(Referring to DAO ratified policy & charters, excludes NEAR House of Stake Foundation bylaws.)_
+This Constitution is the supreme governance document for NEAR House of Stake - the decentralized network of veNEAR tokenholders. In the event of conflict with any policy, charter, or guideline, this Constitution supersedes their controls unless amended under Article 9. *(Referring to DAO ratified policy & charters, excludes NEAR House of Stake Foundation bylaws.)*
 
 ---
 
@@ -22,7 +22,6 @@ This Constitution is the supreme governance document for NEAR House of Stake - t
 **2.1.1.** Treasury management  
 **2.1.2.** Programs to support economic sustainability  
 **2.1.3.** Economic parameters:
-
 - **2.1.3.1.** Inflation
 - **2.1.3.2.** Fee switch for AI products, intents, etc.
 
@@ -58,10 +57,9 @@ The following are **explicit anti-mandates**, i.e., things to avoid:
 ## Article 3 — Membership & Rights
 
 **3.1. Citizens**  
-All NEAR holders are Citizens by default; they must lock their NEAR or eligible liquid staking token to become a **veNEAR holder** (registered voter) with rights to delegate or participate where allowed.
+All NEAR holders are Citizens by default; they must lock their NEAR or eligible liquid staking token to become a **veNEAR holder** (registered voter) with rights to delegate or participate where allowed. 
 
 Official NEAR House of Stake Contracts:
-
 > venear-contract (venear.dao)  
 > voting-contract (vote.dao)
 
@@ -217,11 +215,11 @@ The Screening Committee must approve proposals to be eligible for an onchain vot
 
 **6.4. Voting, Thresholds & Quorum**
 
-| Proposal Type                              | Voting Requirement                                                                | Additional Requirements                                                                                                                        |
-| ------------------------------------------ | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **6.4.1 Sensing Proposal**                 | May utilize any methodology for assessment that serves the purpose of the inquiry | N/A                                                                                                                                            |
-| **6.4.2 Standard Decision Proposal**       | Simple majority of votes cast                                                     | **AND** passing by screening committee                                                                                                         |
-| **6.4.3 Constitutional Decision Proposal** | Two-thirds (67%) supermajority                                                    | **AND** a majority vote from the screening committee publicly posted on the governance forum **PRIOR** to screening committee onchain approval |
+| Proposal Type | Voting Requirement | Additional Requirements |
+|---------------|-------------------|------------------------|
+| **6.4.1 Sensing Proposal** | May utilize any methodology for assessment that serves the purpose of the inquiry | N/A |
+| **6.4.2 Standard Decision Proposal** | Simple majority of votes cast | **AND** passing by screening committee |
+| **6.4.3 Constitutional Decision Proposal** | Two-thirds (67%) supermajority | **AND** a majority vote from the screening committee publicly posted on the governance forum **PRIOR** to screening committee onchain approval |
 
 **6.4.4. Quorum:** Will align to the technical quorum settings put in place by the onchain system.
 
@@ -239,10 +237,10 @@ If execution is impossible or unlawful, the HoS Foundation must publish justific
 ## Article 7 — Treasury & Financial Stewardship
 
 **7.1. Treasuries**  
-The Interim DAO Treasury is controlled by the NEAR House of Stake Foundation and is located at ****\_\_****, an onchain DAO Controlled Treasury will be created with a future software version update.
+The Interim DAO Treasury is controlled by the NEAR House of Stake Foundation and is located at __________, an onchain DAO Controlled Treasury will be created with a future software version update.
 
 **7.2. Custody & Control**  
-The NEAR House of Stake Foundation executes funding decisions validly approved under Article 6, subject to Cayman legal and compliance obligations and technical feasibility. _(Including but not limited to KYC/AML & OFAC screening)_
+The NEAR House of Stake Foundation executes funding decisions validly approved under Article 6, subject to Cayman legal and compliance obligations and technical feasibility. *(Including but not limited to KYC/AML & OFAC screening)*
 
 **7.3. Interim Adjustments**  
 NEAR House of Stake Foundation may adjust fund release schedules for passed proposals to minimize risk of fraud, waste, or abuse.

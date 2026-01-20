@@ -8,7 +8,7 @@ authors: [houseofstake]
 
 Today, the NEAR Protocol enters a new chapter in its evolution. We're proud to announce the mainnet launch of [**House of Stake**](https://gov.houseofstake.org/): a next-generation governance system designed to be transparent, scalable, and adaptive. More than just a tool, it's the first step in a multi-phase transformation of how NEAR is governed—and, eventually, how governance itself is reimagined.
 
-{/_ truncate _/}
+{/* truncate */}
 
 **Phase one**, now underway, is about bootstrapping: building foundational infrastructure, establishing legitimacy, and delivering a functional and accountable system of stake-weighted governance. It’s a pragmatic design, relying on delegated voting and token lockups to ensure long-term alignment: all participants must lock $NEAR, and the longer they lock, the more voting power they receive.
 

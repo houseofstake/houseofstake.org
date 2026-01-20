@@ -18,15 +18,15 @@ Contribute
 :::
 
 ## VISION:
-
 Decentralised governance for humanity-enhancing AI
 
-## MISSION:
 
+## MISSION:
 House of Stake's mission is to establish an evolving governance system,
 <br/>co-created, co-operated and co-governed by NEAR stakeholders, embracing AI,
 <br/>to be incorruptible, uncapturable and sovereign by default,
 <br/>and bring in the era of user-owned, humanity-enhancing AI
+
 
 ## VALUES:
 

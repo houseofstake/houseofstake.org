@@ -6,13 +6,14 @@ authors: [houseofstake]
 
 <img src={require('./assets/venear-rewards.jpg').default} alt="veNEAR Rewards Now Live" style={{width: '100%'}} />
 
+
 # House of Stake Rewards Live: Lock NEAR, Receive Governance Rewards
 
 With the passage of HSP-003 (veNEAR lockup incentives), we have prepared and are now implementing a substantial early adopter rewards rate.
 
 For the first month, early participants locking NEAR or compatible LSTs will receive participation rewards that may be higher than standard staking returns, depending on participation and program parameters.
 
-{/_ truncate _/}
+{/* truncate */}
 
 ## What is veNEAR?
 

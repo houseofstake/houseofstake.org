@@ -1,24 +1,24 @@
 # House of Stake Mandate
 
 1. **Economic governance (of NEAR protocol and other NEAR products)**
-   - Treasury management
-   - Programs to support economic sustainability
-   - Economic parameters
-     - Inflation
+   - Treasury management  
+   - Programs to support economic sustainability  
+   - Economic parameters  
+     - Inflation  
      - Fee switch for AI products, intents, etc.
 
 2. **Technical governance**
-   - Incremental, narrow scope to begin
-   - e.g., MPC signers for chain signatures
-   - Determine which NEPs should be escalated to HoS
-     - Anything that can’t be governed on Github
+   - Incremental, narrow scope to begin  
+   - e.g., MPC signers for chain signatures  
+   - Determine which NEPs should be escalated to HoS  
+     - Anything that can’t be governed on Github  
 
 3. **Build Legitimacy**
-   - Maximize the amount of NEAR/veNEAR in the system
-   - Participation by broad subset of the community
-     - Decentralise Screening Committee
-   - Put in place policy: mission vision values, constitution, charters, policy, co-creation cycles
+   - Maximize the amount of NEAR/veNEAR in the system  
+   - Participation by broad subset of the community  
+     - Decentralise Screening Committee  
+   - Put in place policy: mission vision values, constitution, charters, policy, co-creation cycles  
 
 4. **Grow Engagement and Ecosystem Health**
-   - In the DAO, in governance, in the protocol, in NEAR ecosystem more broadly
+   - In the DAO, in governance, in the protocol, in NEAR ecosystem more broadly  
    - Decentralized stakeholders participate in governance
