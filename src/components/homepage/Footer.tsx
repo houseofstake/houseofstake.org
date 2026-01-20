@@ -1,5 +1,6 @@
 import React from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Link from '@docusaurus/Link';
 import styles from './Footer.module.css';
 import { FaGithub, FaTelegram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
@@ -70,19 +71,26 @@ const Footer: React.FC = () => {
                 <ul className={styles.linksList}>
                   {section.links.map((link) => (
                     <li key={link.label}>
-                      <a
-                        href={link.href}
-                        className={styles.link}
-                        target={link.isExternal ? '_blank' : undefined}
-                        rel={
-                          link.isExternal ? 'noopener noreferrer' : undefined
-                        }
-                      >
-                        {link.icon && (
-                          <span className={styles.linkIcon}>{link.icon}</span>
-                        )}
-                        {link.label}
-                      </a>
+                      {link.isExternal ? (
+                        <a
+                          href={link.href}
+                          className={styles.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {link.icon && (
+                            <span className={styles.linkIcon}>{link.icon}</span>
+                          )}
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link to={link.href} className={styles.link}>
+                          {link.icon && (
+                            <span className={styles.linkIcon}>{link.icon}</span>
+                          )}
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
