@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkhouseofstake=globalThis.webpackChunkhouseofstake||[]).push([[5548],{2570:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/pr-preview/pr-36/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Latest updates and insights from the NEAR House of Stake community","blogTitle":"House of Stake Blog"}}')}}]);
