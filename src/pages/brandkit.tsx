@@ -59,9 +59,10 @@ export default function BrandKit() {
               presence and experience across the world.
             </p>
             <a
-              href={useBaseUrl('/downloads/hos-brand-assets.zip')}
+              href="https://drive.google.com/drive/folders/1Ig6LjbzZTqaJgkrpLGBNdGujHYa8VzDI"
               className={styles.heroButton}
-              download
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Download All Logos
               <ArrowUpRight size={20} />
@@ -413,9 +414,10 @@ export default function BrandKit() {
 
             {/* Download button */}
             <a
-              href={useBaseUrl('/downloads/fk-grotesk-font-family.zip')}
+              href="https://drive.google.com/drive/folders/1Ig6LjbzZTqaJgkrpLGBNdGujHYa8VzDI"
               className={styles.typographyDownloadButton}
-              download
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Download All Font Family
               <ArrowUpRight size={24} />
