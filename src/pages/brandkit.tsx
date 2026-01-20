@@ -320,9 +320,7 @@ export default function BrandKit() {
                   Do not apply a drop shadow, stroke, or other visual effects
                 </p>
               </div>
-            </div>
 
-            <div className={styles.incorrectUseGrid}>
               <div className={styles.incorrectUseCard}>
                 <div
                   className={`${styles.incorrectUsePreview} ${styles.darkGray}`}

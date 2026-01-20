@@ -26,7 +26,7 @@ const GovernanceSystem: React.FC = () => {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 1200);
+      setIsMobile(window.innerWidth <= 1280);
     };
 
     checkMobile();
