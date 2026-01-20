@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './brandkit.module.css';
 import Header from '@site/src/components/homepage/Header';
 import Footer from '@site/src/components/homepage/Footer';
@@ -58,7 +59,7 @@ export default function BrandKit() {
               presence and experience across the world.
             </p>
             <a
-              href="/downloads/hos-brand-assets.zip"
+              href={useBaseUrl('/downloads/hos-brand-assets.zip')}
               className={styles.heroButton}
               download
             >
@@ -89,7 +90,7 @@ export default function BrandKit() {
               <div className={styles.logoCard}>
                 <div className={styles.logoCardPreview}>
                   <img
-                    src="/img/brandkit/logo-stacked-black.svg"
+                    src={useBaseUrl('/img/brandkit/logo-stacked-black.svg')}
                     alt="Primary Vertical logo"
                   />
                 </div>
@@ -109,7 +110,7 @@ export default function BrandKit() {
               <div className={styles.logoCard}>
                 <div className={styles.logoCardPreview}>
                   <img
-                    src="/img/brandkit/logo-horizontal-black.svg"
+                    src={useBaseUrl('/img/brandkit/logo-horizontal-black.svg')}
                     alt="Primary Horizontal logo"
                   />
                 </div>
@@ -128,7 +129,7 @@ export default function BrandKit() {
 
               <div className={styles.logoCard}>
                 <div className={styles.logoCardPreview}>
-                  <img src="/img/brandkit/icon-coral.png" alt="Icon" />
+                  <img src={useBaseUrl('/img/brandkit/icon-coral.png')} alt="Icon" />
                 </div>
                 <div className={styles.logoCardInfo}>
                   <h4 className={styles.logoCardTitle}>Icon</h4>
@@ -151,7 +152,7 @@ export default function BrandKit() {
               <div className={styles.logoCard}>
                 <div className={`${styles.logoCardPreview} ${styles.coral}`}>
                   <img
-                    src="/img/brandkit/logo-stacked-black.svg"
+                    src={useBaseUrl('/img/brandkit/logo-stacked-black.svg')}
                     alt="Inverted Primary Vertical logo"
                   />
                 </div>
@@ -165,7 +166,7 @@ export default function BrandKit() {
               <div className={styles.logoCard}>
                 <div className={`${styles.logoCardPreview} ${styles.coral}`}>
                   <img
-                    src="/img/brandkit/logo-horizontal-black.svg"
+                    src={useBaseUrl('/img/brandkit/logo-horizontal-black.svg')}
                     alt="Inverted Primary Horizontal logo"
                   />
                 </div>
@@ -178,7 +179,7 @@ export default function BrandKit() {
 
               <div className={styles.logoCard}>
                 <div className={`${styles.logoCardPreview} ${styles.coral}`}>
-                  <img src="/img/brandkit/icon-black.png" alt="Inverted Icon" />
+                  <img src={useBaseUrl('/img/brandkit/icon-black.png')} alt="Inverted Icon" />
                 </div>
                 <div className={styles.logoCardInfo}>
                   <h4 className={styles.logoCardTitle}>Inverted Icon</h4>
@@ -195,7 +196,7 @@ export default function BrandKit() {
               <div className={styles.logoCard}>
                 <div className={styles.logoCardPreview}>
                   <img
-                    src="/img/brandkit/logo-stacked-black.svg"
+                    src={useBaseUrl('/img/brandkit/logo-stacked-black.svg')}
                     alt="Monotone Black Primary Vertical logo"
                   />
                 </div>
@@ -209,7 +210,7 @@ export default function BrandKit() {
               <div className={styles.logoCard}>
                 <div className={styles.logoCardPreview}>
                   <img
-                    src="/img/brandkit/logo-horizontal-black.svg"
+                    src={useBaseUrl('/img/brandkit/logo-horizontal-black.svg')}
                     alt="Monotone Black Primary Horizontal logo"
                   />
                 </div>
@@ -225,7 +226,7 @@ export default function BrandKit() {
               <div className={styles.logoCard}>
                 <div className={`${styles.logoCardPreview} ${styles.dark}`}>
                   <img
-                    src="/img/brandkit/logo-stacked-white.svg"
+                    src={useBaseUrl('/img/brandkit/logo-stacked-white.svg')}
                     alt="Monotone Black Primary Horizontal logo"
                   />
                 </div>
@@ -239,7 +240,7 @@ export default function BrandKit() {
               <div className={styles.logoCard}>
                 <div className={`${styles.logoCardPreview} ${styles.dark}`}>
                   <img
-                    src="/img/brandkit/logo-horizontal-white.svg"
+                    src={useBaseUrl('/img/brandkit/logo-horizontal-white.svg')}
                     alt="Monotone White Primary Horizontal logo"
                   />
                 </div>
@@ -262,7 +263,7 @@ export default function BrandKit() {
             <div className={styles.clearSpaceContainer}>
               <div className={styles.clearSpacePreview}>
                 <img
-                  src="/img/brandkit/clearspace-diagram.png"
+                  src={useBaseUrl('/img/brandkit/clearspace-diagram.png')}
                   alt="Logo clear space diagram"
                 />
               </div>
@@ -287,7 +288,7 @@ export default function BrandKit() {
               <div className={styles.incorrectUseCard}>
                 <div className={styles.incorrectUsePreview}>
                   <img
-                    src="/img/brandkit/incorrect-angled.png"
+                    src={useBaseUrl('/img/brandkit/incorrect-angled.png')}
                     alt="Do not place on angle"
                   />
                 </div>
@@ -299,7 +300,7 @@ export default function BrandKit() {
               <div className={styles.incorrectUseCard}>
                 <div className={styles.incorrectUsePreview}>
                   <img
-                    src="/img/brandkit/incorrect-stretched.png"
+                    src={useBaseUrl('/img/brandkit/incorrect-stretched.png')}
                     alt="Do not stretch"
                   />
                 </div>
@@ -311,7 +312,7 @@ export default function BrandKit() {
               <div className={styles.incorrectUseCard}>
                 <div className={styles.incorrectUsePreview}>
                   <img
-                    src="/img/brandkit/incorrect-shadow.png"
+                    src={useBaseUrl('/img/brandkit/incorrect-shadow.png')}
                     alt="Do not apply effects"
                   />
                 </div>
@@ -327,7 +328,7 @@ export default function BrandKit() {
                   className={`${styles.incorrectUsePreview} ${styles.darkGray}`}
                 >
                   <img
-                    src="/img/brandkit/incorrect-lowcontrast.png"
+                    src={useBaseUrl('/img/brandkit/incorrect-lowcontrast.png')}
                     alt="Do not place on low contrast"
                   />
                 </div>
@@ -339,7 +340,7 @@ export default function BrandKit() {
               <div className={styles.incorrectUseCard}>
                 <div className={styles.incorrectUsePreview}>
                   <img
-                    src="/img/brandkit/incorrect-wrongcolor.png"
+                    src={useBaseUrl('/img/brandkit/incorrect-wrongcolor.png')}
                     alt="Do not use unapproved colors"
                   />
                 </div>
@@ -351,7 +352,7 @@ export default function BrandKit() {
               <div className={styles.incorrectUseCard}>
                 <div className={styles.incorrectUsePreview}>
                   <img
-                    src="/img/brandkit/incorrect-spacing.png"
+                    src={useBaseUrl('/img/brandkit/incorrect-spacing.png')}
                     alt="Do not change spacing"
                   />
                 </div>
@@ -414,7 +415,7 @@ export default function BrandKit() {
 
             {/* Download button */}
             <a
-              href="/downloads/fk-grotesk-font-family.zip"
+              href={useBaseUrl('/downloads/fk-grotesk-font-family.zip')}
               className={styles.typographyDownloadButton}
               download
             >
@@ -469,25 +470,25 @@ export default function BrandKit() {
             <div className={styles.contrastGrid}>
               <div className={styles.contrastCard}>
                 <img
-                  src="/img/brandkit/contrast-black-white.png"
+                  src={useBaseUrl('/img/brandkit/contrast-black-white.png')}
                   alt="Background Black, Foreground White"
                 />
               </div>
               <div className={styles.contrastCard}>
                 <img
-                  src="/img/brandkit/contrast-white-black.png"
+                  src={useBaseUrl('/img/brandkit/contrast-white-black.png')}
                   alt="Background White, Foreground Black"
                 />
               </div>
               <div className={styles.contrastCard}>
                 <img
-                  src="/img/brandkit/contrast-coral-black.png"
+                  src={useBaseUrl('/img/brandkit/contrast-coral-black.png')}
                   alt="Background Coral, Foreground Black"
                 />
               </div>
               <div className={styles.contrastCard}>
                 <img
-                  src="/img/brandkit/contrast-image-black.png"
+                  src={useBaseUrl('/img/brandkit/contrast-image-black.png')}
                   alt="Background Images, Foreground Black"
                 />
               </div>
