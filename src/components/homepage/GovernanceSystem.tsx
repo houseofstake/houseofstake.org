@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from '@docusaurus/Link';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -25,7 +26,7 @@ const GovernanceSystem: React.FC = () => {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 1200);
+      setIsMobile(window.innerWidth <= 1280);
     };
 
     checkMobile();
@@ -181,9 +182,9 @@ const GovernanceSystem: React.FC = () => {
                     </Markdown>
                     {tab.docsLink && (
                       <div className={styles.learnMoreWrapper}>
-                        <a href={tab.docsLink} className={styles.learnMoreLink}>
+                        <Link to={tab.docsLink} className={styles.learnMoreLink}>
                           Learn more →
-                        </a>
+                        </Link>
                       </div>
                     )}
                   </div>
@@ -258,12 +259,12 @@ const GovernanceSystem: React.FC = () => {
                     </Markdown>
                     {activeContent.docsLink && (
                       <div className={styles.learnMoreWrapper}>
-                        <a
-                          href={activeContent.docsLink}
+                        <Link
+                          to={activeContent.docsLink}
                           className={styles.learnMoreLink}
                         >
                           Learn more →
-                        </a>
+                        </Link>
                       </div>
                     )}
                   </div>
