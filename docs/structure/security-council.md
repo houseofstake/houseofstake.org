@@ -42,6 +42,7 @@ Over time, the Council’s composition and powers may evolve through on-chain go
 The Security Council currently consists of **six members**, appointed by the **NEAR Foundation**. Every effort will be made to keep the membership up to date here, but the current set of member accounts is always visible on chain as the [members of the `hos-root.sputnik-dao.near` account](https://hos-root.near.page/hos-root.near/widget/app?page=settings&tab=members).
 
 **Current Members:**
+
 - `as.near` (Alex Shevchenko)
 - `fastnear-hos.near` (Evgeny Kuzyakov)
 - `c65255255d689f74ae46b0a89f04bbaab94d3a51ab9dc4b79b1e9b61e7cf6816` (Kendall Cole)

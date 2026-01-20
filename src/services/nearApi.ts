@@ -162,7 +162,10 @@ export async function fetchHouseOfStakeStats(): Promise<HouseOfStakeStats> {
       // Get number of participants from venear.dao
       callViewMethod('venear.dao', 'get_num_accounts'),
       // Get all proposals from vote.dao (to filter out drafts)
-      callViewMethod('vote.dao', 'get_proposals', { from_index: 0, limit: 100 }),
+      callViewMethod('vote.dao', 'get_proposals', {
+        from_index: 0,
+        limit: 100,
+      }),
       // Get total veNEAR supply from venear.dao
       callViewMethod('venear.dao', 'ft_total_supply'),
     ]);

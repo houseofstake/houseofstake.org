@@ -6,13 +6,13 @@ authors: [houseofstake]
 
 <img src={require('./assets/openlab_hos.jpg').default} alt="NEAR House of Stake is proud to partner with Stanford OpenLab" style={{width: '100%'}} />
 
-*Stanford OpenLab x NEAR House of Stake*
+_Stanford OpenLab x NEAR House of Stake_
 
 NEAR House of Stake and Stanford OpenLab are collaborating on a joint research initiative to explore the potential effects of AI on the governance of decentralized organizations. This work bridges OpenLab's multidisciplinary research into decentralized systems with House of Stake's real-world experimentation around AI-native governance, creating a shared environment to study, prototype, and publish on new governance mechanisms powered by intelligent agents.
 
 This partnership marks an important step forward in understanding how AI may be able to support transparent, scalable, and privacy-preserving decision-making across not only DAOs but digital communities and 21st-century organizations at large.
 
-{/* truncate */}
+{/_ truncate _/}
 
 ## Stanford OpenLab: A Multidisciplinary Initiative Committed to Open Systems
 
@@ -52,4 +52,4 @@ If you are interested in contributing to this research, please reach out through
 
 ---
 
-*At NEAR House of Stake, you have a stake in the future of the AI economy. [Join the House today](https://gov.houseofstake.org/info).*
+_At NEAR House of Stake, you have a stake in the future of the AI economy. [Join the House today](https://gov.houseofstake.org/info)._

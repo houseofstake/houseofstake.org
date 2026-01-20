@@ -1,6 +1,5 @@
 # Responsibilities and Scope (RACI)
 
-
 This section defines the roles and responsibilities of key governance participants within the House of Stake, using the [RACI matrix](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix):
 
 - **R – Responsible:** Who does the work
@@ -12,22 +11,21 @@ This section defines the roles and responsibilities of key governance participan
 
 ## Governance Roles
 
-| Governance Process | Screening Committee | Endorsed Delegates | Delegates | Security Council | veNEAR Holders | NEAR HoS Foundation |
-|--------------------|--------------------|--------------------|------------|------------------|----------------|---------------------|
-| **Pre-screening and approval of proposals** | **R, A** | I | I | I | I | I |
-| **Voting on SC approved proposals** | I | **R, A** | **R, A** | I | **R, A** | I |
-| **Security Council 72 h review** | C | I | I | **R, A** | I | C |
-| **Execution of approved proposals** | I | I | I | C | I | **R, A** |
-| **Rejected proposal appeal process** (interim requires a screening committee vote with presented evidence) | **R, A** | C | C | I | **R** | **A** |
-| **Selecting & removing Endorsed Delegates** | **R, A** | I | I | I | I | C |
-| **Emergency intervention / critical patch** | C | I | I | **R, A** | I | C |
-| **Veto of PASSED proposals that are illegal or infeasible** (should have been caught before this point. Redundant safeguard) | I | I | I | **R, A** | I | C |
-| **Treasury execution & fund disbursement** (at behest of DAO) | I | I | I | I | I | **R, A** |
-| **Conflict-of-interest & disclosure reporting** | **R, A** | **R, A** | **R, A** | **R, A** | I | **C / Oversight** |
-| **Transparency & publication of decisions** | **R, A** | **R, A** | **R, A** | **R, A** | C | **A (archive)** |
-| **Constitutional / policy amendments** | C | C | C | C | **R, A** | **A** |
-| **Transition to community governance (post-2026)** | C | C | C | C | **A** | **R** |
-
+| Governance Process                                                                                                           | Screening Committee | Endorsed Delegates | Delegates | Security Council | veNEAR Holders | NEAR HoS Foundation |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------- | ------------------ | --------- | ---------------- | -------------- | ------------------- |
+| **Pre-screening and approval of proposals**                                                                                  | **R, A**            | I                  | I         | I                | I              | I                   |
+| **Voting on SC approved proposals**                                                                                          | I                   | **R, A**           | **R, A**  | I                | **R, A**       | I                   |
+| **Security Council 72 h review**                                                                                             | C                   | I                  | I         | **R, A**         | I              | C                   |
+| **Execution of approved proposals**                                                                                          | I                   | I                  | I         | C                | I              | **R, A**            |
+| **Rejected proposal appeal process** (interim requires a screening committee vote with presented evidence)                   | **R, A**            | C                  | C         | I                | **R**          | **A**               |
+| **Selecting & removing Endorsed Delegates**                                                                                  | **R, A**            | I                  | I         | I                | I              | C                   |
+| **Emergency intervention / critical patch**                                                                                  | C                   | I                  | I         | **R, A**         | I              | C                   |
+| **Veto of PASSED proposals that are illegal or infeasible** (should have been caught before this point. Redundant safeguard) | I                   | I                  | I         | **R, A**         | I              | C                   |
+| **Treasury execution & fund disbursement** (at behest of DAO)                                                                | I                   | I                  | I         | I                | I              | **R, A**            |
+| **Conflict-of-interest & disclosure reporting**                                                                              | **R, A**            | **R, A**           | **R, A**  | **R, A**         | I              | **C / Oversight**   |
+| **Transparency & publication of decisions**                                                                                  | **R, A**            | **R, A**           | **R, A**  | **R, A**         | C              | **A (archive)**     |
+| **Constitutional / policy amendments**                                                                                       | C                   | C                  | C         | C                | **R, A**       | **A**               |
+| **Transition to community governance (post-2026)**                                                                           | C                   | C                  | C         | C                | **A**          | **R**               |
 
 ---
 
@@ -48,4 +46,4 @@ It makes complex governance processes easier to understand and more efficient—
 - [NEAR House of Stake – Interim Screening Committee Charter](https://gov.near.org/t/near-house-of-stake-interim-screening-committee-charter/41689)
 - [NEAR House of Stake – Interim Endorsed Delegate Charter](https://gov.near.org/t/near-house-of-stake-interim-endorsed-delegate-charter/41698)
 
-*Last updated October 2025*
+_Last updated October 2025_

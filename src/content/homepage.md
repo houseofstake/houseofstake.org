@@ -214,5 +214,6 @@ footer:
         - { label: 'Privacy', href: '/privacy#', isExternal: false }
         - { label: 'Terms of Use', href: '/terms#', isExternal: false }
         - { label: 'Cookie Policy', href: '/cookies#', isExternal: false }
+        - { label: 'Brand Kit', href: '/brandkit#', isExternal: false }
   bottomBarText: '© NEAR House of Stake Foundation {year}. All rights reserved'
 ---

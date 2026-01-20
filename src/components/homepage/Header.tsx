@@ -119,94 +119,94 @@ const Header: React.FC = () => {
     >
       <div className={styles.header}>
         <Link to="/#" className={styles.iconContainer}>
-        <img
-          src={useBaseUrl('/img/near-logo.svg')}
-          alt="NEAR Logo"
-          className={styles.logo}
-        />
-      </Link>
-
-      <div className={styles.container}>
-        <Link to="/#" className={styles.brandLink}>
-          <h1 className={styles.brandTitle}>
-            {content.header?.brandTitle || 'House of Stake'}
-          </h1>
+          <img
+            src={useBaseUrl('/img/near-logo.svg')}
+            alt="NEAR Logo"
+            className={styles.logo}
+          />
         </Link>
 
-        <button
-          className={styles.hamburger}
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-          aria-expanded={isMenuOpen}
-        >
-          <span className={styles.hamburgerLine}></span>
-          <span className={styles.hamburgerLine}></span>
-          <span className={styles.hamburgerLine}></span>
-        </button>
+        <div className={styles.container}>
+          <Link to="/#" className={styles.brandLink}>
+            <h1 className={styles.brandTitle}>
+              {content.header?.brandTitle || 'House of Stake'}
+            </h1>
+          </Link>
 
-        <nav
-          className={`${styles.menuContainer} ${isMenuOpen ? styles.menuOpen : ''}`}
-        >
-          {headerMenu.map((item, idx) => {
-            if (item.type === 'button') {
-              const href = item.href || '#';
-              return (
-                <a
-                  key={idx}
-                  href={href}
-                  className={styles.participateButton}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              );
-            }
+          <button
+            className={styles.hamburger}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+          >
+            <span className={styles.hamburgerLine}></span>
+            <span className={styles.hamburgerLine}></span>
+            <span className={styles.hamburgerLine}></span>
+          </button>
 
-            if (item.type === 'edit') {
-              return (
-                <div key={idx} className={styles.menuItem}>
+          <nav
+            className={`${styles.menuContainer} ${isMenuOpen ? styles.menuOpen : ''}`}
+          >
+            {headerMenu.map((item, idx) => {
+              if (item.type === 'button') {
+                const href = item.href || '#';
+                return (
                   <a
-                    href={editUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.menuLink}
+                    key={idx}
+                    href={href}
+                    className={styles.participateButton}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
                   </a>
-                  <svg
-                    className={styles.externalIcon}
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4.5 1.5H2.5C1.94772 1.5 1.5 1.94772 1.5 2.5V9.5C1.5 10.0523 1.94772 10.5 2.5 10.5H9.5C10.0523 10.5 10.5 10.0523 10.5 9.5V7.5M7.5 1.5H10.5M10.5 1.5V4.5M10.5 1.5L5.5 6.5"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              );
-            }
+                );
+              }
 
-            const to = item.to || '#';
-            return (
-              <Link
-                key={idx}
-                to={to}
-                className={styles.menuItem}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
-      </div>
+              if (item.type === 'edit') {
+                return (
+                  <div key={idx} className={styles.menuItem}>
+                    <a
+                      href={editUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.menuLink}
+                    >
+                      {item.label}
+                    </a>
+                    <svg
+                      className={styles.externalIcon}
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.5 1.5H2.5C1.94772 1.5 1.5 1.94772 1.5 2.5V9.5C1.5 10.0523 1.94772 10.5 2.5 10.5H9.5C10.0523 10.5 10.5 10.0523 10.5 9.5V7.5M7.5 1.5H10.5M10.5 1.5V4.5M10.5 1.5L5.5 6.5"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                );
+              }
+
+              const to = item.to || '#';
+              return (
+                <Link
+                  key={idx}
+                  to={to}
+                  className={styles.menuItem}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
       </div>
     </header>
   );

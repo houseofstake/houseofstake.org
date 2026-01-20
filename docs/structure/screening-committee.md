@@ -27,7 +27,7 @@ The committee is responsible for:
   if no objections are raised within 24 hours, approval is assumed; if objections occur, a **simple majority vote** is required.
 - Managing the approval and removal of **Endorsed Delegates**.
 - Publishing all decisions and meeting notes for transparency.The **Screening Committee** is a core governance body within **House of Stake (HoS)**.
-It serves as the first layer of review and quality assurance for proposals, delegates, and governance processes — ensuring that all actions align with the **Mission, Vision, and Values** of House of Stake and comply with the **Constitution** and associated charters.
+  It serves as the first layer of review and quality assurance for proposals, delegates, and governance processes — ensuring that all actions align with the **Mission, Vision, and Values** of House of Stake and comply with the **Constitution** and associated charters.
 
 This group acts as a **filter and guardian of integrity**, maintaining a balance between efficiency, transparency, and due diligence.
 
@@ -62,11 +62,12 @@ The Interim Screening Committee consists of **five members**, appointed by the *
 Membership may change during the interim period, and any member may step down with **seven (7) days’ public notice** on the governance forum.
 
 **Current Members:**
+
 - Bianca Guimaraes-Chadwick (NEAR Foundation)
 - Lane Rettig (NEAR Foundation)
 - Bowen Wang (Near One)
 - Gauntlet (1 seat)
-- [Fifth seat –  will be added]
+- [Fifth seat – will be added]
 
 The Interim Committee will remain in effect until **May 31, 2026**, or until replaced by a **community-elected Screening Committee** developed in accordance with the process defined in the Constitution (Article 9.2).
 
@@ -84,6 +85,7 @@ If this transition is not completed by **May 31, 2026**, the interim committee w
 ## Responsibilities of the Screening Committee
 
 ### 1. Proposal Review & Governance Flow
+
 - Review and publish decisions on all proposals within seven (7) days.
 - Provide clear reasoning for each decision in the governance forum.
 - Approve only proposals that meet all review criteria.
@@ -91,16 +93,19 @@ If this transition is not completed by **May 31, 2026**, the interim committee w
 - Filtering mechanism: proposals rejected by the Committee must achieve a **75% community supermajority** to pass.
 
 ### 2. Delegate Oversight
+
 - Conduct quarterly reviews of **Endorsed Delegate** applications and activity.
 - Monitor performance, transparency, and compliance with the **Code of Conduct** and **Conflict of Interest Policy**.
 - Remove delegates who fail to meet performance or governance standards.
 
 ### 3. Transparency & Reporting
+
 - Log and publish all decisions, summaries, and rationales within **seven (7) days**.
 - Publicly record all approvals, rejections, removals, and appointments.
 - Any member may post clarifications or updates regarding their role on the governance forum.
 
 ### 4. Meetings & Operations
+
 - Decisions follow an **optimistic consent model** (assumed approved unless objected to).
 - Quorum requires **three members**, or **two members plus the Head of Governance**, who may act as a tie-breaker.
 - The committee may appoint a **Chair** from among its members.
