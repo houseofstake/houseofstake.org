@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkhouseofstake=globalThis.webpackChunkhouseofstake||[]).push([[1903],{1912:o=>{o.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"House of Stake Blog","authorsListPath":"/blog/authors"}')}}]);
