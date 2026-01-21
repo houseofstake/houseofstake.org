@@ -55,7 +55,7 @@ export default function BrandKit() {
               together.
             </h1>
             <p className={styles.heroSubtitle}>
-              These guidelines will help you define and build a consistent brand
+              These guidelines help us define and build a consistent brand
               presence and experience across the world.
             </p>
             <a
@@ -130,7 +130,10 @@ export default function BrandKit() {
 
               <div className={styles.logoCard}>
                 <div className={styles.logoCardPreview}>
-                  <img src={useBaseUrl('/img/brandkit/icon-coral.png')} alt="Icon" />
+                  <img
+                    src={useBaseUrl('/img/brandkit/icon-coral.png')}
+                    alt="Icon"
+                  />
                 </div>
                 <div className={styles.logoCardInfo}>
                   <h4 className={styles.logoCardTitle}>Icon</h4>
@@ -180,7 +183,10 @@ export default function BrandKit() {
 
               <div className={styles.logoCard}>
                 <div className={`${styles.logoCardPreview} ${styles.coral}`}>
-                  <img src={useBaseUrl('/img/brandkit/icon-black.png')} alt="Inverted Icon" />
+                  <img
+                    src={useBaseUrl('/img/brandkit/icon-black.png')}
+                    alt="Inverted Icon"
+                  />
                 </div>
                 <div className={styles.logoCardInfo}>
                   <h4 className={styles.logoCardTitle}>Inverted Icon</h4>
