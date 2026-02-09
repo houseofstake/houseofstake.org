@@ -63,10 +63,9 @@ Membership may change during the interim period, and any member may step down wi
 
 **Current Members:**
 - Bianca Guimaraes-Chadwick (NEAR Foundation)
-- Lane Rettig (NEAR Foundation)
 - Bowen Wang (Near One)
 - Gauntlet (1 seat)
-- [Fifth seat –  will be added]
+- [Fourth and Fifth seats –  will be added]
 
 The Interim Committee will remain in effect until **May 31, 2026**, or until replaced by a **community-elected Screening Committee** developed in accordance with the process defined in the Constitution (Article 9.2).
 

@@ -46,5 +46,4 @@ The Security Council currently consists of **six members**, appointed by the **N
 - `fastnear-hos.near` (Evgeny Kuzyakov)
 - `c65255255d689f74ae46b0a89f04bbaab94d3a51ab9dc4b79b1e9b61e7cf6816` (Kendall Cole)
 - `e953bb69d1129e4da87b99739373884a0b57d5e64a65fdc868478f22e6c31eac` (Bowen Wang)
-- `lane.near` (Lane Rettig)
 - `root.near` (Illia Polosukhin)
