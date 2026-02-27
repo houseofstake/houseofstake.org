@@ -17,6 +17,7 @@ const sidebars: SidebarsConfig = {
         'overview/governance-philosophy',
         'overview/mission-vision-values',
         'overview/interim-constitution',
+        'overview/interim-endorsed-delegate-charter-v0.1.0',
       ],
     },
     {
