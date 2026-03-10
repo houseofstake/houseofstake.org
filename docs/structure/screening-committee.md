@@ -58,12 +58,11 @@ The committee is responsible for:
 
 ## Committee Composition
 
-The Interim Screening Committee consists of **five members**, appointed by the **NEAR Foundation**.
+The Interim Screening Committee is composed of members appointed by the **NEAR Foundation**.
 Membership may change during the interim period, and any member may step down with **seven (7) days’ public notice** on the governance forum.
 
 **Current Members:**
 - Bianca Guimaraes-Chadwick (NEAR Foundation)
-- Lane Rettig (NEAR Foundation)
 - Bowen Wang (Near One)
 - Gauntlet (1 seat)
 - [Fifth seat –  will be added]
