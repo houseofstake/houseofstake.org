@@ -4,6 +4,7 @@ import React, {
   useRef,
   useCallback,
   useMemo,
+  useEffect,
 } from 'react';
 import Link from '@docusaurus/Link';
 import { useLocation } from '@docusaurus/router';
@@ -38,6 +39,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const animationFrameRef = useRef<number | null>(null);
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   // Dynamically determine the edit URL based on current page
   const editUrl = useMemo(() => {
@@ -84,6 +86,33 @@ const Header: React.FC = () => {
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const doc = document.documentElement;
+    const stored =
+      (window.localStorage.getItem('theme') as 'light' | 'dark' | null) ?? null;
+    const current =
+      (doc.getAttribute('data-theme') as 'light' | 'dark' | null) ?? null;
+    const initial = stored || current || 'light';
+    doc.setAttribute('data-theme', initial);
+    doc.classList.remove('theme-light', 'theme-dark');
+    doc.classList.add(`theme-${initial}`);
+    setTheme(initial);
+  }, []);
+
+  const toggleTheme = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    setTheme((prev) => {
+      const next = prev === 'dark' ? 'light' : 'dark';
+      const doc = document.documentElement;
+      doc.setAttribute('data-theme', next);
+      doc.classList.remove('theme-light', 'theme-dark');
+      doc.classList.add(`theme-${next}`);
+      window.localStorage.setItem('theme', next);
+      return next;
+    });
   }, []);
 
   useLayoutEffect(() => {
@@ -205,6 +234,19 @@ const Header: React.FC = () => {
                 </Link>
               );
             })}
+            <button
+              type="button"
+              className={styles.themeToggle}
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            >
+              <span className={styles.themeToggleIcon}>
+                {theme === 'dark' ? '☀' : '🌙'}
+              </span>
+              <span className={styles.themeToggleLabel}>
+                {theme === 'dark' ? 'Light' : 'Dark'}
+              </span>
+            </button>
           </nav>
         </div>
       </div>
