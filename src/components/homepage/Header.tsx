@@ -162,16 +162,33 @@ const Header: React.FC = () => {
             </h1>
           </Link>
 
-          <button
-            className={styles.hamburger}
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-            aria-expanded={isMenuOpen}
-          >
-            <span className={styles.hamburgerLine}></span>
-            <span className={styles.hamburgerLine}></span>
-            <span className={styles.hamburgerLine}></span>
-          </button>
+          <div className={styles.mobileNavActions}>
+            <button
+              className={styles.hamburger}
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+            >
+              <span className={styles.hamburgerLine}></span>
+              <span className={styles.hamburgerLine}></span>
+              <span className={styles.hamburgerLine}></span>
+            </button>
+
+            <button
+              type="button"
+              className={`${styles.themeToggle} ${styles.themeToggleMobile}`}
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            >
+              <img
+                src={useBaseUrl(theme === 'dark' ? '/img/sun-icon.svg' : '/img/moon-icon.svg')}
+                alt=""
+                className={styles.themeToggleIcon}
+                width={20}
+                height={20}
+              />
+            </button>
+          </div>
 
           <nav
             className={`${styles.menuContainer} ${isMenuOpen ? styles.menuOpen : ''}`}
@@ -236,16 +253,17 @@ const Header: React.FC = () => {
             })}
             <button
               type="button"
-              className={styles.themeToggle}
+              className={`${styles.themeToggle} ${styles.themeToggleDesktop}`}
               onClick={toggleTheme}
               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
             >
-              <span className={styles.themeToggleIcon}>
-                {theme === 'dark' ? '☀' : '🌙'}
-              </span>
-              <span className={styles.themeToggleLabel}>
-                {theme === 'dark' ? 'Light' : 'Dark'}
-              </span>
+              <img
+                src={useBaseUrl(theme === 'dark' ? '/img/sun-icon.svg' : '/img/moon-icon.svg')}
+                alt=""
+                className={styles.themeToggleIcon}
+                width={20}
+                height={20}
+              />
             </button>
           </nav>
         </div>
