@@ -42,12 +42,14 @@ export default function LayoutWrapper(props: Props): ReactNode {
   }, []);
 
   return (
-    <>
-      <Header />
-      <div style={{ paddingTop: '72px' }}>
-        <Layout {...customProps} />
-      </div>
-      <Footer />
-    </>
+    <Layout {...customProps}>
+      <>
+        <Header />
+        <div style={{ paddingTop: '72px' }}>
+          {props.children}
+        </div>
+        <Footer />
+      </>
+    </Layout>
   );
 }
