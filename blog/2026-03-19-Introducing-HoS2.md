@@ -1,3 +1,10 @@
+---
+slug: House-of-Stake-2.0
+title: 'House of Stake 2.0: Toward a Treasury Governance Engine'
+authors: [houseofstake]
+---
+<img width="1200" height="675" alt="Cover Image" src="https://github.com/user-attachments/assets/53c2e240-a35c-4183-b1ee-19f1f2a35560" />
+
 # House of Stake 2.0: Toward a Treasury Governance Engine
 
 House of Stake successfully launched NEAR’s stake-based governance system. Over 5 million NEAR have been locked in the governance system to date, reflecting early ecosystem participation.
@@ -12,6 +19,8 @@ Long term, the House of Stake Foundation envisions broad participation across NE
 Each group brings critical perspective. Sustainable, high-quality decision-making requires aligned participation from across the ecosystem.
 
 ## A Sharp Mandate: Economic & Treasury Governance
+
+<img width="1200" height="675" alt="Image 1" src="https://github.com/user-attachments/assets/d579b0b8-79a2-40fa-b638-2168dd16655f" />
 
 House of Stake exists to empower tokenholders to govern the NEAR ecosystem collectively and responsibly. But governance must be focused.
 
@@ -28,6 +37,7 @@ Long-term, its core responsibilities may include:
 As the NEAR ecosystem grows and network usage increases – including activity through NEAR Intents and other ecosystem products – House of Stake may gradually take on stewardship of these funds, subject to community governance and regulatory conditions. The long-term objective is clear: To support responsible, community-governed stewardship of ecosystem revenues and, over time, broader NEAR treasury operations.
 
 ## Explicit Goals of House of Stake 2.0
+<img width="1200" height="675" alt="Image 2" src="https://github.com/user-attachments/assets/4d429041-6a97-494c-8f74-47402cd45389" />
 
 House of Stake’s mandate can be summarized in four pillars:  
 **Value Accrual**  
@@ -66,6 +76,8 @@ To execute on this expanded mandate, a streamlined and focused core team has bee
 The team’s objective is to operate as a lean, agile unit focused on product excellence and operational efficiency.
 
 ## Core Team Roadmap (Next 3–6 Months)
+<img width="1200" height="675" alt="Image 3" src="https://github.com/user-attachments/assets/596d1d05-b355-4f6f-9267-d6e9fc096237" />
+
 a) Upgrade the HoS backend to support:
 * LST unstaking
 * Partial delegation
