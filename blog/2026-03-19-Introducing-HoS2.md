@@ -3,7 +3,7 @@ slug: House-of-Stake-2.0
 title: 'House of Stake 2.0: Toward a Treasury Governance Engine'
 authors: [houseofstake]
 ---
-<img width="1200" height="675" alt="Cover Image" src="https://github.com/user-attachments/assets/53c2e240-a35c-4183-b1ee-19f1f2a35560" />
+<img src="https://github.com/user-attachments/assets/53c2e240-a35c-4183-b1ee-19f1f2a35560" alt="House of Stake 2.0: Toward a Treasury Governance Engine" style={{width: '100%'}} />
 
 # House of Stake 2.0: Toward a Treasury Governance Engine
 
