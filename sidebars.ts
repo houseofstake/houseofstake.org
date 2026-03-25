@@ -17,6 +17,8 @@ const sidebars: SidebarsConfig = {
         'overview/governance-philosophy',
         'overview/mission-vision-values',
         'overview/interim-constitution',
+        'overview/code-of-conduct',
+        'overview/conflict-of-interest-policy',
       ],
     },
     {
@@ -35,7 +37,6 @@ const sidebars: SidebarsConfig = {
         'structure/screening-committee',
         'structure/security-council',
         'structure/responsibilities-and-scope',
-        'structure/code-of-conduct',
         {
           type: 'category',
           label: 'NEAR House of Stake Foundation Legal Documents',
@@ -97,7 +98,12 @@ const sidebars: SidebarsConfig = {
         slug: '/get-involved',
       },
       items: [
-        'get-involved/submit-a-proposal',
+        {
+          type: 'doc',
+          id: 'get-involved/submit-a-proposal',
+          label: 'Proposals and Voting Guide',
+        },
+        'get-involved/conflict-of-interest-guide',
         'get-involved/contribute-to-code-or-documentation',
       ],
     },

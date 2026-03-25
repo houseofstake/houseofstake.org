@@ -1,289 +1,185 @@
-# NEAR House of Stake - Interim Constitution (v0.1.0)
-
+---
+title: 'Constitution'
 ---
 
-## Article 1 — Foundational Provisions
+# **NEAR House of Stake Constitution**
 
-**1.1. Purpose**  
-The NEAR House of Stake ("HoS") is the stake-weighted governance system of NEAR that exists to preserve neutrality, legitimacy, and resilience by enabling meaningful, stake-aligned participation.
+## **Preliminary Article**
 
-**1.2. Binding Effect**  
-Rules may be enforced onchain or off-chain; all rules adopted under this Constitution are binding.
+### **P.1 Purpose and Application**
 
-**1.3. Supremacy**  
-This Constitution is the supreme governance document for NEAR House of Stake - the decentralized network of veNEAR tokenholders. In the event of conflict with any policy, charter, or guideline, this Constitution supersedes their controls unless amended under Article 9. *(Referring to DAO ratified policy & charters, excludes NEAR House of Stake Foundation bylaws.)*
+P.1.1 NEAR House of Stake Constitution (**“Constitution”**) sets out the governance principles, roles, and processes applicable to the NEAR House of Stake, including how Tokenholders, delegates, and supporting governance bodies participate in decision-making.
 
----
+P.1.2 This Constitution applies solely as an internal governance framework for the NEAR House of Stake, and does not regulate, amend, or supersede the legal structure, powers, or obligations of the NEAR House of Stake Foundation (**“Foundation”**).
 
-## Article 2 — Mandate
+### **P.2 Legal Nature and Hierarchy**
 
-### 2.1 Economic Governance
+P.2.1 This Constitution **is not a legal contract** and does not, of itself, create enforceable rights, obligations, or duties between the Foundation and any Tokenholder, delegate, or other participant, except as required by applicable law.
 
-**2.1.1.** Treasury management  
-**2.1.2.** Programs to support economic sustainability  
-**2.1.3.** Economic parameters:
-- **2.1.3.1.** Inflation
-- **2.1.3.2.** Fee switch for AI products, intents, etc.
+P.2.2 This Constitution operates subject to the Memorandum of Association, Articles of Association, and Bylaws of the Foundation (**“Foundation Legal Documents”**), which are located at the NEAR House of Stake Documentation. In the event of any conflict or inconsistency, the Foundation Legal Documents shall prevail.
 
-### 2.2 Technical Governance
+### **P.3 Interpretation**
 
-**2.2.1.** Incremental, narrow scope to begin  
-**2.2.2.** e.g., MPC signers for chain signatures  
-**2.2.3.** Determine which NEAR Enhancement Proposals (NEPs) should be escalated to HoS  
-**2.2.4.** Anything that can't be governed on GitHub
+P.3.1 Capitalized terms used in this Constitution but not otherwise defined herein shall have the meanings given to them in the Foundation Legal Documents, unless the context requires otherwise.
 
-### 2.3 Build Legitimacy
+## **Article 1 - General Provisions**
 
-**2.3.1.** Maximize the amount of NEAR/veNEAR in the system  
-**2.3.2.** Participation by broad subset of the community  
-**2.3.3.** Decentralise Screening Committee  
-**2.3.4.** Put in place policy: mission, vision, values, constitution, charters, policy, co-creation cycles
+### **1.1 Purpose of the NEAR House of Stake**
 
-### 2.4 Grow Engagement and Ecosystem Health
+1.1.1 NEAR House of Stake is the governance system of the NEAR Protocol. It exists to enable decentralized Tokenholder participation and to facilitate decision-making in the best interest of the NEAR Ecosystem.
 
-**2.4.1.** In the DAO, in governance, in the protocol, in NEAR ecosystem more broadly  
-**2.4.2.** Decentralized stakeholders participate in governance
+1.1.2 It aims to be credibly neutral, legitimate, and resilient, to enable NEAR Stakeholders to participate in meaningful, stake-aligned governance.
 
-### 2.5 Anti-Mandates
+### **1.2 Legal Structure**
 
-The following are **explicit anti-mandates**, i.e., things to avoid:
+1.2.1 The Foundation is the legal entity through which the NEAR House of Stake interfaces with applicable law, including fiduciary, financial, and regulatory requirements.
 
-**2.5.1.** Grants for the sake of grants. House of Stake won't have an official "grants program" for now, and there won't be a free-for-all for funding requests. Proposals that target the above mandate items may, of course, include requests for funding for specific uses.
+1.2.2 The Foundation may give effect to decisions adopted by veNEAR Tokenholders through onchain voting mechanisms, subject to applicable law and the Foundation Legal Documents.
 
-**2.5.2.** Full technical governance of the NEAR protocol, or of other products including Chain Signatures, NEAR Intents, and NEAR AI. These products are all extraordinarily complex and House of Stake doesn't have the necessary technical expertise, and isn't well positioned, to own this anytime soon. We'll start with less complex technical governance tasks, such as the one outlined above: governing the Chain Signatures MPC signer set, and build capacity to take on more technical governance in the future.
+1.2.3 The Foundation is incorporated in the Cayman Islands and operates in accordance with its Foundation Legal Documents.
 
----
+1.2.4 The purpose of the Foundation is to support the development and stewardship of the NEAR Ecosystem.
 
-## Article 3 — Membership & Rights
+### **1.3 Constitutional Authority and Effect**
 
-**3.1. Citizens**  
-All NEAR holders are Citizens by default; they must lock their NEAR or eligible liquid staking token to become a **veNEAR holder** (registered voter) with rights to delegate or participate where allowed. 
+1.3.1 This Constitution establishes the authoritative framework for the NEAR House of Stake, defining the principles, structures, and processes for governance operations.
 
-Official NEAR House of Stake Contracts:
-> venear-contract (venear.dao)  
-> voting-contract (vote.dao)
+1.3.2 Any person or entity that participates in the NEAR House of Stake, including but not limited to locking NEAR tokens into veNEAR or acting within a governance role, does so subject to the House of Stake Constitutional Documents and the Foundation Legal Documents.
 
-**3.2. Registered Voters**  
-veNEAR holders may submit and vote on proposals, and delegate/self-delegate.
+1.3.3 This Constitution applies as an internal governance instrument of the NEAR House of Stake and shall be interpreted and applied consistently with the Foundation Legal Documents, which shall prevail in the event of any conflict or inconsistency.
 
-### 3.2.1. Voter Rights
+1.3.4 Any smart contract, script, or automated system deployed by or on behalf of NEAR House of Stake shall be designed, interpreted, maintained, and, where necessary, amended or replaced, to ensure consistency with the Constitutional Documents and the Foundation Legal Documents.
 
-Registered Voters have the following rights:
+1.3.5 Nothing in this Constitution or any other House of Stake Constitutional Documents shall be construed to create, confer, or recognise any legal, equitable, proprietary, fiduciary, or contractual rights or claims of any Tokenholder or other participant against or in respect of the Foundation. Tokenholders are not members or beneficiaries of the Foundation and are not owed any duties by the Foundation, its directors, supervisors, or officers by virtue of this Constitution.
 
-- **3.2.1.1.** The right to transparent access to governance records
-- **3.2.1.2.** They may submit and vote on proposals in accordance with the Proposal Process Policy
-- **3.2.1.3.** They may vote to approve or amend Constitutional Policy & Charters, Bylaws, and governance procedures
-- **3.2.1.4.** They may vote to appoint or remove Directors and veto Security Council actions
-- **3.2.1.5.** They may raise concerns about delegates or governance matters
-- **3.2.1.6.** They may expect votes to be binding unless a Near House of Stake Foundation Director justifiably rejects a proposal due to:
-  - **3.2.1.6.1.** Violations of law or fiduciary duties
-  - **3.2.1.6.2.** Conflict with NEAR House of Stake Foundation Articles or Bylaws
-  - **3.2.1.6.3.** Risk of legal or reputational harm
+## **Article 2 - Mandate**
 
-### 3.2.2. Terminology Alignment
+2.1 The Mandate defines the scope of decisions that NEAR House of Stake can make, in accordance with the Foundation Legal Documents.
 
-For the avoidance of doubt, all references to "veNEAR holder," "Registered Voter," or "Citizen (veNEAR participant)" are equivalent during the interim period.
+2.2 NEAR Foundation has initially set the mandate and may update it until NEAR House of Stake sets its own mandate, as part of progressive decentralization towards full autonomy.
 
----
+2.3 The Mandate is located at the NEAR House of Stake Documentation.
 
-## Article 4 — Institutions
+## **Article 3 – Governance Actors, Bodies, and Working Groups**
 
-### 4.1. Endorsed Delegates
+### **3.1 Governance Actors**
 
-Endorsed delegates are a subset of overall delegates which are selected by the Screening Committee based on the endorsed delegate application process. All delegates represent veNEAR holders; Endorsed Delegates meet heightened transparency and activity standards.
+3.1.1 **Stakeholders**
 
-#### 4.1.1. Endorsed Delegates Mandate
+3.1.1.1 NEAR House of Stake Stakeholders refers to any individual, collective, or legal entity that either contributes value, work, or capital to the NEAR ecosystem, or has an interest in, or may be affected by, the outcomes, decisions, or operations thereof (“**Stakeholders**”).
 
-- **4.1.1.1.** Vote on proposals and justify their votes
-- **4.1.1.2.** Must participate in 80%+ of votes monthly
-- **4.1.1.3.** Help bridge community input and execution of governance
-- **4.1.1.4.** Adhere to the Endorsed Delegate Charter
+3.1.1.2 Stakeholder status, by itself, does not confer governance participation rights or decision-making authority within the NEAR House of Stake. However, Stakeholders may raise concerns related to governance matters and may request that such concerns be recorded transparently, in accordance with the processes and limitations defined in the applicable House of Stake Constitutional Documents.
 
-### 4.2. Screening Committee
+3.1.2 **Tokenholders**
 
-Selected by NEAR Foundation in the interim; transitions via a community elected process by ratification of a co-created charter.
+3.1.2.1 Holders of veNEAR (“**Tokenholders**”) may participate in governance decision-making solely through their veNEAR voting power, exercised directly or through delegation, in accordance with the Proposals and Voting Procedures.
 
-#### 4.2.1. Screening Committee Mandate
+3.1.2.2 Decisions adopted through Tokenholder voting may be given effect by the Foundation in accordance with applicable law, the Foundation Legal Documents, and the fiduciary duties of the Foundation’s directors.
 
-- **4.2.1.1.** Elect Endorsed Delegates
-- **4.2.1.2.** Vet and pre-screen community proposals
-- **4.2.1.3.** Remove Delegates who fail to meet responsibilities or act against NEAR values
-- **4.2.1.4.** Adhere to the Screening Committee Charter
+3.1.3 **Delegates and Endorsed Delegates**
 
-### 4.3. Security Council
+3.1.3.1 Tokenholders may delegate their voting power to Delegates in accordance with the Proposals and Voting Procedures.
 
-#### 4.3.1. Mandate
+3.1.3.2 Delegates may apply to become Endorsed Delegates, in accordance with the NEAR House of Stake Endorsed Delegates Charter.
 
-- **4.3.1.1.** Handle on-chain security and integrity operations
-- **4.3.1.2.** Execute Emergency Actions (e.g. patching critical vulnerabilities)
-- **4.3.1.3.** Approve Non-Emergency Actions like protocol upgrades (which must also be approved by Delegates)
-- **4.3.1.4.** Veto proposals that do not align with HoS mandate
-- **4.3.1.5.** Call Emergency Meetings if needed
+3.1.3.3 The rights, responsibilities, and accountability mechanisms applicable to Endorsed Delegates are defined in the NEAR House of Stake Endorsed Delegates Charter.
 
-#### 4.3.2. Safeguards
+3.1.3.4 Endorsed Delegates are subject to the provisions in Article 4. Conflicts of Interest and Accountability.
 
-- **4.3.2.1.** Emergency Actions require a 75% supermajority vote of security council members
-- **4.3.2.2.** All actions must be followed by transparency reports to the community
+### **3.2 Governance Bodies**
 
-#### 4.3.3. Appointment/Removal
+3.2.1 Individuals exercising a role within a governance body (“**Governance Body Members**”) shall act in accordance with the House of Stake Constitutional Documents and the Foundation Legal Documents.
 
-Appointment/Removal by NEAR Foundation.
+3.2.2 **Screening Committee**
 
-#### 4.3.4. Escalation
+3.2.2.1 The Screening Committee screens proposals, resolves conflicts raised from Constitutional interpretation, and selects and evaluates the Endorsed Delegates.
 
-Refer to NEAR House of Stake Foundation bylaws for handling of unaddressed issues.
+3.2.2.2 The mandate, authority, structure, and accountability of the Screening Committee are defined in the NEAR House of Stake Screening Committee Charter.
 
-### 4.4. NEAR House of Stake Foundation
+3.2.3 **Security Council**
 
-#### 4.4.1. Legal Documentation
+3.2.3.1 The Security Council is a governance body established and empowered pursuant to the Foundation Legal Documents, with authority to perform Emergency Actions and Non-Emergency Actions onchain. It is responsible for safeguarding the integrity of the NEAR House of Stake Foundation's operations. The role and composition of the Security Council are defined in the Foundation Legal Documents and the applicable House of Stake documentation.
 
-- **4.4.1.1.** [Bylaws of the NEAR House of Stake Foundation](https://docs.google.com/document/d/1WqUZkP9J4L95c3Ts9yWXjUmyP2l6CLzF/edit#heading=h.h05hwpo1sxsk)
-- **4.4.1.2.** [Memorandum & Articles of Association](https://docs.google.com/document/d/1PnykFR_vJ_ET-f8huMBH2jbF2KCcVlzB/edit)
+3.2.4 **Changes to Governance Bodies**
 
-#### 4.4.2. Purpose
+3.2.4.1 Any establishment, modification, or removal of governance bodies shall be conducted in accordance with the Foundation Legal Documents and the NEAR House of Stake Proposals and Voting Procedures.
 
-The NEAR House of Stake Foundation exists to:
+### **3.3 Working Groups**
 
-- **4.4.2.1.** Empower the NEAR community to lead
-- **4.4.2.2.** Translate community intent into legal and operational action
-- **4.4.2.3.** Ensure decisions are carried out safely, fairly, and transparently
-- **4.4.2.4.** Provide checks and balances between community, directors, and oversight bodies
+3.3.1 Any Stakeholder may, from time to time, establish one or more temporary groups for the purpose of researching, advising on, or developing proposals (“**Working Groups**”) relating to specific matters within the mandate of the NEAR House of Stake.
 
-#### 4.4.3. Director Mandate
+3.3.2 Each Working Group shall be established for a defined and limited purpose, operate for a fixed or clearly determinable duration, and be dissolved automatically upon completion of its mandate.
 
-The HoS Foundation currently has one Director.
+3.3.3 Working Groups are advisory and preparatory in nature only. For the avoidance of doubt, they shall have no decision-making, execution, or voting authority, shall not bind the NEAR House of Stake, the Foundation, or any Governance Body, and shall not confer any governance rights, powers, or status beyond those expressly provided in this Constitution and the applicable governance documents.
 
-- **4.4.3.1.** Manage the day-to-day business of the Foundation
-- **4.4.3.2.** Implement Tokenholder-approved proposals unless legally required to veto them
-- **4.4.3.3.** All execution authority for approved proposals rests solely with the NEAR House of Stake Foundation; Committees may only recommend
-- **4.4.3.4.** Authorize expenses and execute contracts
-- **4.4.3.5.** Ensure the Foundation complies with all applicable laws
+## Article 4 - Conflicts of Interest and Accountability
 
-#### 4.4.4. Director Appointment/Removal
+### **4.1 Disclosure**
 
-Appointed and removed by successful passing of a constitutional decision proposal.
+4.1.1 Endorsed Delegates, Screening Committee, and the Security Council members participating in the NEAR House of Stake governance shall disclose any potential conflict of interest as early as reasonably practicable, in accordance with the NEAR House of Stake Conflict of Interest Policy.
 
-#### 4.4.5. Supervisors Mandate
+### **4.2 Removal for Cause**
 
-- **4.4.5.1.** Provide oversight of Foundation Directors
-- **4.4.5.2.** Review records, attend general meetings, and request reports
-- **4.4.5.3.** Ensure Directors are acting in the interest of the Foundation and the community
+4.2.1 Governance Body Members may be removed for cause, including misconduct, undisclosed conflicts of interest, or failure to perform their duties, following notice and an opportunity to appeal, in accordance with the applicable NEAR House of Stake Constitutional Documents and the Foundation Legal Documents.
 
-#### 4.4.6. Supervisor Appointment/Removal
+### **4.3 Transparency Duties**
 
-- **4.4.6.1.** Appointed by Directors; required if the Foundation has no members
-- **4.4.6.2.** Removed by resignation, conflict of interest, or as outlined in their terms
-- **4.4.6.3.** Can be overridden or removed by successful passing of a standard decision proposal
+4.3.1 Governance Body Members shall publish the rationales of their decisions, as required by their applicable governing documents, subject to confidentiality, privacy, legal privilege, or security considerations.
 
-### 4.5. NEAR Foundation
+## **Article 5 - Proposals and Voting**
 
-- **4.5.1.** Screening committee & security council appointment during interim
-- **4.5.2.** Funding & operational support through launch & stabilization at their discretion
-- **4.5.3.** Transitions responsibilities to the NEAR HoS Foundation upon ratification of new policy & charters which reassign current roles
-- **4.5.4.** Is not managed or directed by NEAR House of Stake voting
+### **5.1 Proposal Process**
 
----
+5.1.1 The creation, review, deliberation, and voting lifecycle of proposals within the NEAR House of Stake is governed by the NEAR House of Stake Proposals and Voting Procedures.
 
-## Article 5 — Integrity, Conflicts of Interest, and Accountability
+### **5.2 Proposal Execution Feasibility**
 
-**5.1. Disclosure**  
-All governance actors (Delegates, Committee/Council members, Foundation directors) must disclose material conflicts prior to decision-making; failure to disclose may be grounds for sanction or removal.
+5.2.1 Where implementation of a proposal would be unlawful, breach an obligation, or materially compromise the integrity or interests of the Foundation, the NEAR Protocol, or the NEAR Ecosystem, the Foundation’s directors may decline to give effect to the proposal, publish their justification, and, where appropriate, indicate a potential path forward, in accordance with the Foundation Legal Documents.
 
-**5.2. Removal for Cause**  
-Delegates, Committee members, or Council members may be removed for misconduct, undisclosed conflicts, or failure of duty by Decision Proposal, with notice and opportunity to respond and appeal the issue to the screening committee.
+5.2.2 For the avoidance of doubt, no Tokenholder vote shall require the Foundation or its directors to act unlawfully or in breach of their fiduciary duties.
 
-**5.3. Transparency Duties**  
-Institutions publish meeting notes, rationales, and decisions; community reporting is mandatory.
+## **Article 6 - Treasury and Financial Stewardship**
 
----
+### **6.1 Treasury**
 
-## Article 6 — Legislative Procedure (Proposals & Voting)
+6.1.1 The NEAR House of Stake treasury is administered by the Foundation through an Administrative Budget Wallet, as provided for in the Foundation Legal Documents.
 
-**6.1. Proposal Process**  
-The detailed proposal creation, deliberation, and voting lifecycle is governed by the **Proposal Process Policy**.
+### **6.2 Custody and Control**
 
-**6.1.1. Implementation Sequence**  
-Proposals shall follow the sequence:
+6.2.1 NEAR House of Stake Foundation may execute funding and treasury-related decisions in accordance with the Foundation Legal Documents, the NEAR House of Stake Proposals and Voting Procedures, and all applicable legal and compliance obligations, including, where applicable, KYC and AML requirements.
 
-**7 Day Deliberation Period** → **Screening filter** → **On-chain Vote** → **Security Council 1-week Review** → **Foundation Execution**
+## **Article 7 - Dissolution**
 
-**6.2. Eligibility to Propose**  
-Any Registered Voter (veNEAR holder) or Endorsed Delegate may submit proposals. All proposals must undergo a minimum deliberation period, not less than 7 days, before a binding vote.
+### **7.1 Authority**
 
-**6.3. Screening**  
-The Screening Committee must approve proposals to be eligible for an onchain vote.
+7.1.1 Any wind-up or dissolution of the Foundation shall be conducted strictly in accordance with the Foundation Legal Documents and applicable Cayman Islands law. Nothing in this Constitution shall modify or override those provisions.
 
-**6.4. Voting, Thresholds & Quorum**
+## **Article 8 - Constitutional Interpretation and Dispute Resolution**
 
-| Proposal Type | Voting Requirement | Additional Requirements |
-|---------------|-------------------|------------------------|
-| **6.4.1 Sensing Proposal** | May utilize any methodology for assessment that serves the purpose of the inquiry | N/A |
-| **6.4.2 Standard Decision Proposal** | Simple majority of votes cast | **AND** passing by screening committee |
-| **6.4.3 Constitutional Decision Proposal** | Two-thirds (67%) supermajority | **AND** a majority vote from the screening committee publicly posted on the governance forum **PRIOR** to screening committee onchain approval |
+### **8.1 Interpretation**
 
-**6.4.4. Quorum:** Will align to the technical quorum settings put in place by the onchain system.
+8.1.1 Where the text of this Constitution is ambiguous, it shall be interpreted in a manner that promotes neutrality, participation, transparency, and practical feasibility within the NEAR House of Stake. Constitutional Documents should be accessible to facilitate informed participation.
 
-**6.5. Challenge & Implementation**  
-Results are recorded publicly; implementation follows a public timeline; deviations or Security Council interventions are explained on-record.
+### **8.2 Review Mechanism**
 
-**6.6. Conflicting Measures**  
-If approved measures conflict (as decided in retrospect by the screening committee), the measure with higher veNEAR support prevails.
+8.2.1 Tokenholders may engage the Head of Governance to facilitate the review and management of governance-related disputes, in accordance with the NEAR House of Stake Screening Committee Charter and the NEAR House of Stake Code of Conduct.
 
-**6.7. Legal/Technical Feasibility**  
-If execution is impossible or unlawful, the HoS Foundation must publish justification within 14 days and propose a path forward.
+### **8.3 Dispute Resolution**
 
----
+8.3.1 Where a dispute arises regarding the meaning or application of any constitutional provision or related governance document, particularly in novel or gray-area situations, the Screening Committee shall deliberate and issue a determination.
 
-## Article 7 — Treasury & Financial Stewardship
+8.3.2 Any such determination shall apply solely for internal governance coordination purposes and shall not limit or override the binding dispute resolution mechanisms, statutory powers, or fiduciary duties established under the Foundation Legal Documents or applicable law.
 
-**7.1. Treasuries**  
-The Interim DAO Treasury is controlled by the NEAR House of Stake Foundation and is located at __________, an onchain DAO Controlled Treasury will be created with a future software version update.
+## **Article 9 - Constitutional Documents**
 
-**7.2. Custody & Control**  
-The NEAR House of Stake Foundation executes funding decisions validly approved under Article 6, subject to Cayman legal and compliance obligations and technical feasibility. *(Including but not limited to KYC/AML & OFAC screening)*
+### 9.1 **House of Stake Constitutional Documents** are:
 
-**7.3. Interim Adjustments**  
-NEAR House of Stake Foundation may adjust fund release schedules for passed proposals to minimize risk of fraud, waste, or abuse.
+( a ) This Constitution;  
+ ( b ) NEAR House of Stake Screening Committee Charter;  
+ ( c ) NEAR House of Stake Endorsed Delegates Charter;  
+ ( d ) NEAR House of Stake Proposals and Voting Procedures;  
+ ( e ) Any other governance documents approved by Tokenholders from time to time.
 
----
+### **9.2 Establishment and Amendment**
 
-## Article 8 — Emergency Powers
-
-**8.1. Trigger & Scope**  
-The Security Council may act to respond to urgent threats or vulnerabilities and coordinate emergency measures.
-
-**8.2. Notice & Review**  
-The Council must inform the community after intervention.
-
-**8.3. Veto Period**  
-The Security Council shall have a 1 week review window following any successful vote to veto or suspend implementation where security or legal risk is identified.
-
----
-
-## Article 9 — Transition & Interim Arrangements
-
-**9.1. Interim Policies**  
-Interim policy set (including this Constitution in interim form) expires **May 31, 2026** unless ratified. If a successor constitution is not ratified, all NEAR House of Stake funding stops because the Foundation cannot receive legal direction to take action.
-
-**9.2. Screening Committee**  
-The screening committee will be replaced using a community-involved selection process.
-
----
-
-## Article 10 — Dissolution
-
-**10.1. Authority**  
-Dissolution requires a constitutional amendment and would require a succession plan to allocate any remaining and/or future treasury. The supremacy for dissolution is the NEAR House of Stake Foundation Bylaws.
-
----
-
-## Article 11 — Interpretation & Dispute Resolution
-
-**11.1. Interpretation**  
-Where text is ambiguous, interpret to maximize neutrality, participation, transparency, and feasibility.
-
-**11.2. Review Mechanism**  
-The community may establish an independent review/arbitration panel by Decision Proposal to resolve constitutional disputes.
-
-**11.3. Dispute Resolution**  
-Where disagreement arises regarding the meaning or intent of any constitutional policy or charter clause, particularly in novel or gray-area situations, the Screening Committee shall deliberate and decide by vote and the result must be confirmed by the Foundation Directors & Head of Governance. The resulting interpretation must be recorded in the Transparency Thread and serves as binding precedent until formally amended or superseded. In the event of continued dispute requiring binding arbitration, refer to the NEAR House of Stake Foundation Bylaws.
+9.2.1 House of Stake Constitutional Documents may be established or amended in accordance with the processes defined in the NEAR House of Stake Proposals and Voting Procedures, and the Foundation Legal Documents.

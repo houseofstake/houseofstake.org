@@ -1,0 +1,117 @@
+---
+title: 'Code of Conduct'
+---
+
+# **NEAR House of Stake Code of Conduct**
+
+## **Article 1\. Purpose and Scope**
+
+1.1 This Code of Conduct establishes the standards of behavior expected of all Stakeholders in the NEAR House of Stake.
+
+1.2 The objectives of this Code are to promote a safe, respectful, and effective governance environment, to protect the integrity and legitimacy of governance processes, and to support the long-term interests of the NEAR ecosystem.
+
+1.3 This Code applies to all Stakeholders when engaging in activities related to NEAR House of Stake, including participating in onchain and off-chain governance, and community-related events, whether virtually or in person.
+
+1.4 This Code is a governance and Stakeholder standards document. It does not create legal rights or obligations and operates subject to the NEAR House of Stake constitutional framework and applicable legal documents.
+
+## **Article 2\. Expected Conduct for All Stakeholders**
+
+2.1 All Stakeholders are expected to act in good faith and with honest intent when engaging in NEAR House of Stake activities. They should:
+
+2.1.1 Treat others with professionalism, dignity, and respect, including during disagreement or dispute.
+
+2.1.2 Engage constructively in governance discussions and decision-making processes.
+
+2.1.3 Communicate clearly, responsibly, and without intent to mislead.
+
+2.1.4 Respect the privacy, safety, and personal boundaries of others.
+
+2.1.5 Follow established governance processes and respect finalized governance outcomes.
+
+2.1.6 Avoid behavior that undermines trust, safety, or the integrity of governance.
+
+2.1.7 Disclose conflicts of interest following the assessment outlined in the Conflict of Interest Policy.
+
+## **Article 3\. Additional Expectations for Governance-Related Roles**
+
+3.1 Governance Body Members, Endorsed Delegates, Moderators, HSP Authors and other governance-related roles are held to a higher standard due to their influence and responsibilities within the NEAR House of Stake. They shall:
+
+3.1.1 Exercise due care and diligence when advising, voting, or allocating resources.
+
+3.1.2 Disclose conflicts of interest fully, accurately, and in a timely manner, in accordance with the Conflict of Interest Policy.
+
+3.1.3 Represent their authority, mandate, endorsement status, or decision-making power according to Foundation Legal Documents and House of Stake Constitutional Documents.
+
+3.1.4 Provide clear and honest rationales for governance decisions where reasonably expected.
+
+3.1.5 Act as stewards of the long-term interests of the NEAR ecosystem.
+
+3.1.6 Use privileged access, information, or influence responsibly and in good faith.
+
+3.1.7 Process Stakeholder feedback without ad hominem criteria, meaning feedback is taken by what is being communicated, and not by who is communicating it.
+
+## **Article 4\. Prohibited Conduct**
+
+4.1 Harassment, bullying, intimidation, or threats.
+
+4.2 Discriminatory or hateful conduct based on protected characteristics like gender, race, nationality, or religion, including synthetic media harassment.
+
+4.3 Impersonation or misrepresentation of identity, authority, or affiliation.
+
+4.4 Vote-buying, bribery, coercion, or covert influence over governance outcomes.
+
+4.5 Doxxing, privacy invasion, or unauthorized disclosure of personal or sensitive information publicly.
+
+4.6 Spam, brigading, shilling, disinformation, or deliberate sabotage of governance processes.
+
+4.7 Retaliation against individuals who, in good faith, raise concerns or report potential prohibited conduct.
+
+4.8 Knowingly false, malicious, or bad-faith reports, including attempts to weaponize this Code to harass or silence others, may themselves constitute prohibited conduct.
+
+## **Article 5\. Reporting and Enforcement**
+
+5.1 Platform Moderators are the first enforcers of this Code.
+
+5.2 NEAR Foundation, NEAR House of Stake Foundation, or the Head of Governance may appoint Moderators, as part of progressive decentralization towards full autonomy of NEAR House of Stake. They may also remove them by applying the principles of Removal for Cause, as provided in the Constitution.
+
+5.3 Any participant who experiences or witnesses a potential prohibited conduct in relation to this Code of Conduct is encouraged to use the platform-specific flagging systems or report it through the code of conduct complaint form in the House of Stake documentation. No other reporting mechanisms are considered valid.
+
+5.4 Reports shall be made in good faith and, where reasonably possible, include relevant context or supporting evidence.
+
+5.5 This Code may be addressed through proportionate and reasonable enforcement actions intended to protect Stakeholder safety and governance integrity.
+
+5.6 Enforcement actions may include warnings, requests for corrective action, temporary restrictions, suspensions, or removal from roles or governance participation.
+
+5.7 Onchain actions may be irreversible, and remedies cannot fully counteract the effects of immutable or third-party systems.
+
+## **Article 6\. Appeals Process**
+
+6.1 To escalate conflicting situations for review, a temporary and case-limited Appeals Panel may be created by the Head of Governance to resolve disputes.
+
+6.2 Appeals shall be submitted within the next 14 days of the appealed event, for a decision to be expected 30 days after the case is reported to the complaint form in the NEAR House of Stake Documentation.
+
+6.3 Decisions from the appeals process are final for internal governance coordination purposes only and do not limit or override any rights, obligations, or Dispute Resolution Mechanisms that exist under the Foundation Legal Documents or applicable law.
+
+## **Article 7\. Moderation and Enforcement Standards**
+
+### **7.1 Due Diligence**
+
+7.1.1 Impartiality: case Moderators must disclose no conflicts of interest.
+
+7.1.2 Cultural and linguistic competence: include Moderators who understand the parties’ context.
+
+7.1.3 Documentation: maintain secure records, a clear evidence trail, and access controls.
+
+7.1.4 Timeliness: target resolution within 14 calendar days; document and communicate extensions.
+
+7.1.5 AI oversight: AI-powered tools may assist with triage or pattern detection; humans make final decisions.
+
+7.1.6 Evidence standards: use verifiable records (e.g., logs, messages, transactions) and note limitations.
+
+### **7.2 Authority Limitations**
+
+7.2.1 Moderators shall act based on available information and exercise judgment solely within the scope of this Code of Conduct.
+
+7.2.2 This Code of Conduct shall be interpreted and applied with proportionality, fairness, and common sense. Any enforcement of this code shall be exercised in good faith, prioritizing Stakeholder safety and governance integrity.
+
+7.2.3 To the maximum extent permitted by applicable law, neither the NEAR House of Stake Foundation, the NEAR House of Stake, Moderators, Appeals Panel members, nor any Governance Body shall be liable for any indirect, incidental, consequential, reputational, or economic loss arising from participation in, reliance upon, or enforcement of this Code of Conduct, including any good-faith act or omission.

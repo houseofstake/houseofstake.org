@@ -1,121 +1,123 @@
-# Screening Committee
-
-The **Screening Committee** is a core governance body within **House of Stake (HoS)**.
-It serves as the first layer of review and quality assurance for proposals, delegates, and governance processes — ensuring that all actions align with the **Mission, Vision, and Values** of House of Stake and comply with the **Constitution** and associated charters.
-
-This group acts as a **filter and guardian of integrity**, maintaining a balance between efficiency, transparency, and due diligence.
-
+---
+title: 'Screening Committee'
 ---
 
-## Current Status: Interim Screening Committee
+# **NEAR House of Stake Screening Committee Charter**
 
-The **Interim Screening Committee (ISC)** operates under the mandate of the **NEAR Foundation**, in accordance with the
-**[NEAR House of Stake – Screening Committee Charter v0.1.0](https://gov.near.org/t/near-house-of-stake-interim-screening-committee-charter/41689)**.
-Its mission is to uphold the integrity, neutrality, and effectiveness of House of Stake governance until a community-elected committee replaces it.
+## **Preliminary Article - General Provisions**
 
-The committee is responsible for:
+### **P.1 Purpose and Application**
 
-- Reviewing all submitted proposals within **seven (7) days** of final submission.
-- Evaluating proposals based on:
-  - Technical feasibility
-  - Stakeholder alignment
-  - Policy and regulatory compliance
-  - Risk management
-  - Financial impact
-  - Alignment with the HoS Mission, Vision, and Values
-- Approving or rejecting proposals for on-chain voting through an **optimistic consent model**:
-  if no objections are raised within 24 hours, approval is assumed; if objections occur, a **simple majority vote** is required.
-- Managing the approval and removal of **Endorsed Delegates**.
-- Publishing all decisions and meeting notes for transparency.The **Screening Committee** is a core governance body within **House of Stake (HoS)**.
-It serves as the first layer of review and quality assurance for proposals, delegates, and governance processes — ensuring that all actions align with the **Mission, Vision, and Values** of House of Stake and comply with the **Constitution** and associated charters.
+P.1.1 This Screening Committee Charter (“Charter”) sets out the mandate, authority, structure, and accountability of the Screening Committee within the governance framework of NEAR House of Stake.
 
-This group acts as a **filter and guardian of integrity**, maintaining a balance between efficiency, transparency, and due diligence.
+P.1.2 This Charter applies solely as an internal governance framework for NEAR House of Stake and does not regulate, amend, or supersede the legal structure, powers, or obligations of NEAR House of Stake Foundation (“Foundation”).
 
----
+### **P.2 Legal Nature and Hierarchy**
 
-## Current Status: Interim Screening Committee
+P.2.1 This Charter is not a legal contract and does not, of itself, create enforceable rights, obligations, or duties between the Foundation and any Screening Committee member, delegate, Tokenholder, or other participant, except as required by applicable law.
 
-The **Interim Screening Committee (ISC)** operates under the mandate of the **NEAR Foundation**, in accordance with the
-**[NEAR House of Stake – Screening Committee Charter v0.1.0](https://gov.near.org/t/near-house-of-stake-interim-screening-committee-charter/41689)**.
-Its mission is to uphold the integrity, neutrality, and effectiveness of House of Stake governance until a community-elected committee replaces it.
+P.2.2 This Charter operates subject to the Memorandum of Association, Articles of Association, and Bylaws of the Foundation (“Foundation Legal Documents”). In the event of any conflict or inconsistency, the Foundation Legal Documents shall prevail.
 
-The committee is responsible for:
+P.2.3 This Charter shall be interpreted consistently with the NEAR House of Stake Constitution.
 
-- Reviewing all submitted proposals within **seven (7) days** of final submission.
-- Evaluating proposals based on:
-  - Technical feasibility
-  - Stakeholder alignment
-  - Policy and regulatory compliance
-  - Risk management
-  - Financial impact
-  - Alignment with the HoS Mission, Vision, and Values
-- Approving or rejecting proposals for on-chain voting through an **optimistic consent model**:
-  if no objections are raised within 24 hours, approval is assumed; if objections occur, a **simple majority vote** is required.
-- Managing the approval and removal of **Endorsed Delegates**.
-- Publishing all decisions and meeting notes for transparency.
+### **P.3 Interpretation**
 
----
+P.3.1 Capitalised terms used in this Charter but not otherwise defined herein shall have the meanings given to them in the Foundation Legal Documents or the Constitution, as applicable, unless the context requires otherwise.
 
-## Committee Composition
+## **Article 1 - Purpose of the Screening Committee**
 
-The Interim Screening Committee is composed of members appointed by the **NEAR Foundation**.
-Membership may change during the interim period, and any member may step down with **seven (7) days’ public notice** on the governance forum.
+### **1.1 Purpose of the Governance Body**
 
-**Current Members:**
-- Bianca Guimaraes-Chadwick (NEAR Foundation)
-- Bowen Wang (Near One)
-- Gauntlet (1 seat)
+1.1.1 The Screening Committee filters proposals and resolves conflicts raised from Constitutional interpretation and selects and evaluates the Endorsed Delegates.
 
-The Interim Committee will remain in effect until **May 31, 2026**, or until replaced by a **community-elected Screening Committee** developed in accordance with the process defined in the Constitution (Article 9.2).
+1.1.2 As an impartial and accountable body, it seeks to ensure all its reviews, deliberations, and dissenting views are transparently recorded and accessible to support a smooth and strategic proposal flow.
 
----
+## **Article 2 - Authority and Responsibilities**
 
-## What Happens Next
+### **2.1 Authority**
 
-The top priority moving forward is the **transition** from a Foundation-appointed interim body to a **community-elected Screening Committee**.
-This process will be implemented through a **co-created replacement charter** and **open elections**.
+2.1.1 The Screening Committee receives its authority from Foundation Legal Documents and NEAR House of Stake Constitution.
 
-If this transition is not completed by **May 31, 2026**, the interim committee will automatically **lose its constitutional authority** under the Constitution.
+2.1.2 No action, decision, recommendation, or determination of the Screening Committee shall be construed as binding the Foundation, incurring obligations, authorising expenditures, or representing the Foundation, except as expressly provided for in the Foundation Legal Documents.
 
----
+2.1.3 The Screening Committee may, at its discretion, determine that a proposal is a Supermajority Proposal, according to NEAR House of Stake Proposals and Voting Procedures.
 
-## Responsibilities of the Screening Committee
+2.1.4 The Screening Committee appoints and removes Endorsed Delegates, according to NEAR House of Stake Endorsed Delegates Charter
 
-### 1. Proposal Review & Governance Flow
-- Review and publish decisions on all proposals within seven (7) days.
-- Provide clear reasoning for each decision in the governance forum.
-- Approve only proposals that meet all review criteria.
-- Allow an **appeal process** — rejected proposals may still advance with support from at least three endorsed delegates.
-- Filtering mechanism: proposals rejected by the Committee must achieve a **75% community supermajority** to pass.
+### **2.2 Resolution of Disputes and Conflicts**
 
-### 2. Delegate Oversight
-- Conduct quarterly reviews of **Endorsed Delegate** applications and activity.
-- Monitor performance, transparency, and compliance with the **Code of Conduct** and **Conflict of Interest Policy**.
-- Remove delegates who fail to meet performance or governance standards.
+2.2.1 The Screening Committee resolves disagreements, solely for internal governance coordination purposes, over the meaning or intent of any constitutional policy or charter clause, in line with the NEAR House of Stake Constitution.
 
-### 3. Transparency & Reporting
-- Log and publish all decisions, summaries, and rationales within **seven (7) days**.
-- Publicly record all approvals, rejections, removals, and appointments.
-- Any member may post clarifications or updates regarding their role on the governance forum.
+2.2.2 It publicly reports on its resolution of disputes and conflicts.
 
-### 4. Meetings & Operations
-- Decisions follow an **optimistic consent model** (assumed approved unless objected to).
-- Quorum requires **three members**, or **two members plus the Head of Governance**, who may act as a tie-breaker.
-- The committee may appoint a **Chair** from among its members.
-- When necessary, the committee may appoint third parties to lead specific projects or deliverables.
+2.2.3 Any interpretation or determination issued by the Screening Committee shall not create legal rights, remedies, or obligations, nor limit or override the statutory powers, fiduciary duties, or dispute resolution mechanisms established under the Foundation Legal Documents or applicable law.
 
----
+### **2.3 Proposal Evaluation and Screening**
 
-## Transition to a Community-Led Model
+2.3.1 The Screening Committee has seven calendar days to:
 
-After the approval of a **new co-created charter**, community elections will be held to form a **community-elected Screening Committee**.
-The interim body will disband immediately after the first election, ensuring a transparent and smooth transition.
+- review and provide feedback,
+- approve for voting or reject proposals that have both passed the HSP Editor's check and are created onchain on the voting platform,
+- publicly report a decision rationale
 
----
+  2.3.2 It screens proposals based on criteria defined in the Foundation Legal Documents, the NEAR House of Stake Mandate, Constitution, Mission-Vision-Values, and Proposals and Voting Procedures.
 
-## Transparency & Accountability
+  2.3.3 It publicly reports its proposal screening decisions, with a rationale.
 
-The Screening Committee operates under the **House of Stake Code of Conduct** and the **Constitution**.
-All members are expected to uphold principles of transparency, neutrality, and accountability.
-Violations of these standards may result in **removal**, as outlined in the Constitution (Article 5.2).
-Compensation and reimbursements follow the governance transparency standards established in **Article 5 (Integrity, Conflicts of Interest, and Accountability)** of the Constitution.
+  2.3.4 Proposal screening and evaluation involve discretionary governance judgment exercised in accordance with applicable House of Stake Constitutional Documents.
+
+### **2.4 Oversight of Endorsed Delegates**
+
+2.4.1 The Screening Committee oversees Endorsed Delegates in accordance with NEAR House of Stake Endorsed Delegates Charter.
+
+2.4.2 It publicly reports, with rationales, its selection and removal decisions, and Endorsed Delegate evaluations.
+
+### **2.5 Other Functions**
+
+2.5.1 The Screening Committee carries out functions that are, from time to time, delegated to it for a defined period by the Head of Governance or by governance proposals.
+
+## **Article 3 - Membership and Selection Process**
+
+### **3.1 Composition**
+
+3.1.1 Membership on the Screening Committee does not create any employment, agency, fiduciary, or contractual relationship with the Foundation. Committee members act solely in a governance capacity, subject to applicable NEAR House of Stake Constitutional Documents.
+
+3.1.2 Screening Committee members provide subject matter expertise in governance-related domains to support informed committee decision-making.
+
+### **3.2 Qualifications**
+
+3.2.1 Members are selected based on expertise, commitment, and alignment with Constitutional Documents and Mandate.
+
+## **Article 4 - Transparency, Accountability and Oversight**
+
+### **4.1 Decision Process**
+
+4.1.1 To approve a proposal, the Screening Committee must have at least one member approving, with none against.
+
+### **4.2 Transparency**
+
+4.2.1 All decisions must be documented and made public, according to the Transparency Duties detailed in NEAR House of Stake Constitution.
+
+### **4.3 Agreements**
+
+4.3.1 The Screening Committee shall exercise its functions in a manner intended to be neutral, legitimate, and procedurally fair, subject to the discretionary judgment permitted under this Charter, the Constitution, and applicable NEAR House of Stake Constitutional Documents.
+
+4.3.2 Screening Committee members agree to follow Foundation Legal Documents, NEAR House of Stake Mandate, NEAR House of Stake Constitution, its subordinate charters, Mission-Vision-Values, and House of Stake Code of Conduct.
+
+4.3.3 Conflicts of interest must be disclosed and managed in accordance with NEAR House of Stake Conflict of Interest Policy.
+
+### **4.4 Continuous Improvement**
+
+4.4.1 The Screening Committee members shall strive to continuously improve the efficiency, effectiveness, and pragmatism of their own processes.
+
+### **4.5 Appeals and Complaints**
+
+4.5.1 The Forum may be used to raise appeals or complaints about the Screening Committee or its individual members. Such appeals shall be dealt with in accordance with the Foundation Legal Documents and NEAR House of Stake Constitutional Documents.
+
+### **4.6 Reliance and Expectations**
+
+4.6.1 Participation in Screening Committee processes, including proposal review, dispute resolution, or delegate evaluation, does not give rise to any reasonable expectation, reliance interest, or estoppel against the Foundation. No action or outcome under this Charter constitutes a promise or commitment by the Foundation to implement.
+
+### **4.7 Limitation of Liability**
+
+4.7.1 To the fullest extent permitted by applicable law, neither the Screening Committee nor its members shall be liable for any act or omission undertaken in good faith in the exercise of their governance functions under this Charter.
