@@ -2,7 +2,7 @@
 title: 'Conflict of Interest Guide'
 ---
 
-# NEAR House of Stake Conflict of Interest Guide 0.02
+# NEAR House of Stake Conflict of Interest Guide
 
 ## 1. Introduction
 

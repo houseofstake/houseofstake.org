@@ -113,10 +113,10 @@ structureRoles:
       link: '/docs/structure/responsibilities-and-scope#'
     - id: 'code-of-conduct'
       title: 'Example: Code of Conduct'
-      link: '/docs/structure/code-of-conduct#'
+      link: '/docs/overview/code-of-conduct#'
     - id: 'conflict-of-interest'
       title: 'Example: Conflict of Interest Policy'
-      link: '/docs/structure/conflict-of-interest-policy#'
+      link: '/docs/overview/conflict-of-interest-policy#'
 
 roadmap:
   visible: false
