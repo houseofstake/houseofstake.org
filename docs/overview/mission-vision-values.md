@@ -2,7 +2,7 @@
 title: 'Mission, Vision, Values'
 ---
 
-# NEAR House of Stake Mission Vision Values Policy v1
+# NEAR House of Stake Mission Vision Values Policy
 
 ## Vision
 

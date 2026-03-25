@@ -1,8 +1,8 @@
 ---
-title: 'Proposals and Voting Guide'
+title: 'NEAR House of Stake Proposals and Voting Guide'
 ---
 
-# Proposals and Voting Guide
+# NEAR House of Stake Proposals and Voting Guide
 
 This Guide is written for those who want to put forward a proposal to the House of Stake. It will help you understand the overall process, write a great proposal, get feedback on it and submit it to a vote.
 

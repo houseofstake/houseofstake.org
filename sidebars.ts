@@ -98,7 +98,11 @@ const sidebars: SidebarsConfig = {
         slug: '/get-involved',
       },
       items: [
-        'get-involved/submit-a-proposal',
+        {
+          type: 'doc',
+          id: 'get-involved/submit-a-proposal',
+          label: 'Proposals and Voting Guide',
+        },
         'get-involved/conflict-of-interest-guide',
         'get-involved/contribute-to-code-or-documentation',
       ],
