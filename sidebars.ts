@@ -36,6 +36,7 @@ const sidebars: SidebarsConfig = {
         'structure/security-council',
         'structure/responsibilities-and-scope',
         'structure/code-of-conduct',
+        'structure/conflict-of-interest-policy',
         {
           type: 'category',
           label: 'NEAR House of Stake Foundation Legal Documents',
@@ -98,6 +99,7 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'get-involved/submit-a-proposal',
+        'get-involved/conflict-of-interest-guide',
         'get-involved/contribute-to-code-or-documentation',
       ],
     },
