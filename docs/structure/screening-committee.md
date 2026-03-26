@@ -124,7 +124,7 @@ P.3.1 Capitalised terms used in this Charter but not otherwise defined herein sh
 
 ## **END OF THE NEAR HOUSE OF STAKE SCREENING COMMITTEE CHARTER**
 
-# Committee Composition
+## Committee Composition
 
 **Current Members:**
 - Bianca Guimaraes-Chadwick (NEAR Foundation)
