@@ -19,7 +19,7 @@ You can see here the overall steps a proposal goes through (described in more de
 <img
    src="assets/proposals-and-voting-guide-lifecycle.png"
    alt="Diagram of the decision proposal lifecycle"
-   style={{ width: "100%", max-width: 650 }}
+   style={{ width: "100%", maxWidth: 650 }}
 />
 
 Overall, a proposal typically requires a minimum of 28–42 days to complete the decision-making process.
