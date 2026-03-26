@@ -121,3 +121,12 @@ P.3.1 Capitalised terms used in this Charter but not otherwise defined herein sh
 ### **4.7 Limitation of Liability**
 
 4.7.1 To the fullest extent permitted by applicable law, neither the Screening Committee nor its members shall be liable for any act or omission undertaken in good faith in the exercise of their governance functions under this Charter.
+
+## **END OF THE NEAR HOUSE OF STAKE SCREENING COMMITTEE CHARTER**
+
+# Committee Composition
+
+**Current Members:**
+- Bianca Guimaraes-Chadwick (NEAR Foundation)
+- Bowen Wang (Near One)
+- Gauntlet (1 seat)
