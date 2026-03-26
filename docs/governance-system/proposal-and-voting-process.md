@@ -2,17 +2,17 @@
 title: 'Proposals and Voting Process'
 ---
 
-# **NEAR House of Stake Proposals and Voting Process**
+# NEAR House of Stake Proposals and Voting Process
 
-## **Preliminary Article – General Provisions**
+## Preliminary Article – General Provisions
 
-### **P.1 Purpose and Application**
+### P.1 Purpose and Application
 
 P.1.1 These Proposals and Voting Procedures (“**Procedures**”) set out the governance mechanics by which Tokenholders and other recognised governance actors of NEAR House of Stake may submit, deliberate on, and vote upon proposals within the scope of NEAR House of Stake.
 
 P.1.2 These Procedures apply solely as an internal governance framework for the NEAR House of Stake and do not regulate, amend, or supersede the legal structure, powers, or obligations of the NEAR House of Stake Foundation (**“Foundation”**).
 
-### **P.2 Legal Nature and Hierarchy**
+### P.2 Legal Nature and Hierarchy
 
 P.2.1 These Procedures are not a legal contract and do not, of themselves, create, confer, or give rise to any enforceable rights, obligations, or duties between the Foundation and any Tokenholder, delegate, governance participant, or other person, except as required by applicable law.
 
@@ -22,21 +22,21 @@ P.2.3 Nothing in these Procedures shall be construed to require the Foundation, 
 
 P.2.4 These Procedures shall be interpreted consistently with the NEAR House of Stake Constitution, as amended from time to time. In the event of any conflict or inconsistency, the Constitution shall prevail.
 
-### **P.3 Interpretation**
+### P.3 Interpretation
 
 P.3.1 Capitalised terms used in these Procedures but not otherwise defined herein shall have the meanings given to them in the Foundation Legal Documents or the Constitution, as applicable, unless the context requires otherwise.
 
-## **Article 1 - Proposals and Voting Procedure Roles**
+## Article 1 - Proposals and Voting Procedure Roles
 
-### **1.1 HSP Definition**
+### 1.1 HSP Definition
 
 1.1.1 A House of Stake Proposal (“**HSP**”) is a standardized governance artifact and procedural mechanism through which proposals are submitted, reviewed, deliberated, and voted upon within NEAR House of Stake.
 
-### **1.2 HSP Author**
+### 1.2 HSP Author
 
 1.2.1 The House of Stake Proposal Author writes the proposal and submits it for review.
 
-### **1.3 HSP Editors**
+### 1.3 HSP Editors
 
 1.3.1 The HSP Editors are appointed and removed by the Head of Governance.
 
@@ -44,31 +44,31 @@ P.3.1 Capitalised terms used in these Procedures but not otherwise defined herei
 
 1.3.3 Updates the HSP proposals' statuses in line with the Proposals and Voting Guide.
 
-### **1.4 Authority Limitation**
+### 1.4 Authority Limitation
 
 1.4.1 No role, committee, working group, or participant acting under these Procedures has authority to bind the Foundation, incur obligations, authorize expenditures, or represent the Foundation, except as expressly provided for in the Foundation Legal Documents.
 
-## **Article 2 - Proposals and Voting Actors and Rights**
+## Article 2 - Proposals and Voting Actors and Rights
 
-### **2.1 Tokenholders**
+### 2.1 Tokenholders
 
 2.1.1 Tokenholders may submit proposals in accordance with these Procedures and may vote on proposals directly with their veNEAR voting power, or by delegating to another Delegate.
 
 2.1.2 HSP Authors are solely responsible for the content of their proposals, including compliance with applicable law, intellectual property rights, and third-party rights.
 
-### **2.2 NEAR House of Stake Delegates**
+### 2.2 NEAR House of Stake Delegates
 
 2.2.1 Any Tokenholder can receive delegated Voting Power by creating a Delegate statement in the voting platform. Delegates may use their delegated Voting Power solely for voting purposes.
 
-## **Article 3 - Voting**
+## Article 3 - Voting
 
-### **3.1 Voting Power**
+### 3.1 Voting Power
 
 3.1.1 Voting Power is the veNEAR that each Delegate controls at the moment a proposal is approved by the Screening Committee to be voted on. The voting power of each Delegate is recorded and fixed for the duration of the proposal vote, regardless of any subsequent changes.
 
 3.1.2 veNEAR Tokenholders may revoke delegation at any time.
 
-### **3.2 Quorum**
+### 3.2 Quorum
 
 3.2.1 The Quorum is the minimum voting power needed for a proposal to be considered valid. In NEAR House of Stake, the Quorum is 1,000 veNEAR.
 
@@ -76,7 +76,7 @@ P.3.1 Capitalised terms used in these Procedures but not otherwise defined herei
 
 3.2.3 Abstain votes are counted for purposes of Quorum calculation.
 
-### **3.3 Voting Tracks**
+### 3.3 Voting Tracks
 
 3.3.1 There are two Voting Tracks: Sensing and Decision.
 
@@ -84,7 +84,7 @@ P.3.1 Capitalised terms used in these Procedures but not otherwise defined herei
 
 3.3.3 A **Decision** vote reflects a final governance determination within the NEAR House of Stake. Implementation remains subject to legal, fiduciary, technical, and operational feasibility in accordance with these Procedures and the Foundation Legal Documents.
 
-### **3.4 Voting Types**
+### 3.4 Voting Types
 
 3.4.1 A Simple Majority Vote is used by default unless the proposal meets the criteria for a Supermajority voting type of proposal.
 
@@ -92,7 +92,7 @@ P.3.1 Capitalised terms used in these Procedures but not otherwise defined herei
 
 3.4.3 The Screening Committee may, at its discretion, determine that a Proposal requires a Supermajority Voting type, in agreement with the Screening Committee Charter.
 
-### **3.5 Thresholds**
+### 3.5 Thresholds
 
 3.5.1 **Simple Majority Vote** requires a voting threshold of over 50% to be ratified, calculated as follows:
 
@@ -100,7 +100,7 @@ $$
 \text{passed} = \frac{yes}{yes+no} \ge \frac{1}{2}
 $$
 
-3.5.2 **Supermajority Vote** requires a voting threshold of over two-thirds to be ratified, calculated as follows:
+3.5.2 Supermajority Vote** requires a voting threshold of over two-thirds to be ratified, calculated as follows:
 
 $$
 \text{passed} = \frac{yes}{yes+no} \ge \frac{2}{3}
@@ -123,7 +123,7 @@ $$
 \left(\frac{voted\  veNEAR}{circulating\  veNEAR} \ge \frac{3}{4}\right)
 $$
 
-### **3.6 Proposal Categories**
+### 3.6 Proposal Categories
 
 3.6.1 HSP Authors shall specify one of the following categories:
 
@@ -134,32 +134,32 @@ $$
 - Operations - House of Stake operational matters
 - Other - Proposals that don't fit above categories
 
-### **3.7 Implementation Safeguards and Responsibility**
+### 3.7 Implementation Safeguards and Responsibility
 
 3.7.1 Implementation of any approved proposal is subject to ongoing legal, financial, technical, and operational feasibility. Where misuse of funds, material deviation from the approved proposal, or other integrity risks are identified, the Foundation may suspend, modify, or terminate implementation and take remedial or recovery actions, in accordance with the Foundation Legal Documents and applicable law.
 
 3.7.2 Where proposal implementation involves the transfer or use of funds by non-Foundation parties, such parties bear sole responsibility for lawful and proper use of such funds, subject to applicable oversight and recovery mechanisms.
 
-## **Article 4 - Selection and Removal of Governance Body Members**
+## Article 4 - Selection and Removal of Governance Body Members
 
 4.1 The NEAR Foundation, the NEAR House of Stake Foundation, or the Head of Governance may appoint Governance Body Members as part of progressive decentralization towards full autonomy. They may also remove them according to Removal for Cause, as provided in the Constitution.
 
-## **Article 5 - Establishment and Amendment of Constitutional Documents**
+## Article 5 - Establishment and Amendment of Constitutional Documents
 
 5.1 Constitutional Documents are defined in the Constitution and may be established by the NEAR House of Stake Foundation, the Head of Governance on an interim basis, or by Tokenholder Vote.
 
 5.2 All interim Constitutional Documents remain subject to ratification, replacement, amendment, or removal by Tokenholder Vote, consistent with the Foundation Legal Documents.
 
-## **Article 6 - House of Stake Proposal (HSP) Requirements and Template**
+## Article 6 - House of Stake Proposal (HSP) Requirements and Template
 
-### **6.1 HSP Elements**
+### 6.1 HSP Elements
 
 6.1.1 HSPs use a standardized markdown file format that contains the following elements, mandatory to any proposal:
 
 - Frontmatter according to provision 6.2.
 - Proposal details according to provision 6.3.
 
-### **6.2 Frontmatter**
+### 6.2 Frontmatter
 
 ```yaml
 hsp: <number>
@@ -176,7 +176,7 @@ created: <YYYY-MM-DD>
 requires: <HSP number(s)> (optional)
 ```
 
-### **6.3 Template**
+### 6.3 Template
 
 ````md
 ## Abstract
@@ -276,7 +276,7 @@ The author(s) must state that they've read and agree with the House of Stake Con
 Copyright and related rights waived via CC0 1.0.
 ````
 
-## **Article 7 - Proposal Lifecycle**
+## Article 7 - Proposal Lifecycle
 
 The proposal lifecycle consists of six stages:
 
@@ -287,7 +287,7 @@ The proposal lifecycle consists of six stages:
 5. Security Council & Directors Review
 6. Execution
 
-### **7.1 Feedback and HSP Editor Review**
+### 7.1 Feedback and HSP Editor Review
 
 7.1.1 This stage begins when the HSP Author posts the draft proposal on the NEAR Forum using the Proposals tag, using the ID: HSP-XXX and the status attribute `Draft` in the Frontmatter. During this stage, two processes occur:
 
@@ -318,13 +318,13 @@ The proposal lifecycle consists of six stages:
 
   7.1.6.3 Constitutional documents and other HSPs that are continuously updated and never reach finality are assigned the HSP status attribute `Living`.
 
-### **7.2 Onchain Submission**
+### 7.2 Onchain Submission
 
 7.2.1 After the Feedback and HSP Editor Review stages, if the proposal is approved by the HSP Editor, the HSP Author may submit their HSP on the voting platform, paying the submission fee. Proposals on the voting platform are tagged as `Created`.
 
 7.2.2 If the Screening Committee approves the proposal for voting, the HSP Editor updates the HSP Frontmatter status attribute to `Voting`.
 
-### **7.3 Screening Committee Review**
+### 7.3 Screening Committee Review
 
 7.3.1 **Review Duration**. The Screening Committee has seven calendar days to review and provide feedback.
 
@@ -340,7 +340,7 @@ The proposal lifecycle consists of six stages:
 
 7.3.5 These Procedures shall be applied in a manner intended to be neutral and consistent across similarly situated proposals, subject to the discretionary judgment of the applicable governance bodies.
 
-### **7.4 Voting Period**
+### 7.4 Voting Period
 
 7.4.1 Proposals in the Sensing track have a duration of 7 days. Regardless of the Sensing results, the HSP Author may submit the proposal in the voting platform, and repay the submission fee for the Decision track.
 
@@ -350,7 +350,7 @@ The proposal lifecycle consists of six stages:
 
 7.4.4 If the proposal meets the threshold, the voting platform updates its proposal tag to `Succeeded`.
 
-### **7.5 Security Council & Director Review**
+### 7.5 Security Council & Director Review
 
 7.5.1 **Authority**. The Security Council review period is 14 days following any successful vote. The Security Council may veto or suspend, in accordance with the NEAR House of Stake Bylaws. If not vetoed, the proposal is forwarded to the NEAR House of Stake Foundation Directors for a decision on execution in accordance with their fiduciary duties and applicable law.
 
@@ -358,7 +358,7 @@ The proposal lifecycle consists of six stages:
 
 7.5.3 When vetoed, the HSP Editor updates the HSP Frontmatter status attribute to `Vetoed`.
 
-### **7.6 Execution**
+### 7.6 Execution
 
 7.6.1 The proposal is executed following the Implementation Section within the HSP.
 
