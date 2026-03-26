@@ -16,7 +16,11 @@ Any NEAR Tokenholder can create and submit a proposal to House of Stake. Such pr
 
 You can see here the overall steps a proposal goes through (described in more detail below) and how the proposal status changes as it transitions through these:
 
-<img src="assets/proposals-and-voting-guide-lifecycle.png" alt="Diagram of the decision proposal lifecycle" style="width:100%; max-width:650px;"/>
+<img
+   src="assets/proposals-and-voting-guide-lifecycle.png"
+   alt="Diagram of the decision proposal lifecycle"
+   style={{ width: "100%", max-width: 650 }}
+/>
 
 Overall, a proposal typically requires a minimum of 28–42 days to complete the decision-making process.
 
