@@ -6,7 +6,7 @@ title: 'NEAR House of Stake Proposals and Voting Guide'
 
 This Guide is written for those who want to put forward a proposal to the House of Stake. It will help you understand the overall process, write a great proposal, get feedback on it and submit it to a vote.
 
-It outlines the procedures that must be followed by an HSP Author, as well as the mechanics of how Voting works, based on the [Proposal and Voting Procedures](https://gov.near.org/t/hsp-xxx-near-house-of-stake-proposals-and-voting-procedures/42019), which is the authoritative definition of those procedures. Use this Guide alongside the Procedures document, not instead of it.
+It outlines the procedures that must be followed by an HSP Author, as well as the mechanics of how Voting works, based on the [Proposal and Voting Procedures](https://houseofstake.org/docs/governance-system/proposal-and-voting-process), which is the authoritative definition of those procedures. Use this Guide alongside the Procedures document, not instead of it.
 
 You can see examples of previously submitted proposals in the [houseofstake/proposals GitHub repo](https://github.com/houseofstake/proposals/tree/main/HSPs).
 
@@ -31,7 +31,7 @@ You can create a proposal in any of these categories:
 - **Operations** - House of Stake operational matters
 - **Other** - Proposals that don't fit above categories
 
-Good proposals will have strong alignment with NEAR House of Stake's [Mandate](https://gov.near.org/t/house-of-stake-mandate/41652) and [Mission-Vision-Values](https://gov.near.org/t/hsp-xxx-near-house-of-stake-mission-vision-values/42052), so be sure to get familiar with these before starting to design your proposal.
+Good proposals will have strong alignment with NEAR House of Stake's [Mandate](https://houseofstake.org/docs/strategic-direction/house-of-stake-mandate) and [Mission-Vision-Values](https://houseofstake.org/docs/overview/mission-vision-values), so be sure to get familiar with these before starting to design your proposal.
 
 Proposals should:
 
@@ -57,7 +57,7 @@ Being engaged on the Forum helps you establish a minimum trust level that will b
 
 ## STEP 3: Draft your HSP
 
-Once you are ready, you should prepare your proposal as a standardized **House of Stake Proposal (HSP)**, which must follow the template defined in Article 6 of the [Proposal and Voting Procedures](https://gov.near.org/t/hsp-xxx-near-house-of-stake-proposals-and-voting-procedures/42019).
+Once you are ready, you should prepare your proposal as a standardized **House of Stake Proposal (HSP)**, which must follow the template defined in Article 6 of the [Proposal and Voting Procedures](https://houseofstake.org/docs/governance-system/proposal-and-voting-process#article-6---house-of-stake-proposal-hsp-requirements-and-template).
 
 ### HSP Tracks and Types
 
