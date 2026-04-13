@@ -66,12 +66,6 @@ const categories = [
       'Learn how to participate in House of Stake by submitting proposals or contributing to the project.',
     href: '/docs/get-involved',
   },
-  {
-    title: '📁 Working Groups',
-    description:
-      'Explore the various working groups focusing on governance, ecosystem growth, treasury, and network economics.',
-    href: '/docs/working-groups',
-  },
 ];
 
 export default function DocsIndex(): React.ReactElement {
