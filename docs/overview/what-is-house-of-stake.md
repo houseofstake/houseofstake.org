@@ -2,22 +2,19 @@
 title: What is House of Stake
 ---
 
-# What is House of Stake
+House of Stake (HoS) is NEAR’s stake-based governance system, where token holders actively participate in shaping the ecosystem. Users can lock NEAR to gain voting power, while governance bodies ensure security and accountability.
 
-The **House of Stake (HoS)** is a governance framework designed to empower NEAR token holders through a transparent, efficient, and stake-weighted decision-making system.
+House of Stake 2.0 evolves this system into NEAR’s Treasury Governance Engine, expanding its role beyond governance into key economic functions such as policy decisions, treasury management, and tokenomics direction.
 
-Instead of a one-person-one-vote model, HoS introduces a more sustainable and long-term approach based on **veNEAR** — a vote-escrowed token that rewards long-term commitment and alignment.
+At its core, HoS enables:
 
-HoS was created to address common challenges in decentralized governance, such as low engagement, lack of transparency, and misaligned incentives.
+NEAR token holders → lock tokens to gain voting power
+Delegates → submit and vote on proposals
+Governance bodies → ensure security and accountability
 
-Key components include:
+HoS operates through a stake-weighted model, where influence increases with the amount of NEAR locked. The system is supported by key roles that maintain checks and balances:
 
-- **Stake-weighted voting** via veNEAR
-- **Pre-screening of proposals** by a Screening Committee
-- A **delegate system** with clear roles and aligned incentives
-- **Structured funding** sourced from 0.5% protocol inflation
-- **On-chain voting** and transparent processes
-
-The vision of HoS is to build a sustainable, decentralized, and user-owned governance system that can evolve alongside the needs of the NEAR ecosystem.
-
-This documentation explains how House of Stake works, how to get involved, and how it will help shape the future of NEAR governance.
+Tokenholders → vote and participate
+Delegates → propose and represent
+Screening Committee → filters proposals
+Security Council → safeguards against malicious actions
