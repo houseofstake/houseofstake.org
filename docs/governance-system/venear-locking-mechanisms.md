@@ -1,6 +1,6 @@
 # veNEAR Locking Mechanism
 
-To obtain **veNEAR**, users must lock **NEAR**, **stNEAR**, or **liNEAR** tokens in a vote-escrow contract.
+To obtain **veNEAR**, users must lock **NEAR**, **stNEAR**, **liNEAR**, or **rNEAR** tokens in a vote-escrow contract.
 The House of Stake governance system supports a **single flexible locking model** that does not require users to commit to a fixed duration.
 
 ---
