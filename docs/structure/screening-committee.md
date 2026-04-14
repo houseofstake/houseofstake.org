@@ -129,4 +129,5 @@ P.3.1 Capitalised terms used in this Charter but not otherwise defined herein sh
 **Current Members:**
 - Bianca Guimaraes-Chadwick (NEAR Foundation)
 - Bowen Wang (Near One)
-- Gauntlet (1 seat)
+- Didier (Frontier/ PikesPeak)
+- Claudio (Metapool)
