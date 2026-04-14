@@ -1,24 +1,25 @@
-# House of Stake Mandate
+# House of Stake 2.0 Mandate
 
-1. **Economic governance (of NEAR protocol and other NEAR products)**
-   - Treasury management  
-   - Programs to support economic sustainability  
-   - Economic parameters  
-     - Inflation  
-     - Fee switch for AI products, intents, etc.
+House of Stake (HoS) empowers NEAR tokenholders to govern the ecosystem collectively and responsibly. As governance systems mature, clarity of mandate becomes essential to ensure effectiveness and long-term sustainability.
 
-2. **Technical governance**
-   - Incremental, narrow scope to begin  
-   - e.g., MPC signers for chain signatures  
-   - Determine which NEPs should be escalated to HoS  
-     - Anything that can’t be governed on Github  
+## Mandate
+House of Stake 2.0 introduces a refined role as **NEAR’s Treasury Governance Engine** — an independent body focused on:
+- Economic policy
+- Treasury oversight
+- Tokenomics decisions
 
-3. **Build Legitimacy**
-   - Maximize the amount of NEAR/veNEAR in the system  
-   - Participation by broad subset of the community  
-     - Decentralise Screening Committee  
-   - Put in place policy: mission vision values, constitution, charters, policy, co-creation cycles  
+All while remaining accountable to community governance and regulatory requirements.
 
-4. **Grow Engagement and Ecosystem Health**
-   - In the DAO, in governance, in the protocol, in NEAR ecosystem more broadly  
-   - Decentralized stakeholders participate in governance
+## Objective
+To enable **responsible**, **community-governed stewardship of ecosystem value**, **supporting long-term growth** and **sustainability**.
+
+## Core Pillars
+
+House of Stake operates across four key pillars:
+a. Value Accrual — Strengthening ecosystem health through transparent governance
+b. Sustainable Allocation — Deploying resources for long-term growth
+c. Aligned Decision-Making — Ensuring incentives across stakeholders are aligned
+d. Economic Policy Leadership — Guiding emissions, fees, and incentive structures
+
+## What’s Next
+In the near term, House of Stake will focus on ecosystem value accrual, treasury strategy, and long-term economic sustainability with a growing role in overseeing ecosystem funds as NEAR adoption expands.
