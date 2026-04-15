@@ -32,7 +32,6 @@ const sidebars: SidebarsConfig = {
         slug: '/structure',
       },
       items: [
-        'structure/working-groups-overview',
         'structure/delegates-and-participants',
         'structure/screening-committee',
         'structure/security-council',
@@ -105,23 +104,6 @@ const sidebars: SidebarsConfig = {
         },
         'get-involved/conflict-of-interest-guide',
         'get-involved/contribute-to-code-or-documentation',
-      ],
-    },
-    {
-      type: 'category',
-      label: '📁 Working Groups',
-      link: {
-        type: 'generated-index',
-        title: 'Working Groups',
-        description:
-          'Explore the various working groups focusing on governance, ecosystem growth, treasury, and network economics.',
-        slug: '/working-groups',
-      },
-      items: [
-        'working-groups/governance-infrastructure-and-processes',
-        'working-groups/ecosystem-growth-strategy',
-        'working-groups/treasury-strategy-and-management',
-        'working-groups/network-economics-and-security',
       ],
     },
   ],
