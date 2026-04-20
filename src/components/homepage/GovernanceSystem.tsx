@@ -182,7 +182,10 @@ const GovernanceSystem: React.FC = () => {
                     </Markdown>
                     {tab.docsLink && (
                       <div className={styles.learnMoreWrapper}>
-                        <Link to={tab.docsLink} className={styles.learnMoreLink}>
+                        <Link
+                          to={tab.docsLink}
+                          className={styles.learnMoreLink}
+                        >
                           Learn more →
                         </Link>
                       </div>

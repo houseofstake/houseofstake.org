@@ -8,8 +8,4 @@ This repo powers the House of Stake website (Docusaurus). Most content is Markdo
 
 Local development (quick reference)
 
-- Install: `npm ci`
-- Dev server: `npm run start`
-- Build: `npm run build`
-
 License: see `LICENSE`.
