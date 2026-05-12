@@ -1,235 +1,343 @@
----
-title: 'NEAR House of Stake Proposals and Voting Guide'
----
 
 # NEAR House of Stake Proposals and Voting Guide
 
-This Guide is written for those who want to put forward a proposal to the House of Stake. It will help you understand the overall process, write a great proposal, get feedback on it and submit it to a vote.
 
-It outlines the procedures that must be followed by an HSP Author, as well as the mechanics of how Voting works, based on the [Proposal and Voting Procedures](https://houseofstake.org/docs/governance-system/proposal-and-voting-process), which is the authoritative definition of those procedures. Use this Guide alongside the Procedures document, not instead of it.
+This guide is written for anyone who wants to submit a proposal to the House of Stake (HoS). It explains how proposals are created, developed, reviewed, and ultimately voted on.
 
-You can see examples of previously submitted proposals in the [houseofstake/proposals GitHub repo](https://github.com/houseofstake/proposals/tree/main/HSPs).
+## Overview
 
-## Proposal Lifecycle overview
+Any NEAR tokenholder can submit a proposal, known as a **House of Stake Proposal (HSP)**. The starting point for any proposal is at [houseofstake.org](https://gov.houseofstake.org/proposals) , hit “Create Proposal” on the top right and follow the prompts.
 
-Any NEAR Tokenholder can create and submit a proposal to House of Stake. Such proposals are referred to as **House of Stake Proposals ("HSPs")** and when you create one, you are the **HSP Author**.
+There are two types of proposals at House of Stake:
 
-You can see here the overall steps a proposal goes through (described in more detail below) and how the proposal status changes as it transitions through these:
+1. **Classic Proposal** — estimated timeline: **36–42 days**
+2. **Fast Track Proposal** — estimated timeline: **14–21 days**
 
-![Diagram of the decision proposal lifecycle](assets/Untitled%20Diagram.drawio%20(1).png)
+Create your proposal at [houseofstake.org](http://houseofstake.org/) as a draft. It will be auto-posted to the House of Stake forum.
 
-Overall, a proposal typically requires a minimum of 28–42 days to complete the decision-making process.
+A **100 NEAR deposit (bond)** is required to create a Fast Track proposal. This bond helps ensure that proposal submitters are accountable and tied to the outcome of their proposal.
 
-## STEP 1: Design your Proposal
+---
 
-You can create a proposal in any of these categories:
+# 1. Classic Proposal
 
-- **Economic Governance** - Treasury, inflation, fees, token economics
-- **Technical Governance** - Protocol changes, smart contracts, infrastructure
-- **Legitimacy & Engagement** - Policies, procedures, community initiatives
-- **Grants & Funding** - Grant programs, funding allocations
-- **Operations** - House of Stake operational matters
-- **Other** - Proposals that don't fit above categories
+A **Classic Proposal** follows the standard governance process. It includes a 7-days mandatory community feedback period, review stages, tokenholder voting, and final review before execution.
 
-Good proposals will have strong alignment with NEAR House of Stake's [Mandate](https://houseofstake.org/docs/strategic-direction/house-of-stake-mandate) and [Mission-Vision-Values](https://houseofstake.org/docs/overview/mission-vision-values), so be sure to get familiar with these before starting to design your proposal.
+![Classic Proposal Process](assets/Classic%20Proposal%20Process.png)
 
-Proposals should:
+## Step 1: Proposal Creation
 
-- **Solve a clear problem** - Articulate the issue and why it matters.
-- **Provide a complete specification** - Include enough detail for implementation.
-- **Show net improvement** - Demonstrate that benefits outweigh costs and risks.
-- **Build consensus** - Engage with community feedback and address concerns.
-- **Be well-scoped** - Focus on a single proposal or a tightly related set of changes.
-- **Consider alternatives** - Explain why this approach vs. others.
-- **Address security** - Discuss security implications thoroughly.
+Create a Classic Proposal at
 
-You don't need to have it all figured out to start: the next step is all about engaging the community of NEAR stakeholders to get there.
+https://gov.houseofstake.org/proposals
 
-You can also [reach out to the House of Stake team](https://t.me/NEAR_HouseOfStake) to receive support in developing your proposal, including to get help with using Markdown and GitHub when it comes to drafting your HSP.
+and save it as a draft.
 
-## STEP 2: Ideation with the community to develop your proposal
+Your proposal will automatically be posted to the NEAR House of Stake forum, where the community can review it, provide feedback, and engage in early discussion.
 
-Successful proposals don't usually come from a vacuum or a single brilliant idea: they come from a deep understanding of an important issue and how that impacts or will benefit people, solving real problems for them.
+---
 
-Use the [NEAR Governance Forum](https://gov.near.org/c/house-of-stake) to engage with others, ask questions and understand different perspectives. Share your idea, get feedback and develop it in collaboration with others.
+## Step 2: Community Feedback & Review
 
-Being engaged on the Forum helps you establish a minimum trust level that will be required to succeed. You can start activating key stakeholders and [delegates](https://gov.houseofstake.org/delegates) who will later vote on your proposal.
+After the proposal is posted, it enters the **Community Feedback & Review** stage.
 
-## STEP 3: Draft your HSP
+**Minimum review period:**
 
-Once you are ready, you should prepare your proposal as a standardized **House of Stake Proposal (HSP)**, which must follow the template defined in Article 6 of the [Proposal and Voting Procedures](https://houseofstake.org/docs/governance-system/proposal-and-voting-process#article-6---house-of-stake-proposal-hsp-requirements-and-template).
+**7 days**
 
-### HSP Tracks and Types
+During this period, the community may review, discuss, and provide feedback on the proposal.
 
-#### Voting Tracks
+To make changes, edit your current draft at
+https://gov.houseofstake.org/proposals
 
-- **Sensing** - On-chain vote to gauge community sentiment on a topic, without threshold or quorum. These have a 7-day voting period.
-- **Decision** - On-chain vote to execute and implement a proposal, provided the required quorum and threshold are met. These have a 14-day voting period.
+Each update will be automatically reposted to the forum. **Note:** Any changes to your proposal will restart the 7-day feedback period.
 
-#### Voting Types
+---
 
-- **Simple Majority** - default, suitable for most proposals → a 50% majority is required to succeed
-- **Supermajority** - if it modifies the governance system itself → a two-thirds majority is required to succeed
+## Step 3: HSP Editor Review
 
-The following are suggested best practices:
+After the community review period is completed, the proposal enters the **HSP Editor Review** stage.
 
-### Shepherding the HSP
+**Review period:**
 
-- **Vetting the idea** - Discussing on the Forum before writing a formal proposal
-- **Writing clearly** - Following the template and writing for a broad audience
-- **Building consensus** - Engaging constructively with feedback
-- **Iterating** - Refining based on community input
-- **Coordinating implementation** - For Decision proposals, working with implementers
-- **Documenting dissent** - Noting significant opposing viewpoints
+**48 hours**
 
-### Style Guidelines
+The HSP Editor will conduct an initial review to ensure all formal requirements are met before it moves to the next stage. 
 
-- **Format** - Markdown formatting ([HackMD](https://hackmd.io) is a useful tool for Markdown editing)
-- **Titles** - Max 44 characters, descriptive, no HSP number in title
-- **Descriptions** - Max 140 characters, complete sentence
-- **Dates** - ISO 8601 format (YYYY-MM-DD)
-- **Linking** - Other HSPs are linked as `HSP-###`
-- **Language** - Clear, accessible, professional, but not overly formal
+### Possible Outcomes
 
-### Payload use cases:
+| Outcome | Result |
+| --- | --- |
+| **Approved** | Proposal is tagged with an HSP number and moves to Screening Committee Review |
+| **Request Changes** | Proposal is sent back to the proposal author with notes |
 
-The payload refers to executable code or text intended for formal adoption, and should display as a collapsible section in the proposal. It is not mandatory for all proposals to have a payload.
+Once approved by the HSP Editor, the proposal is created **on-chain** and assigned an **HSP number**.
 
-### AI tools
+---
 
-You can use https://neargov.ai to assess draft or submitted HSPs against acceptance criteria.
+## Step 4: Screening Committee Review
 
-## STEP 4: Publish for Feedback and Review
+After HSP Editor approval, the proposal moves to the **Screening Committee Review** stage.
 
-_In this step, you will publish on the Forum and GitHub for Community Feedback and on GitHub for HSP Editor Review._
+**Review period:**
 
-1. Publish your draft HSP on the NEAR Forum in the [Proposals category](https://gov.near.org/c/house-of-stake/proposals/168) with:
-   - Forum Post title: HSP-XXX: Proposal Title
-   - Frontmatter:
-     - hsp: \<TBD\>
-     - status: Draft
-   - Note: When publishing on the Forum, for correct formatting, the Frontmatter should be wrapped in ` ```yaml ` and ` ``` `
-2. This initiates the mandatory minimum 7-day feedback period.
-   - During this period, the text of the proposal cannot be changed
-   - Exception: If a Decision proposal follows a Sensing proposal with no changes made to the text of the proposal, the 7-day requirement does not apply
-   - In either case, if you make changes, the 7-day feedback period resets
-3. Once you are satisfied with the state of the proposal, create a GitHub PR to add a new file to the [HSPs folder](https://github.com/houseofstake/proposals/tree/main/HSPs) in the `houseofstake/proposals` repository.
-   - Frontmatter:
-     - discussions-to: \<forum URL\>
-   - Note: When submitting the PR on GitHub, to correctly format it as a table, Frontmatter should be at the very top of the MD file and wrapped in `---` and `---`
-4. HSP Editor reviews formatting, completeness, and scope compliance.
+**7 days**
 
-### If compliant:
+At this stage, the Screening Committee reviews the proposal before it can proceed to voting. The Screening Committee will also determine whether the proposal requires a **Simple Majority** or **Supermajority** vote. (see House of Stake Constitution and Proposal and Voting Procedures)
 
-- HSP Editor assigns the official HSP number and notifies the HSP Author through the Forum.
-- Status is updated to **Review**.
-- You should then update your Forum post with the HSP number and updated status.
+### Quorum Requirement
 
-### If not compliant:
+For a vote to be valid:
 
-- The HSP Editor will share feedback and requested changes with you against the GitHub PR and/or on the Forum.
-- You can then make changes following the HSP Editor's suggestions.
-- Changes can be published on the Forum by editing your existing Forum post. You should also post accompanying comments describing the changes you've made and why.
-- This starts another 7-day feedback period.
-- When you're ready to submit for HSP Editor review again, either update your existing GitHub Pull Request with commit(s) for the revisions you've made, or start a new Pull Request if you prefer.
+**Yes + No + Abstain ≥ 1,000 veNEAR**
 
-## STEP 5: Submit Proposal Onchain
+### Simple Majority Vote
 
-Once the 7-day feedback period has passed and you have an HSP number, you can submit the proposal on the [voting platform](https://gov.houseofstake.org/proposals).
+A proposal passes by Simple Majority if:
 
-- You will pay a small deposit of 0.1013 NEAR to submit a proposal.
-- Title should match the Forum Post title, including the HSP number i.e. HSP-XXX: Proposal Title
-- Description should contain the full text of the proposal, including any payload and excluding the Frontmatter.
-- Link should be the link to the Forum Post
+**Yes / (Yes + No) > 50%**
 
-## STEP 6: Screening Committee Review
+Abstain votes are excluded from the approval percentage calculation.
 
-The Screening Committee will review your proposal and communicate its decision within **7 calendar days**.
+### Supermajority Vote
 
-Possible outcomes, which are final and recorded onchain, are:
+A proposal passes by Supermajority if:
 
-- **Approved**
-  - Status updated to _Voting_.
-  - Voting Period commences immediately upon approval.
-- **Rejected**
-  - Status updated to _Rejected_.
-  - Feedback will be provided.
-  - If you want to resubmit, you must draft a new proposal, with a new HSP number (i.e. starting again at Step 4)
+**Yes / (Yes + No) ≥ 67%**
 
-The Committee may exercise discretionary governance judgment, such as bundling complementary proposals into a single vote, reclassifying as Supermajority or suggesting minor corrections to proposal text, without requiring another 7-day feedback period.
+Abstain votes are excluded from the approval percentage calculation.
 
-## STEP 7: Voting
+### Possible Outcomes
 
-As the HSP Author, you can participate in the communication and voting on the proposal, in accordance with the NEAR House of Stake Conflict of Interest Policy.
+| Outcome | Result |
+| --- | --- |
+| **Approved** | Proposal opens for voting immediately |
+| **Rejected** | The proposal process ends, the proposal is removed from the queue. The Screening Committee provides a rationale, and the author may revise and resubmit it by restarting from step 1. |
 
-Onchain voting details key to understand are:
+---
 
-### Duration
+## Step 5: Tokenholder Vote
 
-- Sensing: 7 days.
-- Decision: 14 days.
+After the proposal opens for voting, it enters the **Tokenholder Vote** stage.
 
-### Voting Power
+**Voting period:**
 
-- Fixed at the moment of Screening Committee approval.
-- Based on the veNEAR held by and delegated to each delegate at that time.
-- Votes are recorded onchain and they cannot be changed after being cast in a proposal.
+**14 days**
 
-### Voting Options
+Tokenholders vote on whether the proposal should pass.
 
-Voting options are **For**, **Against**, and **Abstain**.
+### Possible Outcomes
 
-Further voting types may be developed in the future to cover specific needs, as progressive decentralization advances.
+| Outcome | Result |
+| --- | --- |
+| **Succeeded** | Proposal passes, and moves to Security Council & House of Stake directors review. |
+| **Defeated** | Proposal fails, proposal process ends.  |
 
-### Quorum
+---
 
-- Minimum 1,000 veNEAR.
-- Abstain counts toward quorum.
+## Step 6: Security Council & House of Stake Foundation Director Review
 
-### Thresholds
+If the proposal succeeds in the Tokenholder Vote, it moves to the final review stage.
 
-- Simple Majority: ≥ 50%.
-- Supermajority: ≥ 2/3.
-- Abstain does not count toward the threshold.
+**Review period:**
 
-### Voting Outcome
+**14 days**
 
-- If either quorum or threshold is not met → **Defeated**.
-- If quorum and threshold are both met → **Succeeded**.
+The **Security Council** and **House of Stake Foundation Directors** review the proposal before final approval.
 
-## STEP 8: Security Council & Director Review
+The Security Council acts as a **final protection layer after voting** and reviews whether the proposal aligns with the vision, mission, and values of House of Stake, and whether it may negatively affect the NEAR ecosystem (see [House of Stake Bylaws](https://houseofstake.org/docs/structure/legal-documents/bylaws)).
 
-After a successful vote, the Security Council has 14 days to review and veto or suspend the proposal.
+The House of Stake Foundation Director may decline to implement a proposal if it is unlawful, breaches obligations, or compromises integrity or interests (see [House of Stake Constitution](https://houseofstake.org/docs/overview/interim-constitution)).
 
-**If not vetoed:**
+A veto should be exercised only in cases involving significant governance, ecosystem, legal, financial, technical, or execution concerns.
 
-- Forwarded to NEAR House of Stake Foundation Directors for execution, subject to fiduciary duties and applicable law.
+### Possible Outcomes
 
-**If vetoed:**
+| Outcome | Result |
+| --- | --- |
+| **Approved** | Moves to final outcome |
+| **Vetoed** | Proposal fails, and proposal process ends. |
 
-- Rationale is shared on the NEAR Forum by the Security Council.
-- HSP Status updated to **Vetoed**.
+---
 
-## STEP 9: Execution
+## Step 7: Final Outcome
 
-If approved for execution:
+If the proposal passes all required stages, it will proceed to one of the following outcomes:
 
-1. Together with relevant stakeholders, you can proceed with implementation in accordance with the Implementation Plan stated in the HSP.
-2. You should be prepared to coordinate with other stakeholders to effectively implement the proposal, reporting regularly on deliverables and success criteria as per the Milestones shared in your HSP.
-3. Once implemented, let the HSP Editor know, so that the HSP status can be updated to **Final**.
+## Final Proposal
 
-Implementation timelines are indicative and may be adjusted for legal or operational reasons.
+The proposal moves to:
 
-## Unsuccessful Proposals
+**Execution or implementation of approved changes**
 
-If a proposal was Rejected, Defeated or Vetoed and you wish to amend and resubmit it, you must create a new proposal, following the full process again.
+## Policy Proposal
 
-- **Rejected**: carefully consider the Screening Committee's feedback. What can you learn from what they've shared? Could you adapt your proposal to address their concerns? What further discovery might you need to do to make your proposal more suitable?
-- **Defeated**: study the voter breakdown. Which delegates voted for vs. against? Did any provide rationale on the forum? Reach out and ask so you can understand more.
-- **Vetoed**: study the rationale of the Security Council. Did they provide any recommendations for potential paths forwards? Could you make adaptations to your proposal to address their concerns?
+If the proposal relates to governance rules, constitutional documents, or policy changes, it may become part of:
 
-## Special Cases
+**Constitutional Documents / Governance Policies**
 
-- **Withdrawn**: Prior to Voting, the HSP Author may update their proposal status to _Withdrawn_. They can resurrect it and resume the process at any time by changing it back to _Draft_.
-- **Stagnant**: If the HSP Author does not reply to comments from the HSP Editor or Screening Committee within 6 months, the status of the proposal will be marked as _Stagnant_. They can resurrect it and resume the process at any time by changing it back to _Draft_.
-- **Living** is a status used for Constitutional or other documents that never reach finality, set after they have successfully passed a vote.
+---
+
+# 2. Fast Track Proposal
+
+The **Fast Track Proposal** process offers a shorter approval and voting timeline, using an accelerated review and voting process compared to a Classic Proposal.
+
+![Fast Track Proposal (2)](assets/Fast%20Track%20Proposal%20(2).png)
+
+## Step 1: Proposal Creation
+
+Any NEAR tokenholder can submit a **Fast Track House of Stake Proposal (HSP)**. The starting point for any proposal is at [gov.houseofstake.org](https://gov.houseofstake.org/proposals). Click **“Create Proposal”** on the top right and follow the prompts.
+
+A **100 NEAR bond deposit** is required to create a Fast Track Proposal. This bond helps ensure that proposal submitters remain accountable for the quality, seriousness, and outcome of their proposal.
+
+Once submitted, the proposal will be automatically posted on the House of Stake forum for review.
+
+---
+
+## Step 2: Community Feedback & Review
+
+A Fast Track Proposal may go through the **Community Feedback & Review** stage, but this stage has no minimum duration.
+
+Any changes made during this stage are automatically reflected in the forum post.
+
+If needed, the proposal may be sent back for redrafting.
+
+---
+
+## Step 3: HSP Editor Review
+
+The HSP Editor will conduct an initial review to ensure all formal requirements are met before it moves to the next stage. 
+
+**Maximum review period:**
+
+**48 hours**
+
+The HSP Editor reviews the proposal to ensure that it is clear, complete, properly formatted, and suitable for Fast Track consideration.
+
+### Possible Outcomes
+
+| Outcome | Result |
+| --- | --- |
+| **Approved** | Proposal is tagged with an HSP number and moves to Screening Committee Review |
+| **Request Changes** | Proposal is sent back for redraft |
+
+Once approved by the HSP Editor, the proposal is created **on-chain** and assigned an **HSP number**.
+
+---
+
+## Step 4: Screening Committee Review
+
+After HSP Editor approval, the proposal enters the **Screening Committee Review** stage.
+
+**Maximum review period:**
+
+**48 hours**
+
+At this stage, the Screening Committee reviews the proposal before it can proceed to voting. The Screening Committee will also determine whether the proposal requires a **Simple Majority** or **Supermajority** vote.
+
+### Quorum Requirement
+
+For a vote to be valid:
+
+**Yes + No + Abstain ≥ 1,000 veNEAR**
+
+### Simple Majority Vote
+
+A proposal passes by Simple Majority if:
+
+**Yes / (Yes + No) > 50%**
+
+Abstain votes do not count toward the approval percentage.
+
+### Supermajority Vote
+
+A proposal passes by Supermajority if:
+
+**Yes / (Yes + No) ≥ 67%**
+
+Abstain votes do not count toward the approval percentage.
+
+### Possible Outcomes
+
+| Outcome | Result |
+| --- | --- |
+| **Approved** | Moves to Sandbox Vote |
+| **Deferred** | Bond returned |
+| **Rejected** | Bond slashed |
+
+**Note:** Any slashed bond will be sent to the **HOS Treasury**.
+
+---
+
+## Step 5: Sandbox Vote
+
+After Screening Committee approval, the proposal enters the **Sandbox Vote** stage.
+
+**Voting period:**
+
+**7 days**
+
+To pass this stage:
+
+**At least 30% of votes must be in favor**
+
+If the Sandbox Vote passes, the favor votes are carried over to the Tokenholder Vote.
+
+---
+
+## Step 6: Proposal Opens for Voting
+
+If approved, the proposal opens for voting on the following:
+
+**Monday, 3 PM UTC**
+
+The proposal then enters the **Parallel Voting** stage.
+
+---
+
+## Step 7: Parallel Voting & Review
+
+Fast Track Proposals go through **Parallel Voting & Review stage**.
+
+**Maximum voting/review period:**
+
+**5 days**
+
+The two parallel paths are:
+
+1. **Tokenholder Vote**
+2. **Security Council & HSP Director Review**
+
+The **Security Council** and **House of Stake Foundation Directors** review the proposal before final approval.
+
+The Security Council acts as a **final protection layer after voting** and reviews whether the proposal aligns with the vision, mission, and values of House of Stake, and whether it may negatively affect the NEAR ecosystem (see [House of Stake Bylaws](https://houseofstake.org/docs/structure/legal-documents/bylaws)).
+
+The House of Stake Foundation Director may decline to implement a proposal if it is unlawful, breaches obligations, or compromises integrity or interests (see [House of Stake Constitution](https://houseofstake.org/docs/overview/interim-constitution)).
+
+A veto should be exercised only in cases involving significant governance, ecosystem, legal, financial, technical, or execution concerns.
+
+### Possible Outcomes
+
+| Outcome | Result |
+| --- | --- |
+| **Approved** | Moves to final execution |
+| **Defeated** | Bond returned |
+| **Vetoed** | Bond slashed |
+
+**Note:** Any slashed bond will be sent to the **HOS Treasury**.
+
+---
+
+## Step 8: Final Execution
+
+If the Fast Track Proposal passes the required voting and review stages, the bond is sent to the **HOS Treasury**, and the proposal proceeds to:
+
+**Execution**
+
+---
+
+# Proposal Queue
+
+Up to **3 proposals** may run concurrently during the review and voting stages.
+
+If a proposal is not approved at any stage, it is removed from the queue. This allows the next eligible proposal to enter the process.
